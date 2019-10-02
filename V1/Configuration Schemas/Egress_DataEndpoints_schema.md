@@ -1,12 +1,30 @@
-# EgressEndpointConfiguration Schema
+---
+uid: Egress_DataEndpoints_schema
+---
 
-```
+# OMF health endpoint configuration schema
 
+```json
+[{
+        "endpoint": "https://<pi web api server>/piwebapi/omf/",
+        "UserName": "<username>",
+        "Password": "<password>",
+        "buffering": 0,
+        "maxBufferSizeMB": 0
+    },
+    {
+        "Endpoint": "https://<OCS OMF endpoint>",
+        "ClientId": "<clientid>",
+        "ClientSecret": "<clientsecret>",
+        "buffering": 0,
+        "maxBufferSizeMB": 0
+    }
+]
 ```
 
 | Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                                                             |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------------------------------------------------------- |
-| Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [OmfEgress_DataEndpoints_schema_fixed.json](OmfEgress_DataEndpoints_schema_fixed.json) |
+| Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [Egress_DataEndpoints_schema.json](Egress_DataEndpoints_schema.json) |
 
 # EgressEndpointConfiguration Properties
 
