@@ -2,7 +2,7 @@
 uid: Egress_DataEndpoints_schema
 ---
 
-# OMF health endpoint configuration schema
+# Egress endpoint configuration schema
 
 ```json
 [{
