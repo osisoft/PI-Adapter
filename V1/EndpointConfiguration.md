@@ -1,5 +1,5 @@
 ---
-uid: AdapterEgress
+uid: Egress
 ---
 
 # Adapter Egress
