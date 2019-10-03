@@ -1,1 +1,5 @@
+---
+uid: Endpoint
+---
 
+# Endpoint
