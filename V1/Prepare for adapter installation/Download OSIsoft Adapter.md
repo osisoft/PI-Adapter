@@ -1,5 +1,5 @@
 ---
-uid: PrepareForAdapterInstallation
+uid: DownloadOSIsoftAdapter
 ---
 
-# Prepare for adapter installation
+# Download OSIsoft Adapter
