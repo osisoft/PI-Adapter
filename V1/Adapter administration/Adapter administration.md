@@ -1,1 +1,5 @@
+---
+uid: AdapterAdministration
+---
 
+# Adapter administration
