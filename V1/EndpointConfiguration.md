@@ -92,8 +92,7 @@ Find various examples below of valid egress configurations.
 |-----------------------------------------------------------|-----------|----------------------|
 | api/v1/configuration/egress/DataEndpoints      | GET       | Gets all configured egress endpoints |
 | api/v1/configuration/egress/DataEndpoints      | DELETE    | Deletes all configured egress endpoints |
-| api/v1/configuration/egress/DataEndpoints      | POST      | Add an array of egress endpoints, will fail if any endpoint already exists |
-| api/v1/configuration/egress/DataEndpoints      | POST      | Add a single egress endpoints, will fail if endpoint already exists |
+| api/v1/configuration/egress/DataEndpoints      | POST      | Add an array of egress endpoints or a single endpoint, will fail if any endpoint already exists |
 | api/v1/configuration/egress/DataEndpoints      | PUT       | Replace all egress endpoints |
 | api/v1/configuration/egress/DataEndpoints/{id} | GET       | Get configured endpoint by *id* |
 | api/v1/configuration/egress/DataEndpoints/{id} | DELETE    | Delete configured endpoint by *id* |
@@ -103,5 +102,7 @@ Find various examples below of valid egress configurations.
 ## Egress execution details
 
 After configuration for an egress endpoint is added, egress execution will occur immediately for that endpoint. Egress is handled individually per configured endpoint. On first execution, types and containers will be egressed; subsequently only new or changed types/containers will be egressed. Type creation must be successful in order to perform container creation; likewise container creation must be successful in order to perform data egress.
+
+If an egress endpoint is removed, data flow will immediately end for that endpoint. Any buffered data for the endpoint that has been deleted will be permanently lost.
 
 Type, container, and data items are batched into one or more OMF messages when egressing. As per the requirements defined in OMF, a single message payload will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item will result in the message failing. Types, containers, and data will continue to be egressed as long as the destination continues to respond to HTTP requests - retrying previous failures as needed.
