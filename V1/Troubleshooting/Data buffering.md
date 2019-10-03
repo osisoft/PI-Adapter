@@ -1,1 +1,5 @@
+---
+uid: DataBuffering
+---
 
+# Data buffering
