@@ -1,5 +1,5 @@
 ---
-uid: ConfigureTheAdapter
+uid: ConfigureEndpoints
 ---
 
-# Configure the adapter
+# Configure endpoints
