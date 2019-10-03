@@ -1,1 +1,5 @@
+---
+uid: AdapterSecurity
+---
 
+# Adapter Security
