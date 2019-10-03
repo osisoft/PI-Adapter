@@ -1,1 +1,5 @@
+---
+uid: ConfigurationSchemas
+---
 
+# Configuration schemas
