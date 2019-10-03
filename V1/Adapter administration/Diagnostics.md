@@ -1,1 +1,5 @@
+---
+uid: Diagnostics
+---
 
+# Diagnostics
