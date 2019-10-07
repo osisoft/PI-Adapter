@@ -1,5 +1,5 @@
 ---
-uid: Hardware requirements
+uid: HardwareRequirements
 ---
 
 # Hardware requirements
