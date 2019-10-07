@@ -1,1 +1,1 @@
-# Edge Adapter
+# OSIsoft Adapter Docs
