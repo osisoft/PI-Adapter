@@ -30,3 +30,8 @@
 2. Run command _Git:Sync_.
 
 **Result:** Changes will be synced to the repository in GitHub.
+
+
+
+jdfhlsjdfkljskldjfklwjo
+\Hellookooop[]
