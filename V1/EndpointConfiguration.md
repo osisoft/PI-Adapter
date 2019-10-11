@@ -2,11 +2,11 @@
 uid: Egress
 ---
 
-# Adapter Egress
+# Adapter egress
 
-Adapters can egress dynamic data to destinations supplied by the user through OMF. Supported destinations are OSIsoft Cloud Services and PI servers via PI Web API.
+Adapters can egress dynamic data to destinations that you supply through OMF. Supported destinations are OSIsoft Cloud Services and PI servers through PI Web API.
 
-An egress endpoint represents a destination to which data will be sent. Multiple egress endpoints can be specified, and each egress endpoint, which is comprised of the properties specified in the [Parameters](#Parameters) section, is executed independently of all other egress endpoints, and is expected to accept OMF messages.
+An egress endpoint represents a destination to which data will be sent. You can specify multiple endpoints, and each egress endpoint, which is comprised of the properties specified in the [Parameters](#Parameters) section, is executed independently of all other egress endpoints, and is expected to accept OMF messages.
 
 > **Note:** Some types, and consequently containers and data, cannot be egressed. See [Egress Execution Details](#egress-execution-details) for more information.
 
@@ -19,8 +19,8 @@ An egress endpoint represents a destination to which data will be sent. Multiple
 Complete the following to create new egress endpoints:
 
 1. Using any text editor, create a file that contains one or more egress endpoints in JSON form
-    - See [Examples](#Examples) section below for content structure
-    - See [Parameters](#Parameters) section below for a table of all available egress parameters
+    - For content structure, see [Examples](#Examples).
+    - For a table of all available egress parameters, see [Parameters](#Parameters).
 2. Save the file.
 3. Use any tool capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/Egress/dataendpoints/`
 
@@ -101,7 +101,7 @@ Find various examples below of valid egress configurations.
 
 ## Egress execution details
 
-After configuration for an egress endpoint is added, egress execution will occur immediately for that endpoint. Egress is handled individually per configured endpoint. On first execution, types and containers will be egressed; subsequently only new or changed types/containers will be egressed. Type creation must be successful in order to perform container creation; likewise container creation must be successful in order to perform data egress.
+After you add configuration for an egress endpoint, egress execution will occur immediately for that endpoint. Egress is handled individually per configured endpoint. On first execution, types and containers will be egressed; subsequently only new or changed types/containers will be egressed. Type creation must be successful in order to perform container creation; likewise container creation must be successful in order to perform data egress.
 
 If an egress endpoint is removed, data flow will immediately end for that endpoint. Any buffered data for the endpoint that has been deleted will be permanently lost.
 
