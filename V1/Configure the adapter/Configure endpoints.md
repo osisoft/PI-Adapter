@@ -1,8 +1,8 @@
 ---
-uid: Egress
+uid: ConfigureEndpoints
 ---
 
-# Adapter egress
+# Configure endpoints
 
 Adapters can egress dynamic data to destinations that you supply through OMF. Supported destinations are OSIsoft Cloud Services and PI servers through PI Web API.
 
