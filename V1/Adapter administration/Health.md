@@ -24,7 +24,7 @@ Table 1. Configuration parameters for adapter health endpoints
 | **ValidateEndpointCertificate** | Optional                            | bool      | Used to disable verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends setting this to true in production environments. Defaults to true. |
 
 ## Available Health Data
-Each individual adapter data component produces a few different pieces of health data. These are as follows.
+Each individual adapter data component produces a few different pieces of health data. Dynamic data is sent every minute to configured health endpoints.
 
 ### Device Status
 The device status indicates the health of this component and whether or not it is currently communicating properly with the data source. This time-series data is stored within a PI point or OCS stream, depending on the endpoint type. During healthy steady-state operation, a value of "Good" is expected.
