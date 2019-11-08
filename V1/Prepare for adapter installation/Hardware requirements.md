@@ -1,5 +1,0 @@
----
-uid: HardwareRequirements
----
-
-# Hardware requirements
