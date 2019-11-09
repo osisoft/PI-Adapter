@@ -1,5 +1,0 @@
----
-uid: AdapterAdministration
----
-
-# Adapter administration
