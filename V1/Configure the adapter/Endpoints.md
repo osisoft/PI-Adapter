@@ -1,5 +1,0 @@
----
-uid: Endpoints
----
-
-# Endpoints
