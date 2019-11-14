@@ -7,8 +7,6 @@ uid: BufferingConfiguration
 This section talks about the global parameters used for on-disk buffering configuration. For enabling or disabling buffering at the individual egress endpoint level using the *bufferingEnabled* field please refer to: <</INSERT LINK HERE>>
 
 The parameters for on-disk buffering for the adapters that can be configured are
-- OnDiskMaxBufferSizeMB
-- OnDiskBufferLocation
 
 | Parameter | Required | Type | Description |
 | ----------|:--------:| ----:| :-----------|
