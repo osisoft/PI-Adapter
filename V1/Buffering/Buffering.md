@@ -41,3 +41,4 @@ curl -X PUT  http://localhost:{port}/api/v1/configuration/egress/buffering  -H '
 }'
 ```
 In the above samples *port* refers to configured port for the Adapter to run.
+If successful, methods returns a 200 OK response code.
