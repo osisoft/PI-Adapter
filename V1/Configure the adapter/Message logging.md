@@ -1,5 +1,0 @@
----
-uid: MessageLogging
----
-
-# Message logging
