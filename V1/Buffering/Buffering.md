@@ -4,7 +4,7 @@ uid: BufferingConfiguration
 
 # Overview
 
-The buffering configuration parameters are global and are used to configure buffering for the data egressed from the adatpers to the endpoints. These parameters take effect only during startup. 
+The buffering configuration parameters are used to configure buffering for the data egressed from the Adatpers to endpoints. These are global parameters and take effect only during startup. 
 
 It is strongly recommended *against modifying* the default buffer configuration values.
 
