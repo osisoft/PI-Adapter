@@ -25,28 +25,28 @@ Complete the following to create new egress endpoints:
 **Example using cURL:**
 
 - Add endpoints
-```bash
-curl -v -d "@Egress_DataEndpoints.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/Egress/dataendpoints"
-```
+    ```bash
+    curl -v -d "@Egress_DataEndpoints.config.json" -H "Content-Type: application/json" -X POST      "http://localhost:5590/api/v1/configuration/Egress/dataendpoints"
+    ```
 
-```bash
-curl -v -d "@Egress_DataEndpoints.config.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/Egress/dataendpoints"
-```
+    ```bash
+    curl -v -d "@Egress_DataEndpoints.config.json" -H "Content-Type: application/json" -X PUT   "http://localhost:5590/api/v1/configuration/Egress/dataendpoints"
+    ```
 
 - Delete an endpoint
-```bash
-curl -v -X DELETE "http://localhost:5590/api/v1/configuration/Egress/dataendpoints/{id}"
-```
+    ```bash
+    curl -v -X DELETE "http://localhost:5590/api/v1/configuration/Egress/dataendpoints/{id}"
+    ```
 
 - Update an endpoint
-```bash
-curl -v -d "@Egress_DataEndpoint.config.json" -H "Content-Type: application/json" -X UPDATE "http://localhost:5590/api/v1/configuration/Egress/dataendpoints/{id}"
-```
+    ```bash
+    curl -v -d "@Egress_DataEndpoint.config.json" -H "Content-Type: application/json" -X UPDATE     "http://localhost:5590/api/v1/configuration/Egress/dataendpoints/{id}"
+    ```
 
 - View endpoints
-```bash
-curl -v -X GET "http://localhost:5590/api/v1/configuration/Egress/DataEndpoints"
-```
+    ```bash
+    curl -v -X GET "http://localhost:5590/api/v1/configuration/Egress/DataEndpoints"
+    ```
 
 ### Parameters
 
