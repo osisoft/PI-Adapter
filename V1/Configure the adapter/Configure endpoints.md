@@ -56,7 +56,7 @@ Complete the following to create new egress endpoints:
 | **Endpoint**                    | Required                  | string    | Destination that accepts OMF v1.1 messages. Supported destinations include OCS and PI server. |
 | **ClientId**                    | Required for OCS endpoint | string    | Authentication with the OCS OMF endpoint. |
 | **ClientSecret**                | Required for OCS endpoint | string    | Authentication with the OCS OMF endpoint. |
-| **TokenEndpoint**               | Optional for OCS endpoint | string    | Retrieves an OCS token from an alternative endpoint. *This is not normally necessary with OCS.*
+| **TokenEndpoint**               | Optional for OCS endpoint | string    | Retrieves an OCS token from an alternative endpoint. |
 | **Username**                    | Required for PI endpoint  | string    | Basic authentication to the PI Web API OMF endpoint. |
 | **Password**                    | Required for PI endpoint  | string    | Basic authentication to the PI Web API OMF endpoint. |
 | **ValidateEndpointCertificate** | Optional                  | boolean   | Disables verification of destination certificate. Use for testing only with self-signed certificates. Defaults to true. |
