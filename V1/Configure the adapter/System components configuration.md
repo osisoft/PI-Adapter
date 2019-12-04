@@ -38,11 +38,20 @@ The default _System_Components.json_ file for the System component is the follow
 3. From the same directory where the file exists, run the following curl script:
 
     ```bash
-    curl -i -d "@AddComponent.json" -H "Content-Type: application/json" http://localhost:5590/api/v1/configuration/system/components
+    curl -i -d "@AddComponent.json" -H "Content-Type: application/json" http://localhost:5595/api/v1/configuration/system/components
     ```
 
 After the curl command completes successfully, you can configure or use the new component.
 
+### Deleting a component
+
+You can delete an existing component by running the following curl script:
+
+    ```bash
+	curl -X DELETE http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/
+    ```
+
+All the logs and configurations files for the deleted components will be moved to the corresponding logs/Removed or Configuration/Removed folder.
 ## System components schema
 
 The following table defines the basic behavior of the _AddComponent.json_ file.
