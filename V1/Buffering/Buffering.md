@@ -14,7 +14,7 @@ The parameters for on-disk buffering for the adapters that can be configured are
 
 | Parameter | Required | Type | Description |
 | ----------|:--------:| ----:| :-----------|
-| OnDiskMaxBufferSizeMB | Yes | Integer | Defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (Mebibyte 1 MiB = 1048576 bytes). You must take the capacity and type of the storage medium into account before you determine an alternative value for this parameter. In the case that you do not want to specify a maximum file size, a value of -1 indicates that the file size is restricted only by the available free disk space. <br> Allowed values: -1 or [1, 2147483647]. <br> Default: -1 | 
+| OnDiskMaxBufferSizeMB | Yes | Integer | Defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (Mebibyte 1 MiB = 1048576 bytes). You must take the capacity and type of the storage medium into account before you determine an alternative value for this parameter. For the case that you do not want to specify a maximum file size, a value of -1 indicates that the file size is restricted only by the available free disk space. <br> Allowed values: -1 or [1, 2147483647]. <br> Default: -1 | 
 | OnDiskBufferLocation | Optional | String | Defines the location of the buffer file. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter <br> Allowed value: Path to an existing folder location in the file system. <br> Default: **Windows:** _%ProgramData%\Adapters\Data_ <br> **Linux:** _/usr/share/OSIsoft/Adapters/Data_ |
 
 ## REST URLs
