@@ -6,7 +6,7 @@ uid: WholeAdapterConfiguration
 
 You can configure OSIsoft System and adapter components entirely using a single call for replacing the existing configuration.
 
-## Importing configuration
+## Import configuration
 
 ### REST URLs
 
