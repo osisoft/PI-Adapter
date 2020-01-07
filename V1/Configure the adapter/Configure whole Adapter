@@ -3,7 +3,8 @@ uid: WholeAdapterConfiguration
 ---
 
 # Overview
-OSIsoft System and Adapter components can be configured entirely using a single call for replacing the existing configuration.
+
+You can configure OSIsoft System and adapter components entirely using a single call for replacing the existing configuration.
 
 ## Importing configuration
 
@@ -15,7 +16,7 @@ OSIsoft System and Adapter components can be configured entirely using a single 
 
 ### Sample configuration file for OPC UA
 
-The following sample includes configuration of System components along with an OPCUA Adapter. 
+The following sample includes configuration of System components along with an OPC UA adapter. 
 
 ```json
 {
@@ -91,12 +92,16 @@ The following sample includes configuration of System components along with an O
 }
 ```
 
-### Importing full Adapter configuration using REST client
+### Import full adapter configuration using REST client
 
+- To import the full adapter configuration, run the following command:
+
+```
 curl -X http://localhost:5595/api/v1/configuration -d '{ JSON content }'
+```
 
-Note: Some Adapter specific configurations may take effect only on restarting the Adapter. Please refer to the documentation of the specfic Adapter to learn more.
+> **Note:** In order for some of the adapter specific configurations to take effect, you have to restart the adapter.
 
-### Configuration Errors
+### Configuration errors
 
-When the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result. 
+If the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result. 
