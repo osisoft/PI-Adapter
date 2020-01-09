@@ -8,9 +8,14 @@ Adapters produce various types of health data. You can use this information to e
 
 ## Configure health endpoints
 
-A health endpoint designates an OSIsoft OMF endpoint where adapter health information should be sent. You can configure multiple health endpoints. The configuration for a health endpoint is essentially the same as the configuration for a typical OMF egress endpoint. 
+A health endpoint designates an OSIsoft OMF endpoint where adapter health information should be sent. You can configure multiple health endpoints. 
 
-**Configuration parameters for adapter health endpoints**
+1. Using any text editor, create a file that contains one or more health endpoints in JSON form.
+  - For a table of all available health endpoint parameters, see [Parameters](#parameters).
+2. Save the file.
+3. Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `
+
+### Parameters
 
 | Parameter                       | Required                            | Type      | Description                                        |
 |---------------------------------|-------------------------------------|-----------|----------------------------------------------------|
@@ -41,7 +46,7 @@ There are a few differences in how these two systems treat the associated health
 
 PI Web API parses the information and sends it configured PI Systems for the OMF endpoint. The static data is used to create a hierarchy on a PI AF server similar to the following:
 
-[AdapterHealthAFHierarchy]: https://github.com/osisoft/OSIsoft-Adapter/tree/master/V1/Adapter%20administration/AdapterHealthAFHierarchy.png "Adapter Health AF Hierarchy"
+![AdapterHealthAFHierarchy](AdapterHealthAFHierarchy.png)
 
 The dynamic health data is actually time-series data that is stored in PI points on a PI Data Archive and can be seen in the AF hierarchy as PI Point Data Reference attributes.
 
