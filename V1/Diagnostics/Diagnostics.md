@@ -12,10 +12,10 @@ To egress diagnositcs related data:
 
 1. Configure an adapter health egress endpoint.
 
-## Edge Data Store diagnostics
+## Adapter diagnostics
 
 The Diagnostics.System dynamic type includes these values which are logged in a stream with the id System.Diagnostics.
-This diagnostic stream contains system level information related to the host platform that Edge Data Store is running on.
+This diagnostic stream contains system level information related to the host platform that the adapter is running on.
 
 | Type   | Property                              | Description                                                                                      |
 | ------ | ------------------------------------- | ------------------------------------------------------------------------------------------------ |
@@ -34,9 +34,9 @@ This diagnostic stream contains system level information related to the host pla
 | double | StorageTotalSize (uom=MB)             | Total size of the storage medium in use by the Edge Data Store                                   |
 | double | StorageFreeSpace (uom=MB)             | Free space available                                                                             |
 
-## EDS adapter diagnostics
+## Adapter diagnostics
 
-Each EDS adapter of the Edge Data Store produces its own diagnostics streams.
+Each adapter component produces its own diagnostics streams.
 
 ### Stream count
 
@@ -52,10 +52,10 @@ The Diagnostics.StreamCountEvent dynamic type includes these values, which are l
 
 The Diagnostics.Adapter.IORate dynamic type includes these values, which are logged in a stream with the id {componentid}.IORate. IO rate includes only sequential data collected from a data source.
 
-| Type   | Property  | Description                                             |
-| ------ | --------- | ------------------------------------------------------- |
-| string | timestamp | Timestamp of event                                      |
-| double | IORate    | 10-minute rolling average of data rate (streams/second) |
+| Type   | Property  | Description                                            	|
+| ------ | --------- | -------------------------------------------------------	|
+| string | timestamp | Timestamp of event                                    	|
+| double | IORate    | 1-minute rolling average of data rate (streams/second)	|
 
 ### Error rate
 
@@ -64,52 +64,22 @@ The Diagnostics.Adapter.ErrorRate dynamic type includes these values, and are lo
 | Type   | Property  | Description                                              |
 | ------ | --------- | -------------------------------------------------------- |
 | string | timestamp | Timestamp of event                                       |
-| double | ErrorRate | 10-minute rolling average of error rate (streams/second) |
+| double | ErrorRate | 1-minute rolling average of error rate (streams/second)	|
 
-## Edge Storage diagnostics
-
-The Storage component of Edge Data Store produces the following diagnostics streams.
-
-### Storage.default.default.Counts
-
-The Storage.default.default.Counts stream includes counts of the types, streams and stream views of the default namespace.
-
-| Type    | Property        | Description           |
-| ------- | --------------- | --------------------- |
-| string  | timestamp       | Timestamp of event    |
-| integer | TypeCount       | Count of types        |
-| integer | StreamCount     | Count of streams      |
-| integer | StreamViewCount | Count of stream views |
-
-### Storage.default.diagnostics.Counts
-
-The Storage.default.default.Counts stream includes counts of the types, streams and stream views of the diagnostics namespace.
-
-| Type    | Property        | Description           |
-| ------- | --------------- | --------------------- |
-| string  | timestamp       | Timestamp of event    |
-| integer | TypeCount       | Count of types        |
-| integer | StreamCount     | Count of streams      |
-| integer | StreamViewCount | Count of stream views |
-
-### Storage.Total.Counts
-
-The Storage.Totals.Counts stream includes counts of the types, streams and stream views of all namespaces of the storage component.
-
-| Type    | Property        | Description           |
-| ------- | --------------- | --------------------- |
-| string  | timestamp       | Timestamp of event    |
-| integer | TypeCount       | Count of types        |
-| integer | StreamCount     | Count of streams      |
-| integer | StreamViewCount | Count of stream views |
 
 ## Egress Diagnostics
 
-The Egress component of the Adapter produces the following diagnostics streams.
+The Egress component of the adapter produces the following diagnostics streams.
 
 ### IO rate
 
-The Diagnostics.Egress.IORate dynamic type includes these values, which are logged in a stream with the id {machineName}.{serviceName}.OmfEgress.{EndpointId}.IORate. IO rate includes only sequential data collected from a data source.
+The Diagnostics.Egress.IORate dynamic type includes these values, which are logged in a stream with the id {machineName}.{serviceName}.OmfEgress.{EndpointId}.IORate. IO rate includes only sequential data sucessfully sent to an egress.
+
+| Type   | Property  | Description                                            	|
+| ------ | --------- | -------------------------------------------------------	|
+| string | timestamp | Timestamp of event                                    	|
+| double | IORate    | 1-minute rolling average of data rate (streams/second)	|
+
 
 ## REST URLs
 
