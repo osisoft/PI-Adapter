@@ -1,0 +1,4 @@
+- name: Stop and start an OSIsoft adapter
+  href: Stop and start an OSIsoft adapter.md
+- name: Retrieve product version information
+  href: Retrieve product version information.md
