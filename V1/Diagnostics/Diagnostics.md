@@ -143,3 +143,14 @@ curl -X PUT  http://localhost:{port}/api/v1/configuration/system/diadnostics  -H
 In the previous examples, _port_ refers to the configured port for the adapter to run on.
 
 If successful, the methods returns a `204 No Content` response code.
+
+## AF Structure
+
+After running diagnostics with a Health EndPoint configured to a PI server, you can use _**PI System Explorer**_ to view the diagnostics for a given adapter. The element hierarchy is shown in the screen shot below. Notable points about the structure include:
+
+- At the _**Elements**_ root there is a link to an _**Adapters**_ node. This is the root note for all adapter instances.
+- Below _**Adapters**_ there will be one or more adapter nodes. Each node's title is defined by the node's corresponding computer name and service name in this format: "_**{ComputerName}.{ServiceName}**_". For example, in the screen shot below, **_RGRALAK5530_** is the computer name, and _**SignalGenerator**_ is the service name.
+- Clicking on an adapter node and setting the tab to _**Attributes**_ will show the **System.Diagnostics** values. Example values are shown in the screen shot below.
+
+![System.Diagnostics](./Diagnostics_System.jpg)
+git 
