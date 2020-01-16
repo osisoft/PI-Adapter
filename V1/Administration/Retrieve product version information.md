@@ -1,8 +1,8 @@
 ---
-uid: EdgeDataStoreDiagnostics-ProductInformation
+uid: RetrieveProductVersionInformation
 ---
 
-# Product versions
+# Retrieve product version information
 
 In order to get the application version, the version of the underlying .NET Core Framework, and the operating system that the adapter is running on, you can make requests against the Diagnostics endpoint. 
 
