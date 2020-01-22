@@ -2,7 +2,7 @@
 uid: BufferingConfiguration
 ---
 
-# Overview
+# Configure buffering
 
 To configure buffering for the data egressed from the adapters to endpoints, you use buffering configuration parameters. These are global parameters and take effect only during startup. 
 
