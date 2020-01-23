@@ -1,6 +1,5 @@
-- name: Adapter health - Device status
-  href: Device status.md
-- name: Adapter health - Next health message expected
-  href: Next health message expected.md
+- name: Adapter health
+  href: Health/toc.yml
+  topicHref: Adapter health.md
 - name: Adapter diagnostics
   href: Adapter diagnostics.md
