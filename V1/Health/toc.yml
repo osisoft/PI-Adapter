@@ -1,4 +1,6 @@
-- name: Device status
+- name: Adapter health - Device status
   href: Device status.md
-- name: Next health message expected
+- name: Adapter health - Next health message expected
   href: Next health message expected.md
+- name: Adapter diagnostics
+  href: Adapter diagnostics.md
