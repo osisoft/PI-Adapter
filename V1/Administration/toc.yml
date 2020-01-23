@@ -1,5 +1,5 @@
-- name: Stop and start an OSIsoft adapter
-  href: Stop and start an OSIsoft adapter.md
+- name: Start and stop an adapter
+  href: Start and stop an adapter.md
 - name: Retrieve product version information
   href: Retrieve product version information.md
 - name: Delete an adapter component
