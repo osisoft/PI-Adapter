@@ -2,3 +2,5 @@
   href: Stop and start an OSIsoft adapter.md
 - name: Retrieve product version information
   href: Retrieve product version information.md
+- name: Delete an OSIsoft adapter
+  href: Delete an OSIsoft adapter.md
