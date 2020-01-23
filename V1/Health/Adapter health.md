@@ -1,5 +1,5 @@
 ---
-uid: Health
+uid: AdapterHealth
 ---
 
 # Adapter health
