@@ -4,7 +4,7 @@ uid: StopAndStartAnOSIsoftAdapter
 
 # Stop and start an OSIsoft adapter
 
-You can stop and start OSIsoft adapters. By default, all currently configured OSIsoft adapters are started and remain running until the product shuts down.
+By default, all currently configured OSIsoft adapters are started and remain running until the product shuts down.
 
 ## Stop an OSIsoft adapter
 
