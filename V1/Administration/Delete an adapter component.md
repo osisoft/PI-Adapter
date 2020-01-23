@@ -1,8 +1,8 @@
 ---
-uid: DeleteAdapter
+uid: DeleteAnAdapterComponent
 ---
 
-# Delete an Adapter
+# Delete an adapter component
 
 An adapter instance can be removed by making a DELETE call with either a REST client or the EdgeCmd utility. When an adapter instance is removed, the configuration and log files are saved into a sub-directory in case they are needed later. Any associated types, streams, and data will remain on respective endpoints.
 
