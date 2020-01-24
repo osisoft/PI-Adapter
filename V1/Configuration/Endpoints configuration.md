@@ -1,5 +1,5 @@
 ---
-uid: ConfigureEndpoints
+uid: EndpointsConfiguration
 ---
 
 # Configure endpoints
