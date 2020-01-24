@@ -1,8 +1,8 @@
 ---
-uid: WholeAdapterConfiguration
+uid: AdapterConfiguration
 ---
 
-# Configure whole adapter
+# Adapter configuration
 
 You can configure OSIsoft System and adapter components entirely using a single call for replacing the existing configuration.
 
