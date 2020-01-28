@@ -6,7 +6,7 @@ uid: BufferingConfiguration
 
 The the data egressed from the Adapter to endpoints can be buffered and this is configured through the buffering configuration parameters in the system configuration.
 
-> **Note:** OSIsoft recommends that you do not modify the default buffering location unless necessary. The global buffering parameters take effect only during Adapter service startup.
+> **Note:** OSIsoft recommends that you do not modify the default buffering location unless necessary. The changes to the buffering configuration parameters take effect only during Adapter service startup.
 
 System buffering configuration parameters:
 
