@@ -21,71 +21,112 @@ The default _System_Components.json_ file for the System component contains the 
 ]
 ```
 
- You can add additional components if you want, but only a single OmfEgress component is supported. 
+You can add additional components if you want, but only a single OmfEgress component is supported.
 
-1. To add a new component, create a JSON file with the ComponentId and ComponentType. The following example adds a Modbus TCP adapter. 
+1. To add a new component, create a JSON file with the ComponentId and ComponentType. The following example adds a Modbus TCP adapter.
 
-    **Note:** A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter:
+   **Note:** A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter:
 
-    ```json
-      {
-        "ComponentId": "Modbus1",
-        "ComponentType": "Modbus"
-      }
-    ```
+   ```json
+   {
+     "ComponentId": "Modbus1",
+     "ComponentType": "Modbus"
+   }
+   ```
 
-2. Save the JSON in a file named _AddComponent.json_. 
+2. Save the JSON in a file named _AddComponent.json_.
 3. From the same directory where the file exists, run the following curl script:
 
-    ```bash
-    curl -i -d "@AddComponent.json" -H "Content-Type: application/json" http://localhost:5595/api/v1/configuration/system/components
-    ```
+   ```bash
+   curl -i -d "@AddComponent.json" -H "Content-Type: application/json" http://localhost:5595/api/v1/configuration/system/components
+   ```
 
 After the curl command completes successfully, you can configure or use the new component.
 
 ### Delete a component
 
- - To delete an existing component, run the following curl script:
+- To delete an existing component, run the following curl script:
 
-    ```bash
-	curl -X DELETE http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/
-    ```
+  ```bash
+  /
+  ```
 
-	All the logs and configurations files for the deleted components will be moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
-	
+      	All the logs and configurations files for the deleted components will be moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
+
 ## System components schema
 
 The following table defines the basic behavior of the _AddComponent.json_ file.
 
-| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties |                           
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | 
+| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties |
+| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             |
-
 
 ## Parameters for system components
 
 The following parameters are available for configuring system components.
 
-| Parameters     | Required | Type    | Nullable | Description |
-| -------------- | -------- | --------| ---------|-------------|
-| ComponentId    | Required |`string` | Yes      | The ID of the component. It can be any alphanumeric string, for example Egress.|
-| ComponentType  | Required |`string` | Yes      | The type of the component, for example OmfEgress. There are two types of components: OmfEgress and the adapter. |
+| Parameters    | Required | Type     | Nullable | Description                                                                                                     |
+| ------------- | -------- | -------- | -------- | --------------------------------------------------------------------------------------------------------------- |
+| ComponentId   | Required | `string` | Yes      | The ID of the component. It can be any alphanumeric string, for example Egress.                                 |
+| ComponentType | Required | `string` | Yes      | The type of the component, for example OmfEgress. There are two types of components: OmfEgress and the adapter. |
 
 ## System components example
 
 ```json
 [
   {
-                "componentId": "Modbus1",
-                "componentType": "Modbus"
-            },
-            {
-                "componentId": "Modbus2",
-                "componentType": "Modbus"
-            },
-            {
-                "ComponentId": "Egress",
-                "ComponentType": "OmfEgress"
-   }
+    "componentId": "Modbus1",
+    "componentType": "Modbus"
+  },
+  {
+    "componentId": "Modbus2",
+    "componentType": "Modbus"
+  },
+  {
+    "ComponentId": "Egress",
+    "ComponentType": "OmfEgress"
+  }
 ]
+```
+
+### System Components Schema Definition
+
+Below is the full schema definition for the system components configuration:
+
+```
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "EdgeComponentConfig",
+  "SchemaVersion": "1.0.0",
+  "definitions": {
+    "EdgeConfigurationBase": {
+      "type": "object",
+      "x-abstract": true,
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/EdgeConfigurationBase"
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ComponentId",
+        "ComponentType"
+      ],
+      "properties": {
+        "ComponentId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ComponentType": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  ]
+}
 ```
