@@ -18,4 +18,4 @@ OSIsoft adapters support .NET Core 3.1., which is supported on the following ope
  - Windows Client: 7, 8.1, 10 (1607+)
  - Windows Server: 2012 R2+
 
-You can download OSIsoft Adapter for OPC UA from the OSIsoft Customer Portal: <insert Salesforce link here>
+You can download any OSIsoft adapter from the [OSIsoft Customer Portal](https://customers.osisoft.com/s/).
