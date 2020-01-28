@@ -8,7 +8,7 @@ To configure buffering for the data egressed from the adapters to endpoints, you
 
 OSIsoft strongly recommends that you do not modify the default buffer configuration values.
 
-> **Note:** This section describes the global parameters used for on-disk buffering configuration. For enabling or disabling buffering at the individual egress endpoint level using the *bufferingEnabled* field, see: <</INSERT LINK HERE>>
+**Note:** This section describes the global parameters used for on-disk buffering configuration. For enabling or disabling buffering at the individual egress endpoint level using the *bufferingEnabled* field, see: <</INSERT LINK HERE>>
 
 The parameters for on-disk buffering for the adapters that can be configured are:
 
