@@ -100,7 +100,7 @@ The following sample includes configuration of System components along with an O
 curl -X http://localhost:5595/api/v1/configuration -d '{ JSON content }'
 ```
 
-> **Note:** In order for some of the adapter specific configurations to take effect, you have to restart the adapter.
+**Note:** In order for some of the adapter specific configurations to take effect, you have to restart the adapter.
 
 ### Configuration errors
 
