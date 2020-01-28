@@ -8,11 +8,11 @@ Adapters can egress dynamic data to destinations that you supply through OMF. Su
 
 An egress endpoint represents a destination to which data will be sent. You can specify multiple endpoints. Every egress endpoint is executed independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under [Parameters](#parameters).
 
-> **Note:** Some types, and consequently containers and data, cannot be egressed.  For more information, see [Egress Execution Details](#egress-execution-details).
+**Note:** Some types, and consequently containers and data, cannot be egressed.  For more information, see [Egress Execution Details](#egress-execution-details).
 
 ## Configuration procedure
 
-> **Note:** You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoints, see [REST URLs](#rest-urls).
+**Note:** You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoints, see [REST URLs](#rest-urls).
 
 Complete the following to create new egress endpoints:
 
