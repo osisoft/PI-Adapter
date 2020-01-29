@@ -28,9 +28,9 @@ The relative URI for all buffering configuration actions is `api/v1/configuratio
 
 ## Examples
 
-The following examples 
+The following examples are buffering configurations made through curl REST client.
 
-### Retrieve the buffering configuration through curl REST client
+### Retrieve the buffering configuration
 
 ```
 curl -X GET "http://localhost:{port}/api/v1/configuration/system/buffering"
@@ -48,7 +48,7 @@ Sample output:
 
 `200 OK` response indicates success.
 
-### Configure buffering through curl REST client
+### Configure buffering
 
 ```
 curl -X PUT "http://localhost:{port}/api/v1/configuration/system/buffering" -H "Content-Type: application/json" -d "{ "MaxBufferSizeMB": 50, "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/NewBuffers", "EnableBuffering": true }"
@@ -57,7 +57,7 @@ curl -X PUT "http://localhost:{port}/api/v1/configuration/system/buffering" -H "
 `204 No Content` response indicates success.
 
 
-### Update MaxBuferSizeMb parameter through curl REST client
+### Update MaxBuferSizeMb parameter
 
 ```
 curl -X PATCH "http://localhost:{port}/api/v1/configuration/system/buffering" -H "Content-Type: application/json" -d "{ "MaxBufferSizeMB": 100 }"
