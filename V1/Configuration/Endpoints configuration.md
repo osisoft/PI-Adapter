@@ -26,7 +26,7 @@ Complete the following to create new egress endpoints:
 
 - Add endpoints
     ```bash
-    curl -v -d "@Egress_DataEndpoints.config.json" -H "Content-Type: application/json" -X POST      "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
+    curl -v -d "@OmfEgress_DataEndpoints.config.json" -H "Content-Type: application/json" -X POST    "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
     ```
 
     ```bash
