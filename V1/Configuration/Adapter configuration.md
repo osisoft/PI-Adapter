@@ -29,7 +29,7 @@ The following sample includes configuration of System components along with an O
         "DataSource": {
             "EndpointUrl": "opc.tcp://OPCUAServerEndpoint/OPCUA/Server",
             "UseSecureConnection": false,
-	        "StreamIdPrefix": "OPC_Prefix_",
+	    "StreamPrefix": "OPC_Prefix_",
             "UserName": null,
             "Password": null,
             "RootNodeIds": null,
@@ -85,8 +85,9 @@ The following sample includes configuration of System components along with an O
             }
         ],
         "Buffering": {
-            "onDiskBufferLocation": "C:\\ProgramData\\OSIsoft\\Adapters\\Buffering",
-            "onDiskMaxBufferSizeMB": -1
+            "BufferLocation": "C:\\ProgramData\\OSIsoft\\Adapters\\OpcUa\\OpcUa\\Buffers",
+            "MaxBufferSizeMB": -1,
+	    "EnableBuffering": true
         }
     }
 }
@@ -97,7 +98,7 @@ The following sample includes configuration of System components along with an O
 - To import the full adapter configuration, run the following command:
 
 ```
-curl -X http://localhost:5595/api/v1/configuration -d '{ JSON content }'
+curl -X http://localhost:5590/api/v1/configuration -d '{ JSON content }'
 ```
 
 **Note:** In order for some of the adapter specific configurations to take effect, you have to restart the adapter.
