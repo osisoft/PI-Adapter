@@ -8,16 +8,12 @@ uid: Egress_DataEndpoints_schema
 [{
         "endpoint": "https://<pi web api server>/piwebapi/omf/",
         "UserName": "<username>",
-        "Password": "<password>",
-        "buffering": 0,
-        "maxBufferSizeMB": 0
+        "Password": "<password>"
     },
     {
         "Endpoint": "https://<OCS OMF endpoint>",
         "ClientId": "<clientid>",
-        "ClientSecret": "<clientsecret>",
-        "buffering": 0,
-        "maxBufferSizeMB": 0
+        "ClientSecret": "<clientsecret>"
     }
 ]
 ```
@@ -30,28 +26,14 @@ uid: Egress_DataEndpoints_schema
 
 | Property                                                    | Type      | Required     | Nullable | Defined by                                |
 | ----------------------------------------------------------- | --------- | ------------ | -------- | ----------------------------------------- |
-| [Buffering](#buffering)                                     | reference | Optional     | No       | EgressEndpointConfiguration (this schema) |
 | [ClientId](#clientid)                                       | `string`  | Optional     | Yes      | EgressEndpointConfiguration (this schema) |
 | [ClientSecret](#clientsecret)                               | `string`  | Optional     | Yes      | EgressEndpointConfiguration (this schema) |
 | [Endpoint](#endpoint)                                       | `string`  | **Required** | No       | EgressEndpointConfiguration (this schema) |
 | [Id](#id)                                                   | `string`  | Optional     | Yes      | EgressEndpointConfiguration (this schema) |
-| [MaxBufferSizeMB](#maxbuffersizemb)                         | `integer` | Optional     | No       | EgressEndpointConfiguration (this schema) |
 | [Password](#password)                                       | `string`  | Optional     | Yes      | EgressEndpointConfiguration (this schema) |
 | [TokenEndpoint](#tokenendpoint)                             | `string`  | Optional     | Yes      | EgressEndpointConfiguration (this schema) |
 | [UserName](#username)                                       | `string`  | Optional     | Yes      | EgressEndpointConfiguration (this schema) |
 | [ValidateEndpointCertificate](#validateendpointcertificate) | `boolean` | Optional     | No       | EgressEndpointConfiguration (this schema) |
-
-## Buffering
-
-`Buffering`
-
-- is optional
-- type: reference
-- defined in this schema
-
-### Buffering Type
-
-- []() – `#/definitions/BufferType`
 
 ## ClientId
 
@@ -102,18 +84,6 @@ uid: Egress_DataEndpoints_schema
 ### Id Type
 
 `string`, nullable
-
-## MaxBufferSizeMB
-
-`MaxBufferSizeMB`
-
-- is optional
-- type: `integer`
-- defined in this schema
-
-### MaxBufferSizeMB Type
-
-`integer`
 
 ## Password
 
@@ -171,27 +141,14 @@ uid: Egress_DataEndpoints_schema
 
 | Property                      | Type    | Required     |
 | ----------------------------- | ------- | ------------ |
-| `Buffering`                   |  reference       | Optional     |
 | `ClientId`                    | string  | Optional     |
 | `ClientSecret`                | string  | Optional     |
 | `Endpoint`                    | string  | **Required** |
 | `Id`                          | string  | Optional     |
-| `MaxBufferSizeMB`             | integer | Optional     |
 | `Password`                    | string  | Optional     |
 | `TokenEndpoint`               | string  | Optional     |
 | `UserName`                    | string  | Optional     |
 | `ValidateEndpointCertificate` | boolean | Optional     |
-
-#### Buffering
-
-`Buffering`
-
-- is optional
-- type: reference
-
-##### Buffering Type
-
-- []() – `#/definitions/BufferType`
 
 #### ClientId
 
@@ -238,17 +195,6 @@ uid: Egress_DataEndpoints_schema
 ##### Id Type
 
 `string`, nullable
-
-#### MaxBufferSizeMB
-
-`MaxBufferSizeMB`
-
-- is optional
-- type: `integer`
-
-##### MaxBufferSizeMB Type
-
-`integer`
 
 #### Password
 
