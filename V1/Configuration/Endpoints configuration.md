@@ -20,32 +20,32 @@ Complete the following to create new egress endpoints:
     - For content structure, see [Examples](#examples).
     - For a table of all available egress parameters, see [Parameters](#parameters).
 2. Save the file.
-3. Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/Egress/dataendpoints/`
+3. Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/`
 
 **Example using cURL:**
 
 - Add endpoints
     ```bash
-    curl -v -d "@Egress_DataEndpoints.config.json" -H "Content-Type: application/json" -X POST      "http://localhost:5590/api/v1/configuration/Egress/dataendpoints"
+    curl -v -d "@Egress_DataEndpoints.config.json" -H "Content-Type: application/json" -X POST      "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
     ```
 
     ```bash
-    curl -v -d "@Egress_DataEndpoints.config.json" -H "Content-Type: application/json" -X PUT   "http://localhost:5590/api/v1/configuration/Egress/dataendpoints"
+    curl -v -d "@OmfEgress_DataEndpoints.config.json" -H "Content-Type: application/json" -X PUT   "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
     ```
 
 - Delete an endpoint
     ```bash
-    curl -v -X DELETE "http://localhost:5590/api/v1/configuration/Egress/dataendpoints/{id}"
+    curl -v -X DELETE "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}"
     ```
 
 - Update an endpoint
     ```bash
-    curl -v -d "@Egress_DataEndpoint.config.json" -H "Content-Type: application/json" -X UPDATE     "http://localhost:5590/api/v1/configuration/Egress/dataendpoints/{id}"
+    curl -v -d "@OmfEgress_DataEndpoint.config.json" -H "Content-Type: application/json" -X UPDATE     "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}"
     ```
 
 - View endpoints
     ```bash
-    curl -v -X GET "http://localhost:5590/api/v1/configuration/Egress/DataEndpoints"
+    curl -v -X GET "http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints"
     ```
 
 ### Parameters
@@ -91,14 +91,14 @@ The following examples are valid egress configurations.
 
 | Relative URL                                              | HTTP verb | Action               |
 |-----------------------------------------------------------|-----------|----------------------|
-| api/v1/configuration/egress/DataEndpoints      | GET       | Gets all configured egress endpoints |
-| api/v1/configuration/egress/DataEndpoints      | DELETE    | Deletes all configured egress endpoints |
-| api/v1/configuration/egress/DataEndpoints      | POST      | Adds an array of egress endpoints or a single endpoint. Fails if any endpoint already exists |
-| api/v1/configuration/egress/DataEndpoints      | PUT       | Replaces all egress endpoints |
-| api/v1/configuration/egress/DataEndpoints/{id} | GET       | Gets configured endpoint by *id* |
-| api/v1/configuration/egress/DataEndpoints/{id} | DELETE    | Deletes configured endpoint by *id* |
-| api/v1/configuration/egress/DataEndpoints/{id} | PUT       | Replaces egress endpoint by *id*. Fails if endpoint doesn't exist |
-| api/v1/configuration/egress/DataEndpoints/{id} | PATCH     | Allows partial updating of configured endpoint by *id* |
+| api/v1/configuration/omfegress/DataEndpoints      | GET       | Gets all configured egress endpoints |
+| api/v1/configuration/omfegress/DataEndpoints      | DELETE    | Deletes all configured egress endpoints |
+| api/v1/configuration/omfegress/DataEndpoints      | POST      | Adds an array of egress endpoints or a single endpoint. Fails if any endpoint already exists |
+| api/v1/configuration/omfegress/DataEndpoints      | PUT       | Replaces all egress endpoints |
+| api/v1/configuration/omfegress/DataEndpoints/{id} | GET       | Gets configured endpoint by *id* |
+| api/v1/configuration/omfegress/DataEndpoints/{id} | DELETE    | Deletes configured endpoint by *id* |
+| api/v1/configuration/omfegress/DataEndpoints/{id} | PUT       | Replaces egress endpoint by *id*. Fails if endpoint doesn't exist |
+| api/v1/configuration/omfegress/DataEndpoints/{id} | PATCH     | Allows partial updating of configured endpoint by *id* |
 
 ## Egress execution details
 
