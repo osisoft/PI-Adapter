@@ -6,7 +6,7 @@ uid: ConfigurationTools
 
 ## EdgeCmd utility
 
-You can use the [EdgeCmd utility](https://github.com/osisoft/Edgecmd/blob/master/V1/EdgeCmd%20utility/EdgeCmd%20utility.md) utility on both Linux and Windows to configure OSIsoft adapters.
+You can use the [EdgeCmd utility](https://github.com/osisoft/Edgecmd/blob/master/V1/EdgeCmd%20utility/EdgeCmd%20utility.md) on both Linux and Windows to configure OSIsoft adapters.
 
 ## REST tools
 
