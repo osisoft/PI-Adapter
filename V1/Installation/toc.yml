@@ -1,5 +1,3 @@
-- name: Installation prerequisites
-  href: Installation prerequisites.md
 - name: Install the adapter
   href: Install the adapter.md
 - name: Uninstall the adapter
