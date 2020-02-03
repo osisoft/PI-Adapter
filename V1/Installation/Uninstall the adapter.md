@@ -10,7 +10,7 @@ uid: UninstallTheAdapter
 
     **Note:** The configuration, data, and log files are not removed by the uninstall process.
 
-2. Optional: To remove data, configuration and log files, remove the directory _C:\ProgramData\OSIsoft\Adapters\AdapterName\_.
+2. Optional: To remove data, configuration and log files, remove the directory _C:\ProgramData\OSIsoft\Adapters\AdapterName_.
 
     This will delete all data processed by the adapter in addition to configuration and log files.
 
