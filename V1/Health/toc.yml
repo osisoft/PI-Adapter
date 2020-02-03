@@ -4,3 +4,5 @@
 - name: Adapter diagnostics
   href: ../Diagnostics/toc.yml
   TopicHref: ../Diagnostics/Adapter diagnostics.md
+- name: Egress diagnostics
+  topicHref: ../Diagnostics/Egress diagnostics.md
