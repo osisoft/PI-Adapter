@@ -6,6 +6,8 @@ uid: OPCUAInstallation
 
 You can install OSIsoft adapters using an install kit. To download any OSIsoft adapter, go to the [OSIsoft Customer Portal](https://customers.osisoft.com/s/).
 
+For a list of supported operating systems and further installation requirements, see the following list.
+
 ## Installation prerequisites
 
 - OSIsoft adapters support .NET Core 3.1., which is supported on the following operating systems:
