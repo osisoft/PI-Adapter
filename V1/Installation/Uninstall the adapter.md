@@ -8,7 +8,7 @@ uid: UninstallTheAdapter
 
 1. To remove the OSIsoft adapter program files from a Windows device, use the Windows Control Panel uninstall application process.
 
-    The configuration, data, and log files are not removed by the uninstall process.
+    **Note:** The configuration, data, and log files are not removed by the uninstall process.
 
 2. Optional: To remove data, configuration and log files, remove the directory _C:\ProgramData\OSIsoft\Adapters\AdapterName\_.
 
