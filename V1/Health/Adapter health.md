@@ -4,30 +4,17 @@ uid: AdapterHealth
 
 # Adapter health
 
-Adapters produce various types of health data. You can use this information to ensure that your adapters are running properly and data is flowing to the configured OSIsoft OMF endpoints. This section provides information on how to configure your adapters so that this health data is produced and stored at a designated endpoint and what types of health data are available.
-
-
-## Parameters
-
-| Parameter                       | Required                            | Type      | Description                                        |
-|---------------------------------|-------------------------------------|-----------|----------------------------------------------------|
-| **Id**                          | Optional                            | `string`    | Uniquely identifies the endpoint. This can be any alphanumeric string. If left blank, a unique value is generated automatically. |
-| **Endpoint**                    | Required                            | `string`    | The URL of the OMF endpoint to receive this health data. |
-| **ClientId**                    | Required for OCS endpoints          | `string`    | The Client Id used for authentication with an OSIsoft Cloud Services OMF endpoint. |
-| **ClientSecret**                | Required for OCS endpoints          | `string`    | The Client Secret used for authentication with an OSIsoft Cloud Services OMF endpoint. |
-| **Username**                    | Required for PI Web API endpoints   | `string`    | The username used to authenticate with a PI Web API OMF endpoint. |
-| **Password**                    | Required for PI Web API endpoints   | `string`    | The password used to authenticate with a PI Web API OMF endpoint. |
-| **BufferingEnabled**            | Optional                            | `bool`      | Enables or disables buffering to this endpoint. By default, buffering is enabled ("true"). |
-| **ValidateEndpointCertificate** | Optional                            | `bool`      | Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends setting this to true in production environments. Defaults to true. |
+OSIsoft adapters produce different kinds of health data, which can be egressed to different health endpoints. For details, read the following two sections.
 
 ## Available health data
+
 Each individual adapter data component produces a few different pieces of health data. Dynamic data is sent every minute to configured health endpoints.
 
 The following health data are available:
 - [Device status](xref:DeviceStatus)
 - [Next Health Message Expected](xref:NextHealthMessageExpected)
 
-## Health endpoint differences - PI Web API vs. OSIsoft Cloud Services
+## Health endpoint differences
 
 Two following two OMF endpoints are currently supported for adapter health data:
 
