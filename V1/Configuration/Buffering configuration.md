@@ -66,3 +66,49 @@ curl -X PATCH "http://localhost:{port}/api/v1/configuration/system/buffering" -H
 `204 No Content` response indicates success.
 
 **Note:** In the previous examples, *port* refers to the configured port that the adapter runs on.
+
+### System Buffering Schema Definition
+
+Below is the full schema definition for the buffering configuration.
+
+File: *System_Buffering_schema.json*
+
+```c#
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "BufferingConfiguration",
+  "SchemaVersion": "1.0.0",
+  "definitions": {
+    "EdgeConfigurationBase": {
+      "type": "object",
+      "x-abstract": true,
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/EdgeConfigurationBase"
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "BufferLocation": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "MaxBufferSizeMB": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "EnableBuffering": {
+          "type": "boolean"
+        }
+      }
+    }
+  ]
+}
+```
+

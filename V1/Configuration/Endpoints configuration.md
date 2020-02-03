@@ -114,3 +114,93 @@ The following examples are valid egress configurations.
 - After you add configuration for an egress endpoint, egress will be executed immediately for that endpoint. Egress is handled individually per configured endpoint. On first execution, types and containers will be egressed. After that only new or changed types or containers will be egressed. Type creation must be successful in order to create containers. Container creation must be successful in order to egress data.
 - If an egress endpoint is removed, data flow will immediately end for that endpoint. Any buffered data for the endpoint that has been deleted will be permanently lost.
 - Type, container, and data items are batched into one or more OMF messages when egressing. As per the requirements defined in OMF, a single message payload will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item will result in the message failing. Types, containers, and data will continue to be egressed as long as the destination continues to respond to HTTP requests - retrying previous failures as needed.
+
+### Egress Data Endpoints Schema Definition:
+
+Below is the full schema definition for the egress data endpoints configuration.
+
+File: *Egress_DataEndpoints_schema.json*
+
+```c#
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "EgressEndpointConfiguration",
+  "SchemaVersion": "1.0.0",
+  "definitions": {
+    "EndpointConfigurationBase": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/EdgeConfigurationBase"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "Endpoint"
+          ],
+          "properties": {
+            "Id": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Endpoint": {
+              "type": "string",
+              "minLength": 1
+            },
+            "UserName": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Password": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "ClientId": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "ClientSecret": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "TokenEndpoint": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "ValidateEndpointCertificate": {
+              "type": "boolean"
+            }
+          }
+        }
+      ]
+    },
+    "EdgeConfigurationBase": {
+      "type": "object",
+      "x-abstract": true,
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/EndpointConfigurationBase"
+    },
+    {
+      "type": "object",
+      "additionalProperties": false
+    }
+  ]
+}
+```
+
