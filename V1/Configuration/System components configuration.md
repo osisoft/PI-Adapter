@@ -57,8 +57,8 @@ After the curl command completes successfully, you can configure or use the new 
 
 The following table defines the basic behavior of the _AddComponent.json_ file.
 
-| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties |                           
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | 
+| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties |
+| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             |
 
 
@@ -88,4 +88,48 @@ The following parameters are available for configuring system components.
                 "ComponentType": "OmfEgress"
    }
 ]
+```
+
+### System Components Schema Definition
+
+Below is the full schema definition for the system components configuration.
+
+File: *System_Components_schema.json*
+
+```c#
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "EdgeComponentConfig",
+  "SchemaVersion": "1.0.0",
+  "definitions": {
+    "EdgeConfigurationBase": {
+      "type": "object",
+      "x-abstract": true,
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/EdgeConfigurationBase"
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ComponentId",
+        "ComponentType"
+      ],
+      "properties": {
+        "ComponentId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ComponentType": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  ]
+}
 ```
