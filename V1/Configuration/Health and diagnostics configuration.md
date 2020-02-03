@@ -4,7 +4,7 @@ uid: HealthAndDiagnosticsConfiguration
 
 # Health and diagnostics configuration
 
-The following 
+The following sections provide an overview on how to configure health endpoints to which health and diagnostics data can be sent.
 
 ## Health
 
