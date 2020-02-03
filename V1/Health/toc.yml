@@ -2,4 +2,4 @@
   href: Health/toc.yml
   topicHref: Adapter health.md
 - name: Adapter diagnostics
-  href: Diagnostics/Adapter diagnostics.md
+  href: ../Diagnostics/Adapter diagnostics.md
