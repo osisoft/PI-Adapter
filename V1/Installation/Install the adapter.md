@@ -14,7 +14,7 @@ To install an OSIsoft adapter on Windows, complete the following steps:
 
 3. Change to the directory into which you downloaded the .msi file.
 
-4. Run `<adapterName>_<OSversion>.msi` file.
+4. Run the .msi file.
 
 5. Follow the setup wizard.
 
