@@ -4,17 +4,6 @@ uid: AdapterDiagnostics
 
 # Adapter diagnostics
 
-OSIsoft adapters produce different kinds of diagnostics data, which can be egressed to different health endpoints. For details, read the following sections.
-
-## Egress diagnostics data through PeriodicEgressEndpoints
-
-- To egress diagnositcs related data, configure an adapter health egress endpoint.
-
-    For more information, see [Adapter health](xref:Health). 
-
-
-## Adapter diagnostics
-
 The Diagnostics.System dynamic type includes the following values which are logged in a stream with the id System.Diagnostics.
 This diagnostic stream contains system level information related to the host platform that the adapter is running on.
 
@@ -36,49 +25,6 @@ This diagnostic stream contains system level information related to the host pla
 | **double** | StorageFreeSpace (uom=MB)             | Free space available                                                                             |
 
 Each adapter component produces its own diagnostics streams.
-
-### Stream count
-
-The Diagnostics.StreamCountEvent dynamic type includes these values, which are logged in a stream with the id {componentid}.StreamCount. The stream count and type count include only types and streams created for sequential data received from a data source.
-
-| Type   | Property    | Description                                       |
-| ------ | ----------- | ------------------------------------------------- |
-| **string** | timestamp   | Timestamp of event                                |
-| **int**    | StreamCount | Number of streams created by the adapter instance |
-| **int**    | TypeCount   | Number of types created by the adapter instance   |
-
-### IO rate
-
-The Diagnostics.Adapter.IORate dynamic type includes these values, which are logged in a stream with the id {componentid}.IORate. IO rate includes only sequential data collected from a data source.
-
-| Type   | Property  | Description                                            	|
-| ------ | --------- | -------------------------------------------------------	|
-| **string** | timestamp | Timestamp of event                                    	|
-| **double** | IORate    | 1-minute rolling average of data rate (streams/second)	|
-
-### Error rate
-
-The Diagnostics.Adapter.ErrorRate dynamic type includes these values, which are logged in a stream with the id {componentid}.ErrorRate.
-
-| Type   | Property  | Description                                              |
-| ------ | --------- | -------------------------------------------------------- |
-| **string** | timestamp | Timestamp of event                                       |
-| **double** | ErrorRate | 1-minute rolling average of error rate (streams/second)	|
-
-
-## Egress diagnostics
-
-The Egress component of the adapter produces the following diagnostics streams.
-
-### IO rate
-
-The Diagnostics.Egress.IORate dynamic type includes these values, which are logged in a stream with the id {machineName}.{serviceName}.OmfEgress.{EndpointId}.IORate. IO rate includes only sequential data sucessfully sent to an egress.
-
-| Type   | Property  | Description                                            	|
-| ------ | --------- | -------------------------------------------------------	|
-| **string** | timestamp | Timestamp of event                                    	|
-| **double** | IORate    | 1-minute rolling average of data rate (streams/second)	|
-
 
 ## REST URLs
 
