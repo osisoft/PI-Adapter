@@ -1,8 +1,8 @@
 ---
-uid: SystemDiagnostics
+uid: System
 ---
 
-# System diagnostics
+# System
 
 The Diagnostics.System dynamic type includes the following values which are logged in a stream with the id System.Diagnostics.
 This diagnostic stream contains system level information related to the host platform that the adapter is running on.
