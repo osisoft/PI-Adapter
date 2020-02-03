@@ -6,16 +6,8 @@ uid: AdapterHealth
 
 Adapters produce various types of health data. You can use this information to ensure that your adapters are running properly and data is flowing to the configured OSIsoft OMF endpoints. This section provides information on how to configure your adapters so that this health data is produced and stored at a designated endpoint and what types of health data are available.
 
-## Configure health endpoints
 
-A health endpoint designates an OSIsoft OMF endpoint where adapter health information should be sent. You can configure multiple health endpoints. 
-
-1. Using any text editor, create a file that contains one or more health endpoints in JSON form.
-    - For a table of all available health endpoint parameters, see [Parameters](#parameters).
-2. Save the file.
-3. Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `
-
-### Parameters
+## Parameters
 
 | Parameter                       | Required                            | Type      | Description                                        |
 |---------------------------------|-------------------------------------|-----------|----------------------------------------------------|
