@@ -18,11 +18,11 @@ Complete the following to create new egress endpoints:
 
 1. Using any text editor, create a file that contains one or more egress endpoints in JSON form.
     - For content structure, see [Examples](#examples).
-    - For a table of all available egress parameters, see [Parameters](#parameters).
-2. Save the file.
-3. Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/`
+2. Update the parameters as needed. For a table of all available parameters, see [Parameters](#parameters)
+3. Save the file as _Egress_DataEndpoints.json_.
+4. Use any configuration tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/`
 
-**Example using cURL:**
+**Examples using curl:**
 
 - Add endpoints
     ```bash
@@ -47,19 +47,29 @@ Complete the following to create new egress endpoints:
     ```bash
     curl -v -X GET "http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints"
     ```
+    
+### Egress endpoint configuration schema
+
+The following table defines the basic behavior of the _Egress_DataEndpoints_schema.json_ file.
+
+| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties |                           
+| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | 
+| Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             |
+
 
 ### Parameters
 
-| Parameter                       | Required                  | Type      | Description                                        |
-|---------------------------------|---------------------------|-----------|----------------------------------------------------|
-| **Id**                          | Required                  | string    | Unique identifier |
-| **Endpoint**                    | Required                  | string    | Destination that accepts OMF v1.1 messages. Supported destinations include OCS and PI server. |
-| **ClientId**                    | Required for OCS endpoint | string    | Authentication with the OCS OMF endpoint. |
-| **ClientSecret**                | Required for OCS endpoint | string    | Authentication with the OCS OMF endpoint. |
-| **TokenEndpoint**               | Optional for OCS endpoint | string    | Retrieves an OCS token from an alternative endpoint. |
-| **Username**                    | Required for PI endpoint  | string    | Basic authentication to the PI Web API OMF endpoint. |
-| **Password**                    | Required for PI endpoint  | string    | Basic authentication to the PI Web API OMF endpoint. |
-| **ValidateEndpointCertificate** | Optional                  | boolean   | Disables verification of destination certificate. Use for testing only with self-signed certificates. Defaults to true. |
+| Parameter                       | Required                  | Type      | Nullable | Description                                        |
+|---------------------------------|---------------------------|-----------|----------|-------------|
+| **Id**                          | Required                  | string    | Yes      | Unique identifier |
+| **Endpoint**                    | Required                  | string    | No      | Destination that accepts OMF v1.1 messages. Supported destinations include OCS and PI server. |
+| **ValidateEndpointCertificate** | Optional                  | boolean   | No      | Disables verification of destination certificate. Use for testing only with self-signed certificates. Defaults to true. |
+| **ClientId**                    | Required for OCS endpoint | string    | Yes      | Authentication with the OCS OMF endpoint. |
+| **ClientSecret**                | Required for OCS endpoint | string    | Yes      | Authentication with the OCS OMF endpoint. |
+| **TokenEndpoint**               | Optional for OCS endpoint | string    | Yes      | Retrieves an OCS token from an alternative endpoint. |
+| **Username**                    | Required for PI endpoint  | string    | Yes      | Basic authentication to the PI Web API OMF endpoint. |
+| **Password**                    | Required for PI endpoint  | string    | Yes      | Basic authentication to the PI Web API OMF endpoint. |
+
 
 ### Examples
 
@@ -69,10 +79,9 @@ The following examples are valid egress configurations.
 
 ```json
 [{
-    "Id": "OCS",
-    "Endpoint" : " https://{IP/FQDN of OCS}/api/Tenants/{tenantId}/Namespaces/{namespaceId}/omf",
-    "ClientId" : "{clientId}",
-    "ClientSecret" : "{clientSecret}"
+     "Endpoint": "https://<OCS OMF endpoint>",
+     "ClientId": "<clientid>",
+     "ClientSecret": "<clientsecret>"
 }]
 ```
 
@@ -80,10 +89,10 @@ The following examples are valid egress configurations.
 
 ```json
 [{
-    "Id": "PI WebAPI",
-    "Endpoint" : " https://{IP/FQDN of WebApi}/piwebapi/omf",
-    "userName" : "{username}",
-    "Password" : "{password}"
+     "Endpoint": "https://<pi web api server>/piwebapi/omf/",
+     "UserName": "<username>",
+     "Password": "<password>"
+    
 }]
 ```
 
