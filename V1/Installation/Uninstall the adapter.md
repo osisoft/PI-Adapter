@@ -23,7 +23,7 @@ uid: UninstallTheAdapter
     sudo apt remove osisoft.adapters.<AdapterName>
     ```
 
-2. Optional: To remove data, configuration, and log files, remove the directory _/usr/share/OSIsoft/Adapters/AdapterName/_.
+2. Optional: To remove data, configuration, and log files, remove the directory _/usr/share/OSIsoft/Adapters/AdapterName_.
 
     This will delete all data processed  by the adapter, in addition to configuration and log files.
 
