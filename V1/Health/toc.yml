@@ -3,6 +3,6 @@
   topicHref: Adapter health.md
 - name: Adapter diagnostics
   href: ../Diagnostics/toc.yml
-  TopicHref: ../Diagnostics/Adapter diagnostics.md
+  topicHref: ../Diagnostics/Adapter diagnostics.md
 - name: Egress diagnostics
-  topicHref: ../Diagnostics/Egress diagnostics.md
+  href: ../Diagnostics/Egress diagnostics.md
