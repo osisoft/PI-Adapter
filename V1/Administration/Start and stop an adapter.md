@@ -4,44 +4,34 @@ uid: StartAndStopAnAdapter
 
 # Start and stop an adapter
 
-By default, all currently configured OSIsoft adapters are started and remain running until the product shuts down.
+By default, all currently configured OSIsoft adapters are started.
 
 ## Start an OSIsoft adapter
 
-- To start an individual OSIsoft adapter, use any REST client and make a request using the following:
+Complete the following to start an individual OSIsoft adapter:
 
-    ```http
-    Method: POST
-    Endpoint: http://localhost:5590/api/v1/administration/OSIsoft adapterId/Start
-    Header: Content-Type application/json
-    ```
-
-    Example using cURL:
+1. Start any configuration tool capable of making HTTP requests.
+2. Execute a POST command to the following endpoint, replacing `<OSIsoft adapterId>` with the adapter that you want to start: `http://localhost:5590/api/v1/administration/OSIsoft adapterId/Start`
+    
+    Example **Start the OpcUa1 adapter** using curl:
 
     ```bash
-    curl -v -d "" http://localhost:5590/api/v1/Administration/OSIsoft adapterId/Start
+    curl -v -d "" http://localhost:5590/api/v1/Administration/OpcUa1/Start
     ```
-
-    **Note:** Replace _OSIsoft adapterId_ with the ID of the OSIsoft adapter you want to start.
 
     An HTTP status 204 message indicates success.
 
 ## Stop an OSIsoft adapter
 
-- To stop an individual OSIsoft adapter, use any REST client and make a request using the following:
+Complete the following to stop an individual OSIsoft adapter:
 
-    ```http
-    Method: POST
-    Endpoint: http://localhost:5590/api/v1/administration/OSIsoft adapterId/Stop
-    Header: Content-Type application/json
-    ```
+1. Start any configuration tool capable of making HTTP requests.
+2. Execute a POST command to the following endpoint, replacing `<OSIsoft adapterId>` with the adapter that you want to stop: `http://localhost:5590/api/v1/administration/OSIsoft adapterId/Stop`
 
-    Example using cURL:
+    Example **Stop the Modbus1 adapter** using cURL:
 
     ```bash
-    curl -v -d "" http://localhost:5590/api/v1/Administration/OSIsoft adapterId/Stop
+    curl -v -d "" http://localhost:5590/api/v1/Administration/Modbus1/Stop
     ```
-
-    **Note:** Replace _OSIsoft adapterId_ with the ID of the OSIsoft adapter you want to stop.
 
     An HTTP status 204 message indicates success.
