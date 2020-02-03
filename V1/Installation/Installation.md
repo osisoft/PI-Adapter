@@ -4,7 +4,7 @@ uid: OPCUAInstallation
 
 # Installation
 
-OSIsoft adapters can be installed using an install kit. You can download any OSIsoft adapter from the [OSIsoft Customer Portal](https://customers.osisoft.com/s/).
+You can install OSIsoft adapters using an install kit. To download any OSIsoft adapter, go to the [OSIsoft Customer Portal](https://customers.osisoft.com/s/).
 
 ## Installation prerequisites
 
