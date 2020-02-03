@@ -10,12 +10,12 @@ OSIsoft adapters use JSON configuration files in a protected directory on Window
 
 ## Configure system components
 
-The default _System_Components.json_ file for the System component contains the following information. The Egress component is required for this initial release for adapters to run.
+The default _System_Components.json_ file for the System component contains the following information. The OmfEgress component is required for this initial release for adapters to run.
 
 ```json
 [
   {
-    "ComponentId": "Egress",
+    "ComponentId": "OmfEgress",
     "ComponentType": "OmfEgress"
   }
 ]
@@ -68,7 +68,7 @@ The following parameters are available for configuring system components.
 
 | Parameters     | Required | Type    | Nullable | Description |
 | -------------- | -------- | --------| ---------|-------------|
-| ComponentId    | Required |`string` | Yes      | The ID of the component. It can be any alphanumeric string, for example Egress.|
+| ComponentId    | Required |`string` | Yes      | The ID of the component. It can be any alphanumeric string, for example OmfEgress.|
 | ComponentType  | Required |`string` | Yes      | The type of the component, for example OmfEgress. There are two types of components: OmfEgress and the adapter. |
 
 ## System components example
@@ -84,7 +84,7 @@ The following parameters are available for configuring system components.
                 "componentType": "Modbus"
             },
             {
-                "ComponentId": "Egress",
+                "ComponentId": "OmfEgress",
                 "ComponentType": "OmfEgress"
    }
 ]
