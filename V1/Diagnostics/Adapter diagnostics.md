@@ -4,7 +4,7 @@ uid: AdapterDiagnostics
 
 # Adapter diagnostics
 
-The adapter and its components produce diagnostics data which is sent to all health endpoints. The _System_Diagnostics.json_ file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd tool. Diagnostics data are collected by default.
+OSIsoft adapters produce different kinds of diagnostics data, which can be egressed to different health endpoints. For details, read the following sections.
 
 ## Egress diagnostics data through PeriodicEgressEndpoints
 
