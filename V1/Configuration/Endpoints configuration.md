@@ -2,7 +2,7 @@
 uid: EndpointsConfiguration
 ---
 
-# Configure endpoints
+# Endpoints configuration
 
 Adapters can egress dynamic data to destinations that you supply through OMF. Supported destinations are OSIsoft Cloud Services and PI servers through PI Web API.
 
@@ -10,7 +10,7 @@ An egress endpoint represents a destination to which data will be sent. You can 
 
 **Note:** Some types, and consequently containers and data, cannot be egressed.  For more information, see [Egress Execution Details](#egress-execution-details).
 
-## Configuration procedure
+## Configure endpoints
 
 **Note:** You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoints, see [REST URLs](#rest-urls).
 
