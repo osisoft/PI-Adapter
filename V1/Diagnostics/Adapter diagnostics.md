@@ -63,7 +63,7 @@ If successful, the methods returns a `204 No Content` response code.
 
 After running diagnostics with a health endpoint configured to a PI server, you can use _**PI System Explorer**_ to view the diagnostics for a given adapter. The element hierarchy is shown in the following image. 
 
-![System.Diagnostics](./Diagnostics_System.jpg)
+![System.Diagnostics](../images/Diagnostics_System.jpg)
 
 **Note:**
 
