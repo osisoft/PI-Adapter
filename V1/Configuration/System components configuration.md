@@ -54,7 +54,7 @@ Complete the following to add a new component:
 
 ### Delete a component
 
-Complete the following to delete an exising component:
+Complete the following to delete an existing component:
 
 1. Start any tool capable of making HTTP requests.
 2. Execute a DELETE command to the following endpoint:`http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/`
