@@ -52,7 +52,7 @@ Complete the following to add a new component:
 
 	After the curl command completes successfully, you can configure or use the new component.
 
-### Delete a component
+### Delete a system component
 
 Complete the following to delete an existing component:
 
