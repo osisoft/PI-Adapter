@@ -46,9 +46,9 @@ Complete the following to add a new component:
 
 	The following example shows the HTTP request using curl (run this command from the same directory where the file is located):
 
-    ```bash
-    curl -i -d "@AddComponent.json" -H "Content-Type: application/json" http://localhost:5595/api/v1/configuration/system/components
-    ```
+   	```bash
+   	curl -i -d "@AddComponent.json" -H "Content-Type: application/json" http://localhost:5595/api/v1/configuration/system/components
+   	```
 
 	After the curl command completes successfully, you can configure or use the new component.
 
@@ -59,13 +59,13 @@ Complete the following to delete an existing component:
 1. Start any tool capable of making HTTP requests.
 2. Execute a DELETE command to the following endpoint: `http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/`
 
-The following example shows the HTTP request using curl:
+	The following example shows the HTTP request using curl:
 
-    ```bash
+	```bash
 	curl -X DELETE http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/
-    ```
+	```
 
-All the logs and configurations files for the deleted components will be moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
+	All the logs and configurations files for the deleted components will be moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
 	
 ## System components schema
 
