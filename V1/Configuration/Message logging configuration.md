@@ -4,11 +4,11 @@ uid: MessageLoggingConfiguration
 
 # Message logging configuration
 
-Edge Data Store writes daily log messages to flat text files in the following locations:
+OSIsoft adapters write daily log messages to flat text files in the following locations:
 
-• Windows: *%ProgramData%/OSIsoft/EdgeDataStore/Logs*
+• Windows: *%ProgramData%\OSIsoft\Adapters\OpcUa\OpcUa\Logs*
 
-• Linux: */usr/share/OSIsoft/EdgeDataStore/Logs*
+• Linux: */usr/share/OSIsoft/Adapters/OpcUa/OpcUa/Logs*
 
 Each message in the log displays the message severity level, timestamp, and the message itself.
 
@@ -27,9 +27,9 @@ The following logging configuration is the default for a component on install:
 The schema file specifies how to formally describe the configuration parameters for message logging. 
 It is located in:
 
-• Windows: *%ProgramFiles%/OSIsoft/EdgeDataStore/Schema*
+• Windows: *%ProgramFiles%\OSIsoft\Adapters\adapterName\Schema*
 
-• Linux: */opt/EdgeDataStore/Schema*
+• Linux: */opt/OSIsoft/Adapters/adapterName/Schema*
 
 ### Log levels
 
@@ -75,7 +75,7 @@ To change the logging configuration complete the following steps:
 
 **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter or Storage, for example _OpcUa1_.
 
-On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after Edge Data Store is restarted. 
+On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after the adapter is restarted. 
 
 **Note:**  Any parameter not specified in the updated configuration file will revert to the default schema value.
 
