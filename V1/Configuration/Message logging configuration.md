@@ -6,9 +6,9 @@ uid: MessageLoggingConfiguration
 
 OSIsoft adapters write daily log messages to flat text files in the following locations:
 
-• Windows: *%ProgramData%\OSIsoft\Adapters\OpcUa\OpcUa\Logs*
+• Windows: *%ProgramData%\OSIsoft\Adapters\adapterName\adapterId\Logs*
 
-• Linux: */usr/share/OSIsoft/Adapters/OpcUa/OpcUa/Logs*
+• Linux: */usr/share/OSIsoft/Adapters/adapterName/adapterId/Logs*
 
 Each message in the log displays the message severity level, timestamp, and the message itself.
 
