@@ -18,7 +18,7 @@ Complete the following for your operating to start or stop the adapter service:
 
 1. Open command line.
 
-2. Depending on whether your adapter is running or not, type the following:
+2. Depending on whether your adapter is running or not, type one of the following:
 
     Example: **Start** OSIsoft Adapter for OPC UA
 
