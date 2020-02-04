@@ -4,6 +4,8 @@ uid: UninstallTheAdapter
 
 # Uninstall the adapter
 
+Complete the following for your operating system to uninstall an OSIsoft adapter:
+
 ## Windows
 
 1. To remove the OSIsoft adapter program files from a Windows device, use the Windows Control Panel uninstall application process.
