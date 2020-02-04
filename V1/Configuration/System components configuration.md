@@ -4,13 +4,17 @@ uid: SystemComponentsConfiguration
 
 # System components configuration
 
-OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the edgecmd command line tool for any changes you make to the files. As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form (with cryptographic key material stored separately in a secure location.) If you edit the files directly, the adapter may not work as expected.
+OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the edgecmd command line tool for any changes you make to the files. 
+
+As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form (with cryptographic key material stored separately in a secure location.) If you edit the files directly, the adapter may not work as expected.
 
 **Note:** You can edit any single component or facet of the system using REST, but also configure the system as a whole with a single REST call.
 
 ## Configure system components
 
-The default _System_Components.json_ file for the System component contains the following information. The OmfEgress component is required for this initial release for adapters to run.
+The default _System_Components.json_ file for the System component contains the following information. 
+
+**Note:** The OmfEgress component is required for this initial release for adapters to run.
 
 ```json
 [
