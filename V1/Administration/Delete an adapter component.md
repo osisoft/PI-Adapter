@@ -12,13 +12,13 @@ All configuration and log files will be renamed and moved to a folder called "Re
 
 In the following example, one Modbus Adapter service is installed on a particular Windows node with the name "ModbusService1". A Modbus component with the name "ModbusDeviceX" was added and configured to this Modbus adapter and later removed. Similar behavior will be seen on Linux. This is the resulting relocation and renaming scheme after deletion:
 
-![ConfigurationFolder](https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/images/ConfigurationFolder.png)
+![ConfigurationFolder](../images/ConfigurationFolder.png)
 
-![RemovedConfigurations](https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/images/RemovedConfigurations.png)
+![RemovedConfigurations](../images/RemovedConfigurations.png)
 
-![LogsFolder](https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/images/LogsFolder.png)
+![LogsFolder](../images/LogsFolder.png)
 
-![RemovedLogs](https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/images/RemovedLogs.png)
+![RemovedLogs](../images/RemovedLogs.png)
 
 
 ## REST Command: DELETE
