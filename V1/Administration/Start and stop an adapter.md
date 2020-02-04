@@ -12,7 +12,7 @@ Complete the following for your operating to start or stop the adapter service:
 
 2. Select **OSIsoft Adapter for _AdapterName_**.
 
-3. Depending on whether your adapter is running or not, click either **Start** or **Stop**
+3. Depending on whether your adapter is running or not, click either **Start** or **Stop**.
 
 ## Linux
 
