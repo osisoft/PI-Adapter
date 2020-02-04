@@ -4,7 +4,7 @@ uid: StartAndStopAnAdapter
 
 # Start and stop an adapter
 
-Complete the following for your operating to start or stop the adapter service:
+Complete the following for your operating system to start or stop the adapter service:
 
 ## Windows
 
