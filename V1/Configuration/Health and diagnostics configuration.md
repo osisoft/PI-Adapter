@@ -17,7 +17,7 @@ A health endpoint designates an OSIsoft OMF endpoint where adapter health inform
 1. Using any text editor, create a file that contains one or more health endpoints in JSON form.
     - For a table of all available health endpoint parameters, see [Health endpoint parameters](#health-endpoint-parameters).
 2. Save the file.
-3. Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `<endpoint placeholder>`
+3. Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints/`
 
 ### Health endpoint parameters
 
