@@ -1,16 +1,16 @@
 ---
-uid: EndpointsConfiguration
+uid: EgressEndpointsConfiguration
 ---
 
-# Endpoints configuration
+# Egress endpoints configuration
 
 Adapters can egress dynamic data to destinations that you supply through OMF. Supported destinations are OSIsoft Cloud Services and PI servers through PI Web API.
 
-An egress endpoint represents a destination to which data will be sent. You can specify multiple endpoints. Every egress endpoint is executed independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under [Parameters](#parameters).
+An egress endpoint represents a destination to which data will be sent. You can specify multiple endpoints. Every egress endpoint is executed independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under [Egress endpoint parameters](#egress-endpoint-parameters).
 
 **Note:** Some types, and consequently containers and data, cannot be egressed.  For more information, see [Egress Execution Details](#egress-execution-details).
 
-## Configure endpoints
+## Configure egress endpoints
 
 **Note:** You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoints, see [REST URLs](#rest-urls).
 
@@ -18,7 +18,7 @@ Complete the following to create new egress endpoints:
 
 1. Using any text editor, create a file that contains one or more egress endpoints in JSON form.
     - For content structure, see [Examples](#examples).
-2. Update the parameters as needed. For a table of all available parameters, see [Parameters](#parameters)
+2. Update the parameters as needed. For a table of all available parameters, see [Egress endpoint parameters](#egress-endpoint-parameters).
 3. Save the file as _Egress_DataEndpoints.json_.
 4. Use any configuration tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/`
 
@@ -63,7 +63,7 @@ Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
 Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 
-### Parameters
+### Egress endpoint parameters
 
 | Parameter                       | Required                  | Type      | Nullable | Description                                        |
 |---------------------------------|---------------------------|-----------|----------|-------------|
