@@ -20,17 +20,17 @@ Complete the following for your operating to start or stop the adapter service:
 
 2. Depending on whether your adapter is running or not, type the following:
 
-  Example: **Start** OSIsoft Adapter for OPC UA
+    Example: **Start** OSIsoft Adapter for OPC UA
 
-  ```cmdline
-  systemctl start OSIsoft Adapter for OPC UA
-  ```
-  
-  Example: **Stop** OSIsoft Adapter for Modbus TCP
-  
-  ```cmdline
-  systemctl stop OSIsoft Adapter for Modbus
-  ```
+    ```cmdline
+    systemctl start OSIsoft Adapter for OPC UA
+    ```
+
+    Example: **Stop** OSIsoft Adapter for Modbus TCP
+
+    ```cmdline
+    systemctl stop OSIsoft Adapter for Modbus
+    ```
   
 3. Press Enter.
 
