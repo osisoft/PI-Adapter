@@ -28,7 +28,9 @@ The default _System_Components.json_ file for the System component contains the 
 - The OmfEgress component is required for this initial release for adapters to run. 
 - You can add additional components if you want, but only a single OmfEgress component is supported. 
 
-1. To add a new component, create a JSON file with the ComponentId and ComponentType. The following example adds a Modbus TCP adapter. 
+Complete the following to add a new component:
+
+1. Create a JSON file with the ComponentId and ComponentType. The following example adds a Modbus TCP adapter. 
 
     **Note:** A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter:
 
