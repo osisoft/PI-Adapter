@@ -57,7 +57,7 @@ Complete the following to add a new component:
 Complete the following to delete an existing component:
 
 1. Start any tool capable of making HTTP requests.
-2. Execute a DELETE command to the following endpoint:`http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/`
+2. Execute a DELETE command to the following endpoint: `http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/`
 
 The following example shows the HTTP request using curl:
 
