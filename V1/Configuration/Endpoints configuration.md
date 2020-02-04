@@ -56,6 +56,12 @@ The following table defines the basic behavior of the _Egress_DataEndpoints_sche
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | 
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             |
 
+The full schema definition for the egress endpoint configuration is in the _Egress_DataEndpoints_schema.json_ here:
+
+Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
+
+Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
+
 
 ### Parameters
 
