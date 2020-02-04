@@ -4,6 +4,8 @@ uid: InstallTheAdapter
 
 # Install the adapter
 
+Complete the following for your operating system to install an OSIsoft adapter:
+
 ## Windows
 
 To install an OSIsoft adapter on Windows, complete the following steps:
