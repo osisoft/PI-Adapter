@@ -14,8 +14,6 @@ As part of making adapters as secure as possible, any passwords or secrets that 
 
 The default _System_Components.json_ file for the System component contains the following information. 
 
-**Note:** The OmfEgress component is required for this initial release for adapters to run.
-
 ```json
 [
   {
@@ -25,7 +23,10 @@ The default _System_Components.json_ file for the System component contains the 
 ]
 ```
 
- You can add additional components if you want, but only a single OmfEgress component is supported. 
+ **Note:** 
+
+- The OmfEgress component is required for this initial release for adapters to run. 
+- You can add additional components if you want, but only a single OmfEgress component is supported. 
 
 1. To add a new component, create a JSON file with the ComponentId and ComponentType. The following example adds a Modbus TCP adapter. 
 
@@ -38,24 +39,31 @@ The default _System_Components.json_ file for the System component contains the 
       }
     ```
 
-2. Save the JSON in a file named _AddComponent.json_. 
-3. From the same directory where the file exists, run the following curl script:
+2. Save the JSON as _AddComponent.json_. 
+3. Use any tool capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5595/api/v1/configuration/system/components`
+
+	The following example shows the HTTP request using curl (run this command from the same directory where the file is located):
 
     ```bash
     curl -i -d "@AddComponent.json" -H "Content-Type: application/json" http://localhost:5595/api/v1/configuration/system/components
     ```
 
-After the curl command completes successfully, you can configure or use the new component.
+	After the curl command completes successfully, you can configure or use the new component.
 
 ### Delete a component
 
- - To delete an existing component, run the following curl script:
+Complete the following to delete an exising component:
+
+1. Start any tool capable of making HTTP requests.
+2. Execute a DELETE command to the following endpoint:`http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/`
+
+The following example shows the HTTP request using curl:
 
     ```bash
 	curl -X DELETE http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/
     ```
 
-	All the logs and configurations files for the deleted components will be moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
+All the logs and configurations files for the deleted components will be moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
 	
 ## System components schema
 
@@ -64,6 +72,12 @@ The following table defines the basic behavior of the _AddComponent.json_ file.
 | Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             |
+
+The full schema definition for the system components configuration is in the *System_Components_schema.json* located here:
+
+Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
+
+Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 
 ## Parameters for system components
@@ -92,48 +106,4 @@ The following parameters are available for configuring system components.
                 "ComponentType": "OmfEgress"
    }
 ]
-```
-
-### System Components Schema Definition
-
-Below is the full schema definition for the system components configuration.
-
-File: *System_Components_schema.json*
-
-```c#
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "EdgeComponentConfig",
-  "SchemaVersion": "1.0.0",
-  "definitions": {
-    "EdgeConfigurationBase": {
-      "type": "object",
-      "x-abstract": true,
-      "additionalProperties": false
-    }
-  },
-  "allOf": [
-    {
-      "$ref": "#/definitions/EdgeConfigurationBase"
-    },
-    {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "ComponentId",
-        "ComponentType"
-      ],
-      "properties": {
-        "ComponentId": {
-          "type": "string",
-          "minLength": 1
-        },
-        "ComponentType": {
-          "type": "string",
-          "minLength": 1
-        }
-      }
-    }
-  ]
-}
 ```
