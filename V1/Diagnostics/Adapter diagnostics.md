@@ -21,7 +21,7 @@ This diagnostic stream contains system level information related to the host pla
 | **double** | ManagedMemorySize (uom=MB)            | Number of bytes currently thought to be allocated in managed memory                              |
 | **double** | PrivateMemorySize (uom=MB)            | Amount of paged memory, in bytes, allocated for the host process                                 |
 | **double** | PeakPagedMemorySize (uom=MB)          | Maximum amount of memory in the virtual memory paging file, in bytes, used by the host process.  |
-| **double** | StorageTotalSize (uom=MB)             | Total size of the storage medium in use by the Edge Data Store                                   |
+| **double** | StorageTotalSize (uom=MB)             | Total size of the storage medium in use by the system                                   |
 | **double** | StorageFreeSpace (uom=MB)             | Free space available                                                                             |
 
 Each adapter component produces its own diagnostics streams.
