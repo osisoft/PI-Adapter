@@ -4,13 +4,28 @@ uid: DeleteAnAdapterComponent
 
 # Delete an adapter component
 
-An adapter instance can be removed by making a DELETE call with either a REST client or the EdgeCmd utility. When an adapter instance is removed, the configuration and log files are saved into a sub-directory in case they are needed later. Any associated types, streams, and data will remain on respective endpoints.
+When an adapter component is removed, the configuration and log files are saved into a sub-directory in case they are needed later. Any associated types, streams, and data will remain on respective endpoints.
 
-## File Relocation
+Complete the following to delete an adapter component:
 
-All configuration and log files will be renamed and moved to a folder called "Removed" within the respective directory. Configuration files will be moved to .\Configuration\Removed; logs files to .\Logs\Removed. The files are renamed according to the timestamp of removal, e.g. FileName.json_removed_yyyy-MM-dd--hh-mm-ss.
+1. Start any tool capable of making HTTP requests.
 
-In the following example, one Modbus Adapter service is installed on a particular Windows node with the name "ModbusService1". A Modbus component with the name "ModbusDeviceX" was added and configured to this Modbus adapter and later removed. Similar behavior will be seen on Linux. This is the resulting relocation and renaming scheme after deletion:
+2. Execute a DELETE command to the following endpoint: `http://localhost:5595/api/v1/configuration/system/components/ComponentIdToBeDeleted`
+
+    **Note:** An empty DELETE command must be made against the Id of the component to be deleted. 
+
+
+    Example using cURL:
+
+    ```bash
+    curl -v -X DELETE "http://localhost:5595/api/v1/configuration/system/components/ComponentIdToBeDeleted"
+    ```
+
+## File relocation
+
+All configuration and log files will be renamed and moved to a folder called _Removed_ within the respective directory. Configuration files will be moved to *.\Configuration\Removed;* log files to *.\Logs\Removed*. The files are renamed according to the timestamp of removal, for example *FileName.json_removed_yyyy-MM-dd--hh-mm-ss*.
+
+In the following example, one Modbus Adapter service is installed on a particular Windows node with the name ModbusService1. A Modbus component with the name ModbusDeviceX was added and configured to this Modbus adapter and later removed. Linux follows a similar behavior. This is the resulting relocation and renaming scheme after deletion:
 
 ![ConfigurationFolder](../images/ConfigurationFolder.png)
 
@@ -20,14 +35,6 @@ In the following example, one Modbus Adapter service is installed on a particula
 
 ![RemovedLogs](../images/RemovedLogs.png)
 
-
-## REST Command: DELETE
-
-An empty DELETE command must be made against the Id of the component to be deleted. Using cURL:
-
-```bash
-curl -v -X DELETE "http://localhost:5595/api/v1/configuration/system/components/ComponentIdToBeDeleted"
-```
 
 ## REST URLs
 | Relative URL                                              | HTTP verb | Action               |
