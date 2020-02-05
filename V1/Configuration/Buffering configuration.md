@@ -25,7 +25,7 @@ You can configure buffering for data egressed from the adapter to endpoints thro
    `204 No Content` response indicates success.
 
 
-### System buffering schema
+## System buffering schema
 
 The full schema definition for the system buffering is in the *System_Buffering_schema.json* here:
 
@@ -34,7 +34,7 @@ Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
 Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 
-### System buffering parameters:
+## System buffering parameters:
 
  Parameter | Type | Description |
 | ----------|:-----:| :-----------|
