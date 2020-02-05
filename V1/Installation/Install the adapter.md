@@ -11,13 +11,9 @@ Complete the following for your operating system to install an OSIsoft adapter:
 To install an OSIsoft adapter on Windows, complete the following steps:
 
 1. Download the Windows .msi file from the [OSIsoft Customer portal](https://customers.osisoft.com/s/products), for example _Modbus_win10-x64.msi_ or _OpcUa_win10-x64.msi_.
-
 2. Open a command prompt.
-
 3. Change to the directory into which you downloaded the .msi file.
-
 4. Run the .msi file.
-
 5. Follow the setup wizard.
 
 **Result:** The OSIsoft adapter is installed on Windows and you can now configure it.
