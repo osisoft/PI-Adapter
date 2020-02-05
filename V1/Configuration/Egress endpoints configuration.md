@@ -56,7 +56,7 @@ The following table defines the basic behavior of the _Egress_DataEndpoints_sche
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | 
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             |
 
-The full schema definition for the egress endpoint configuration is in the _Egress_DataEndpoints_schema.json_ here:
+The full schema definition for the logging configuration is in the component specific logging file: _AdapterName_Logging_schema.json_, _OmfEgress_Logging_schema.json_, and _System_Logging_schema.json_ here:
 
 Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
 
