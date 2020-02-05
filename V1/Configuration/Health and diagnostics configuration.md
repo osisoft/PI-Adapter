@@ -45,11 +45,3 @@ Linux: /opt/OSIsoft/Adapters/AdapterName/Schemas
 The adapter and its components produce diagnostics data which is sent to all health endpoints. The _System_Diagnostics.json_ file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default. 
 
 To egress diagnostics related data, you have to configure an adapter health endpoint first. See [Configure health endpoint](#configure-health-endpoint). For more information about how to configure adapter diagnostics, see [Adapter diagnostics](xref:AdapterDiagnostics).
-
-### Diagnostics schema
-
-The full schema definition for the diagnostics configuration is in the *System_Diagnostics_schema.json* here:
-
-Windows: %Program Files%\OSIsoft\Adapters\AdapterName\Schemas
-
-Linux: /opt/OSIsoft/Adapters/AdapterName/Schemas
