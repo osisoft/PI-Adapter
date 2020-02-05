@@ -10,9 +10,23 @@ You can configure buffering for data egressed from the adapter to endpoints thro
 
 ## Configure buffering
 
+1. Using any text editor, create a file that contains the system buffering in JSON form.
+ - For content structure, see the sample output in [Examples - Retrieve the buffering configuration](#examples).
+2. Update the parameters as needed. For a table of all available parameters, see [System buffering parameters](#system-buffering-parameters).
+3. Save the file as *System_Buffering.json*.
+4. Use any configuration tool capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:<port>/api/v1/configuration/system/buffering`
 
 
-## System buffering configuration parameters:
+### System buffering schema
+
+The full schema definition for the system buffering is in the *System_Buffering_schema.json* here:
+
+Windows: %Program Files%\OSIsoft\Adapters\AdapterName\Schemas
+
+Linux: /opt/OSIsoft/Adapters/AdapterName/Schemas
+
+
+### System buffering parameters:
 
  Parameter | Type | Description |
 | ----------|:-----:| :-----------|
@@ -34,7 +48,7 @@ The relative URI for all buffering configuration actions is `api/v1/configuratio
 
 The following examples are buffering configurations made through curl REST client.
 
-### Retrieve the buffering configuration
+**Retrieve the buffering configuration**
 
 ```
 curl -X GET "http://localhost:{port}/api/v1/configuration/system/buffering"
@@ -52,7 +66,7 @@ Sample output:
 
 `200 OK` response indicates success.
 
-### Configure buffering
+**Configure buffering**
 
 ```
 curl -X PUT "http://localhost:{port}/api/v1/configuration/system/buffering" -H "Content-Type: application/json" -d "{ "MaxBufferSizeMB": 50, "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/NewBuffers", "EnableBuffering": true }"
@@ -61,7 +75,7 @@ curl -X PUT "http://localhost:{port}/api/v1/configuration/system/buffering" -H "
 `204 No Content` response indicates success.
 
 
-### Update MaxBuferSizeMb parameter
+**Update MaxBuferSizeMb parameter**
 
 ```
 curl -X PATCH "http://localhost:{port}/api/v1/configuration/system/buffering" -H "Content-Type: application/json" -d "{ "MaxBufferSizeMB": 100 }"
@@ -70,49 +84,4 @@ curl -X PATCH "http://localhost:{port}/api/v1/configuration/system/buffering" -H
 `204 No Content` response indicates success.
 
 **Note:** In the previous examples, *port* refers to the configured port that the adapter runs on.
-
-### System Buffering Schema Definition
-
-Below is the full schema definition for the buffering configuration.
-
-File: *System_Buffering_schema.json*
-
-```c#
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "BufferingConfiguration",
-  "SchemaVersion": "1.0.0",
-  "definitions": {
-    "EdgeConfigurationBase": {
-      "type": "object",
-      "x-abstract": true,
-      "additionalProperties": false
-    }
-  },
-  "allOf": [
-    {
-      "$ref": "#/definitions/EdgeConfigurationBase"
-    },
-    {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "BufferLocation": {
-          "type": [
-            "null",
-            "string"
-          ]
-        },
-        "MaxBufferSizeMB": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "EnableBuffering": {
-          "type": "boolean"
-        }
-      }
-    }
-  ]
-}
-```
 
