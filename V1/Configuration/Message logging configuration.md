@@ -12,49 +12,11 @@ OSIsoft adapters write daily log messages to flat text files in the following lo
 
 Each message in the log displays the message severity level, timestamp, and the message itself.
 
-## Default logging configuration and schema
-
-By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
-The following logging configuration is the default for a component on install:
-```json
-{
-  "logLevel": "Information",
-  "logFileSizeLimitBytes": 34636833,
-  "logFileCountLimit": 31   
-}
-```
-
-The schema file specifies how to formally describe the configuration parameters for message logging. 
-It is located in:
-
-• Windows: *%ProgramFiles%\OSIsoft\Adapters\adapterName\Schema*
-
-• Linux: */opt/OSIsoft/Adapters/adapterName/Schema*
-
-### Log levels
-
-The logLevel sets the minimum severity for messages to be included in the logs. Messages with a severity below the level set are not included. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical.
-
-Table: General guidelines for setting the log level.
-
-| **Level**                | **Description**|
-|--------------------------|-----------|
-|Trace         | Logs that contain the most detailed messages. These messages may contain sensitive application data like actual received values, which is why these messages shouldn’t be enabled in production environment. |
-| Debug | Logs that can be used to troubleshoot data flow issues by recording metrics and detailed flow related information. |
-| Information | Logs that track the general flow of the application. Any non-repetitive general information (like version information relating to the software at startup, what external services are being used, data source connection string, number of measurements, egress URL, change of state “Starting”, “Stopping”, or configuration) can be useful for diagnosing potential application errors.  |
-| Warning | Logs that highlight an abnormal or unexpected event in the application flow, but does not otherwise cause the application execution to stop. Warning messages can indicate an unconfigured data source state, that a communication with backup failover instance has been lost, an insecure communication channel in use, or any other event that could require attention, but that does not impact data flow. |
-| Error | Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity, not an application-wide failure. This can indicate an invalid configuration, unavailable external endpoint, internal flow error, and so on.|
-| Critical | Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention. This can indicate application wide failures like beta timeout expired, unable to start self-hosted endpoint, unable to access vital resource (for example, Data Protection key file), and so on. |
-
-### Log file count limit
-
-The logFileCountLimit controls the number of days the log files are stored before they are deleted. 
-
 ## Change logging configuration
 
 To change the logging configuration complete the following steps: 
 
-1. Update the parameters of the message logging configuration JSON file that you want as needed. For example, the _Component_Logging.json_ file:
+1. Update the parameters of the message logging configuration JSON file that you want as needed. For example, the _OmfEgress_Logging.json_ file:
 
     ```json
     {
@@ -79,73 +41,52 @@ On successful execution, the log level change takes effect immediately during ru
 
 **Note:**  Any parameter not specified in the updated configuration file will revert to the default schema value.
 
-### Logger schema definition
 
-Below is the full schema definition for logger configuration.
+### Default logging configuration
 
-File: *System_Logging_schema.json*
+By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
+The following logging configuration is the default for a component on install:
 
-```c#
+```json
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "LoggerConfiguration",
-  "SchemaVersion": "1.0.0",
-  "definitions": {
-    "LogLevel": {
-      "type": "string",
-      "description": "",
-      "x-enumNames": [
-        "Trace",
-        "Debug",
-        "Information",
-        "Warning",
-        "Error",
-        "Critical",
-        "None"
-      ],
-      "enum": [
-        "Trace",
-        "Debug",
-        "Information",
-        "Warning",
-        "Error",
-        "Critical",
-        "None"
-      ]
-    },
-    "EdgeConfigurationBase": {
-      "type": "object",
-      "x-abstract": true,
-      "additionalProperties": false
-    }
-  },
-  "allOf": [
-    {
-      "$ref": "#/definitions/EdgeConfigurationBase"
-    },
-    {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "LogLevel": {
-          "$ref": "#/definitions/LogLevel"
-        },
-        "LogFileSizeLimitBytes": {
-          "type": [
-            "integer",
-            "null"
-          ],
-          "format": "int64"
-        },
-        "LogFileCountLimit": {
-          "type": [
-            "integer",
-            "null"
-          ],
-          "format": "int32"
-        }
-      }
-    }
-  ]
+  "logLevel": "Information",
+  "logFileSizeLimitBytes": 34636833,
+  "logFileCountLimit": 31   
 }
 ```
+
+### Logging schema
+
+The schema file specifies how to formally describe the configuration parameters for message logging. 
+It is located in:
+
+• Windows: *%ProgramFiles%\OSIsoft\Adapters\adapterName\Schema*
+
+• Linux: */opt/OSIsoft/Adapters/adapterName/Schema*
+
+### Logging parameters
+
+#### LogLevel
+
+The logLevel sets the minimum severity for messages to be included in the logs. Messages with a severity below the level set are not included. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical.
+
+Table: General guidelines for setting the log level.
+
+| **Level**                | **Description**|
+|--------------------------|-----------|
+|Trace         | Logs that contain the most detailed messages. These messages may contain sensitive application data like actual received values, which is why these messages shouldn’t be enabled in production environment. |
+| Debug | Logs that can be used to troubleshoot data flow issues by recording metrics and detailed flow related information. |
+| Information | Logs that track the general flow of the application. Any non-repetitive general information (like version information relating to the software at startup, what external services are being used, data source connection string, number of measurements, egress URL, change of state “Starting”, “Stopping”, or configuration) can be useful for diagnosing potential application errors.  |
+| Warning | Logs that highlight an abnormal or unexpected event in the application flow, but does not otherwise cause the application execution to stop. Warning messages can indicate an unconfigured data source state, that a communication with backup failover instance has been lost, an insecure communication channel in use, or any other event that could require attention, but that does not impact data flow. |
+| Error | Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity, not an application-wide failure. This can indicate an invalid configuration, unavailable external endpoint, internal flow error, and so on.|
+| Critical | Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention. This can indicate application wide failures like beta timeout expired, unable to start self-hosted endpoint, unable to access vital resource (for example, Data Protection key file), and so on. |
+
+#### LogFileSizeLimitBytes
+
+The maximum size in bytes of log files that the service will create for the component. It must be a positive integer.
+
+
+#### LogFileCountLimit
+
+The maximum number of days that the service stores the log files before they are deleted. 
+
