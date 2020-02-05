@@ -8,8 +8,6 @@ You can configure OSIsoft System and adapter components entirely using a single 
 
 ## Import configuration
 
-### Import full adapter configuration using REST client
-
 Complete the following to import the full adapter configuration using REST client:
 
 1. Start any tool capable of making HTTP requests.
