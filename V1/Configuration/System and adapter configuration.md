@@ -6,9 +6,9 @@ uid: SystemAndAdapterConfiguration
 
 You can configure the System and adapter components together using a single call for replacing the existing configuration.
 
-## Import configuration file
+## Change system and adapter configuration
 
-Complete the following to import the full changed configuration using REST client:
+Change the system and adapter configuration by importing the JSON file using a REST client:
 
 1. Using any text editor, create a file that contains the System and adapter configuration in JSON form.
 	- For content structure, see [Sample configuration file](#sample-configuration-file).
