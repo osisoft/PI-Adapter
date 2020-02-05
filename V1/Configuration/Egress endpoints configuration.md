@@ -48,7 +48,7 @@ Complete the following to create new egress endpoints:
         curl -v -X GET "http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints"
         ```
 
-### Egress endpoint configuration schema
+## Egress endpoint configuration schema
 
 The following table defines the basic behavior of the _Egress_DataEndpoints_schema.json_ file.
 
@@ -63,7 +63,7 @@ Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
 Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 
-### Egress endpoint parameters
+## Egress endpoint parameters
 
 | Parameter                       | Required                  | Type      | Nullable | Description                                        |
 |---------------------------------|---------------------------|-----------|----------|-------------|
@@ -77,7 +77,7 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 | **Password**                    | Required for PI endpoint  | string    | Yes      | Basic authentication to the PI Web API OMF endpoint. |
 
 
-### Examples
+## Examples
 
 The following examples are valid egress configurations.
 
@@ -102,7 +102,7 @@ The following examples are valid egress configurations.
 }]
 ```
 
-### REST URLs
+## REST URLs
 
 | Relative URL                                              | HTTP verb | Action               |
 |-----------------------------------------------------------|-----------|----------------------|
