@@ -23,10 +23,7 @@ The default _System_Components.json_ file for the System component contains the 
 ]
 ```
 
- **Note:** 
-
-- The OmfEgress component is required for this initial release for adapters to run. 
-- You can add additional components if you want, but only a single OmfEgress component is supported. 
+ **Note:** The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported. 
 
 Complete the following to add a new component:
 
