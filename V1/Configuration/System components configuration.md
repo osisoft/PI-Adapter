@@ -44,7 +44,7 @@ Complete the following to add a new component:
 2. Save the JSON as _AddComponent.json_. 
 3. Use any tool capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5595/api/v1/configuration/system/components`
 
-	The following example shows the HTTP request using curl (run this command from the same directory where the file is located):
+	Example using curl (run this command from the same directory where the file is located):
 
    	```bash
    	curl -i -d "@AddComponent.json" -H "Content-Type: application/json" http://localhost:5595/api/v1/configuration/system/components
