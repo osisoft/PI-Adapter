@@ -59,12 +59,11 @@ The following logging configuration is the default for a component on install:
 
 ### Logging schema
 
-The schema file specifies how to formally describe the configuration parameters for message logging. 
-It is located in:
+The full schema definition for the logging configuration is in the component specific logging file: _AdapterName_Logging_schema.json_, _OmfEgress_Logging_schema.json_, or _System_Logging_schema.json_ here:
 
-• Windows: *%ProgramFiles%\OSIsoft\Adapters\adapterName\Schema*
+Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
 
-• Linux: */opt/OSIsoft/Adapters/adapterName/Schema*
+Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 ### Logging parameters
 
