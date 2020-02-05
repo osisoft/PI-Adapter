@@ -8,6 +8,23 @@ You can configure OSIsoft System and adapter components entirely using a single 
 
 ## Import configuration
 
+### Import full adapter configuration using REST client
+
+Complete the following to import the full adapter configuration using REST client:
+
+1. Start any tool capable of making HTTP requests.
+2. Execute a PUT command with the contents of the JSON file to the following endpoint: `http://localhost:5590/api/v1/configuration -d '{JSON file name}'`
+
+	Example using curl:
+	
+	```cmdline
+	curl -X http://localhost:5590/api/v1/configuration -d '{JSON file name}'
+	```
+
+	**Note:** In order for some of the adapter specific configurations to take effect, you have to restart the adapter.
+
+	If the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result.
+
 ### REST URLs
 
 | Relative URL                                              | HTTP verb | Action               |
@@ -92,17 +109,4 @@ The following sample includes configuration of System components along with an O
     }
 }
 ```
-
-### Import full adapter configuration using REST client
-
-- To import the full adapter configuration, run the following command:
-
-```
-curl -X http://localhost:5590/api/v1/configuration -d '{ JSON content }'
-```
-
-**Note:** In order for some of the adapter specific configurations to take effect, you have to restart the adapter.
-
-### Configuration errors
-
-If the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result. 
+ 
