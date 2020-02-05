@@ -25,7 +25,7 @@ Change the system and adapter configuration by importing the JSON file using a R
 
 	If the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result.
 
-### Sample configuration file
+## Sample configuration file
 
 The following sample includes configuration of System components along with an OPC UA adapter. 
 
@@ -104,7 +104,7 @@ The following sample includes configuration of System components along with an O
 }
 ```
  
-### REST URLs
+## REST URLs
 
 | Relative URL                                              | HTTP verb | Action               |
 |-----------------------------------------------------------|-----------|----------------------|
