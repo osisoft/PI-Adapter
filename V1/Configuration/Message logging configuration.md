@@ -36,26 +36,10 @@ To change the logging configuration complete the following steps:
     ```bash
     curl -i -d "@Component_Logging.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/<ComponentId>/Logging
     ```
-
-
-
+    
 On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after the adapter is restarted. 
 
 **Note:**  Any parameter not specified in the updated configuration file will revert to the default schema value.
-
-
-### Default logging configuration
-
-By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
-The following logging configuration is the default for a component on install:
-
-```json
-{
-  "logLevel": "Information",
-  "logFileSizeLimitBytes": 34636833,
-  "logFileCountLimit": 31   
-}
-```
 
 ### Logging schema
 
@@ -91,3 +75,15 @@ The maximum size in bytes of log files that the service will create for the comp
 
 The maximum number of days that the service stores the log files before they are deleted. 
 
+### Examples: Default logging configuration
+
+By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
+The following logging configuration is the default for a component on install:
+
+```json
+{
+  "logLevel": "Information",
+  "logFileSizeLimitBytes": 34636833,
+  "logFileCountLimit": 31   
+}
+```
