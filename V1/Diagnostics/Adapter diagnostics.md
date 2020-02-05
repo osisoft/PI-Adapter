@@ -40,13 +40,6 @@ This diagnostic stream contains system level information related to the host pla
 
 Each adapter component produces its own diagnostics streams.
 
-## REST URLs
-
-| Relative URL                            | HTTP verb | Action                                          |
-| --------------------------------------- | --------- | ----------------------------------------------- |
-| `api/v1/configuration/system/diagnostics` | `GET`       | Gets the diagnostics configuration              |
-| `api/v1/configuration/system/diagnostics` | `PUT`       | Replaces the existing diagnostics configuration |
-
 ## Examples
 
 ### Retrieve the diagnostics configuration
@@ -76,6 +69,15 @@ curl -X PUT  http://localhost:{port}/api/v1/configuration/system/diagnostics  -H
 In the previous examples, _port_ refers to the configured port for the adapter to run on.
 
 If successful, the methods returns a `204 No Content` response code.
+
+
+
+## REST URLs
+
+| Relative URL                            | HTTP verb | Action                                          |
+| --------------------------------------- | --------- | ----------------------------------------------- |
+| `api/v1/configuration/system/diagnostics` | `GET`       | Gets the diagnostics configuration              |
+| `api/v1/configuration/system/diagnostics` | `PUT`       | Replaces the existing diagnostics configuration |
 
 ## AF structure
 
