@@ -16,6 +16,14 @@ You can configure buffering for data egressed from the adapter to endpoints thro
 3. Save the file as *System_Buffering.json*.
 4. Use any configuration tool capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:<port>/api/v1/configuration/system/buffering`
 
+   Example using curl:
+
+   ```
+   curl -X PUT "http://localhost:{port}/api/v1/configuration/system/buffering" -H "Content-Type: application/json" -d "{ "MaxBufferSizeMB": 50, "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/NewBuffers", "EnableBuffering": true }"
+   ```
+
+   `204 No Content` response indicates success.
+
 
 ### System buffering schema
 
@@ -65,15 +73,6 @@ Sample output:
 ```
 
 `200 OK` response indicates success.
-
-**Configure buffering**
-
-```
-curl -X PUT "http://localhost:{port}/api/v1/configuration/system/buffering" -H "Content-Type: application/json" -d "{ "MaxBufferSizeMB": 50, "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/NewBuffers", "EnableBuffering": true }"
-```
-
-`204 No Content` response indicates success.
-
 
 **Update MaxBuferSizeMb parameter**
 
