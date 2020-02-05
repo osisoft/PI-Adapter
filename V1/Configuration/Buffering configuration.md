@@ -29,9 +29,9 @@ You can configure buffering for data egressed from the adapter to endpoints thro
 
 The full schema definition for the system buffering is in the *System_Buffering_schema.json* here:
 
-Windows: %Program Files%\OSIsoft\Adapters\AdapterName\Schemas
+Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
 
-Linux: /opt/OSIsoft/Adapters/AdapterName/Schemas
+Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 
 ### System buffering parameters:
