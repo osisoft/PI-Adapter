@@ -19,7 +19,7 @@ A health endpoint designates an OSIsoft OMF endpoint where adapter health inform
 2. Save the file.
 3. Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints/`
 
-### Health endpoints schema definition
+### Health endpoints schema
 
 The full schema definition for the health endpoint configuration is in the *System_HealthEndpoints_schema.json* here:
 
@@ -44,7 +44,7 @@ Linux: /opt/OSIsoft/Adapters/AdapterName/Schemas
 
 The adapter and its components produce diagnostics data which is sent to all health endpoints. The _System_Diagnostics.json_ file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default. To egress diagnostics related data, you have to configure an adapter health endpoint. See [Configure health endpoint](#configure-health-endpoint). For more information about adapter diagnostics, see [Adapter diagnostics](xref:AdapterDiagnostics).
 
-### Diagnostics schema definition
+### Diagnostics schema
 
 The full schema definition for the diagnostics configuration is in the *System_Diagnostics_schema.json* here:
 
