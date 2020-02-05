@@ -1,17 +1,19 @@
 ---
-uid: AdapterConfiguration
+uid: SystemAndAdapterConfiguration
 ---
 
-# Adapter configuration
+# System and adapter configuration
 
-You can configure OSIsoft System and adapter components entirely using a single call for replacing the existing configuration.
+You can configure the System and adapter components together using a single call for replacing the existing configuration.
 
-## Import configuration
+## Import configuration file
 
-Complete the following to import the full adapter configuration using REST client:
+Complete the following to import the full changed configuration using REST client:
 
-1. Start any tool capable of making HTTP requests.
-2. Execute a PUT command with the contents of the JSON file to the following endpoint: `http://localhost:5590/api/v1/configuration -d '{JSON file name}'`
+1. Using any text editor, create a file that contains the System and adapter configuration in JSON form.
+	- For content structure, see [Sample configuration file](#sample-configuration-file).
+2. Save the file.
+2. Use any configuration tool capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration -d '{JSON file name}'`
 
 	Example using curl:
 	
@@ -23,13 +25,7 @@ Complete the following to import the full adapter configuration using REST clien
 
 	If the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result.
 
-### REST URLs
-
-| Relative URL                                              | HTTP verb | Action               |
-|-----------------------------------------------------------|-----------|----------------------|
-| api/v1/configuration/     | PUT       | Replaces the configuration for the entire adapter  |
-
-### Sample configuration file for OPC UA
+### Sample configuration file
 
 The following sample includes configuration of System components along with an OPC UA adapter. 
 
@@ -108,3 +104,8 @@ The following sample includes configuration of System components along with an O
 }
 ```
  
+### REST URLs
+
+| Relative URL                                              | HTTP verb | Action               |
+|-----------------------------------------------------------|-----------|----------------------|
+| api/v1/configuration/     | PUT       | Replaces the configuration for the entire adapter  |
