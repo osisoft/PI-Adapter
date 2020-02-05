@@ -82,7 +82,7 @@ Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
 Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 
-## Parameters for system components
+## System components parameters
 
 The following parameters are available for configuring system components.
 
