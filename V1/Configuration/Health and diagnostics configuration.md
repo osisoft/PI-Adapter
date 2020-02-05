@@ -23,9 +23,9 @@ A health endpoint designates an OSIsoft OMF endpoint where adapter health inform
 
 The full schema definition for the health endpoint configuration is in the *System_HealthEndpoints_schema.json* here:
 
-Windows: %Program Files%\OSIsoft\Adapters\AdapterName\Schemas
+Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
 
-Linux: /opt/OSIsoft/Adapters/AdapterName/Schemas
+Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 ### Health endpoint parameters
 
