@@ -4,7 +4,7 @@ uid: MessageLoggingConfiguration
 
 # Message logging configuration
 
-OSIsoft adapters write daily log messages to flat text files in the following locations:
+OSIsoft adapters write daily log messages for the adapter, the system, and omf egress to flat text files in the following locations:
 
 • Windows: *%ProgramData%\OSIsoft\Adapters\adapterName\adapterId\Logs*
 
