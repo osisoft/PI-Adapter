@@ -19,6 +19,14 @@ A health endpoint designates an OSIsoft OMF endpoint where adapter health inform
 2. Save the file.
 3. Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints/`
 
+### Health endpoints schema definition
+
+The full schema definition for the health endpoint configuration is in the *System_HealthEndpoints_schema.json* here:
+
+Windows: %Program Files%\OSIsoft\Adapters\AdapterName\Schemas
+
+Linux: /opt/OSIsoft/Adapters/AdapterName/Schemas
+
 ### Health endpoint parameters
 
 | Parameter                       | Required                            | Type      | Description                                        |
@@ -32,131 +40,14 @@ A health endpoint designates an OSIsoft OMF endpoint where adapter health inform
 | **BufferingEnabled**            | Optional                            | `boolean`      | Enables or disables buffering to this endpoint. By default, buffering is enabled ("true"). |
 | **ValidateEndpointCertificate** | Optional                            | `boolean`      | Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends setting this to true in production environments. Defaults to true. |
 
-### Health endpoints schema definition
-
-Below is the full schema definition for the health endpoints configuration.
-
-File: *System_HealthEndpoints_schema.json*
-
-```c#
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "OmfHealthEndpointConfiguration",
-  "SchemaVersion": "1.1.0",
-  "definitions": {
-    "EndpointConfigurationBase": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/EdgeConfigurationBase"
-        },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "Endpoint"
-          ],
-          "properties": {
-            "Id": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "Endpoint": {
-              "type": "string",
-              "minLength": 1
-            },
-            "UserName": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "Password": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "ClientId": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "ClientSecret": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "TokenEndpoint": {
-              "type": [
-                "null",
-                "string"
-              ]
-            },
-            "ValidateEndpointCertificate": {
-              "type": "boolean"
-            }
-          }
-        }
-      ]
-    },
-    "EdgeConfigurationBase": {
-      "type": "object",
-      "x-abstract": true,
-      "additionalProperties": false
-    }
-  },
-  "allOf": [
-    {
-      "$ref": "#/definitions/EndpointConfigurationBase"
-    },
-    {
-      "type": "object",
-      "additionalProperties": false
-    }
-  ]
-}
-```
-
 ## Diagnostics
 
 The adapter and its components produce diagnostics data which is sent to all health endpoints. The _System_Diagnostics.json_ file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default. To egress diagnostics related data, you have to configure an adapter health endpoint. For more information about adapter diagnostics, see [Adapter diagnostics](xref:AdapterDiagnostics).
 
 ### Diagnostics schema definition
 
-Below is the full schema definition for the system components configuration.
+The full schema definition for the diagnostics configuration is in the *System_Diagnostics_schema.json* here:
 
-File: *System_Diagnostics_schema.json*
+Windows: %Program Files%\OSIsoft\Adapters\AdapterName\Schemas
 
-```c#
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "EdgeDiagnosticsConfiguration",
-  "SchemaVersion": "1.0.0",
-  "definitions": {
-    "EdgeConfigurationBase": {
-      "type": "object",
-      "x-abstract": true,
-      "additionalProperties": false
-    }
-  },
-  "allOf": [
-    {
-      "$ref": "#/definitions/EdgeConfigurationBase"
-    },
-    {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "EnableDiagnostics": {
-          "type": "boolean"
-        }
-      }
-    }
-  ]
-}
-```
-
+Linux: /opt/OSIsoft/Adapters/AdapterName/Schemas
