@@ -10,23 +10,28 @@ For more information about adapter diagnostics, see [Adapter diagnostics](xref:A
 
 ## Configure diagnostics
 
-Example using curl:
+1. Using any text editor, create a file that contains a flag which determines whether Diagnostics are enabled in JSON form.
+    - For a table of all available diagnostics parameters, see [Diagnostics parameters](#diagnostics-parameters).
+2. Save the file.
+3. Use any tool capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:{port}/api/v1/configuration/system/diagnostics`
 
-```
-curl -X PUT  http://localhost:{port}/api/v1/configuration/system/diagnostics  -H 'Content-Type: application/json' -d '{ "enableDiagnostics": true }'
-```
+    **Note:** _port_ refers to the configured port for the adapter to run on.
+    
+    Example using curl:
 
-In the previous examples, _port_ refers to the configured port for the adapter to run on.
+    ```
+    curl -X PUT  http://localhost:{port}/api/v1/configuration/system/diagnostics  -H 'Content-Type: application/json' -d '{ "enableDiagnostics": true }'
+    ```
 
-If successful, the methods returns a `204 No Content` response code.
+    If successful, the methods returns a `204 No Content` response code.
 
 ## Diagnostics schema
 
 The full schema definition for the diagnostics configuration is in the *System_Diagnostics_schema.json* here:
 
-Windows: %Program Files%\OSIsoft\Adapters\AdapterName\Schemas
+Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
 
-Linux: /opt/OSIsoft/Adapters/AdapterName/Schemas
+Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 ## Diagnostics parameters
 
