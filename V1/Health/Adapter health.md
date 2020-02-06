@@ -4,7 +4,7 @@ uid: AdapterHealth
 
 # Adapter health
 
-OSIsoft adapters produce different kinds of health data, which can be egressed to different health endpoints. For details, read the following two sections.
+OSIsoft adapters produce different kinds of health data, which can be egressed to different health endpoints. For details, see the following sections.
 
 ## Available health data
 
