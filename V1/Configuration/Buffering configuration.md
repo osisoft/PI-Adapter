@@ -10,11 +10,11 @@ You can configure buffering for data egressed from the adapter to endpoints thro
 
 ## Configure buffering
 
-1. Using any text editor, create a file that contains the system buffering in JSON form.
+1. Open the _System_Buffering.json_ file.
    - For content structure, see the sample output in [Examples - Retrieve the buffering configuration](#examples).
 2. Update the parameters as needed. For a table of all available parameters, see [System buffering parameters](#system-buffering-parameters).
-3. Save the file as *System_Buffering.json*.
-4. Use any configuration tool capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:<port>/api/v1/configuration/system/buffering`
+3. Save the file.
+4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:<port>/api/v1/configuration/system/buffering`
 
    Example using curl:
 
