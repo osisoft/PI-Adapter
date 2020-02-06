@@ -50,7 +50,7 @@ Complete the following to create new egress endpoints:
 
 ## Egress endpoint configuration schema
 
-The following table defines the basic behavior of the _Egress_DataEndpoints_schema.json_ file.
+The following table defines the basic behavior of the _OmfEgress_DataEndpoints_schema.json_ file.
 
 | Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties |                           
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | 
