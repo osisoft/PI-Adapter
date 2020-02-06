@@ -16,7 +16,9 @@ Each message in the log displays the message severity level, timestamp, and the 
 
 To change the logging configuration complete the following steps: 
 
-1. Update the parameters of the message logging configuration JSON file that you want as needed. For example, the _OmfEgress_Logging.json_ file:
+1. Open the _Logging.json_ file of the component for which you want to change logging.
+
+2. Update the parameters as needed. For example, the _OmfEgress_Logging.json_ file:
 
     ```json
     {
@@ -27,7 +29,7 @@ To change the logging configuration complete the following steps:
     ```
 2. Save the file.
 
-3. Use any tool capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Logging`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Logging`.
 
     **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter, for example _OpcUa1_.
 
