@@ -1,16 +1,14 @@
 ---
-uid: HealthAndDiagnosticsConfiguration
+uid: HealthEndpointConfiguration
 ---
 
-# Health and diagnostics configuration
+# Health endpoint configuration
 
-The following sections provide an overview on how to configure health endpoints to which health and diagnostics data can be sent.
+This section provides information on how to configure your OSIsoft adapters so that health and diagnostics data is produced and stored at the designated health endpoint.
 
-## Health
+ For more information about adapter health, see [Adapter health](xref:AdapterHealth).
 
-Adapters produce various types of health data. You can use this information to ensure that your adapters are running properly and data is flowing to the configured OSIsoft OMF endpoints. This section provides information on how to configure your OSIsoft adapters so that this health data is produced and stored at a designated endpoint and what types of health data are available. For more information about adapter health, see [Adapter health](xref:AdapterHealth).
-
-### Configure health endpoint
+## Configure health endpoint
 
 A health endpoint designates an OSIsoft OMF endpoint where adapter health information should be sent. You can configure multiple health endpoints. 
 
@@ -19,7 +17,7 @@ A health endpoint designates an OSIsoft OMF endpoint where adapter health inform
 2. Save the file.
 3. Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints/`
 
-### Health endpoints schema
+## Health endpoints schema
 
 The full schema definition for the health endpoint configuration is in the *System_HealthEndpoints_schema.json* here:
 
@@ -27,7 +25,7 @@ Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
 
 Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
-### Health endpoint parameters
+## Health endpoint parameters
 
 | Parameter                       | Required                            | Type      | Description                                        |
 |---------------------------------|-------------------------------------|-----------|----------------------------------------------------|
@@ -39,9 +37,3 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 | **Password**                    | Required for PI Web API endpoints   | `string`    | The password used to authenticate with a PI Web API OMF endpoint. |
 | **BufferingEnabled**            | Optional                            | `boolean`      | Enables or disables buffering to this endpoint. By default, buffering is enabled ("true"). |
 | **ValidateEndpointCertificate** | Optional                            | `boolean`      | Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends setting this to true in production environments. Defaults to true. |
-
-## Diagnostics
-
-The adapter and its components produce diagnostics data which is sent to all health endpoints. The _System_Diagnostics.json_ file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default. 
-
-To egress diagnostics related data, you have to configure an adapter health endpoint first. See [Configure health endpoint](#configure-health-endpoint). For more information about how to configure adapter diagnostics, see [Adapter diagnostics](xref:AdapterDiagnostics).
