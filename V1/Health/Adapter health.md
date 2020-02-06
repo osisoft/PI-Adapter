@@ -8,7 +8,7 @@ OSIsoft adapters produce different kinds of health data, which can be egressed t
 
 ## Available health data
 
-Each individual adapter data component produces a few different pieces of health data. Dynamic data is sent every minute to configured health endpoints.
+Dynamic data is sent every minute to configured health endpoints.
 
 The following health data are available:
 - [Device status](xref:DeviceStatus)
