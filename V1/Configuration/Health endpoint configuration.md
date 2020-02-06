@@ -4,7 +4,7 @@ uid: HealthEndpointConfiguration
 
 # Health endpoint configuration
 
-This section provides information on how to configure your OSIsoft adapters so that health and diagnostics data is produced and stored at the designated health endpoint.
+This section provides information on how to configure your OSIsoft adapters so that health data is produced and stored at the designated health endpoint.
 
  For more information about adapter health, see [Adapter health](xref:AdapterHealth).
 
