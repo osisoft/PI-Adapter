@@ -37,7 +37,7 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 | Parameter             | Required | Type    | Description |
 | ---------             | -------- | ------- | ----------- |
-| **EnableDiagnostics** | Yes      | boolean | Determines whether Diagnostics are enabled. |
+| **EnableDiagnostics** | Yes      | `boolean` | Determines whether Diagnostics are enabled. |
 
 ## Example
 
