@@ -11,7 +11,7 @@ For more information about adapter diagnostics, see [Adapter diagnostics](xref:A
 ## Configure diagnostics
 
 1. Open the _System_Diagnostics.json_ file.
-2. If you want to enable diagnostics, set `"EnableDiagnostics"` to **true**. If you want to disable diagnostics, set `"EnableDiagnostics"` to **false**
+2. If you want to enable diagnostics, set `"EnableDiagnostics"` to **true**. If you want to disable diagnostics, set `"EnableDiagnostics"` to **false**.
 2. Save the file.
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:{port}/api/v1/configuration/system/diagnostics`
 
