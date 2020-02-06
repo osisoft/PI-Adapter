@@ -1,8 +1,8 @@
 ---
-uid: MessageLoggingConfiguration
+uid: LoggingConfiguration
 ---
 
-# Message logging configuration
+# Logging configuration
 
 OSIsoft adapters write daily log messages for the adapter, the system, and omf egress to flat text files in the following locations:
 
@@ -12,7 +12,7 @@ OSIsoft adapters write daily log messages for the adapter, the system, and omf e
 
 Each message in the log displays the message severity level, timestamp, and the message itself.
 
-## Change logging configuration
+## Configure logging
 
 To change the logging configuration complete the following steps: 
 
