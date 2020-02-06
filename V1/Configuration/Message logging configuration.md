@@ -53,6 +53,12 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 ## Logging parameters
 
+| Parameter                | Required | Type      | Description |
+| ------------------------ | -------- | --------- | ----------- |
+|**logLevel**              | Optional | reference |  For more information, see [LogLevel](#loglevel). |
+|**logFileSizeLimitBytes** | Optional | `integer` | The maximum size in bytes of log files that the service will create for the component. It must be a positive integer.|
+|**logFileCountLimit**     | Optional | `integer` | The maximum number of log files that the service will create for the component. It must be a positive integer.|
+
 ### LogLevel
 
 The logLevel sets the minimum severity for messages to be included in the logs. Messages with a severity below the level set are not included. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical.
@@ -68,16 +74,8 @@ Table: General guidelines for setting the log level.
 | Error | Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity, not an application-wide failure. This can indicate an invalid configuration, unavailable external endpoint, internal flow error, and so on.|
 | Critical | Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention. This can indicate application wide failures like beta timeout expired, unable to start self-hosted endpoint, unable to access vital resource (for example, Data Protection key file), and so on. |
 
-### LogFileSizeLimitBytes
 
-The maximum size in bytes of log files that the service will create for the component. It must be a positive integer.
-
-
-### LogFileCountLimit
-
-The maximum number of days that the service stores the log files before they are deleted. 
-
-## Examples: Default logging configuration
+## Example: Default logging configuration
 
 By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
 The following logging configuration is the default for a component on install:
