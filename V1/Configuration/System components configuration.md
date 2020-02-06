@@ -27,13 +27,10 @@ The default _System_Components.json_ file for the System component contains the 
 
 Complete the following to add a new component:
 
-1. Open the _System_Components.json_ file. 
-
-2. Add a new component by defining `<ComponentId>` and `<ComponentType>`.
+1. Using any text editor, create a file that contains the system components configuration in JSON form.
+	- For content structure, see [System components example](#system-components-example).
 
 	The following example adds a Modbus TCP adapter. 
-
-    **Note:** A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter:
 
     ```json
       {
@@ -41,8 +38,10 @@ Complete the following to add a new component:
         "ComponentType": "Modbus"
       }
     ```
+    
+    **Note:** A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter:
 
-2. Save the file.
+2. Save the file, for example as *AddComponent.json*.
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5595/api/v1/configuration/system/components`
 
 	Example using curl (run this command from the same directory where the file is located):
