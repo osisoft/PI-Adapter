@@ -43,7 +43,7 @@ Complete the following to add a new component:
     ```
 
 2. Save the file.
-3. Use any tool capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5595/api/v1/configuration/system/components`
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5595/api/v1/configuration/system/components`
 
 	Example using curl (run this command from the same directory where the file is located):
 
