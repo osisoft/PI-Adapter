@@ -10,10 +10,10 @@ For more information about adapter diagnostics, see [Adapter diagnostics](xref:A
 
 ## Configure diagnostics
 
-1. Open the _System_Diagnostics.json_ file.
-2. If you want to enable diagnostics, set `"EnableDiagnostics"` to **true**. If you want to disable diagnostics, set `"EnableDiagnostics"` to **false**.
-2. Save the file.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:{port}/api/v1/configuration/system/diagnostics`
+1. Using any text editor, create a file that contains the diagnostics configuration in JSON form.
+   - For content structure, see [Example - Retrieve the diagnostics configuration](#example).
+3. Save the file.
+4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:{port}/api/v1/configuration/system/diagnostics`
 
     **Note:** _port_ refers to the configured port for the adapter to run on.
     
@@ -40,6 +40,16 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 | **EnableDiagnostics** | Yes      | `boolean` | Determines whether Diagnostics are enabled. |
 
 ## Example
+
+**Configure diagnostics**
+
+Example using curl:
+
+```
+curl -X PUT  http://localhost:{port}/api/v1/configuration/system/diagnostics  -H 'Content-Type: application/json' -d '{ "enableDiagnostics": true }'
+```
+
+If successful, the methods returns a `204 No Content` response code.
 
 **Retrieve the diagnostics configuration**
 
