@@ -16,14 +16,6 @@ For more information about adapter diagnostics, see [Adapter diagnostics](xref:A
 4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:{port}/api/v1/configuration/system/diagnostics`
 
     **Note:** _port_ refers to the configured port for the adapter to run on.
-    
-    Example using curl:
-
-    ```
-    curl -X PUT  http://localhost:{port}/api/v1/configuration/system/diagnostics  -H 'Content-Type: application/json' -d '{ "enableDiagnostics": true }'
-    ```
-
-    If successful, the methods returns a `204 No Content` response code.
 
 ## Diagnostics schema
 
