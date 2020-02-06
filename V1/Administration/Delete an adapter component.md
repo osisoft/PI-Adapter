@@ -14,12 +14,11 @@ Complete the following to delete an adapter component:
 
     **Note:** An empty DELETE command must be made against the Id of the component to be deleted. 
 
+       Example using curl:
 
-    Example using curl:
-
-   ```bash
-   curl -v -X DELETE "http://localhost:5595/api/v1/configuration/system/components/ComponentIdToBeDeleted"
-   ```
+      ```bash
+      curl -v -X DELETE "http://localhost:5595/api/v1/configuration/system/components/ComponentIdToBeDeleted"
+      ```
 
 ## File relocation
 
