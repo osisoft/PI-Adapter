@@ -89,8 +89,8 @@ The following parameters are available for configuring system components.
 
 | Parameters     | Required | Type    | Nullable | Description |
 | -------------- | -------- | --------| ---------|-------------|
-| ComponentId    | Required |`string` | Yes      | The ID of the component. It can be any alphanumeric string, for example OmfEgress.|
-| ComponentType  | Required |`string` | Yes      | The type of the component, for example OmfEgress. There are two types of components: OmfEgress and the adapter. |
+| **ComponentId**    | Required |`string` | Yes      | The ID of the component. It can be any alphanumeric string, for example OmfEgress.|
+| **ComponentType**  | Required |`string` | Yes      | The type of the component, for example OmfEgress. There are two types of components: OmfEgress and the adapter. |
 
 ## System components example
 
