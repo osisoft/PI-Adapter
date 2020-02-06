@@ -58,7 +58,7 @@ Complete the following to add a new component:
 Complete the following to delete an existing component:
 
 1. Start any tool capable of making HTTP requests.
-2. Execute a DELETE command to the following endpoint: `http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/`
+2. Execute a DELETE command to the following endpoint, replacing `<ComponentId To Delete>` with the ID of the component that you want to delete, for example OpcUa1: `http://localhost:5595/api/v1/configuration/system/components/<ComponentId_To_Delete>/`
 
 	Example using curl:
 
