@@ -20,7 +20,7 @@ Complete the following to create new egress endpoints:
     - For content structure, see [Examples](#examples).
 2. Update the parameters as needed. For a table of all available parameters, see [Egress endpoint parameters](#egress-endpoint-parameters).
 3. Save the file as _OmfEgress_DataEndpoints.json_.
-4. Use any configuration tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/`
+4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/`
 
     **Examples using curl:**
 
