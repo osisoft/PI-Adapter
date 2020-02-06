@@ -70,7 +70,7 @@ Complete the following to delete an existing component:
 	
 ## System components schema
 
-The following table defines the basic behavior of the _AddComponent.json_ file.
+The following table defines the basic behavior of the *System_Components_schema.json* file.
 
 | Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- |
