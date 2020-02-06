@@ -16,17 +16,9 @@ Each message in the log displays the message severity level, timestamp, and the 
 
 To change the logging configuration complete the following steps: 
 
-1. Open the _Logging.json_ file of the component for which you want to change logging.
+1. Using any text editor, create a file that contains the logging configuration in JSON form.
+    - For content structure, see [Example Default logging configuration](#example-default-logging-configuration).
 
-2. Update the parameters as needed. For example, the _OmfEgress_Logging.json_ file:
-
-    ```json
-    {
-      "logLevel": "Warning",
-      "logFileSizeLimitBytes": 16777216,
-      "logFileCountLimit": 30   
-    }
-    ```
 2. Save the file.
 
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Logging`.
@@ -71,7 +63,7 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 | Critical | Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention. This can indicate application wide failures like beta timeout expired, unable to start self-hosted endpoint, unable to access vital resource (for example, Data Protection key file), and so on. |
 
 
-## Example: Default logging configuration
+## Example Default logging configuration
 
 By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
 The following logging configuration is the default for a component on install:
