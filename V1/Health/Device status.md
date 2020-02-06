@@ -2,7 +2,7 @@
 uid: DeviceStatus
 ---
 
-# Device Status
+# Device status
 
 The device status indicates the health of this component and whether or not it is currently communicating properly with the data source. This time-series data is stored within a PI point or OCS stream, depending on the endpoint type. During healthy steady-state operation, a value of "Good" is expected.
 
