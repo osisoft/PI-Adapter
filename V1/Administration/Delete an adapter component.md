@@ -6,7 +6,7 @@ uid: DeleteAnAdapterComponent
 
 When an adapter component is removed, the configuration and log files are saved into a sub-directory in case they are needed later. Any associated types, streams, and data will remain on respective endpoints.
 
-Complete the following to delete an adapter component:
+Complete the following procedure to delete an adapter component:
 
 1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 
