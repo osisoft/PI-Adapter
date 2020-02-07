@@ -25,7 +25,7 @@ The default _System_Components.json_ file for the System component contains the 
 
  **Note:** The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported. 
 
-Complete the following to add a new component:
+Complete the following procedure to add a new component:
 
 1. Using any text editor, create a file that contains the system components configuration in JSON form.
 	- For content structure, see [System components example](#system-components-example).
@@ -54,7 +54,7 @@ Complete the following to add a new component:
 
 ### Delete a system component
 
-Complete the following to delete an existing component:
+Complete the following procedure to delete an existing component:
 
 1. Start any tool capable of making HTTP requests.
 2. Execute a DELETE command to the following endpoint, replacing `<ComponentId To Delete>` with the ID of the component that you want to delete, for example OpcUa1: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId_To_Delete>/`
