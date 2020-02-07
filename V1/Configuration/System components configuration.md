@@ -42,12 +42,12 @@ Complete the following to add a new component:
     **Note:** A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter:
 
 2. Save the file, for example as *AddComponent.json*.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5595/api/v1/configuration/system/components`
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components`
 
 	Example using curl (run this command from the same directory where the file is located):
 
    	```bash
-   	curl -i -d "@AddComponent.json" -H "Content-Type: application/json" http://localhost:5595/api/v1/configuration/system/components
+   	curl -i -d "@AddComponent.json" -H "Content-Type: application/json" http://localhost:5590/api/v1/configuration/system/components
    	```
 
 	After the curl command completes successfully, you can configure or use the new component.
@@ -57,7 +57,7 @@ Complete the following to add a new component:
 Complete the following to delete an existing component:
 
 1. Start any tool capable of making HTTP requests.
-2. Execute a DELETE command to the following endpoint, replacing `<ComponentId To Delete>` with the ID of the component that you want to delete, for example OpcUa1: `http://localhost:5595/api/v1/configuration/system/components/<ComponentId_To_Delete>/`
+2. Execute a DELETE command to the following endpoint, replacing `<ComponentId To Delete>` with the ID of the component that you want to delete, for example OpcUa1: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId_To_Delete>/`
 
 	Example using curl:
 
