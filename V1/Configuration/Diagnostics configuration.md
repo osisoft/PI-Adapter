@@ -16,7 +16,7 @@ For more information about adapter diagnostics, see [Adapter diagnostics](xref:A
 3. Save the file.
 4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/diagnostics`
 
-    **Note:** `5590` is the default port number. If you selected a different port number, replace it with the value you picked.
+    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
 ## Diagnostics schema
 
