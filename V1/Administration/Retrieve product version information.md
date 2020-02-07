@@ -6,7 +6,7 @@ uid: RetrieveProductVersionInformation
 
 The product version information includes the application version, the version of the underlying .NET Core Framework, and the operating system that the adapter is running on.
 
-Complete the following to retrieve the product version information of an OSIsoft adapter:
+Complete the following procedure to retrieve the product version information of an OSIsoft adapter:
 
 1. Start any configuration tool capable of making HTTP requests.
 2. Execute a GET command to the following endpoint: `GET http://localhost:5590/api/v1/Diagnostics/ProductInformation`
