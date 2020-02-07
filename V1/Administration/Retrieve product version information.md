@@ -9,7 +9,7 @@ The product version information includes the application version, the version of
 Complete the following to retrieve the product version information of an OSIsoft adapter:
 
 1. Start any configuration tool capable of making HTTP requests.
-2. Execute a GET command to the following endpoint: `GET http://localhost:5595/api/v1/Diagnostics/ProductInformation`
+2. Execute a GET command to the following endpoint: `GET http://localhost:5590/api/v1/Diagnostics/ProductInformation`
 
    Result example:
 
