@@ -18,8 +18,9 @@ To change the logging configuration complete the following steps:
 
 1. Using any text editor, create a file that contains the logging configuration in JSON form.
     - For content structure, see [Example Default logging configuration](#example-default-logging-configuration).
-
-2. Save the file.
+    - For all available parameters, see [Logging parameters](#logging-parameters).
+ 
+2. Save the file, for example as *Component_Logging.json*.
 
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Logging`.
 
