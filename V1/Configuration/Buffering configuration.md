@@ -12,8 +12,11 @@ You can configure buffering for data egressed from the adapter to endpoints thro
 
 1. Using any text editor, create a file that contains the buffering configuration in JSON form.
    - For content structure, see the sample output in [Examples - Retrieve the buffering configuration](#examples).
+   - For a table of all available parameters, see [Buffering parameters](#buffering-parameters).
 3. Save the file.
-4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:<port>/api/v1/configuration/system/buffering`
+4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/buffering`
+
+  **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
 ## Buffering schema
 
