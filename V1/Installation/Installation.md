@@ -4,11 +4,14 @@ uid: Installation
 
 # Installation
 
-You can install OSIsoft adapters using an install kit. To download any OSIsoft adapter, go to the [OSIsoft Customer Portal](https://customers.osisoft.com/s/). For a list of supported operating systems and further installation requirements, see the following list.
+Adapters are installed on a local machine using an install kit downloaded from the OSIsoft Customer Portal. For instructions on downloading and installing adapters, see [Install the adapter](xref:InstallTheAdapter).
 
 ## Installation prerequisites
 
-- OSIsoft adapters support .NET Core 3.1, which is supported on the following operating systems:
+Adapters require the installation of the following software and operating systems:
+
+- .NET Core 3.1
+- Operating systems:
  
    - Alpine: 3.10+
    - Debian: 9+
@@ -19,11 +22,7 @@ You can install OSIsoft adapters using an install kit. To download any OSIsoft a
    - openSUSE: 15+
    - SUSE Enterprise Linux (SLES): 12 SP2+
    - macOS: 10.13+
-   - Windows Client: 7, 8.1, 10 (1607+)
-   
-   **Note:** OSIsoft no longer supports Windows 7.
-   
+   - Windows Client: 8.1, 10 (1607+)   
    - Windows Server: 2012 R2+
 
-
-- OSIsoft adapters also require PI Web API. 
+- PI Web API
