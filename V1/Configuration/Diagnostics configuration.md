@@ -13,9 +13,9 @@ For more information about adapter diagnostics, see [Adapter diagnostics](xref:A
 1. Using any text editor, create a file that contains the diagnostics configuration in JSON form.
    - For content structure, see [Example - Retrieve the diagnostics configuration](#example).
 3. Save the file.
-4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:{port}/api/v1/configuration/system/diagnostics`
+4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/diagnostics`
 
-    **Note:** _port_ refers to the configured port for the adapter to run on.
+    **Note:** `5590` is the default port number. If you selected a different port number, replace it with the value you picked.
 
 ## Diagnostics schema
 
