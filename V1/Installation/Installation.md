@@ -23,7 +23,7 @@ For a list of supported operating systems and further installation requirements,
    - macOS: 10.13+
    - Windows Client: 7, 8.1, 10 (1607+)
    
-   **Note:** OSIsoft does no longer support Windows 7.
+   **Note:** OSIsoft no longer supports Windows 7.
    
    - Windows Server: 2012 R2+
 
