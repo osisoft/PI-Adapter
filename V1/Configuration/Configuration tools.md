@@ -4,7 +4,7 @@ uid: ConfigurationTools
 
 # Configuration tools
 
-OSIsoft adapters can be configured with either EdgeCmd utility or one of the REST tools described in this topic.
+OSIsoft adapters can be configured with either EdgeCmd utility or a REST tool. For more information, see the following sections.
 
 ## EdgeCmd utility
 
