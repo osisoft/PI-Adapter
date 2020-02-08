@@ -14,7 +14,7 @@ Each message in the log displays the message severity level, timestamp, and the 
 
 ## Configure logging
 
-To change the logging configuration complete the following steps: 
+Complete the following procedure to change the logging configuration: 
 
 1. Using any text editor, create a file that contains the logging configuration in JSON form.
     - For content structure, see [Example Default logging configuration](#example-default-logging-configuration).
