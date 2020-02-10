@@ -50,12 +50,6 @@ Complete the following procedure to create new egress endpoints:
 
 ## Egress endpoint configuration schema
 
-The following table defines the basic behavior of the _OmfEgress_DataEndpoints_schema.json_ file.
-
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties |                           
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | 
-| Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             |
-
 The full schema definition for the egress endpoint configuration is in the *OmfEgress_DataEndpoints_schema.json* here:
 
 Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
