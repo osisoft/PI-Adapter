@@ -12,23 +12,12 @@ As part of making adapters as secure as possible, any passwords or secrets that 
 
 ## Configure system components
 
-The default _System_Components.json_ file for the System component contains the following information. 
-
-```json
-[
-  {
-    "ComponentId": "OmfEgress",
-    "ComponentType": "OmfEgress"
-  }
-]
-```
-
- **Note:** The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported. 
-
 Complete the following procedure to add a new component:
 
 1. Using any text editor, create a file that contains the system components configuration in JSON form.
-	- For content structure, see [System components example](#system-components-example).
+	- For content structure, see [Example system components configuration example](#example-system-components-configuration).
+	
+	 **Note:** The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported. See [Default system components configuration](#default-system-components-configuration).
 
 	The following example adds a Modbus TCP adapter. 
 
@@ -91,7 +80,21 @@ The following parameters are available for configuring system components.
 | **ComponentId**    | Required |`string` | Yes      | The ID of the component. It can be any alphanumeric string, for example OmfEgress.|
 | **ComponentType**  | Required |`string` | Yes      | The type of the component, for example OmfEgress. There are two types of components: OmfEgress and the adapter. |
 
-## System components example
+
+## Default system components configuration
+
+The default _System_Components.json_ file for the System component contains the following information. 
+
+```json
+[
+  {
+    "ComponentId": "OmfEgress",
+    "ComponentType": "OmfEgress"
+  }
+]
+```
+
+## Example system components configuration
 
 ```json
 [
