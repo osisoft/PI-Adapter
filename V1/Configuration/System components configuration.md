@@ -58,12 +58,6 @@ Complete the following procedure to delete an existing component:
 	
 ## System components schema
 
-The following table defines the basic behavior of the *System_Components_schema.json* file.
-
-| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties |
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- |
-| Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             |
-
 The full schema definition for the system components configuration is in the *System_Components_schema.json* located here:
 
 Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
