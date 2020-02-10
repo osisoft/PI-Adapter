@@ -39,7 +39,7 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 Example using curl:
 
 ```
-curl -X PUT  http://localhost:{port}/api/v1/configuration/system/diagnostics  -H 'Content-Type: application/json' -d '{ "enableDiagnostics": true }'
+curl -X PUT -H "Content-Type:application/json" -d '{"enableDiagnostics":true }' http://localhost:{port}/api/v1/configuration/system/diagnostics
 ```
 
 If successful, the methods returns a `204 No Content` response code.
