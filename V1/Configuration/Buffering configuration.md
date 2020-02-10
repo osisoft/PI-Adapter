@@ -27,7 +27,7 @@ Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
 Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 
-## Buffering parameters:
+## Buffering parameters
 
 | Parameter | Required | Type | Description |
 | ----------| -------- | ---- | ----------- |
