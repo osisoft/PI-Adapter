@@ -24,5 +24,3 @@ Adapters require the installation of the following software and operating system
    - macOS: 10.13+
    - Windows Client: 8.1, 10 (1607+)   
    - Windows Server: 2012 R2+
-
-- PI Web API
