@@ -21,3 +21,5 @@ The possible statuses are:
 | **Starting**                      | The component is currently in the process of starting up and is not yet connected to the data source. |
 | **DeviceInError**                 | The component encountered an error either while connecting to the data source or attempting to collect data. |
 | **Shutdown**                      | The component is either in the process of shutting down or has finished. |
+| **Removed**                       | The adapter component has been removed and will no longer collect data. |
+| **NotConfigured**                 | The adapter component has been created but is not yet configured. |
