@@ -27,7 +27,7 @@ Change the system and adapter configuration by importing the JSON file using a R
 
 ## Sample configuration file
 
-The following sample includes configuration of System components along with an OPC UA adapter. 
+The following sample file shows the configuration of an OPC UA adapter. 
 
 ```json
 {
