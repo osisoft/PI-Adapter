@@ -8,7 +8,7 @@ OSIsoft adapters can be configured with either EdgeCmd utility or a REST tool. F
 
 ## EdgeCmd utility
 
-You can use the [EdgeCmd utility](xref:EdgecmdUtility) on both Linux and Windows to configure OSIsoft adapters.
+To configure OSIsoft adapters, you can use the EdgeCmd utility on both Linux and Windows. For more information, see [EdgeCmd utility](xref:EdgecmdUtility).
 
 ## REST tools
 
@@ -21,11 +21,3 @@ OSIsoft adapter documentation displays curl commands for configuration and manag
 ### Postman
 
 Postman is an effective REST tool for systems with GUI components. OSIsoft adapters are supported on platforms that lack this capability. It is particularly useful for learning more about OSIsoft adapter REST APIs. For more information, see [Postman (https://www.postman.com/)](https://www.postman.com/).
-
-### C#, Python, Go
-
-You can use any modern programming language to make REST calls to administer and write programs for OSIsoft adapters.
-
-### System tools
-
-Many OSIsoft customers use Windows computers, even though they may deploy Linux devices to host OSIsoft adapters. You can install OSIsoft adapters on Windows 10, and the same custom applications developed on Windows should work on Linux, as long as the application development environment is supported on Linux. OSIsoft adapters have been designed to use platform independent programming. To facilitate working with Linux devices, Windows tools like PuTTY and WinSCP are very useful for copying files and remotely accessing Linux command lines.
