@@ -44,6 +44,7 @@ curl -X PUT -H "Content-Type:application/json" -d '{"enableDiagnostics":true }' 
 
 If successful, the methods returns a `204 No Content` response code.
 
+
 **Retrieve the diagnostics configuration**
 
 Example using curl:
