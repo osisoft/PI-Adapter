@@ -26,26 +26,26 @@ Complete the following procedure to create new egress endpoints:
 
     - Add endpoints
         ```bash
-        curl -v -d "@OmfEgress_DataEndpoints.config.json" -H "Content-Type: application/json" -X POST    "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
+        curl -d "@OmfEgress_DataEndpoints.config.json" -H "Content-Type: application/json" -X POST    "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
         ```
 
         ```bash
-        curl -v -d "@OmfEgress_DataEndpoints.config.json" -H "Content-Type: application/json" -X PUT   "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
+        curl -d "@OmfEgress_DataEndpoints.config.json" -H "Content-Type: application/json" -X PUT   "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
         ```
 
     - Delete an endpoint
         ```bash
-        curl -v -X DELETE "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}"
+        curl -X DELETE "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}"
         ```
 
     - Update an endpoint
         ```bash
-        curl -v -d "@OmfEgress_DataEndpoint.config.json" -H "Content-Type: application/json" -X UPDATE     "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}"
+        curl -d "@OmfEgress_DataEndpoint.config.json" -H "Content-Type: application/json" -X UPDATE     "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}"
         ```
 
     - View endpoints
         ```bash
-        curl -v -X GET "http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints"
+        curl -X GET "http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints"
         ```
 
 ## Egress endpoint configuration schema
@@ -118,5 +118,5 @@ The following examples are valid egress configurations.
 ## Egress execution details
 
 - After you add configuration for an egress endpoint, egress will be executed immediately for that endpoint. Egress is handled individually per configured endpoint. On first execution, types and containers will be egressed. After that only new or changed types or containers will be egressed. Type creation must be successful in order to create containers. Container creation must be successful in order to egress data.
-- If an egress endpoint is removed, data flow will immediately end for that endpoint. Any buffered data for the endpoint that has been deleted will be permanently lost.
+- If an egress endpoint is removed, data flow will immediately stop for that endpoint. Buffered data of a removed endpoint will be permanently lost.
 - Type, container, and data items are batched into one or more OMF messages when egressing. As per the requirements defined in OMF, a single message payload will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item will result in the message failing. Types, containers, and data will continue to be egressed as long as the destination continues to respond to HTTP requests - retrying previous failures as needed.
