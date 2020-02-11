@@ -28,6 +28,8 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 ## Diagnostics parameters
 
+The following parameters are available for configuring diagnostics:
+
 | Parameter             | Required | Type    | Description |
 | ---------             | -------- | ------- | ----------- |
 | **EnableDiagnostics** | Required | `boolean` | Determines whether Diagnostics are enabled. |
