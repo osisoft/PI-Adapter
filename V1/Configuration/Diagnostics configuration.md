@@ -67,5 +67,5 @@ Sample output:
 
 | Relative URL                            | HTTP verb | Action                                          |
 | --------------------------------------- | --------- | ----------------------------------------------- |
-| `api/v1/configuration/system/diagnostics` | `GET`       | Gets the diagnostics configuration              |
-| `api/v1/configuration/system/diagnostics` | `PUT`       | Replaces the existing diagnostics configuration |
+| api/v1/configuration/system/diagnostics | GET       | Gets the diagnostics configuration              |
+| api/v1/configuration/system/diagnostics | PUT       | Replaces the existing diagnostics configuration |
