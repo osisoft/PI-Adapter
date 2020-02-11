@@ -77,10 +77,8 @@ curl -X PATCH "http://localhost:5590/api/v1/configuration/system/buffering" -H "
 
 ## REST URIs
 
-The relative URI for all buffering configuration actions is `api/v1/configuration/system/buffering`.
-
-| HTTP verb | Action               |
-|-----------------------------------------------------------|-----------|
-| GET       | Gets the buffering configuration |
-| PUT       | Replaces the existing buffering configuration |
-| PATCH | Update parameter, partial configuration |
+| Relative URL | HTTP verb | Action               |
+| ------------ ||-----------------------------------------------------------|-----------|
+| api/v1/configuration/system/buffering | GET       | Gets the buffering configuration |
+| api/v1/configuration/system/buffering | PUT       | Replaces the existing buffering configuration |
+| api/v1/configuration/system/buffering | PATCH | Update parameter, partial configuration |
