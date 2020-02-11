@@ -22,7 +22,7 @@ For more information about adapter diagnostics, see [Adapter diagnostics](xref:A
 
 The full schema definition for the diagnostics configuration is in the *System_Diagnostics_schema.json* here:
 
-Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
+Windows: *%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas*
 
 Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
