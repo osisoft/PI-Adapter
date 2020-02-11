@@ -52,7 +52,7 @@ Complete the following procedure to create new egress endpoints:
 
 The full schema definition for the egress endpoint configuration is in the *OmfEgress_DataEndpoints_schema.json* here:
 
-Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
+Windows: *%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas*
 
 Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
