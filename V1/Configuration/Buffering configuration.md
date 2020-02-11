@@ -29,6 +29,8 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 ## Buffering parameters
 
+The following parameters are available for buffering:
+
 | Parameter | Required | Type | Description |
 | ----------| -------- | ---- | ----------- |
 | **EnableBuffering**  | Optional |  `boolean` | Enables or disables buffering. <br><br> Default: True |
