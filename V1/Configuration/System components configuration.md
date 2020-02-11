@@ -12,12 +12,16 @@ As part of making adapters as secure as possible, any passwords or secrets that 
 
 ## Configure system components
 
+Configuration of system components includes adding, updating and deleting components.
+
+### Add a system component
+
 Complete the following procedure to add a new component:
 
-1. Using any text editor, create a file that contains the system components configuration in JSON form.
-	- For content structure, see [Example system components configuration example](#example-system-components-configuration).
+1. Using any text editor, create a file that contains the component to be added to the system in JSON form.
+	- For content structure, see [Default system components configuration](#default-system-components-configuration).
 	
-	 **Note:** The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported. See [Default system components configuration](#default-system-components-configuration).
+	 **Note:** The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported.
 
 	The following example adds a Modbus TCP adapter. 
 
@@ -40,18 +44,38 @@ Complete the following procedure to add a new component:
    	```
 
 	After the curl command completes successfully, you can configure or use the new component.
+	
+### Update the system components configuration
+
+Complete the following procedure to update the system components configuration:
+
+1. Using any text editor, create a file that contains the system components configuration in JSON form. 
+	- For content structure, see [Example system components configuration](#example-system-components-configuration).
+2. Delete or add one or more components from the file.
+
+	**Note:** A component always consists of `<componentId>` and `<componentType>`
+
+2. Start any tool capable of making HTTP requests.
+3. Execute a PUT command to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components`
+
+	Example using curl
+
+	```bash
+	curl -X PUT http://localhost:5590/api/v1/configuration/system/components
+	```
+
 
 ### Delete a system component
 
 Complete the following procedure to delete an existing component:
 
 1. Start any tool capable of making HTTP requests.
-2. Execute a DELETE command to the following endpoint, replacing `<ComponentId To Delete>` with the ID of the component that you want to delete, for example OpcUa1: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId_To_Delete>/`
+2. Execute a DELETE command to the following endpoint, replacing `<ComponentId>` with the ID of the component that you want to delete: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId>/`
 
-	Example using curl:
+	Example using curl - Delete OpcUa1 component
 
 	```bash
-	curl -X DELETE http://localhost:5590/api/v1/configuration/system/components/{ComponentId_To_Delete}/
+	curl -X DELETE http://localhost:5590/api/v1/configuration/system/components/OpcUa1/
 	```
 
 	All the logs and configurations files for the deleted components will be moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
