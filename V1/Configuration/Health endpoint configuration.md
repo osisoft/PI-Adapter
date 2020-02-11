@@ -26,6 +26,8 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 ## Health endpoint parameters
 
+The following parameters are available for configuring health endpoints:
+
 | Parameter                       | Required                            | Type      | Description                                        |
 |---------------------------------|-------------------------------------|-----------|----------------------------------------------------|
 | **Id**                          | Optional                            | `string`    | Uniquely identifies the endpoint. This can be any alphanumeric string. If left blank, a unique value is generated automatically. |
