@@ -10,14 +10,14 @@ Complete the following procedure to delete an adapter component:
 
 1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 
-2. Execute a DELETE command to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components/<ComponentIdToBeDeleted>`
+2. Execute a DELETE command to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId>`
 
     **Note:** An empty DELETE command must be made against the Id of the component to be deleted. 
 
-      Example using curl:
+      Example using curl - Delete OpcUa1 adapter component
 
       ```bash
-      curl -v -X DELETE "http://localhost:5590/api/v1/configuration/system/components/ComponentIdToBeDeleted"
+      curl -v -X DELETE "http://localhost:5590/api/v1/configuration/system/components/OpcUa1"
       ```
 
 ## File relocation
@@ -51,3 +51,5 @@ In the following example, one Modbus Adapter service is installed on a particula
 | Relative URL                                              | HTTP verb | Action               |
 |-----------------------------------------------------------|-----------|----------------------|
 | api/v1/configuration/system/components/{id}      | DELETE       | Deletes specified component |
+
+**Note:** {id} is the ID of the component that you want to remove, for example OpcUa1 or Modbus1.
