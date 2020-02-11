@@ -8,8 +8,7 @@ Adapters are installed on a local machine using an install kit downloaded from t
 
 ## Installation prerequisites
 
-Adapters require the installation of the following software and operating systems:
-
+Adapters require the installation of the following software:
 - .NET Core 3.1
 - Operating systems:
  
