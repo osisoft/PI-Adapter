@@ -22,7 +22,19 @@ Complete the following procedure to delete an adapter component:
 
 ## File relocation
 
-All configuration and log files will be renamed and moved to a folder called _Removed_ within the respective directory. Configuration files will be moved to *.\Configuration\Removed;* log files to *.\Logs\Removed*. The files are renamed according to the timestamp of removal, for example *FileName.json_removed_yyyy-MM-dd--hh-mm-ss*.
+All configuration and log files will be renamed and moved.The files are renamed according to the timestamp of removal, for example *FileName.json_removed_yyyy-MM-dd--hh-mm-ss*. 
+
+Configuration files will be moved to the following location:
+
+   **Windows:** *%programdata%\OSIsoft\Adapters\AdapterName\AdapterName\Configuration\Removed*
+
+   **Linux:** */usr/share/OSIsoft/Adapters/AdapterName/AdapterName/Configuration/Removed*
+
+Log files will be moved to the following location:
+
+   **Windows:** *%programdata%\OSIsoft\Adapters\AdapterName\AdapterName\Logs\Removed*
+
+   **Linux:** */usr/share/OSIsoft/Adapters/AdapterName/AdapterName/Logs/Removed*
 
 In the following example, one Modbus Adapter service is installed on a particular Windows node with the name ModbusService1. A Modbus component with the name ModbusDeviceX was added and configured to this Modbus adapter and later removed. Linux follows a similar behavior. This is the resulting relocation and renaming scheme after deletion:
 
