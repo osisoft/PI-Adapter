@@ -133,3 +133,12 @@ The default _System_Components.json_ file for the System component contains the 
    }
 ]
 ```
+
+## REST URLs
+
+| Relative URL | HTTP verb | Action |
+| ------------ | --------- | ------ |
+| api/v1/configuration/system/components | GET | Retrieves  the system components configuration |
+| api/v1/configuration/system/components | POST | Adds a new component to the system configuration |
+| api/v1/configuration/system/components | PUT | Updates the system components configuration |
+| api/v1/configuration/system/components/_componentId_ | DELETE | Deletes a specific component from the system components configuration |
