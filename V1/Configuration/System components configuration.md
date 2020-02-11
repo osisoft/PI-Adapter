@@ -67,7 +67,7 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 ## System components parameters
 
-The following parameters are available for configuring system components.
+The following parameters are available for configuring system components:
 
 | Parameters     | Required | Type    | Nullable | Description |
 | -------------- | -------- | --------| ---------|-------------|
