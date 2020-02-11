@@ -20,6 +20,7 @@ Complete the following procedure to add a new component to the system:
 
 1. Using any text editor, create a file that contains the component to be added to the system in JSON form.
 	- For content structure, see [Default system components configuration](#default-system-components-configuration).
+	- For a table of all available parameters, see [System components parameters](#system-components-parameters).
 	
 	 **Note:** The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported.
 
@@ -51,6 +52,8 @@ Complete the following procedure to update the system components configuration:
 
 1. Using any text editor, create a file that contains the system components configuration in JSON form. 
 	- For content structure, see [Example system components configuration](#example-system-components-configuration).
+	- For a table of all available parameters, see [System components parameters](#system-components-parameters).
+	
 2. Delete or add one or more components from the file.
 
 	**Note:** A component always consists of `<componentId>` and `<componentType>`.
