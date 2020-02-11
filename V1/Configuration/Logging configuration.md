@@ -46,6 +46,8 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 ## Logging parameters
 
+The following parameters are available for configuring logging:
+
 | Parameter                | Required | Type      | Description |
 | ------------------------ | -------- | --------- | ----------- |
 |**logLevel**              | Optional | reference | The logLevel sets the minimum severity for messages to be included in the logs. Messages with a severity below the level set are not included. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical. For detailed information about the logLevels, see [LogLevel](#loglevel). |
