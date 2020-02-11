@@ -18,7 +18,7 @@ Change the system and adapter configuration by importing the JSON file using a R
 	Example using curl:
 	
 	```cmdline
-	curl -X http://localhost:5590/api/v1/configuration -d '{JSON file name}'
+	curl -X  PUT http://localhost:5590/api/v1/configuration -d '{JSON file name}'
 	```
 
 	**Note:** In order for some of the adapter specific configurations to take effect, you have to restart the adapter.
