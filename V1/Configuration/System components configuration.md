@@ -16,7 +16,7 @@ Configuration of system components includes adding, updating and deleting compon
 
 ### Add a system component
 
-Complete the following procedure to add a new component:
+Complete the following procedure to add a new component to the system:
 
 1. Using any text editor, create a file that contains the component to be added to the system in JSON form.
 	- For content structure, see [Default system components configuration](#default-system-components-configuration).
@@ -53,7 +53,7 @@ Complete the following procedure to update the system components configuration:
 	- For content structure, see [Example system components configuration](#example-system-components-configuration).
 2. Delete or add one or more components from the file.
 
-	**Note:** A component always consists of `<componentId>` and `<componentType>`
+	**Note:** A component always consists of `<componentId>` and `<componentType>`.
 
 2. Start any tool capable of making HTTP requests.
 3. Execute a PUT command to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components`
