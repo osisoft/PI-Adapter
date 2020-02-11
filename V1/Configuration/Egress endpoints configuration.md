@@ -59,7 +59,7 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 ## Egress endpoint parameters
 
-The following parameters are available for configuring egress endpoint parameters:
+The following parameters are available for configuring egress endpoints:
 
 | Parameter                       | Required                  | Type      | Nullable | Description                                        |
 |---------------------------------|---------------------------|-----------|----------|-------------|
