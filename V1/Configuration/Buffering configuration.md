@@ -75,7 +75,7 @@ curl -X PATCH "http://localhost:5590/api/v1/configuration/system/buffering" -H "
 
 `204 No Content` response indicates success.
 
-## REST URIs
+## REST URLs
 
 | Relative URL | HTTP verb | Action               |
 | ------------ |---------- |----------------------|
