@@ -60,7 +60,7 @@ Complete the following procedure to delete an existing component:
 
 The full schema definition for the system components configuration is in the *System_Components_schema.json* located here:
 
-Windows: *%Program Files%\OSIsoft\Adapters\AdapterName\Schemas*
+Windows: *%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas*
 
 Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
