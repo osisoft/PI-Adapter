@@ -13,7 +13,7 @@ For more information about adapter diagnostics, see [Adapter diagnostics](xref:A
 1. Using any text editor, create a file that contains the diagnostics configuration in JSON form.
    - For content structure, see [Example - Retrieve the diagnostics configuration](#example).
    - For a table of all available parameters, see [Diagnostics parameters](#diagnostics-parameters).
-3. Save the file.
+3. Save the file, for example as *Diagnostics.config.json*
 4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/diagnostics`
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
@@ -41,7 +41,7 @@ The following parameters are available for configuring diagnostics:
 Example using curl:
 
 ```
-curl -X PUT -H "Content-Type:application/json" -d '{"enableDiagnostics":true }' http://localhost:{port}/api/v1/configuration/system/diagnostics
+curl -d "@Diagnostics.config.json" -H "Content-Type:application/json" -X PUT "http://localhost:{port}/api/v1/configuration/system/diagnostics"
 ```
 
 If successful, the methods returns a `204 No Content` response code.
@@ -52,7 +52,7 @@ If successful, the methods returns a `204 No Content` response code.
 Example using curl:
 
 ```
-curl -X GET  http://localhost:{port}/api/v1/configuration/system/diagnostics
+curl -X GET http://localhost:{port}/api/v1/configuration/system/diagnostics
 ```
 
 Sample output:
