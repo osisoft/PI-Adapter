@@ -44,7 +44,7 @@ The following examples are buffering configurations made through curl REST clien
 **Configure buffering**
 
    ```
-   curl -X PUT "http://localhost:5590/api/v1/configuration/system/buffering" -H "Content-Type: application/json" -d "{ "MaxBufferSizeMB": 50, "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/NewBuffers", "EnableBuffering": true }"
+   curl -d "{ "MaxBufferSizeMB": 50, "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/NewBuffers", "EnableBuffering": true }" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/buffering" 
    ```
 
    `204 No Content` response indicates success.
@@ -70,7 +70,7 @@ Sample output:
 **Update MaxBuferSizeMb parameter**
 
 ```
-curl -X PATCH "http://localhost:5590/api/v1/configuration/system/buffering" -H "Content-Type: application/json" -d "{ "MaxBufferSizeMB": 100 }"
+curl -d "{ "MaxBufferSizeMB": 100 }" -H "Content-Type: application/json" -X PATCH "http://localhost:5590/api/v1/configuration/system/buffering"
 ```
 
 `204 No Content` response indicates success.
