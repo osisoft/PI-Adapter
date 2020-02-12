@@ -37,3 +37,11 @@ The following parameters are available for configuring health endpoints:
 | **Username**                    | Required for PI Web API endpoints   | `string`    | The username used to authenticate with a PI Web API OMF endpoint. |
 | **Password**                    | Required for PI Web API endpoints   | `string`    | The password used to authenticate with a PI Web API OMF endpoint. |
 | **ValidateEndpointCertificate** | Optional                            | `boolean`      | Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends setting this to true in production environments. Defaults to true. |
+
+# REST URLs
+
+| Relative URL | HTTP verb | Action |
+| ------------ | --------- | ------ |
+| api/v1/Configuration/System/HealthEndpoints | GET | Retrieves all configured health endpoints |
+| api/v1/Configuration/System/HealthEndpoints | POST | Adds a new PI Web API OMF or OCS health endpoint |
+| api/v1/Configuration/System/HealthEndpoints/_<endpointId> | PATCH | Updates or changes the values of a specific configured endpoint |
