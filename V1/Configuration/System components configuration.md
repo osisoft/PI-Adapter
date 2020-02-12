@@ -57,7 +57,7 @@ Complete the following procedure to delete an existing component:
 	Example using curl - Delete OpcUa1 component
 
 	```bash
-	curl -X DELETE http://localhost:5590/api/v1/configuration/system/components/OpcUa1/
+	curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/OpcUa1/"
 	```
 
 	All the logs and configurations files for the deleted components will be moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
