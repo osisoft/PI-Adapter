@@ -8,7 +8,7 @@ Adapters can be installed on either a Windows or Linux operating system. Before 
 
 ## Windows
 
-Complete the following steps to install an OSIsoft adapter on Windows:
+Complete the following procedure to install an OSIsoft adapter on Windows:
 
 1. Download the Windows .msi file from the [OSIsoft Customer portal (https://customers.osisoft.com/s/products)](https://customers.osisoft.com/s/products).
 
@@ -29,7 +29,7 @@ Complete the following steps to install an OSIsoft adapter on Windows:
 
 ## Linux
 
-Complete the following steps to install an OSIsoft adapter on Linux:
+Complete the following procedure to install an OSIsoft adapter on Linux:
 
 1. Download the appropriate Linux distribution file from the [OSIsoft Customer portal (https://customers.osisoft.com/s/products)](https://customers.osisoft.com/s/products).
 
