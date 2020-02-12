@@ -16,7 +16,7 @@ Complete the following procedure to start an individual ingress component:
     Example **Start the OpcUa1 ingress component** using curl:
 
     ```bash
-    curl -X POST "http://localhost:5590/api/v1/Administration/OpcUa1/Start"
+    curl -d "" -X POST "http://localhost:5590/api/v1/Administration/OpcUa1/Start"
     ```
 
     An HTTP status 204 message indicates success.
@@ -31,7 +31,7 @@ Complete the following procedure to stop an individual ingress component:
     Example **Stop the Modbus1 ingress component** using cURL:
 
     ```bash
-    curl -X POST "http://localhost:5590/api/v1/Administration/Modbus1/Stop"
+    curl -d "" -X POST "http://localhost:5590/api/v1/Administration/Modbus1/Stop"
     ```
 
     An HTTP status 204 message indicates success.
