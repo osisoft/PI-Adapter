@@ -44,4 +44,4 @@ The following parameters are available for configuring health endpoints:
 | ------------ | --------- | ------ |
 | api/v1/Configuration/System/HealthEndpoints | GET | Retrieves all configured health endpoints |
 | api/v1/Configuration/System/HealthEndpoints | POST | Adds a new PI Web API OMF or OCS health endpoint |
-| api/v1/Configuration/System/HealthEndpoints/_<endpointId> | PATCH | Updates or changes the values of a specific configured endpoint |
+| api/v1/Configuration/System/HealthEndpoints/<endpointId> | PATCH | Updates or changes the values of a specific configured endpoint |
