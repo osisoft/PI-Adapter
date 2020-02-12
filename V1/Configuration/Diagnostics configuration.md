@@ -40,7 +40,7 @@ The following parameters are available for configuring diagnostics:
 
 Example using curl:
 
-```
+```bash
 curl -d "{ "enableDiagnostics":true }" -H "Content-Type:application/json" -X PUT "http://localhost:{port}/api/v1/configuration/system/diagnostics"
 ```
 
@@ -51,7 +51,7 @@ If successful, the methods returns a `204 No Content` response code.
 
 Example using curl:
 
-```
+```bash
 curl -X GET "http://localhost:{port}/api/v1/configuration/system/diagnostics"
 ```
 
