@@ -78,3 +78,14 @@ The following logging configuration is the default for a component on install:
   "logFileCountLimit": 31   
 }
 ```
+
+## REST URLs
+
+| Relative URL | HTTP verb | Action |
+| ------------ | --------- | ------ |
+| api/v1/configuration/System/Logging | GET | Retrieves the system logging configuration
+| api/v1/configuration/System/Logging | PUT | Updates the system logging configuration 
+| api/v1/configuration/_ComponentId_/Logging | GET | Retrieves the logging configuration of the specified adapter component
+| api/v1/configuration/_ComponentId_/Logging | PUT | Updates the logging configuration of the specified adapter component
+
+**Note:** Replace *ComponentId* with the Id of your adapter component, for example Modbus1 or OpcUa1.
