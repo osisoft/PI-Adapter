@@ -13,7 +13,7 @@ Change the system and adapter configuration by importing the JSON file using a R
 1. Using any text editor, create a file that contains the System and adapter configuration in JSON form.
 	- For content structure, see [Sample configuration file](#sample-configuration-file).
 2. Save the file.
-2. Use any of the [Configuration Tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration -d '{JSON file name}'`
+2. Use any of the [Configuration Tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration`
 
 	Example using curl:
 	
