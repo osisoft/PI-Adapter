@@ -29,7 +29,7 @@ Complete the following procedure to change the logging configuration:
     Example using curl (run this command from the same directory where the file is located):
 
     ```bash
-    curl -i -d "@Component_Logging.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/<ComponentId>/Logging
+    curl -d "@Component_Logging.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/<ComponentId>/Logging"
     ```
     
 On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after the adapter is restarted. 
