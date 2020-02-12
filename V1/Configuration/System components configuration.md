@@ -41,32 +41,11 @@ Complete the following procedure to add a new component to the system:
 	Example using curl (run this command from the same directory where the file is located):
 
    	```bash
-   	curl -i -d "@AddComponent.json" -H "Content-Type: application/json" http://localhost:5590/api/v1/configuration/system/components
+   	curl -d "@AddComponent.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/components"
    	```
 
 	After the curl command completes successfully, you can configure or use the new component.
 	
-### Update the system components configuration
-
-Complete the following procedure to update the system components configuration:
-
-1. Using any text editor, create a file that contains the system components configuration in JSON form. 
-	- For content structure, see [Example system components configuration](#example-system-components-configuration).
-	- For a table of all available parameters, see [System components parameters](#system-components-parameters).
-	
-2. Delete or add one or more components from the file.
-
-	**Note:** A component always consists of `<componentId>` and `<componentType>`.
-
-2. Start any tool capable of making HTTP requests.
-3. Execute a PUT command to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components`
-
-	Example using curl
-
-	```bash
-	curl -X PUT http://localhost:5590/api/v1/configuration/system/components
-	```
-
 
 ### Delete a system component
 
