@@ -19,7 +19,7 @@ Complete the following steps to install an OSIsoft adapter on Windows:
     
     You can change the installation folder or port number during setup. The default port number is 5590.
 
-4. Optional: Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a GET command to the following endpoint: `curl http://localhost:5590/api/v1/configuration`.
+4. Optional: Run the following curl command to verify the installation: `curl http://localhost:5590/api/v1/configuration`.
 
     If you receive an error, wait a few seconds and try the script again. If the installation was successful, a JSON copy of the default system configuration is returned 
 
@@ -37,6 +37,6 @@ Complete the following steps to install an OSIsoft adapter on Linux:
 
     For example, to install the Linux ARM Debian package, run command. `sudo apt install ./Modbus_linux-arm.deb`. To install the Linux    x64 package, run command `sudo apt install ./Modbus_linux-x64.deb`.
 
-4. Optional: Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a GET command to the following endpoint: `curl http://localhost:5590/api/v1/configuration`.
+4. Optional: Run the following curl command to verify the installation: `curl http://localhost:5590/api/v1/configuration`.
 
     If you receive an error, wait a few seconds and try the script again. If the installation was successful, a JSON copy of the default system configuration is returned 
