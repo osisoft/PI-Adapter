@@ -16,6 +16,12 @@ For more information about adapter diagnostics, see [Adapter diagnostics](xref:A
 3. Save the file.
 4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/diagnostics`
 
+   Example using curl:
+
+   ```bash
+   curl -d "{ "enableDiagnostics":true }" -H "Content-Type:application/json" -X PUT "http://localhost:{port}/api/v1/configuration/system/diagnostics"
+   ```
+
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
 ## Diagnostics schema
@@ -35,17 +41,6 @@ The following parameters are available for configuring diagnostics:
 | **EnableDiagnostics** | Required | `boolean` | Determines whether Diagnostics are enabled. |
 
 ## Example
-
-**Configure diagnostics**
-
-Example using curl:
-
-```bash
-curl -d "{ "enableDiagnostics":true }" -H "Content-Type:application/json" -X PUT "http://localhost:{port}/api/v1/configuration/system/diagnostics"
-```
-
-If successful, the methods returns a `204 No Content` response code.
-
 
 **Retrieve the diagnostics configuration**
 
