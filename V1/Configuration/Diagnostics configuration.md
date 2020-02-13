@@ -18,7 +18,7 @@ For more information about adapter diagnostics, see [Adapter diagnostics](xref:A
 
    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-   Example using curl:
+   Example using curl (run this command from the same directory where the file is located):
 
    ```bash
    curl -d "{ "enableDiagnostics":true }" -H "Content-Type:application/json" -X PUT "http://localhost:{port}/api/v1/configuration/system/diagnostics"
