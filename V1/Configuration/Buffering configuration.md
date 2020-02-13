@@ -13,10 +13,16 @@ You can configure buffering for data egressed from the adapter to endpoints thro
 1. Using any text editor, create a file that contains the buffering configuration in JSON form.
    - For content structure, see the sample output in [Examples - Retrieve the buffering configuration](#examples).
    - For a table of all available parameters, see [Buffering parameters](#buffering-parameters).
-3. Save the file.
-4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/buffering`
+2. Save the file.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/buffering`
 
-  **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
+     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
+
+     Example using curl (run this command from the same directory where the file is located): 
+
+     ```
+      curl -d "{ "MaxBufferSizeMB": 50, "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/NewBuffers", "EnableBuffering": true }" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/buffering" 
+      ```
 
 ## Buffering schema
 
@@ -40,14 +46,6 @@ The following parameters are available for configuring buffering:
 ## Examples
 
 The following examples are buffering configurations made through curl REST client.
-
-**Configure buffering**
-
-   ```
-   curl -d "{ "MaxBufferSizeMB": 50, "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/NewBuffers", "EnableBuffering": true }" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/buffering" 
-   ```
-
-   `204 No Content` response indicates success.
 
 **Retrieve the buffering configuration**
 
