@@ -15,6 +15,8 @@ Change the system and adapter configuration by importing the JSON file using a R
 2. Save the file.
 2. Use any of the [Configuration Tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration`
 
+    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
+
 	Example using curl:
 	
 	```cmdline
