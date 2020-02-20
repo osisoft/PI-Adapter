@@ -25,6 +25,8 @@ Complete the following procedure to change the logging configuration:
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Logging`.
 
     **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter, for example _OpcUa1_.
+        
+    `5590` is the default port number. If you selected a different port number, replace it with that value.
 
     Example using curl (run this command from the same directory where the file is located):
 
