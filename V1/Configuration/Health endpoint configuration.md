@@ -64,10 +64,10 @@ The following parameters are available for configuring health endpoints:
 
 ```
 {
-	Id: "PWA",
-	Endpoint: "EXAMPLE2.COM",
-	UserName: "JohnDoe",
-	Password: "123ABC"
+	"Id": "PWA",
+	"Endpoint": "EXAMPLE2.COM",
+	"UserName": "JohnDoe",
+	"Password": "123ABC"
 }
 ```
 
