@@ -20,7 +20,7 @@ You can configure buffering for data egressed from the adapter to endpoints thro
 
      Example using curl (run this command from the same directory where the file is located): 
 
-     ```
+     ```bash
       curl -d "@Buffering.config.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/buffering" 
       ```
 
