@@ -53,7 +53,7 @@ Complete the following procedure to add a new component to the system:
 
 Complete the following procedure to delete an existing component:
 
-1. Start any tool capable of making HTTP requests.
+1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 2. Execute a DELETE command to the following endpoint, replacing `<ComponentId>` with the ID of the component that you want to delete: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId>/`
 
 	**Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
