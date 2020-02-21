@@ -12,9 +12,18 @@ For more information about adapter health, see [Adapter health](xref:AdapterHeal
 A health endpoint designates an OSIsoft OMF endpoint where adapter health information should be sent. You can configure multiple health endpoints. 
 
 1. Using any text editor, create a file that contains one or more health endpoints in JSON form.
+    - For content structure, see [Examples](#examples).
     - For a table of all available health endpoint parameters, see [Health endpoint parameters](#health-endpoint-parameters).
-2. Save the file.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints/`
+2. Save the file, for example as *HealthEndpoint.config.json*.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints`
+
+    `5590` is the default port number. If you selected a different port number, replace it with that value.
+
+    Example using curl (run this command from the same directory where the file is located):
+    
+    ```bash
+    curl -d "@HealthEndpoint.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/healthendpoints"
+    ```
 
 ## Health endpoints schema
 
@@ -38,7 +47,31 @@ The following parameters are available for configuring health endpoints:
 | **Password**                    | Required for PI Web API endpoints   | `string`    | The password used to authenticate with a PI Web API OMF endpoint. |
 | **ValidateEndpointCertificate** | Optional                            | `boolean`      | Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends setting this to true in production environments. Defaults to true. |
 
-# REST URLs
+# Examples
+
+**OCS endpoint**
+
+```
+{
+    "Id": "OCS",
+    "Endpoint": "EXAMPLE1.COM",
+    "ClientId": "123-ABC",
+    "ClientSecret": "ABC123"
+}
+```
+
+**PI Web API endpoint**
+
+```
+{
+	Id: "PWA",
+	Endpoint: "EXAMPLE2.COM",
+	UserName: "JohnDoe",
+	Password: "123ABC"
+}
+```
+
+## REST URLs
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
