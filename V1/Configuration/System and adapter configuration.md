@@ -11,7 +11,7 @@ You can configure the System and adapter components together using a single call
 Change the system and adapter configuration by importing the JSON file using a REST client:
 
 1. Using any text editor, create a file that contains the System and adapter configuration in JSON form.
-	- For content structure, see [Sample configuration file](#sample-configuration-file).
+	- For content structure, see [Example](#example).
 2. Save the file.
 2. Use any of the [Configuration Tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration`
 
@@ -27,7 +27,9 @@ Change the system and adapter configuration by importing the JSON file using a R
 
 	If the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result.
 
-## Sample configuration file
+## Example
+
+**Sample configuration file**
 
 The following sample file shows the configuration of an OPC UA adapter. 
 
