@@ -17,7 +17,7 @@ Each message in the log displays the message severity level, timestamp, and the 
 Complete the following procedure to change the logging configuration: 
 
 1. Using any text editor, create a file that contains the logging configuration in JSON form.
-    - For content structure, see [Example Default logging configuration](#example-default-logging-configuration).
+    - For content structure, see [Example](#example).
     - For all available parameters, see [Logging parameters](#logging-parameters).
  
 2. Save the file, for example as *Component_Logging.json*.
@@ -68,7 +68,9 @@ The following parameters are available for configuring logging:
 | Critical | Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention. This can indicate application wide failures like beta timeout expired, unable to start self-hosted endpoint, unable to access vital resource (for example, Data Protection key file), and so on. |
 
 
-## Example Default logging configuration
+## Example 
+
+**Default logging configuration**
 
 By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
 The following logging configuration is the default for a component on install:
