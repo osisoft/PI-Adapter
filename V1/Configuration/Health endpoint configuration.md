@@ -17,7 +17,7 @@ A health endpoint designates an OSIsoft OMF endpoint where adapter health inform
 2. Save the file, for example as *HealthEndpoint.config.json*.
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints`
 
-    `5590` is the default port number. If you selected a different port number, replace it with that value.
+    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
     Example using curl (run this command from the same directory where the file is located):
     
@@ -47,7 +47,7 @@ The following parameters are available for configuring health endpoints:
 | **Password**                    | Required for PI Web API endpoints   | `string`    | The password used to authenticate with a PI Web API OMF endpoint. |
 | **ValidateEndpointCertificate** | Optional                            | `boolean`      | Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends setting this to true in production environments. Defaults to true. |
 
-# Examples
+## Examples
 
 **OCS endpoint**
 
