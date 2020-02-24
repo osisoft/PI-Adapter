@@ -52,7 +52,7 @@ Complete the following procedure to add a new component to the system:
 
 Complete the following procedure to update the system components, for example by adding or removing components.
 
-1. Using any text editor, create a file that contains the current system components configuration. For information on how to retrieve the current system configuration, see [REST URLs](#rest-urls).
+1. Using any text editor, create a file that contains the current system components configuration. For information on how to retrieve the system components configuration, see [REST URLs](#rest-urls).
 2. Remove or add components as you need. You cannot remove the OmfEgress component.
 3. Save the file, for example as *UpdateComponents.json*
 4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components`
