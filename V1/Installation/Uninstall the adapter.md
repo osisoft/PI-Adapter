@@ -8,7 +8,7 @@ Complete one of the following procedures for your operating system to uninstall 
 
 ## Windows
 
-1. To remove the OSIsoft adapter program files from a Windows device, use the Windows Control Panel uninstall application process.
+1. To remove the adapter software from a Windows device, use the Windows Control Panel - Programs and Features utility.
 
     **Note:** The configuration, data, and log files are not removed by the uninstall process.
 
