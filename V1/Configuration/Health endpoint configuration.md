@@ -54,7 +54,7 @@ The following parameters are available for configuring health endpoints:
 ```
 {
     "Id": "OCS",
-    "Endpoint": "EXAMPLE1.COM",
+    "Endpoint": "https://example1.com",
     "ClientId": "123-ABC",
     "ClientSecret": "ABC123"
 }
@@ -65,7 +65,7 @@ The following parameters are available for configuring health endpoints:
 ```
 {
     "Id": "PWA",
-    "Endpoint": "EXAMPLE2.COM",
+    "Endpoint": "https://example2.com",
     "UserName": "JohnDoe",
     "Password": "123ABC"
 }
