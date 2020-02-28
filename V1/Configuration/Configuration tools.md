@@ -8,7 +8,7 @@ OSIsoft adapters can be configured with either the EdgeCmd utility, OSIsoft's pr
 
 ## EdgeCmd utility
 
-The EdgeCmd utility enables adapter configuration on both Linux and Windows operating systems. For more information on using the EdgeCmd utility, see the [EdgeCmd utility documentation (https://osisoft.github.io/Edgecmd-Docs/V1/EdgeCmd_utility.html)](https://osisoft.github.io/Edgecmd-Docs/V1/EdgeCmd_utility.html).
+The EdgeCmd utility enables adapter configuration on both Linux and Windows operating systems. For more information on using the EdgeCmd utility, see the [EdgeCmd utility documentation (https://osisoft.github.io/Edgecmd-Docs/V1.1/EdgeCmd_utility_1-1.html)](https://osisoft.github.io/Edgecmd-Docs/V1.1/EdgeCmd_utility_1-1.html).
 
 ## REST tools
 
