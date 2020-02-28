@@ -4,7 +4,7 @@ uid: BufferingConfiguration
 
 # Buffering configuration
 
-You can configure buffering for data egressed from the adapter to endpoints through the buffering configuration parameters in the system configuration.
+OSIsoft adapters can be configured to buffer data egressed from the adapter to endpoints. Buffering is configured through the buffering configuration parameters in the system configuration.
 
 **Note:** OSIsoft recommends that you do not modify the default buffering location unless necessary. The changes to the buffering configuration parameters take effect only during adapter service startup.
 
