@@ -4,7 +4,7 @@ uid: DiagnosticsConfiguration
 
 # Diagnostics configuration
 
-This section provides information on how to configure your OSIsoft adapters so that diagnostics data is produced and stored at the designated health endpoint.
+OSIsoft adapters can be configured to produce and store diagnostics data at a designated health endpoint.
 
 For more information about adapter diagnostics, see [Adapter diagnostics](xref:AdapterDiagnostics).
 
