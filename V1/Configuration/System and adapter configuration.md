@@ -19,7 +19,7 @@ Change the system and adapter configuration by importing the JSON file using a R
 
 	Example using curl (run this file from the same directory where the file is located):
 	
-	```cmdline
+	```bash
 	curl -d "@SystemAdapter.config.json" -H "Content-Type: application/json" -X  PUT "http://localhost:5590/api/v1/configuration"
 	```
 
