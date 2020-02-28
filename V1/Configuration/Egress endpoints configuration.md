@@ -24,7 +24,7 @@ Complete the following procedure to create new egress endpoints:
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-    **Examples using curl:**
+    **Examples using curl** (run this command from the same directory where the file is located):
 
     - Add endpoints
         ```bash
