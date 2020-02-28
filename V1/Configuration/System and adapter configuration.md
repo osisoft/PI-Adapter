@@ -17,7 +17,7 @@ Change the system and adapter configuration by importing the JSON file using a R
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-	Example using curl:
+	Example using curl (run this file from the same directory where the file is located):
 	
 	```cmdline
 	curl -d "@SystemAdapter.config.json" -H "Content-Type: application/json" -X  PUT "http://localhost:5590/api/v1/configuration"
