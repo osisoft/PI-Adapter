@@ -93,7 +93,7 @@ The following examples are valid egress configurations.
 
 ```json
 [{
-     "Id: "PI Web API",
+     "Id": "PI Web API",
      "Endpoint": "https://<pi web api server>/piwebapi/omf/",
      "UserName": "<username>",
      "Password": "<password>" 
