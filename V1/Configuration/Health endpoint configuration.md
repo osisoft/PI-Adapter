@@ -22,7 +22,7 @@ A health endpoint designates an OSIsoft OMF endpoint where adapter health inform
     Example using curl (run this command from the same directory where the file is located):
     
     ```bash
-    curl -d "@HealthEndpoint.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/healthendpoints"
+    curl -d "@HealthEndpoints.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/healthendpoints"
     ```
 
 ## Health endpoints schema
