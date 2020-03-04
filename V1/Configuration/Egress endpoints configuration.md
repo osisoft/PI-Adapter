@@ -8,8 +8,6 @@ Adapters can egress dynamic data to destinations that you supply through OMF. Su
 
 An egress endpoint represents a destination to which data will be sent. You can specify multiple endpoints. Every egress endpoint is executed independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under [Egress endpoint parameters](#egress-endpoint-parameters).
 
-**Note:** Some types, and consequently containers and data, cannot be egressed.  For more information, see [Egress execution details](#egress-execution-details).
-
 ## Configure egress endpoints
 
 **Note:** You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoints, see [REST URLs](#rest-urls).
@@ -19,30 +17,33 @@ Complete the following procedure to create new egress endpoints:
 1. Using any text editor, create a file that contains one or more egress endpoints in JSON form.
     - For content structure, see [Examples](#examples).
     - For a table of all available parameters, see [Egress endpoint parameters](#egress-endpoint-parameters).
-3. Save the file, for example as _OmfEgress_DataEndpoints.config.json_.
-4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/`
+2. Save the file, for example as _OmfEgress_DataEndpoints.json_.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/`
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
     **Examples using curl** (run this command from the same directory where the file is located):
 
     - Add endpoints
+
         ```bash
-        curl -d "@OmfEgress_DataEndpoints.config.json" -H "Content-Type: application/json" -X POST    "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
+        curl -d "@OmfEgress_DataEndpoints.json" -H "Content-Type: application/json" -X POST    "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
         ```
 
         ```bash
-        curl -d "@OmfEgress_DataEndpoints.config.json" -H "Content-Type: application/json" -X PUT   "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
+        curl -d "@OmfEgress_DataEndpoints.json" -H "Content-Type: application/json" -X PUT   "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
         ```
 
     - Delete an endpoint
+
         ```bash
         curl -X DELETE "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}"
         ```
 
     - Update an endpoint
+
         ```bash
-        curl -d "@OmfEgress_DataEndpoint.config.json" -H "Content-Type: application/json" -X UPDATE     "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}"
+        curl -d "@OmfEgress_DataEndpoints.json" -H "Content-Type: application/json" -X UPDATE     "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}"
         ```
 
     - View endpoints
@@ -58,14 +59,13 @@ Windows: *%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas*
 
 Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
-
 ## Egress endpoint parameters
 
 The following parameters are available for configuring egress endpoints:
 
 | Parameter                       | Required                  | Type      | Description                                        |
 |---------------------------------|---------------------------|-----------|-------------|
-| **Id**                          | Required                  | `string`    | Unique identifier |
+| **Id**                          | Optional                  | `string`    | Unique identifier |
 | **Endpoint**                    | Required                  | `string`    | Destination that accepts OMF v1.1 messages. Supported destinations include OCS and PI server. |
 | **Username**                    | Required for PI endpoint  | `string`    | Basic authentication to the PI Web API OMF endpoint. |
 | **Password**                    | Required for PI endpoint  | `string`    | Basic authentication to the PI Web API OMF endpoint. |
@@ -75,29 +75,29 @@ The following parameters are available for configuring egress endpoints:
 | **ValidateEndpointCertificate** | Optional                  | `boolean`   | Disables verification of destination certificate. Use for testing only with self-signed certificates. Defaults to true. |
 
 
-
 ## Examples
 
 The following examples are valid egress configurations.
 
-**Egress data to OCS**
+### Egress data to OCS
 
 ```json
 [{
+     "Id": "OCS",
      "Endpoint": "https://<OCS OMF endpoint>",
      "ClientId": "<clientid>",
      "ClientSecret": "<clientsecret>"
 }]
 ```
 
-**Egress data to PI Web API.**
+### Egress data to PI Web API
 
 ```json
 [{
+     "Id": "PI Web API",
      "Endpoint": "https://<pi web api server>/piwebapi/omf/",
      "UserName": "<username>",
-     "Password": "<password>"
-    
+     "Password": "<password>" 
 }]
 ```
 
