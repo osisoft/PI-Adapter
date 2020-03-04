@@ -39,7 +39,7 @@ Complete the following procedure to install an OSIsoft adapter on Linux:
 2. Open a terminal.
 3. Run the sudo apt install command. 
 
-    For example: <br> To install the Linux ARM Debian package, run command <br>`sudo apt install ./Modbus_linux-arm.deb` <br> To install the Linux x64 package, run command <br> `sudo apt install ./Modbus_linux-x64.deb`
+    **Examples**: <br> To install the Linux ARM Debian package, run command <br>`sudo apt install ./Modbus_linux-arm.deb` <br> To install the Linux x64 package, run command <br> `sudo apt install ./Modbus_linux-x64.deb`
 
 4. Optional: Run the following curl command, using the port number that you specified during installation, to verify the installation: 
    
