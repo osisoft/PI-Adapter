@@ -52,7 +52,7 @@ The following parameters are available for configuring logging:
 
 | Parameter                | Required | Type      | Description |
 | ------------------------ | -------- | --------- | ----------- |
-|**logLevel**              | Optional | reference | The logLevel sets the minimum severity for messages to be included in the logs. Messages with a severity below the level set are not included. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical, None. For detailed information about the logLevels, see [LogLevel](#loglevel). |
+|**logLevel**              | Optional | reference | The logLevel sets the minimum severity for messages to be included in the logs. <br> Messages with a severity below the level set are not included. <br> The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical, None. <br> For detailed information about the logLevels, see [LogLevel](#loglevel). |
 |**logFileSizeLimitBytes** | Optional | `integer` | The maximum size in bytes of log files that the service will create for the component. It must be a positive integer.|
 |**logFileCountLimit**     | Optional | `integer` | The maximum number of log files that the service will create for the component. It must be a positive integer.|
 
