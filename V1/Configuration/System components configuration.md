@@ -4,7 +4,7 @@ uid: SystemComponentsConfiguration
 
 # System components configuration
 
-OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the edgecmd command line tool for any changes you make to the files. 
+OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or EdgeCmd utility for any changes you make to the files. 
 
 As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form (with cryptographic key material stored separately in a secure location.) If you edit the files directly, the adapter may not work as expected.
 
@@ -12,7 +12,7 @@ As part of making adapters as secure as possible, any passwords or secrets that 
 
 ## Configure system components
 
-Configuration of system components includes adding, updating and deleting components.
+The configuration of system components includes adding, updating and deleting components.
 
 ### Add a system component
 
@@ -77,7 +77,8 @@ Complete the following procedure to delete an existing component:
 
 	**Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-	Example using curl - Delete OpcUa1 component
+	Example using curl (run this command from the same directory where the file is located) <br> 
+	*Delete OpcUa1 component*
 
 	```bash
 	curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/OpcUa1/"
