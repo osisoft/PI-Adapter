@@ -22,9 +22,9 @@ Complete the following procedure to create new egress endpoints:
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-    **Examples using curl** (run this command from the same directory where the file is located):
+    Examples using curl (run the commands from the same directory where the file is located):
 
-    - Add endpoints
+    - _Add endpoints_
 
         ```bash
         curl -d "@OmfEgress_DataEndpoints.json" -H "Content-Type: application/json" -X POST    "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
@@ -34,19 +34,19 @@ Complete the following procedure to create new egress endpoints:
         curl -d "@OmfEgress_DataEndpoints.json" -H "Content-Type: application/json" -X PUT   "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
         ```
 
-    - Delete an endpoint
+    - _Delete an endpoint_
 
         ```bash
         curl -X DELETE "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}"
         ```
 
-    - Update an endpoint
+    - _Update an endpoint_
 
         ```bash
         curl -d "@OmfEgress_DataEndpoints.json" -H "Content-Type: application/json" -X UPDATE     "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}"
         ```
 
-    - View endpoints
+    - _View endpoints_
         ```bash
         curl -X GET "http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints"
         ```
