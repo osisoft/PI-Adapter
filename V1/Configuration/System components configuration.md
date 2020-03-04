@@ -98,10 +98,10 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 The following parameters are available for configuring system components:
 
-| Parameters     | Required | Type    | Nullable | Description |
-| -------------- | -------- | --------| ---------|-------------|
-| **ComponentId**    | Required |`string` | Yes      | The ID of the component. It can be any alphanumeric string, for example OmfEgress.|
-| **ComponentType**  | Required |`string` | Yes      | The type of the component, for example OmfEgress. There are two types of components: OmfEgress and the adapter. |
+| Parameters     | Required | Type    | Description |
+| -------------- | -------- | --------| -------------|
+| **ComponentId**    | Required |`string` | The ID of the component. It can be any alphanumeric string, for example OmfEgress.|
+| **ComponentType**  | Required |`string` | The type of the component, for example OmfEgress. There are two types of components: OmfEgress and the adapter. |
 
 
 ## Examples
