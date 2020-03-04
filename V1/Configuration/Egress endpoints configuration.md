@@ -107,7 +107,6 @@ The following examples are valid egress configurations.
 | api/v1/configuration/omfegress/DataEndpoints      | GET       | Gets all configured egress endpoints |
 | api/v1/configuration/omfegress/DataEndpoints      | DELETE    | Deletes all configured egress endpoints |
 | api/v1/configuration/omfegress/DataEndpoints      | POST      | Adds an array of egress endpoints or a single endpoint. Fails if any endpoint already exists |
-| api/v1/configuration/omfegress/DataEndpoints      | POST      | Creates all egress endpoints. Fails if endpoint configuration already exists. |
 | api/v1/configuration/omfegress/DataEndpoints      | PUT       | Replaces all egress endpoints |
 | api/v1/configuration/omfegress/DataEndpoints/{id} | GET       | Gets configured endpoint by *id* |
 | api/v1/configuration/omfegress/DataEndpoints/{id} | DELETE    | Deletes configured endpoint by *id* |
