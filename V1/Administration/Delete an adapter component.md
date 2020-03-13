@@ -13,7 +13,7 @@ Complete the following procedure to delete an adapter component:
 2. Execute a DELETE command to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId>`
 
     **Note:** An empty DELETE command must be made against the Id of the component to be deleted. <br> `5590` is the default port number. If you selected a different port number, replace it with that value.
-      
+
       Example using curl **Delete OpcUa1 adapter component**:
 
       ```bash
@@ -22,7 +22,7 @@ Complete the following procedure to delete an adapter component:
 
 ## File relocation
 
-All configuration and log files will be renamed and moved.The files are renamed according to the timestamp of removal, for example *FileName.json_removed_yyyy-MM-dd--hh-mm-ss*. 
+All configuration and log files will be renamed and moved.The files are renamed according to the timestamp of removal, for example *FileName.json_removed_yyyy-MM-dd--hh-mm-ss*.
 
 Configuration files will be moved to the following location:
 
@@ -46,8 +46,8 @@ In the following example, one Modbus Adapter service is installed on a particula
 
 ![RemovedLogs](../images/RemovedLogs.png)
 
-
 ## REST URLs
+
 | Relative URL                                              | HTTP verb | Action               |
 |-----------------------------------------------------------|-----------|----------------------|
 | api/v1/configuration/system/components/*ComponentId*      | DELETE       | Deletes specified component |
