@@ -9,7 +9,7 @@ For more information about adapter health, see [Adapter health](xref:AdapterHeal
 
 ## Configure health endpoint
 
-A health endpoint designates an OSIsoft OMF endpoint where adapter health information should be sent. You can configure multiple health endpoints. 
+A health endpoint designates an OSIsoft OMF endpoint where adapter health information should be sent. You can configure multiple health endpoints.
 
 1. Using any text editor, create a file that contains one or more health endpoints in JSON form.
     - For content structure, see [Examples](#examples).
@@ -20,7 +20,7 @@ A health endpoint designates an OSIsoft OMF endpoint where adapter health inform
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
     Example using curl (run this command from the same directory where the file is located):
-    
+
     ```bash
     curl -d "@HealthEndpoints.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/healthendpoints"
     ```
@@ -50,9 +50,9 @@ The following parameters are available for configuring health endpoints:
 
 ## Examples
 
-**OCS endpoint**
+### OCS endpoint
 
-```
+```code
 {
     "Id": "OCS",
     "Endpoint": "https://<OCS OMF endpoint>",
@@ -61,9 +61,9 @@ The following parameters are available for configuring health endpoints:
 }
 ```
 
-**PI Web API endpoint**
+### PI Web API endpoint
 
-```
+```code
 {
     "Id": "PI Web API",
     "Endpoint": "https://<pi web api server>/piwebapi/omf/",
