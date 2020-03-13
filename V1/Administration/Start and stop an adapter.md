@@ -33,4 +33,3 @@ Complete one of the following procedures for your operating system to start or s
     ```
   
 3. Press Enter.
-
