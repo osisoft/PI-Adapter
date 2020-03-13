@@ -11,6 +11,7 @@ OSIsoft adapters produce different kinds of health data, which can be egressed t
 Dynamic data is sent every minute to configured health endpoints.
 
 The following health data are available:
+
 - [Device status](xref:DeviceStatus)
 - [Next Health Message Expected](xref:NextHealthMessageExpected)
 
@@ -18,10 +19,10 @@ The following health data are available:
 
 Two following two OMF endpoints are currently supported for adapter health data:
 
-- PI Web API 
+- PI Web API
 - OSIsoft Cloud Services
 
-There are a few differences in how these two systems treat the associated health data. 
+There are a few differences in how these two systems treat the associated health data.
 
 - PI Web API parses the information and sends it configured PI Systems for the OMF endpoint. The static data is used to create a hierarchy on a PI AF server similar to the following:
 
