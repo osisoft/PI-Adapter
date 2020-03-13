@@ -38,7 +38,7 @@ The following parameters are available for configuring diagnostics:
 
 ## Example
 
-**Retrieve the diagnostics configuration**
+### Retrieve the diagnostics configuration
 
 Example using curl:
 
@@ -48,7 +48,7 @@ curl -X GET "http://localhost:{port}/api/v1/configuration/system/diagnostics"
 
 Sample output:
 
-```
+```code
 {
     "enableDiagnostics": true
 }
