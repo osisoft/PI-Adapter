@@ -14,18 +14,18 @@ Each message in the log displays the message severity level, timestamp, and the 
 
 ## Configure logging
 
-Complete the following procedure to change the logging configuration: 
+Complete the following procedure to change the logging configuration:
 
 1. Using any text editor, create a file that contains the logging configuration in JSON form.
     - For content structure, see [Example](#example).
     - For all available parameters, see [Logging parameters](#logging-parameters).
- 
+
 2. Save the file, for example as *Component_Logging.json*.
 
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Logging`.
 
     **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter, for example _OpcUa1_.
-        
+
     `5590` is the default port number. If you selected a different port number, replace it with that value.
 
     Example using curl (run this command from the same directory where the file is located):
@@ -33,8 +33,8 @@ Complete the following procedure to change the logging configuration:
     ```bash
     curl -d "@Component_Logging.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/<ComponentId>/Logging"
     ```
-    
-On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after the adapter is restarted. 
+
+On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after the adapter is restarted.
 
 **Note:**  Any parameter not specified in the updated configuration file will revert to the default schema value.
 
@@ -68,9 +68,9 @@ The following parameters are available for configuring logging:
 | Critical | Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention. This can indicate application wide failures like beta timeout expired, unable to start self-hosted endpoint, unable to access vital resource (for example, Data Protection key file), and so on. |
 | None | Logging is disabled for the given component. |
 
-## Example 
+## Example
 
-**Default logging configuration**
+### Default logging configuration
 
 By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
 The following logging configuration is the default for a component on install:
@@ -79,7 +79,7 @@ The following logging configuration is the default for a component on install:
 {
   "logLevel": "Information",
   "logFileSizeLimitBytes": 34636833,
-  "logFileCountLimit": 31   
+  "logFileCountLimit": 31
 }
 ```
 
@@ -88,7 +88,7 @@ The following logging configuration is the default for a component on install:
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
 | api/v1/configuration/System/Logging | GET | Retrieves the system logging configuration
-| api/v1/configuration/System/Logging | PUT | Updates the system logging configuration 
+| api/v1/configuration/System/Logging | PUT | Updates the system logging configuration
 | api/v1/configuration/_ComponentId_/Logging | GET | Retrieves the logging configuration of the specified adapter component
 | api/v1/configuration/_ComponentId_/Logging | PUT | Updates the logging configuration of the specified adapter component
 
