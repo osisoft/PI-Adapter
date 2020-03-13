@@ -47,6 +47,7 @@ Complete the following procedure to create new egress endpoints:
         ```
 
     - _View endpoints_
+
         ```bash
         curl -X GET "http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints"
         ```
@@ -74,7 +75,6 @@ The following parameters are available for configuring egress endpoints:
 | **TokenEndpoint**               | Optional for OCS endpoint | `string`    | Retrieves an OCS token from an alternative endpoint. |
 | **ValidateEndpointCertificate** | Optional                  | `boolean`   | Disables verification of destination certificate. Use for testing only with self-signed certificates. Defaults to true. |
 
-
 ## Examples
 
 The following examples are valid egress configurations.
@@ -97,7 +97,7 @@ The following examples are valid egress configurations.
      "Id": "PI Web API",
      "Endpoint": "https://<pi web api server>/piwebapi/omf/",
      "UserName": "<username>",
-     "Password": "<password>" 
+     "Password": "<password>"
 }]
 ```
 
