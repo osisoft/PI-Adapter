@@ -18,10 +18,10 @@ OSIsoft adapters can be configured to buffer data egressed from the adapter to e
 
      **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-     Example using curl (run this command from the same directory where the file is located): 
+     Example using curl (run this command from the same directory where the file is located):
 
      ```bash
-      curl -d "@Buffering.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/buffering" 
+      curl -d "@Buffering.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/buffering"
       ```
 
 ## Buffering schema
@@ -32,7 +32,6 @@ Windows: *%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas*
 
 Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
-
 ## Buffering parameters
 
 The following parameters are available for configuring buffering:
@@ -41,21 +40,21 @@ The following parameters are available for configuring buffering:
 | ----------| -------- | ---- | ----------- |
 | **EnableBuffering**  | Optional |  `boolean` | Enables or disables buffering. <br><br> Default: True <br><br> **Note:** If you disable buffering, in-memory buffering will be used. In-memory buffering is limited to 20 MB per endpoint. |
 | **MaxBufferSizeMB**  | Optional     |`integer` | Defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (1 Mebibyte = 1048576 bytes). Take into account the capacity and type of the storage medium to determine a suitable value for this parameter. A value of -1 indicates that the buffer file size is restricted only by the available free disk space. <br><br> Allowed values: -1 or [1, 2147483647]. <br><br> Default: -1 |
-| **BufferLocation**   | Required  | `string` | Defines the location of the buffer files. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter <br><br> Allowed value: Valid path to a folder location in the file system. <br><br> Default: <br> **Windows:** _%ProgramData%\OSIsoft\Adapters\\{AdapterType}\\{AdapterInstance}\Buffers_ <br> **Linux:** _/usr/share/OSIsoft/Adapters/{AdatpterType}/{AdapterInstance}/Buffers_ |
+| **BufferLocation**   | Required  | `string` | Defines the location of the buffer files. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter <br><br> Allowed value: Valid path to a folder location in the file system. <br><br> Default: <br> **Windows:** _%ProgramData%\OSIsoft\Adapters\\{AdapterType}\\{AdapterInstance}\Buffers_ <br> **Linux:** _/usr/share/OSIsoft/Adapters/{AdapterType}/{AdapterInstance}/Buffers_ |
 
 ## Examples
 
 The following examples are buffering configurations made through curl REST client.
 
-**Retrieve the buffering configuration**
+### Retrieve the buffering configuration
 
-```
+```cmd
 curl -X GET "http://localhost:5590/api/v1/configuration/system/buffering"
 ```
 
 Sample output:
 
-```
+```code
 {
     "bufferLocation": "C:/ProgramData/OSIsoft/Adapters/Modbus/Modbus/Buffers",
     "maxBufferSizeMB": -1,
@@ -65,9 +64,9 @@ Sample output:
 
 `200 OK` response indicates success.
 
-**Update MaxBuferSizeMb parameter**
+### Update MaxBufferSizeMb parameter
 
-```
+```cmd
 curl -d "{ "MaxBufferSizeMB": 100 }" -H "Content-Type: application/json" -X PATCH "http://localhost:5590/api/v1/configuration/system/buffering"
 ```
 
