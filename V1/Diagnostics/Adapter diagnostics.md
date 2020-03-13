@@ -4,7 +4,7 @@ uid: AdapterDiagnostics
 
 # Adapter diagnostics
 
-The adapter and its components produce different kinds of diagnostics data which is sent to all health endpoints. The _System_Diagnostics.json_ file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default. 
+The adapter and its components produce different kinds of diagnostics data which is sent to all health endpoints. The _System_Diagnostics.json_ file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default.
 
 To egress diagnostics related data, you have to configure an adapter health endpoint first. See [Health endpoint configuration](xref:HealthEndpointConfiguration).
 
@@ -21,7 +21,7 @@ The following diagnostics data are available:
 
 ## AF structure
 
-After running diagnostics with a health endpoint configured to a PI server, you can use _**PI System Explorer**_ to view the diagnostics for a given adapter. The element hierarchy is shown in the following image. 
+After running diagnostics with a health endpoint configured to a PI server, you can use _**PI System Explorer**_ to view the diagnostics for a given adapter. The element hierarchy is shown in the following image.
 
 ![Diagnostics](../images/Diagnostics.PNG)
 
