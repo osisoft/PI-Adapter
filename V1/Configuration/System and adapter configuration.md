@@ -11,25 +11,25 @@ The System and adapter components can be configured together using a single call
 Change the system and adapter configuration by importing the JSON file using a REST client:
 
 1. Using any text editor, create a file that contains the System and adapter configuration in JSON form.
-	- For content structure, see [Example](#example).
+    - For content structure, see [Example](#example).
 2. Save the file, for example as *SystemAdapter.config.json*.
-2. Use any of the [Configuration Tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration`
+3. Use any of the [Configuration Tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration`
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-	Example using curl (run this file from the same directory where the file is located):
-	
-	```bash
-	curl -d "@SystemAdapter.config.json" -H "Content-Type: application/json" -X  PUT "http://localhost:5590/api/v1/configuration"
-	```
+    Example using curl (run this file from the same directory where the file is located):
 
-	**Note:** In order for some of the adapter specific configurations to take effect, you have to restart the adapter.
+    ```bash
+    curl -d "@SystemAdapter.config.json" -H "Content-Type: application/json" -X  PUT "http://localhost:5590/api/v1/configuration"
+    ```
 
-	If the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result.
+    **Note:** In order for some of the adapter specific configurations to take effect, you have to restart the adapter.
+
+    If the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result.
 
 ## Example
 
-**Sample configuration file**
+### Sample configuration file
 
 The following sample file shows the configuration of an OPC UA adapter.
 
@@ -68,9 +68,9 @@ The following sample file shows the configuration of an OPC UA adapter.
         },
         "HealthEndpoints": [
         ],
-	"Diagnostics": {
-    	    "enableDiagnostics": true
-	},
+    "Diagnostics": {
+            "enableDiagnostics": true
+    },
         "Components": [
             {
                 "componentId": "Egress",
@@ -81,11 +81,11 @@ The following sample file shows the configuration of an OPC UA adapter.
                 "componentType": "OpcUa"
             }
         ],
-	"Buffering": {
+    "Buffering": {
             "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/OpcUa/OpcUa/Buffers",
             "MaxBufferSizeMB": -1,
             "EnableBuffering": true
-    	}
+        }
      },
     "OmfEgress": {
         "Logging": {
@@ -107,11 +107,11 @@ The following sample file shows the configuration of an OPC UA adapter.
                 "clientSecret": "CLIENTSECRET"
             }
         ]
-        
+
     }
 }
 ```
- 
+
 ## REST URLs
 
 | Relative URL                                              | HTTP verb | Action               |
