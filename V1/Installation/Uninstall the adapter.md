@@ -16,7 +16,6 @@ Complete one of the following procedures for your operating system to uninstall 
 
     This will delete all data processed by the adapter in addition to configuration and log files.
 
-
 ## Linux
 
 1. To remove OSIsoft adapter software from a Linux device, open a terminal window and run the following command:
