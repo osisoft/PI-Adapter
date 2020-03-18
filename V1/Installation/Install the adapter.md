@@ -4,11 +4,11 @@ uid: InstallTheAdapter
 
 # Install the adapter
 
-Adapters can be installed on either a Windows or Linux operating system. Before installing the adapter, see the [Installation prerequisites](xref:Installation#installation-prerequisites) section to ensure your machine is properly configured to provide optimum adapter operation.
+Adapters can be installed on either a Windows or Linux operating system. Before installing the adapter, see [Installation prerequisites](xref:Installation#installation-prerequisites) to ensure your machine is properly configured to provide optimum adapter operation.
 
 ## Windows
 
-Complete the following procedure to install an OSIsoft adapter on Windows:
+Complete the following procedure to install an OSIsoft adapter on a Windows computer:
 
 1. Download the Windows .msi file from the [OSIsoft Customer portal (https://customers.osisoft.com/s/products)](https://customers.osisoft.com/s/products).
 
@@ -17,7 +17,7 @@ Complete the following procedure to install an OSIsoft adapter on Windows:
 2. Run the .msi file.
 3. Follow the setup wizard.
 
-    You can change the installation folder or port number during setup. The default port number is 5590.
+    You can change the installation folder or port number during setup. The default port number is `5590`.
 
 4. Optional: To verify the installation, run the following curl command using the port number that you specified during installation:
 
@@ -29,7 +29,7 @@ Complete the following procedure to install an OSIsoft adapter on Windows:
 
 ## Linux
 
-Complete the following procedure to install an OSIsoft adapter on Linux:
+Complete the following procedure to install an OSIsoft adapter on a Linux computer:
 
 1. Download the appropriate Linux distribution file from the [OSIsoft Customer portal (https://customers.osisoft.com/s/products)](https://customers.osisoft.com/s/products).
 
