@@ -4,7 +4,7 @@ uid: DeleteAnAdapterComponent
 
 # Delete an adapter component
 
-When an adapter component is removed, the configuration and log files are saved into a sub-directory in case they are needed later. Any associated types, streams, and data will remain on respective endpoints.
+When an adapter component is removed, the configuration and log files are saved into a sub-directory in case they are needed later. Any associated types, streams, and data remain on the respective endpoints.
 
 Complete the following procedure to delete an adapter component:
 
@@ -22,7 +22,7 @@ Complete the following procedure to delete an adapter component:
 
 ## File relocation
 
-All configuration and log files will be renamed and moved.The files are renamed according to the timestamp of removal, for example *FileName.json_removed_yyyy-MM-dd--hh-mm-ss*.
+All configuration and log files will be renamed and moved. The files are renamed according to the timestamp of removal, for example *FileName.json_removed_yyyy-MM-dd--hh-mm-ss*.
 
 Configuration files will be moved to the following location:
 
@@ -36,7 +36,7 @@ Log files will be moved to the following location:
 
    **Linux:** */usr/share/OSIsoft/Adapters/AdapterName/AdapterName/Logs/Removed*
 
-In the following example, one Modbus Adapter service is installed on a particular Windows node with the name ModbusService1. A Modbus component with the name ModbusDeviceX was added and configured to this Modbus adapter and later removed. Linux follows a similar behavior. This is the resulting relocation and renaming scheme after deletion:
+In the following example, one Modbus adapter service is installed on a particular Windows node with the name ModbusService1. A Modbus component with the name ModbusDeviceX was added and configured to this Modbus adapter and later removed. Linux follows a similar behavior. This is the resulting relocation and renaming scheme after deletion:
 
 ![ConfigurationFolder](../images/ConfigurationFolder.png)
 
