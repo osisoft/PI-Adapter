@@ -4,7 +4,7 @@ uid: UninstallTheAdapter
 
 # Uninstall the adapter
 
-Complete one of the following procedures for your operating system to uninstall an OSIsoft adapter:
+Complete the procedure appropriate for your operating system to uninstall an OSIsoft adapter:
 
 ## Windows
 
