@@ -5,7 +5,7 @@ uid: DiagnosticsConfiguration
 # Diagnostics configuration
 
 OSIsoft adapters can be configured to produce and store diagnostics data at a designated health endpoint.
-For more information about adapter diagnostics, see [Adapter diagnostics](xref:AdapterDiagnostics).
+For more information about available diagnostics data, see [Adapter diagnostics](xref:AdapterDiagnostics).
 
 ## Configure diagnostics
 
@@ -58,5 +58,5 @@ Sample output:
 
 | Relative URL                            | HTTP verb | Action                                          |
 | --------------------------------------- | --------- | ----------------------------------------------- |
-| api/v1/configuration/system/diagnostics | GET       | Gets the diagnostics configuration              |
-| api/v1/configuration/system/diagnostics | PUT       | Replaces the existing diagnostics configuration |
+| api/v1/configuration/system/diagnostics | GET       | Gets the diagnostics configuration.              |
+| api/v1/configuration/system/diagnostics | PUT       | Replaces the existing diagnostics configuration. |
