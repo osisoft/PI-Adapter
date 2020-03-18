@@ -25,7 +25,7 @@ Change the system and adapter configuration by importing the JSON file using a R
 
     **Note:** In order for some of the adapter specific configurations to take effect, you have to restart the adapter.
 
-    If the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result.
+    If the operation fails due to errors in the configuration, the count of the error and suitable error messages are returned in the result.
 
 ## Example
 
@@ -116,4 +116,4 @@ The following sample file shows the configuration of an OPC UA adapter.
 
 | Relative URL                                              | HTTP verb | Action               |
 |-----------------------------------------------------------|-----------|----------------------|
-| api/v1/configuration/     | PUT       | Replaces the configuration for the entire adapter  |
+| api/v1/configuration/     | PUT       | Replaces the configuration for the entire adapter.  |
