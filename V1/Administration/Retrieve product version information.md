@@ -4,7 +4,7 @@ uid: RetrieveProductVersionInformation
 
 # Retrieve product version information
 
-The product version information includes the application version, the version of the underlying .NET Core Framework, and the operating system that the adapter is running on.
+The product version information includes the application version, the version of the underlying .NET Core framework, and the operating system that the adapter is running on.
 
 Complete the following procedure to retrieve the product version information of an OSIsoft adapter:
 
