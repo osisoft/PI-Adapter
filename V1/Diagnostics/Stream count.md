@@ -4,7 +4,7 @@ uid: StreamCount
 
 # Stream count
 
-The Diagnostics.StreamCountEvent dynamic type includes these values, which are logged in a stream with the id {componentid}.StreamCount. The stream count and type count include only types and streams created for sequential data received from a data source.
+The Diagnostics.StreamCountEvent dynamic type includes the following values, which are logged in a stream with the id {componentid}.StreamCount. The stream count and type count include only types and streams created for sequential data received from a data source.
 
 | Property    | Type   | Description                                       |
 | ----------- | ------ | ------------------------------------------------- |
