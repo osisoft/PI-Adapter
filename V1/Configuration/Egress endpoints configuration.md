@@ -117,5 +117,5 @@ The following examples are valid egress configurations.
 ## Egress execution details
 
 - After you add configuration for an egress endpoint, egress will be executed immediately for that endpoint. Egress is handled individually per configured endpoint. On first execution, types and containers will be egressed. After that only new or changed types or containers will be egressed. Type creation must be successful in order to create containers. Container creation must be successful in order to egress data.
-- If an egress endpoint is removed, data flow will immediately stop for that endpoint. Buffered data of a removed endpoint will be permanently lost.
+- If an egress endpoint is deleted, data flow will immediately stop for that endpoint. Buffered data of a deleted endpoint will be permanently lost.
 - Type, container, and data items are batched into one or more OMF messages when egressing. As per the requirements defined in OMF, a single message payload will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item will result in the message failing. Types, containers, and data will continue to be egressed as long as the destination continues to respond to HTTP requests.
