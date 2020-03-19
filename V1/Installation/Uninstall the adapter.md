@@ -28,7 +28,7 @@ Complete the procedure appropriate for your operating system to uninstall an OSI
 
     This will delete all data processed  by the adapter, in addition to configuration and log files.
 
-    Alternatively, you can run the following command:
+    Alternatively, run the following command:
 
     ```bash
     sudo rm -r /usr/share/OSIsoft/Adapters/<AdapterName>
