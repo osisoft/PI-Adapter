@@ -4,7 +4,7 @@ uid: ErrorRate
 
 # Error rate
 
-The Diagnostics.Adapter.ErrorRate dynamic type includes these values, which are logged in a stream with the id {componentid}.ErrorRate.
+The Diagnostics.Adapter.ErrorRate dynamic type includes the following values, which are logged in a stream with the id {componentid}.ErrorRate.
 
 | Property  | Type   | Description                                              |
 | --------- | ------ | -------------------------------------------------------- |
