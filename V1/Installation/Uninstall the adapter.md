@@ -8,23 +8,23 @@ Complete the procedure appropriate for your operating system to uninstall an OSI
 
 ## Windows
 
-1. To remove the OSIsoft adapter program files from a Windows device, use the Windows Control Panel uninstall application process.
+1. To delete the OSIsoft adapter program files from a Windows device, use the Windows Control Panel uninstall application process.
 
-    **Note:** The configuration, data, and log files are not removed by the uninstall process.
+    **Note:** The configuration, data, and log files are not deleted by the uninstall process.
 
-2. Optional: To remove data, configuration and log files, remove the directory _%ProgramData%\OSIsoft\Adapters\AdapterName_.
+2. Optional: To delete data, configuration and log files, delete the directory _%ProgramData%\OSIsoft\Adapters\AdapterName_.
 
     This will delete all data processed by the adapter in addition to configuration and log files.
 
 ## Linux
 
-1. To remove OSIsoft adapter software from a Linux device, open a terminal window and run the following command:
+1. To delete OSIsoft adapter software from a Linux device, open a terminal window and run the following command:
 
     ```bash
     sudo apt remove osisoft.adapters.<AdapterName>
     ```
 
-2. Optional: To remove data, configuration, and log files, remove the directory _/usr/share/OSIsoft/Adapters/AdapterName_.
+2. Optional: To delete data, configuration, and log files, delete the directory _/usr/share/OSIsoft/Adapters/AdapterName_.
 
     This will delete all data processed  by the adapter, in addition to configuration and log files.
 
