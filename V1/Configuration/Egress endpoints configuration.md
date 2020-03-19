@@ -111,7 +111,7 @@ The following examples are valid egress configurations.
 | api/v1/configuration/omfegress/DataEndpoints      | PUT       | Replaces all egress endpoints. |
 | api/v1/configuration/omfegress/DataEndpoints/{id} | GET       | Gets configured endpoint by *id*. |
 | api/v1/configuration/omfegress/DataEndpoints/{id} | DELETE    | Deletes configured endpoint by *id*. |
-| api/v1/configuration/omfegress/DataEndpoints/{id} | PUT       | Replaces egress endpoint by *id*. Fails if endpoint doesn't exist. |
+| api/v1/configuration/omfegress/DataEndpoints/{id} | PUT       | Replaces egress endpoint by *id*. Fails if endpoint does not exist. |
 | api/v1/configuration/omfegress/DataEndpoints/{id} | PATCH     | Allows partial updating of configured endpoint by *id*. |
 
 ## Egress execution details
