@@ -23,7 +23,7 @@ Complete the following procedure to add a new component to the system:
     - For content structure, see [Examples](#examples).
     - For a table of all available parameters, see [System components parameters](#system-components-parameters).
 
-    **Note:** The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported.
+    **Note:** The OmfEgress component is required for this initial release for adapters to run. You can add additional components, but only a single OmfEgress component is supported.
 
     The following example adds a Modbus TCP adapter.
 
@@ -51,12 +51,12 @@ Complete the following procedure to add a new component to the system:
 
 ### Update system components
 
-Complete the following procedure to update the system components, for example by adding or removing components.
+Complete the following procedure to update the system components, for example by adding or deleting components.
 
 1. Using any text editor, create a file that contains the current system components configuration. For information on how to retrieve the system components configuration, see [REST URLs](#rest-urls).
-2. Remove or add components as you need.
+2. Delete or add components as you need.
 
-    **Note:** You cannot remove the OmfEgress component.
+    **Note:** You cannot delete the OmfEgress component.
 
 3. Save the file, for example as *UpdateComponents.json*
 4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components`
