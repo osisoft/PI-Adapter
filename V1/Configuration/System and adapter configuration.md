@@ -107,7 +107,6 @@ The following sample file shows the configuration of an OPC UA adapter.
                 "clientSecret": "CLIENTSECRET"
             }
         ]
-
     }
 }
 ```
