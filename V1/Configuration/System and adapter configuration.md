@@ -29,8 +29,6 @@ Change the system and adapter configuration by importing the JSON file using a R
 
 ## Example
 
-### Sample configuration file
-
 <details>
     <summary>Sample OPC UA adapter configuration</summary>
     <pre>
