@@ -31,9 +31,9 @@ Change the system and adapter configuration by importing the JSON file using a R
 
 ### Sample configuration file
 
-The following sample file shows the configuration of an OPC UA adapter.
-
-```json
+<details>
+    <summary>Sample OPC UA adapter configuration</summary>
+    <pre>
 {
     "OpcUa1": {
         "Logging": {
@@ -109,7 +109,8 @@ The following sample file shows the configuration of an OPC UA adapter.
         ]
     }
 }
-```
+   </pre>
+</details>
 
 ## REST URLs
 
