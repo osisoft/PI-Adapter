@@ -17,7 +17,7 @@ For more information about available diagnostics data, see [Adapter diagnostics]
    Example using curl:
 
    ```bash
-   curl -d "{ "enableDiagnostics":true }" -H "Content-Type:application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/diagnostics"
+   curl -d "{ "enableDiagnostics":true }" -X PUT "http://localhost:5590/api/v1/configuration/system/diagnostics"
    ```
 
 ## Diagnostics schema
