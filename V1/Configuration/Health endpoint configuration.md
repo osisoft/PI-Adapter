@@ -90,6 +90,7 @@ The following parameters are available for configuring health endpoints:
 | api/v1/configuration/system/healthEndpoints      | DELETE    | Deletes all configured health endpoints. |
 | api/v1/configuration/system/healthEndpoints      | POST      | Adds an array of health endpoints or a single endpoint. Fails if any endpoint already exists. |
 | api/v1/configuration/system/healthEndpoints      | PUT       | Replaces all health endpoints. **Note:** Requires an array of endpoints. |
+| api/v1/configuration/system/healthEndpoints     | PATCH     | Allows partial updating of configured health endpoints within an array. **Note:** To identify the health endpoints to be updated, Id must be included in the array. |
 | api/v1/configuration/system/healthEndpoints/*id* | GET       | Gets configured health endpoint by *id*. |
 | api/v1/configuration/system/healthEndpoints/*id*| DELETE     | Deletes configured health endpoint by *id*. |
 | api/v1/configuration/system/healthEndpoints/*id* | PUT       | Replaces health endpoint by *id*. Creates new health endpoint if it does not exist.|
