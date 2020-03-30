@@ -37,15 +37,25 @@ Complete the following procedure to add a new component to the system:
     **Note:** A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter to be added.
 
 2. Save the file, for example as *AddComponent.json*.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components`
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute either a POST or PUT command to their appropriate endpoint.
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
+    
+    - **POST** endpoint: `http://localhost:5590/api/v1/configuration/system/components`
 
-    Example using curl (run this command from the same directory where the file is located):
+        Example using curl (run this command from the same directory where the file is located):
 
-    ```bash
-    curl -d "@AddComponent.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/components"
-    ```
+        ```bash
+        curl -d "@AddComponent.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/components"
+        ```
+    
+    - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/system/components/<componentId>`
+    
+        Example using curl (run this command from the same directory where the file is located):
+
+        ```bash
+        curl -d "@AddComponent.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components/Modbus1"
+        ```
 
     After the curl command completes successfully, you can configure or use the new component.
 
@@ -146,3 +156,4 @@ The default _System_Components.json_ file for the System component contains the 
 | api/v1/configuration/system/components | POST | Adds a new component to the system configuration |
 | api/v1/configuration/system/components | PUT | Updates the system components configuration |
 | api/v1/configuration/system/components/_componentId_ | DELETE | Deletes a specific component from the system components configuration |
+| api/v1/configuration/system/components/_componentId_ | PUT | Creates a new component with the specified *componentId* in the system configuration
