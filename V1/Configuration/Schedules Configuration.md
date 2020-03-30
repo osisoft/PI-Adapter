@@ -1,5 +1,5 @@
 ---
-uid: ScheduleConfiguration
+uid: SchedulesConfiguration
 ---
 
 # Schedule configuration
