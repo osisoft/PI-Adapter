@@ -15,15 +15,25 @@ A health endpoint designates an OMF endpoint where adapter health information sh
     - For content structure, see [Examples](#examples).
     - For a table of all available health endpoint parameters, see [Health endpoint parameters](#health-endpoint-parameters).
 2. Save the file, for example as *HealthEndpoints.json*.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints`
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute either a POST or PUT command to their appropriate endpoint.
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
+    
+    - **POST** endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints`
 
-    Example using curl (run this command from the same directory where the file is located):
+        Example using curl (run this command from the same directory where the file is located):
 
-    ```bash
-    curl -d "@HealthEndpoints.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/healthendpoints"
-    ```
+        ```bash
+        curl -d "@HealthEndpoints.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/healthendpoints"
+        ```
+    - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints/{id}`
+    
+        Example using curl (run this command from the same directory where the file is located):
+
+        ```bash
+        curl -d "@HealthEndpoints.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/healthendpoints/OCS"
+         ```
+    
 
 ## Health endpoints schema
 
@@ -82,7 +92,7 @@ The following parameters are available for configuring health endpoints:
 | api/v1/configuration/system/healthEndpoints      | PUT       | Replaces all health endpoints. |
 | api/v1/configuration/system/healthEndpoints/*id* | GET       | Gets configured health endpoint by *id*. |
 | api/v1/configuration/system/healthEndpoints/*id*| DELETE     | Deletes configured health endpoint by *id*. |
-| api/v1/configuration/system/healthEndpoints/*id* | PUT       | Replaces health endpoint by *id*. Fails if endpoint does not exist. |
+| api/v1/configuration/system/healthEndpoints/*id* | PUT       | Replaces health endpoint by *id*. Creates new health endpoint if it does not exist.|
 | api/v1/configuration/system/healthEndpoints/*id* | PATCH     | Allows partial updating of configured health endpoint by *id*. |
 
 **Note:** Replace *id* with the Id of the health endpoint.
