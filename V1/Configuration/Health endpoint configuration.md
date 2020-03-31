@@ -2,7 +2,7 @@
 uid: HealthEndpointConfiguration
 ---
 
-# Health endpoint configuration
+# Health endpoint configuration 
 
 OSIsoft adapters can be configured to produce and store health data at a designated health endpoint.
 For more information about adapter health, see [Adapter health](xref:AdapterHealth).
@@ -26,7 +26,7 @@ A health endpoint designates an OMF endpoint where adapter health information sh
         ```bash
         curl -d "@HealthEndpoints.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/healthendpoints"
         ```
-    - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints/{id}`
+    - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints/{Id}`
     
         Example using curl (run this command from the same directory where the file is located):
 
@@ -90,9 +90,10 @@ The following parameters are available for configuring health endpoints:
 | api/v1/configuration/system/healthEndpoints      | DELETE    | Deletes all configured health endpoints. |
 | api/v1/configuration/system/healthEndpoints      | POST      | Adds an array of health endpoints or a single endpoint. Fails if any endpoint already exists. |
 | api/v1/configuration/system/healthEndpoints      | PUT       | Replaces all health endpoints. **Note:** Requires an array of endpoints. |
-| api/v1/configuration/system/healthEndpoints/*id* | GET       | Gets configured health endpoint by *id*. |
-| api/v1/configuration/system/healthEndpoints/*id*| DELETE     | Deletes configured health endpoint by *id*. |
-| api/v1/configuration/system/healthEndpoints/*id* | PUT       | Replaces health endpoint by *id*. Creates new health endpoint if it does not exist.|
-| api/v1/configuration/system/healthEndpoints/*id* | PATCH     | Allows partial updating of configured health endpoint by *id*. |
+| api/v1/configuration/system/healthEndpoints     | PATCH     | Allows partial updating of configured health endpoints. <br>**Note:** The request must be an array containing one or more health endpoints. Each health endpoint in the array must include its *Id*.  |
+| api/v1/configuration/system/healthEndpoints/*Id* | GET       | Gets configured health endpoint by *Id*. |
+| api/v1/configuration/system/healthEndpoints/*Id*| DELETE     | Deletes configured health endpoint by *Id*. |
+| api/v1/configuration/system/healthEndpoints/*Id* | PUT       | Replaces health endpoint by *Id*. Creates new health endpoint if it does not exist.|
+| api/v1/configuration/system/healthEndpoints/*Id* | PATCH     | Allows partial updating of configured health endpoint by *Id*. |
 
-**Note:** Replace *id* with the Id of the health endpoint.
+**Note:** Replace *Id* with the Id of the health endpoint.
