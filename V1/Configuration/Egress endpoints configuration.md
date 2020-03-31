@@ -37,13 +37,13 @@ Complete the following procedure to configure egress endpoints:
     - _Delete an endpoint_
 
         ```bash
-        curl -X DELETE "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}"
+        curl -X DELETE "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}"
         ```
 
     - _Update an endpoint_
 
         ```bash
-        curl -d "@OmfEgress_DataEndpoints.json" -H "Content-Type: application/json" -X UPDATE     "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}"
+        curl -d "@OmfEgress_DataEndpoints.json" -H "Content-Type: application/json" -X UPDATE     "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}"
         ```
 
     - _View endpoints_
@@ -109,10 +109,11 @@ The following examples are valid egress configurations.
 | api/v1/configuration/omfegress/DataEndpoints      | DELETE    | Deletes all configured egress endpoints. |
 | api/v1/configuration/omfegress/DataEndpoints      | POST      | Adds an array of egress endpoints or a single endpoint. Fails if any endpoint already exists. |
 | api/v1/configuration/omfegress/DataEndpoints      | PUT       | Replaces all egress endpoints. |
-| api/v1/configuration/omfegress/DataEndpoints/{id} | GET       | Gets configured endpoint by *id*. |
-| api/v1/configuration/omfegress/DataEndpoints/{id} | DELETE    | Deletes configured endpoint by *id*. |
-| api/v1/configuration/omfegress/DataEndpoints/{id} | PUT       | Replaces egress endpoint by *id*. Creates new endpoint if it does not exist.|
-| api/v1/configuration/omfegress/DataEndpoints/{id} | PATCH     | Allows partial updating of configured endpoint by *id*. |
+| api/v1/configuration/omfegress/DataEndpoints      | PATCH     | Allows partial updating of configured endpoints. **Note:** The request must be an array containing one or more endpoints. Each endpoint in the array must include its *Id*. |
+| api/v1/configuration/omfegress/DataEndpoints/{Id} | GET       | Gets configured endpoint by *Id*. |
+| api/v1/configuration/omfegress/DataEndpoints/{Id} | DELETE    | Deletes configured endpoint by *Id*. |
+| api/v1/configuration/omfegress/DataEndpoints/{Id} | PUT       | Replaces egress endpoint by *Id*. Creates new endpoint if it does not exist.|
+| api/v1/configuration/omfegress/DataEndpoints/{Id} | PATCH     | Allows partial updating of configured endpoint by *Id*. |
 
 ## Egress execution details
 
