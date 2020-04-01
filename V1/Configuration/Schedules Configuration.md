@@ -2,15 +2,15 @@
 uid: SchedulesConfiguration
 ---
 
-# Schedule configuration
+# Schedules configuration
 
-OSIsoft adapters can be configured to run scans based on a schedule. If the adapter supports scheduling, then each data item in the data selection configuration can be assigned a schedule. The adapter will then query for data for those data items at the scheduled time.
+OSIsoft adapters can be configured to run scans based on a schedule. If the adapter supports schedules, each data item in the data selection configuration can be assigned a schedule. The adapter will then query for data for those data items at the scheduled time.
 
-## Configure schedule
+## Configure schedules
 
-Complete the following procedure to change the logging configuration:
+Complete the following procedure to change the schedules configuration:
 
-1. Using any text editor, create a file that contains the logging configuration in JSON form.
+1. Using any text editor, create a file that contains the schedules configuration in JSON form.
     - For content structure, see [Example](#example).
     - For all available parameters, see [Schedules parameters](#schedules-parameters).
 
@@ -32,7 +32,7 @@ On successful execution, the schedules change takes effect immediately during ru
 
 ## Schedules schema
 
-The full schema definition for the schedules configuration is in the component specific schedules file: _AdapterName_Schedules_schema.json_
+The full schema definition for the schedules configuration is in the  _AdapterName_Schedules_schema.json_ here:
 
 Windows: *%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas*
 
@@ -40,13 +40,13 @@ Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
 
 ## Schedules parameters
 
-The following parameters are available for configuring logging:
+The following parameters are available for configuring schedules:
 
 | Parameter                | Required | Type      | Description |
 | ------------------------ | -------- | --------- | ----------- |
 |**Id**              | Required | `string` | Unique identifier for the schedule. |
-|**Period** | Required | `string` | The data sampling rate of the schedule. Expected format is HH:MM:SS.###. |
-|**Offset**     | Optional | `integer` | The offset from the midnight when the schedule starts. Expected format is HH:MM:SS.### |
+|**Period** | Required | `string` | The data sampling rate of the schedule. The expected format is HH:MM:SS.###. |
+|**Offset**     | Optional | `integer` | The offset from the midnight when the schedule starts. The expected format is HH:MM:SS.### |
 
 ## Example
 
