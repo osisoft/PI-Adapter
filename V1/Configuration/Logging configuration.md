@@ -1,4 +1,4 @@
----
+﻿---
 uid: LoggingConfiguration
 ---
 
@@ -6,9 +6,9 @@ uid: LoggingConfiguration
 
 OSIsoft adapters write daily log messages for the adapter, the system, and omf egress to flat text files in the following locations:
 
-• Windows: *%ProgramData%\OSIsoft\Adapters\adapterName\adapterServiceName\Logs*
+• Windows: *%ProgramData%\OSIsoft\Adapters\{AdapterInstance}\Logs*
 
-• Linux: */usr/share/OSIsoft/Adapters/adapterName/adapterServiceName/Logs*
+• Linux: */usr/share/OSIsoft/Adapters/{AdapterInstance}/Logs*
 
 Each message in the log displays the message severity level, timestamp, and the message itself.
 

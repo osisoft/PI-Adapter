@@ -80,7 +80,7 @@ Change the system and adapter configuration by importing the JSON file using a R
             }
         ],
     "Buffering": {
-            "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/OpcUa/OpcUa/Buffers",
+            "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/OpcUa/Buffers",
             "MaxBufferSizeMB": -1,
             "EnableBuffering": true
         }
