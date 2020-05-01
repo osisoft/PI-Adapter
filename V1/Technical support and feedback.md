@@ -4,7 +4,7 @@ uid: TechnicalSupportAndFeedback
 
 # Technical support and feedback
 
-If you need help with or have questions, comments, or other feedback about OSIsoft adapters, use one of the following resources:
+OSIsoft provides several ways to report issues and provide feedback on OSIsoft adapters.
 
 ## Technical support
 
