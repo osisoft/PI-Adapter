@@ -32,7 +32,7 @@ The product team at OSIsoft regularly monitors the page.
 For documentation feedback, send an email to [documentation@osisoft.com](mailto:documentation@osisoft.com?subject=OSIsoft%20adapter%20documentation). Be sure to include the following information with your feedback:
 
 - Product name and version
-- Topic title
+- Documentation page title
 - Details of the suggestion or error
 
 The technical documentation team at OSIsoft will review and respond to your feedback.
