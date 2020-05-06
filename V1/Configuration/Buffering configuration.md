@@ -57,7 +57,7 @@ Sample output:
 ```code
 {
     "bufferLocation": "C:/ProgramData/OSIsoft/Adapters/Modbus/Buffers",
-    "maxBufferSizeMB": -1,
+    "maxBufferSizeMB": 1024,
     "enablePersistentBuffering": true
 }
 ```
