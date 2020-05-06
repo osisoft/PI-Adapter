@@ -38,8 +38,8 @@ The following parameters are available for configuring buffering:
 
 | Parameter | Required | Type | Description |
 | ----------| -------- | ---- | ----------- |
-| **EnableBuffering**  | Optional |  `boolean` | Enables or disables buffering. <br><br> Default: True <br><br> **Note:** If you disable buffering, in-memory buffering will be used. In-memory buffering is limited to 20 MB per endpoint. |
-| **MaxBufferSizeMB**  | Optional     |`integer` | Defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (1 Mebibyte = 1048576 bytes). Take into account the capacity and type of the storage medium to determine a suitable value for this parameter. A value of -1 indicates that the buffer file size is restricted only by the available free disk space. <br><br> Allowed values: -1 or [1, 2147483647]. <br><br> Default: -1 |
+| **EnablePersistentBuffering**  | Optional |  `boolean` | Enables or disables on-disk buffering. <br><br> Default: True <br><br> **Note:** If you disable persistent buffering, in-memory buffering will be used. In-memory buffering is limited by value in MaxBufferSizeMB property. |
+| **MaxBufferSizeMB**  | Optional     |`integer` | Defines the maximum size of the buffer files that will be persisted on disk or that will be used in memory when EnablePersistentBuffering is set to false per configured endpoint. The unit is specified in MB (1 Megabyte = 1048576 bytes). Take into account the capacity and type of the storage medium to determine a suitable value for this parameter. <br><br> Allowed values: [1, 2147483647]. <br><br> Default: 1024 |
 | **BufferLocation**   | Required  | `string` | Defines the location of the buffer files. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter. <br><br> Allowed value: Valid path to a folder location in the file system. <br><br> Default: <br> **Windows:** _%ProgramData%\OSIsoft\Adapters\\{AdapterInstance}\Buffers_ <br> **Linux:** _/usr/share/OSIsoft/Adapters/{AdapterInstance}/Buffers_ |
 
 ## Examples
@@ -58,7 +58,7 @@ Sample output:
 {
     "bufferLocation": "C:/ProgramData/OSIsoft/Adapters/Modbus/Buffers",
     "maxBufferSizeMB": -1,
-    "enableBuffering": true
+    "enablePersistentBuffering": true
 }
 ```
 
@@ -78,4 +78,4 @@ curl -d "{ "MaxBufferSizeMB": 100 }" -H "Content-Type: application/json" -X PATC
 | ------------ |---------- |----------------------|
 | api/v1/configuration/system/buffering | GET       | Gets the buffering configuration. |
 | api/v1/configuration/system/buffering | PUT       | Replaces the existing buffering configuration. |
-| api/v1/configuration/system/buffering | PATCH | Update parameter, partial configuration. |
+| api/v1/configuration/system/buffering | PATCH     | Update parameter, partial configuration. |
