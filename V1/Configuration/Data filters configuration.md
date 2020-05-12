@@ -1,8 +1,8 @@
 ---
-uid: DataFilersConfiguration
+uid: DataFiltersConfiguration
 ---
 
-# Data Filters configuration
+# Data filters configuration
 
 OSIsoft adapters can be configured to perform data filtering to save network bandwidth. Every data item in the data selection configuration can be assigned the id of a data filter. The adapter will then filter data for those data items based on the data filter configuration.
 
@@ -11,7 +11,7 @@ OSIsoft adapters can be configured to perform data filtering to save network ban
 Complete the following procedure to change the data filters configuration:
 
 1. Using any text editor, create a file that contains the data filters configuration in JSON form.
-    - For content structure, see [Example](#example).
+    - For content structure, see [Data filters example](#data-filters-example).
     - For all available parameters, see [Data filters parameters](#data-filters-parameters).
 
 2. Save the file, for example as *Component_DataFilters.json*.
@@ -45,11 +45,11 @@ The following parameters are available for configuring data filters:
 | Parameter                | Required | Type      | Description |
 | ------------------------ | -------- | --------- | ----------- |
 |**Id**              | Required | `String` | Unique identifier for the data filter. |
-|**AbsoluteDeadband** | Optional | `Double` | Specifies the absolute change in data value that should cause the current value to pass the filter test. At least one of `AbsoluteDeadband` or `PercentChange` must be specified. |
-|**PercentChange**     | Optional | `Double` | Specifies the percent change from previous value that should cause the current value to pass the filter test. At least one of `AbsoluteDeadband` or `PercentChange` must be specified. |
+|**AbsoluteDeadband** | Optional | `Double` | Specifies the absolute change in data value that should cause the current value to pass the filter test. <br> **Note:** You must specify at least either `AbsoluteDeadband` or `PercentChange`. |
+|**PercentChange**     | Optional | `Double` | Specifies the percent change from previous value that should cause the current value to pass the filter test. <br> **Note:** You must specify at least either `AbsoluteDeadband` or `PercentChange`. |
 |**ExpirationPeriod**     | Optional | `TimeSpan` | The length in time that can elapse after an event before automatically storing the next event. The expected format is HH:MM:SS.###. |
 
-## Example
+## Data filters example
 
 ```code
 [
@@ -74,6 +74,5 @@ The following parameters are available for configuring data filters:
 | api/v1/configuration/_ComponentId_/DataFilters/*id* | GET       | Gets configured data filter by *id*. |
 | api/v1/configuration/_ComponentId_/DataFilters/*id*| DELETE     | Deletes configured data filter by *id*. |
 | api/v1/configuration/_ComponentId_/DataFilters/*id* | PUT       | Replaces data filter by *id*. Fails if data filter does not exist. |
-
 
 **Note:** Replace *ComponentId* with the Id of your adapter component, for example Modbus1.
