@@ -8,7 +8,7 @@ Adapters are installed on a local machine using an install kit downloaded from t
 
 ## Installation prerequisites
 
-Adapters require the installation of the following software:
+Adapters require the following software installations:
 
 - Operating systems:
   - Alpine: 3.10+
