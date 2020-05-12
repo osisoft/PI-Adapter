@@ -6,13 +6,13 @@ uid: SystemComponentsConfiguration
 
 OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the EdgeCmd utility for any changes you make to the files.
 
-As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form, where cryptographic key material is stored separately in a secure location. If you edit the files directly, the adapter may not work as expected.
+As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form where cryptographic key material is stored separately in a secure location. If you edit the files directly, the adapter may not work as expected.
 
 **Note:** You can edit any single component or facet of the system individually using REST, but you can also configure the system as a whole with a single REST call.
 
 ## Configure system components
 
-The configuration of system components includes adding, updating and deleting components.
+The configuration of system components includes adding, updating, and deleting components.
 
 ### Add a system component
 
@@ -25,7 +25,7 @@ Complete the following procedure to add a new component to the system:
 
     **Note:** The OmfEgress component is required for this initial release for adapters to run. You can add additional components, but only a single OmfEgress component is supported.
 
-    The following example adds a Modbus TCP adapter.
+    The following example adds a Modbus TCP adapter:
 
       ```json
         {
@@ -36,45 +36,53 @@ Complete the following procedure to add a new component to the system:
 
     **Note:** A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter to be added.
 
-2. Save the file, for example as *AddComponent.json*.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute either a POST or PUT command to their appropriate endpoint.
+2. Save the file. For example, *AddComponent.json*.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute either a `POST` or `PUT` command to their appropriate endpoint.
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
     
     - **POST** endpoint: `http://localhost:5590/api/v1/configuration/system/components`
 
-        Example using curl (run this command from the same directory where the file is located):
+        Example using `curl`:
 
+        **Note:** Run this command from the same directory where the file is located.
+    
         ```bash
         curl -d "@AddComponent.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/components"
         ```
     
     - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/system/components/<componentId>`
-    
-        Example using curl (run this command from the same directory where the file is located):
 
+        Example using `curl`:
+    
+        **Note:** Run this command from the same directory where the file is located.
+    
         ```bash
         curl -d "@AddComponent.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components/Modbus1"
         ```
-
+    
     After the curl command completes successfully, you can configure or use the new component.
 
 ### Update system components
 
-Complete the following procedure to update the system components, for example by adding or deleting components.
+Complete the following procedure to update the system components. For example, by adding or deleting components.
 
 1. Using any text editor, create a file that contains the current system components configuration. For information on how to retrieve the system components configuration, see [REST URLs](#rest-urls).
+
 2. Delete or add components as you need.
 
     **Note:** You cannot delete the OmfEgress component.
 
-3. Save the file, for example as *UpdateComponents.json*
-4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components`
+3. Save the file. For example,  *UpdateComponents.json*
+
+4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a `PUT` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components`
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-    Example using curl (run this command from the same directory where the file is located):
+    Example using `curl`:
 
+    **Note:** Run this command from the same directory where the file is located.
+    
     ```bash
     curl -d "@UpdateComponents.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components"
     ```
@@ -84,22 +92,25 @@ Complete the following procedure to update the system components, for example by
 Complete the following procedure to delete an existing component:
 
 1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
-2. Execute a DELETE command to the following endpoint, replacing `<ComponentId>` with the ID of the component that you want to delete: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId>/`
+
+2. Execute a `DELETE` command to the following endpoint, replacing `<ComponentId>` with the ID of the component that you want to delete: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId>/`
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-    Example using curl (run this command from the same directory where the file is located) <br>
+    Example using `curl`:
+    
+**Note:** Run this command from the same directory where the file is located. <br>
     *Delete OpcUa1 component*
-
+    
     ```bash
-    curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/OpcUa1/"
+curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/OpcUa1/"
     ```
-
+    
     All the logs and configurations files for the deleted components will be moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
 
 ## System components schema
 
-The full schema definition for the system components configuration is in the *System_Components_schema.json* located here:
+The full schema definition for the system components configuration is in the *System_Components_schema.json* file located in one of the folders listed below:
 
 Windows: *%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas*
 
@@ -111,8 +122,8 @@ The following parameters are available for configuring system components:
 
 | Parameters     | Required | Type    | Description |
 | -------------- | -------- | --------| -------------|
-| **ComponentId**    | Required |`string` | The ID of the component. It can be any alphanumeric string, for example OmfEgress.|
-| **ComponentType**  | Required |`string` | The type of the component, for example OmfEgress. There are two types of components: OmfEgress and the adapter. |
+| **ComponentId**    | Required |`string` | The ID of the component. It can be any alphanumeric string. For example, OmfEgress. |
+| **ComponentType**  | Required |`string` | The type of the component. For example, OmfEgress. There are two types of components: OmfEgress and the adapter. |
 
 ## Examples
 
