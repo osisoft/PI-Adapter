@@ -6,6 +6,8 @@ uid: SchedulesConfiguration
 
 OSIsoft adapters can be configured to run scans based on a schedule. If the adapter supports schedules, each data item in the data selection configuration can be assigned a schedule. The adapter will then sample data for those data items at the scheduled time.
 
+**Note:** When the adapter framework scheduler misses or skips a scan due to any reason, the following messages are printed respectively:<br>`Scan skipped for schedule id <Id>`<br>`Scan missed for schedule <id>`
+
 ## Configure schedules
 
 Complete the following procedure to change the schedules configuration:
