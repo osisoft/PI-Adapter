@@ -34,7 +34,7 @@ Configuration files will be moved to the following location:
 
 Log files will be moved to the following location:
 
-   **Windows:** `%programdata%\OSIsoft\Adapters\AdapterName\AdapterName\Logs\Removed`*`
+   **Windows:** `%programdata%\OSIsoft\Adapters\AdapterName\AdapterName\Logs\Removed`
 
    **Linux:** `/usr/share/OSIsoft/Adapters/AdapterName/AdapterName/Logs/Removed`
 
