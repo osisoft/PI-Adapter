@@ -25,6 +25,6 @@ After running diagnostics with a health endpoint configured to a PI server, you 
 
 ![Diagnostics](../images/Diagnostics.PNG)
 
-- The `Elements` root contains a link to an `Adapters` node. This is the root node for all adapter instances.
-- Below `Adapters`, you fill find one or more adapter nodes. Each node's title is defined by the node's corresponding computer name and service name in this format: `{ComputerName}.{ServiceName}`. For example, in the following image, `MachineName` is the computer name and `OpcUa` is the service name.
-- To see the `System.Diagnostics` values, click on an adapter node and set the tab to `Attributes`. Example values are shown in the image.
+- The **Elements** root contains a link to an **Adapters** node. This is the root node for all adapter instances.
+- Below **Adapters**, you fill find one or more adapter nodes. Each node's title is defined by the node's corresponding computer name and service name in this format: `{ComputerName}.{ServiceName}`. For example, in the following image, **MachineName** is the computer name and **OpcUa** is the service name.
+- To see the **System.Diagnostics** values, click on an adapter node and set the tab to **Attributes**. Example values are shown in the image.
