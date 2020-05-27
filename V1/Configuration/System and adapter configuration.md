@@ -4,20 +4,25 @@ uid: SystemAndAdapterConfiguration
 
 # System and adapter configuration
 
-The System and adapter components can be configured together using a single call for replacing the existing configuration.
+You can configure the system and adapter components together using a single call for replacing the existing configuration.
 
 ## Change system and adapter configuration
 
 Change the system and adapter configuration by importing the JSON file using a REST client:
 
 1. Using any text editor, create a file that contains the System and adapter configuration in JSON form.
+
     - For content structure, see [Example](#example).
-2. Save the file, for example as *SystemAdapter.config.json*.
-3. Use any of the [Configuration Tools](xref:ConfigurationTools) capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration`
+
+2. Save the file. For example,  *SystemAdapter.config.json*.
+
+3. Use any of the [Configuration Tools](xref:ConfigurationTools) capable of making HTTP requests and run a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration`
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-    Example using curl (run this file from the same directory where the file is located):
+    Example using `curl`:
+
+    **Note:** Run this command from the same directory where the file is located.
 
     ```bash
     curl -d "@SystemAdapter.config.json" -H "Content-Type: application/json" -X  PUT "http://localhost:5590/api/v1/configuration"
@@ -112,6 +117,6 @@ Change the system and adapter configuration by importing the JSON file using a R
 
 ## REST URLs
 
-| Relative URL                                              | HTTP verb | Action               |
-|-----------------------------------------------------------|-----------|----------------------|
-| api/v1/configuration/     | PUT       | Replaces the configuration for the entire adapter.  |
+| Relative URL          | HTTP verb | Action                                            |
+| --------------------- | --------- | ------------------------------------------------- |
+| api/v1/configuration/ | PUT       | Replaces the configuration for the entire adapter |

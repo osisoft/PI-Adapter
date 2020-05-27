@@ -4,7 +4,7 @@ uid: ConfigurationTools
 
 # Configuration tools
 
-OSIsoft adapters can be configured with either the EdgeCmd utility, OSIsoft's proprietary tool for configuring adapters, or a commonly used REST tool.
+You can configure OSIsoft adapters with the EdgeCmd utility, OSIsoft's proprietary tool for configuring adapters, or a commonly used REST tool.
 
 ## EdgeCmd utility
 
@@ -12,11 +12,11 @@ The EdgeCmd utility enables adapter configuration on both Linux and Windows oper
 
 ## REST tools
 
-The following tools are available to make REST calls.
+The following tools are available to make REST calls:
 
 ### curl
 
-curl is a command line tool used to make HTTP calls and is supported on both Windows and Linux operating systems. curl is easily scripted using Bash or PowerShell on either Linux or Windows, and can be used to perform adapter administrative and programming tasks. curl commands are used in configuration and management examples throughout this document. For more information, see [curl (https://curl.haxx.se/)](https://curl.haxx.se/).
+curl is a command line tool used to make HTTP calls and is supported on both Windows and Linux operating systems. You can script curl with Bash or PowerShell on Linux or Windows and you can use it to perform adapter administrative and programming tasks. `curl` commands are used in configuration and management examples throughout this document. For more information, see [curl (https://curl.haxx.se/)](https://curl.haxx.se/).
 
 ### Postman
 

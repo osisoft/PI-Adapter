@@ -4,7 +4,7 @@ uid: AdapterHealth
 
 # Adapter health
 
-OSIsoft adapters produce different kinds of health data, which can be egressed to different health endpoints. For details, see the following sections.
+OSIsoft adapters produce different kinds of health data that can be egressed to different health endpoints. 
 
 ## Available health data
 
@@ -17,7 +17,7 @@ The following health data are available:
 
 ## Health endpoint differences
 
-Two following two OMF endpoints are currently supported for adapter health data:
+Two OMF endpoints are currently supported for adapter health data:
 
 - PI Web API
 - OSIsoft Cloud Services
@@ -28,6 +28,6 @@ There are a few differences in how these two systems treat the associated health
 
   ![AdapterHealthAFHierarchy](../images/AdapterHealthAFHierarchy.PNG)
 
-  The dynamic health data is actually time-series data that is stored in PI points on a PI Data Archive. It can be seen in the AF hierarchy as PI point data reference attributes.
+  The dynamic health data is time-series data that is stored in PI points on a PI Data Archive. You can see it in the AF hierarchy as PI point data reference attributes.
 
-- OSIsoft Cloud Services currently does not provide a way to store the static metadata. For OCS-based adapter health endpoints, only the dynamic data will be stored. Each value will be its own stream with the timestamp property as the single index.
+- OSIsoft Cloud Services does not currently provide a way to store the static metadata. For OCS-based adapter health endpoints, only the dynamic data is stored. Each value is its own stream with the timestamp property as the single index.

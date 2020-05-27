@@ -8,12 +8,14 @@ The product version information includes the application version, the version of
 
 Complete the following procedure to retrieve the product version information of an OSIsoft adapter:
 
-1. Start any configuration tool capable of making HTTP requests.
-2. Execute a GET command to the following endpoint: `http://localhost:5590/api/v1/Diagnostics/ProductInformation`
+1. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
+2. Run a `GET` command to the following endpoint: `http://localhost:5590/api/v1/Diagnostics/ProductInformation`
 
    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-   Example using curl **Get product information for adapter hosted on port 5590**:
+   Example using `curl`:
+
+   **Get product information for adapter hosted on port 5590**
 
    ```bash
    curl -d "" -X GET "http://localhost:5590/api/v1/Diagnostics/ProductInformation
