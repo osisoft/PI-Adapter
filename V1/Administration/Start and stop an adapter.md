@@ -10,9 +10,9 @@ Complete the procedure appropriate for your operating system to start or stop an
 
 1. Open Windows services.
 
-2. Select `OSIsoft Adapter` for `AdapterName`, for example OSIsoft Adapter for Modbus.
+2. Select **OSIsoft Adapter for _AdapterName_**, for example OSIsoft Adapter for Modbus.
 
-3. Depending on whether your adapter is running or not, click either `Start` or `Stop`.
+3. Depending on whether your adapter is running or not, click either **Start** or **Stop**.
 
 ## Linux
 
@@ -25,15 +25,15 @@ Complete the procedure appropriate for your operating system to start or stop an
     **Start** OSIsoft Adapter for OPC UA
     
     ```cmdline
-systemctl start OSIsoft Adapter for OPC UA
+    systemctl start OSIsoft Adapter for OPC UA
     ```
 
     Example: 
     
     **Stop** OSIsoft Adapter for Modbus TCP
   
-  ```cmdline
-  systemctl stop OSIsoft Adapter for Modbus
-  ```
+      ```cmdline
+      systemctl stop OSIsoft Adapter for Modbus
+      ```
   
 3. Press Enter.
