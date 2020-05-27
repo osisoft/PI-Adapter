@@ -122,8 +122,8 @@ The following parameters are available for configuring system components:
 
 | Parameters     | Required | Type    | Description |
 | -------------- | -------- | --------| -------------|
-| **ComponentId**    | Required |`string` | The ID of the component. It can be any alphanumeric string. For example, OmfEgress. |
-| **ComponentType**  | Required |`string` | The type of the component. For example, OmfEgress. There are two types of components: OmfEgress and the adapter. |
+| **ComponentId**    | Required |`string` | The ID of the component. It can be any alphanumeric string, for example OmfEgress. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> `>` `<` `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `*` `\` `"` `(` `)` `\\` `+` `,` `;` `=` `` \| `` `` ` `` `{` `}` |
+| **ComponentType**  | Required |`string` | The type of the component, for example OmfEgress. There are two types of components: OmfEgress and the adapter. |
 
 ## Examples
 
