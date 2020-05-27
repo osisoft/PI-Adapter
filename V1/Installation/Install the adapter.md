@@ -40,7 +40,7 @@ Complete the following procedure to install an OSIsoft adapter on a Linux comput
 
     **Examples**: <br> To install the Linux ARM Debian package, run the command <br>`sudo apt install ./Modbus_linux-arm.deb` <br> To install the Linux x64 package, run the command <br> `sudo apt install ./Modbus_linux-x64.deb`
 
-4. Optional: To verify the installation, run the following `curl` command withthe port number that you specified during installation:
+4. Optional: To verify the installation, run the following `curl` command with the port number that you specified during installation:
 
    ```bash
    curl http://localhost:5590/api/v1/configuration

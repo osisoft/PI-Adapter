@@ -16,7 +16,7 @@ The following tools are available to make REST calls:
 
 ### curl
 
-curl is a command line tool used to make HTTP calls and is supported on both Windows and Linux operating systems. You can script curl with Bash or PowerShell on Linux or Windows and you can use it to perform adapter administrative and programming tasks. curl commands are used in configuration and management examples throughout this document. For more information, see [curl (https://curl.haxx.se/)](https://curl.haxx.se/).
+curl is a command line tool used to make HTTP calls and is supported on both Windows and Linux operating systems. You can script curl with Bash or PowerShell on Linux or Windows and you can use it to perform adapter administrative and programming tasks. `curl` commands are used in configuration and management examples throughout this document. For more information, see [curl (https://curl.haxx.se/)](https://curl.haxx.se/).
 
 ### Postman
 
