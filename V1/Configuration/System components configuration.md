@@ -37,30 +37,30 @@ Complete the following procedure to add a new component to the system:
     **Note:** A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter to be added.
 
 2. Save the file. For example, *AddComponent.json*.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute either a `POST` or `PUT` command to their appropriate endpoint.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run either a `POST` or `PUT` command to their appropriate endpoint.
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
-    
+
     - **POST** endpoint: `http://localhost:5590/api/v1/configuration/system/components`
 
         Example using `curl`:
 
         **Note:** Run this command from the same directory where the file is located.
-    
+
         ```bash
         curl -d "@AddComponent.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/components"
         ```
-    
+
     - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/system/components/<componentId>`
 
         Example using `curl`:
-    
+
         **Note:** Run this command from the same directory where the file is located.
-    
+
         ```bash
         curl -d "@AddComponent.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components/Modbus1"
         ```
-    
+
     After the curl command completes successfully, you can configure or use the new component.
 
 ### Update system components
@@ -75,14 +75,14 @@ Complete the following procedure to update the system components. For example, b
 
 3. Save the file. For example,  *UpdateComponents.json*
 
-4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a `PUT` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components`
+4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `PUT` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components`
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
     Example using `curl`:
 
     **Note:** Run this command from the same directory where the file is located.
-    
+
     ```bash
     curl -d "@UpdateComponents.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components"
     ```
@@ -93,19 +93,19 @@ Complete the following procedure to delete an existing component:
 
 1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 
-2. Execute a `DELETE` command to the following endpoint, replacing `<ComponentId>` with the ID of the component that you want to delete: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId>/`
+2. Run a `DELETE` command to the following endpoint, replacing `<ComponentId>` with the ID of the component that you want to delete: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId>/`
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
     Example using `curl`:
-    
-**Note:** Run this command from the same directory where the file is located. <br>
+
+    **Note:** Run this command from the same directory where the file is located. <br>
     *Delete OpcUa1 component*
-    
+  
     ```bash
-curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/OpcUa1/"
+    curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/OpcUa1/"
     ```
-    
+
     All the logs and configurations files for the deleted components will be moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
 
 ## System components schema

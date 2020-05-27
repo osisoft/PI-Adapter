@@ -2,7 +2,7 @@
 uid: HealthEndpointConfiguration
 ---
 
-# Health endpoint configuration 
+# Health endpoint configuration
 
 You can configure OSIsoft adapters to produce and store health data at a designated health endpoint.
 For more information about adapter health, see [Adapter health](xref:AdapterHealth).
@@ -15,30 +15,29 @@ A health endpoint designates an OMF endpoint where adapter health information is
     - For content structure, see [Examples](#examples).
     - For a table of all available health endpoint parameters, see [Health endpoint parameters](#health-endpoint-parameters).
 2. Save the file. For example, *HealthEndpoints.json*.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute either a POST or PUT command to their appropriate endpoint.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint.
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
-    
+
     - **POST** endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints`
 
         Example using `curl`:
 
         **Note:** Run this command from the same directory where the file is located.
-        
+
         ```bash
         curl -d "@HealthEndpoints.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/healthendpoints"
         ```
-        
-- **PUT** endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints/{Id}`
+
+    - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints/{Id}`
   
         Example using `curl`:
-        
+
         **Note:** Run this command from the same directory where the file is located.
-        
+
         ```bash
         curl -d "@HealthEndpoints.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/healthendpoints/OCS"
         ```
-    
 
 ## Health endpoints schema
 

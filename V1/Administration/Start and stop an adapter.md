@@ -20,16 +20,16 @@ Complete the procedure appropriate for your operating system to start or stop an
 
 2. Depending on whether your adapter is running or not, type one of the following:
 
-    Example: 
+    Example:
 
     **Start** OSIsoft Adapter for OPC UA
-    
+
     ```cmdline
     systemctl start OSIsoft Adapter for OPC UA
     ```
 
-    Example: 
-    
+    Example:
+
     **Stop** OSIsoft Adapter for Modbus TCP
   
       ```cmdline

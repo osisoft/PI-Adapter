@@ -14,7 +14,7 @@ You can configure OSIsoft adapters to buffer data egressed from the adapter to e
    - For content structure, see the sample output in [Examples - Retrieve the buffering configuration](#examples).
    - For a table of all available parameters, see [Buffering parameters](#buffering-parameters).
 2. Save the file. For example, *Buffering.json*.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and execute a `PUT` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/buffering`
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and run a `PUT` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/buffering`
 
      **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
@@ -24,7 +24,7 @@ You can configure OSIsoft adapters to buffer data egressed from the adapter to e
       curl -d "@Buffering.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/buffering"
      ```
 
-**Note:** Run this command from the same directory where the file is located.
+    **Note:** Run this command from the same directory where the file is located.
 
 ## Buffering schema
 

@@ -10,14 +10,14 @@ Complete the following procedure to delete an adapter component:
 
 1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 
-2. Execute a `DELETE` command to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId>`
+2. Run a `DELETE` command to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId>`
 
     **Note:** You must make an empty `DELETE` command  against the `Id` of the component you want to delete. <br> `5590` is the default port number. If you selected a different port number, replace it with that value.
 
       Example using `curl` :
 
     **Delete OpcUa1 adapter component**
-    
+
       ```bash
       curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/OpcUa1"
       ```

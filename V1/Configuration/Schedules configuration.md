@@ -18,7 +18,7 @@ Complete the following procedure to change the schedules configuration:
 
 2. Save the file. For example, Component_Schedules.json*.
 
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules`.
 
     **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter. For example, _Modbus1_.
 
@@ -27,7 +27,7 @@ Complete the following procedure to change the schedules configuration:
     Example using `curl`:
 
     **Note:** Run this command from the same directory where the file is located.
-    
+
     ```bash
     curl -d "@Component_Schedules.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules"
     ```

@@ -8,8 +8,8 @@ The device status indicates the health of this component and if it is currently 
 
 | Property                          | Type                                 | Description                    |
 |-----------------------------------|--------------------------------------|--------------------------------|
-| `Time`                        | `string`                               | Timestamp of the event        |
-| `DeviceStatus`                | `string`                               | The value of the `DeviceStatus` |
+| **Time**                        | `string`                               | Timestamp of the event        |
+| **DeviceStatus**                | `string`                               | The value of the `DeviceStatus` |
 
 The possible statuses are:
 

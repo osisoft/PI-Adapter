@@ -8,5 +8,5 @@ This property is similar to a heartbeat. A new value for `NextHealthMessageExpec
 
 | Property                          | Type                                 | Description                            |
 |-----------------------------------|--------------------------------------|----------------------------------------|
-| `Time`                        | `string`                             | Timestamp of the event                |
-| `NextHealthMessageExpected`   | `string`                              | Timestamp when next value is expected |
+| **Time**                        | `string`                             | Timestamp of the event                |
+| **NextHealthMessageExpected**   | `string`                              | Timestamp when next value is expected |

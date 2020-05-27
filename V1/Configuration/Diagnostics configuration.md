@@ -10,7 +10,7 @@ For more information about available diagnostics data, see [Adapter diagnostics]
 ## Configure diagnostics
 
 1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
-2. Execute a `PUT` command to the following endpoint and set the `enableDiagnostics` parameter to either **true** or **false**: `http://localhost:5590/api/v1/configuration/system/diagnostics`
+2. Run a `PUT` command to the following endpoint and set the `enableDiagnostics` parameter to either **true** or **false**: `http://localhost:5590/api/v1/configuration/system/diagnostics`
 
    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 

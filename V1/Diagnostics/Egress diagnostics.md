@@ -12,5 +12,5 @@ The `Diagnostics.Egress.IORate` dynamic type includes the following values, whic
 
 | Property  | Type   | Description                                            |
 | --------- | ------ | -------------------------------------------------------|
-| `timestamp` | `string` | Timestamp of event                                   |
-| `IORate`  | `double` | 1-minute rolling average of data rate (streams/second)|
+|**timestamp** | `string` | Timestamp of event                                   |
+| **IORate**  | `double` | 1-minute rolling average of data rate (streams/second)|
