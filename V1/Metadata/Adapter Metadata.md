@@ -19,10 +19,11 @@ If you set EnableDiagnostics to `true` in [General configuration](xref:GeneralCo
 
 The adapter may also send its own stream metadata not including health and diagnostics streams. For more information about what custom metadata is included in each stream, see the user guide for your adapter.
 
-**Note:** 
+**Note:**
+
 - Metadata is only sent for streams created by the ingress components.
 - Currently, the only endpoint that persists sent metadata is OCS (OSIsoft Cloud Services).
 
-_Metadata in OCS_
-
-![Metadata in OCS](../images/Metadata.png)
+|![Metadata in OCS](../images/Metadata.png)|
+|:--:|
+|_Metadata in OCS_|
