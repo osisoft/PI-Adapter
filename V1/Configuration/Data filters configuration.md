@@ -22,11 +22,13 @@ Complete the following procedure to change the data filters configuration:
 
     `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-    Example using curl (run this command from the same directory where the file is located):
+    Example using `curl`:
 
     ```bash
     curl -d "@ComponentId_DataFilters.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/<ComponentId>/DataFilters"
     ```
+
+    **Note:** Run this command from the same directory where the file is located.
 
 On successful execution, the data filters change takes effect immediately during runtime.
 
