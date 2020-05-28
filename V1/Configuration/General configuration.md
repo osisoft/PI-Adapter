@@ -4,18 +4,18 @@ uid: GeneralConfiguration
 
 # General configuration
 
-OSIsoft adapters can be configured to produce and store diagnostics data at a designated health endpoint, and to send metadata for created streams.
+You can configure OSIsoft adapters to produce and store diagnostics data at a designated health endpoint, and to send metadata for created streams.
 For more information about available diagnostics data, see [Adapter diagnostics](xref:AdapterDiagnostics) and [Egress diagnostics](xref:EgressDiagnostics).
 For more information about available metadata, see [Adapter Metadata](xref:AdapterMetadata).
 
 ## Configure general
 
 1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
-2. Execute a PUT command to the following endpoint, setting the `enableDiagnostics` parameter to either **true** or **false**: `http://localhost:5590/api/v1/configuration/system/general`
+2. Run a `PUT` command to the following endpoint, setting the `enableDiagnostics` parameter to either **true** or **false**: `http://localhost:5590/api/v1/configuration/system/general`
 
    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-   Example using curl:
+   Example using `curl`:
 
    ```bash
    curl -d "{ \"enableDiagnostics\":true, \"enableMetadata\":false }" -X PUT "http://localhost:5590/api/v1/configuration/system/general"
@@ -25,24 +25,24 @@ For more information about available metadata, see [Adapter Metadata](xref:Adapt
 
 The full schema definition for the general configuration is in the *System_General_schema.json* here:
 
-Windows: *%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas*
+Windows: `%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
 
-Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
+Linux: `/opt/OSIsoft/Adapters/AdapterName/Schemas`
 
-## general parameters
+## General parameters
 
 The following parameters are available for configuring general:
 
 | Parameter             | Required | Type    | Description |
 | ---------             | -------- | ------- | ----------- |
-| **EnableDiagnostics** | Optional | `boolean` | Determines whether Diagnostics are enabled. |
-| **EnableMetadata** | Optional | `boolean` | Determines whether metadata will be sent. |
+| **EnableDiagnostics** | Optional | `boolean` | Determines if Diagnostics are enabled |
+| **EnableMetadata** | Optional | `boolean` | Determines if metadata are sent |
 
 ## Example
 
 ### Retrieve the general configuration
 
-Example using curl:
+Example using `curl`:
 
 ```bash
 curl -X GET "http://localhost:{port}/api/v1/configuration/system/general"
@@ -61,5 +61,6 @@ Sample output:
 
 | Relative URL                            | HTTP verb | Action                                          |
 | --------------------------------------- | --------- | ----------------------------------------------- |
-| api/v1/configuration/system/General 	  | GET       | Gets the general configuration.              |
-| api/v1/configuration/system/General 	  | PUT       | Replaces the existing general configuration. |
+| api/v1/configuration/system/General  | GET       | Gets the general configuration             |
+| api/v1/configuration/system/General  | PUT       | Replaces the existing general configuration |
+| api/v1/configuration/system/General  | PATCH       | Allows partial updating of general configuration
