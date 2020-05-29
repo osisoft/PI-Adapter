@@ -15,9 +15,9 @@ If the option to send metadata is set to `true` in the [General configuration](x
 
 ## Metadata for health and diagnostics streams
 
-If you configure a health endpoint and enable metadata, they are included in the health streams together with `ComponentId` and `ComponentType`.
+If you configure a health endpoint and enable metadata, they are included in the health streams ([Device status](xref:DeviceStatus) and [Next health message expected](xref:NextHealthMessageExpected)) together with `ComponentId` and `ComponentType`.
 
-If you set EnableDiagnostics to `true` in [General configuration](xref:GeneralConfiguration), metadata are included in the diagnostics streams together with `ComponentId` and `ComponentType`.
+If you set EnableDiagnostics to `true` in [General configuration](xref:GeneralConfiguration), metadata are included in the diagnostics streams ([Stream count](xref:StreamCount), [IO rate](xref:IORate), [Error rate](xref:ErrorRate)) together with `ComponentId` and `ComponentType`.
 
 The adapter may also send its own stream metadata not including health and diagnostics streams. For more information about what custom metadata is included in each stream, see the user guide for your adapter.
 
