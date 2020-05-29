@@ -11,7 +11,7 @@ If the option to send metadata is set to `true` in the [General configuration](x
   AdapterType: {ComponentType}
 ```
 
-`ComponentId` corresponds to the adapter components' data source configured in the [Components configuration](xref:SystemComponentsConfiguration). `ComponentType` corresponds to the adapter type, for example Modbus or OpcUa.
+`ComponentId` corresponds to the adapter components' data source configured in the [Components configuration](xref:SystemComponentsConfiguration). `ComponentType` corresponds to the adapter type. For example Modbus or OpcUa.
 
 If you configure a health endpoint and enable metadata, they are included in the health streams together with `ComponentId` and `ComponentType`.
 
