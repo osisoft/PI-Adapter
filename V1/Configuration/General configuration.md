@@ -11,7 +11,7 @@ For more information about available metadata, see [Adapter Metadata](xref:Adapt
 ## Configure general
 
 1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
-2. Run a `PUT` command to the following endpoint, setting the `enableDiagnostics` parameter to either **true** or **false**: `http://localhost:5590/api/v1/configuration/system/general`
+2. Run a `PUT` command to the following endpoint, setting the `enableDiagnostics` and `enableMetadata` parameters to either **true** or **false**: `http://localhost:5590/api/v1/configuration/system/general`
 
    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
@@ -23,7 +23,7 @@ For more information about available metadata, see [Adapter Metadata](xref:Adapt
 
 ## General schema
 
-The full schema definition for the general configuration is in the *System_General_schema.json* here:
+The full schema definition for the general configuration is in the `System_General_schema.json` here:
 
 Windows: `%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
 
@@ -35,7 +35,7 @@ The following parameters are available for configuring general:
 
 | Parameter             | Required | Type    | Description |
 | ---------             | -------- | ------- | ----------- |
-| **EnableDiagnostics** | Optional | `boolean` | Determines if Diagnostics are enabled |
+| **EnableDiagnostics** | Optional | `boolean` | Determines if diagnostics are enabled |
 | **EnableMetadata** | Optional | `boolean` | Determines if metadata are sent |
 
 ## Example
