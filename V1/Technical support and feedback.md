@@ -22,11 +22,11 @@ When you contact OSIsoft Technical Support, be prepared to provide this informat
 - Details of any environment changes prior to the start of the issue
 - Summary of the issue, including any relevant log files during the time the issue occurred 
 
-To view a brief primer on OSIsoft adapters, see the [OSIsoft adapters playbook](https://customers.osisoft.com/s/knowledgearticle?knowledgeArticleUrl=Playbook-OSIsoft-adapters) in the OSIsoft Customer Portal. 
+<!--To view a brief primer on OSIsoft adapters, see the [OSIsoft adapters playbook](https://customers.osisoft.com/s/knowledgearticle?knowledgeArticleUrl=Playbook-OSIsoft-adapters) in the OSIsoft Customer Portal.-->
 
-## Product feedback
+<!--## Product feedback-->
 
-To submit product feedback for OSIsoft adapters, visit the [OSIsoft adapters feedback page](https://feedback.osisoft.com/forums/123456-osisoft-adapters). The product team at OSIsoft regularly monitors the page. 
+<!--To submit product feedback for OSIsoft adapters, visit the [OSIsoft adapters feedback page](https://feedback.osisoft.com/forums/123456-osisoft-adapters). The product team at OSIsoft regularly monitors the page.-->
 
 ## Documentation feedback
 
