@@ -11,7 +11,7 @@ For more information about adapter health, see [Adapter health](xref:AdapterHeal
 
 A health endpoint designates an OMF endpoint where adapter health information is sent. You can configure multiple health endpoints.
 
-1. Using any text editor, create a file that contains one or more health endpoints in JSON form.
+1. Using any text editor, create a file that contains one or more health endpoints in the JSON format.
     - For content structure, see [Examples](#examples).
     - For a table of all available health endpoint parameters, see [Health endpoint parameters](#health-endpoint-parameters).
 2. Save the file. For example, *HealthEndpoints.json*.

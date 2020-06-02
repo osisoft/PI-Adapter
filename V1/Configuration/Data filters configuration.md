@@ -8,9 +8,9 @@ OSIsoft adapters can be configured to perform data filtering to save network ban
 
 ## Configure data filters
 
-Complete the following procedure to change the data filters configuration:
+Complete the following steps to change the data filters configuration:
 
-1. Using any text editor, create a file that contains the data filters configuration in JSON form.
+1. Using any text editor, create a file that contains the data filters configuration in the JSON format.
     - For content structure, see [Data filters example](#data-filters-example).
     - For all available parameters, see [Data filters parameters](#data-filters-parameters).
 

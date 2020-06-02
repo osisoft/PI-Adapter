@@ -16,9 +16,9 @@ The configuration of system components includes adding, updating, and deleting c
 
 ### Add a system component
 
-Complete the following procedure to add a new component to the system:
+Complete the following steps to add a new component to the system:
 
-1. Using any text editor, create a file that contains the component to be added to the system in JSON form.
+1. Using any text editor, create a file that contains the component to be added to the system in the JSON format.
 
     - For content structure, see [Examples](#examples).
     - For a table of all available parameters, see [System components parameters](#system-components-parameters).
@@ -65,7 +65,7 @@ Complete the following procedure to add a new component to the system:
 
 ### Update system components
 
-Complete the following procedure to update the system components. For example, by adding or deleting components.
+Complete the following steps to update the system components. For example, by adding or deleting components.
 
 1. Using any text editor, create a file that contains the current system components configuration. For information on how to retrieve the system components configuration, see [REST URLs](#rest-urls).
 
@@ -89,7 +89,7 @@ Complete the following procedure to update the system components. For example, b
 
 ### Delete a system component
 
-Complete the following procedure to delete an existing component:
+Complete the following steps to delete an existing component:
 
 1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 
@@ -106,7 +106,7 @@ Complete the following procedure to delete an existing component:
     curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/OpcUa1/"
     ```
 
-    All the logs and configurations files for the deleted components will be moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
+    All the logs and configurations files for the deleted components are moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
 
 ## System components schema
 

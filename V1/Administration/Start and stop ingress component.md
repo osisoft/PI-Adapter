@@ -8,7 +8,7 @@ To control data ingress, you can start and stop the ingress components of an ada
 
 ## Start an ingress component
 
-Complete the following procedure to start an individual ingress component:
+Complete the following steps to start an individual ingress component:
 
 1. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 2. Run a `POST` command to the following endpoint, replacing `<ingressComponentId>` with the ingress component that you want to start: `http://localhost:5590/api/v1/administration/<ingressComponentId>/Start`
@@ -25,7 +25,7 @@ Complete the following procedure to start an individual ingress component:
 
 ## Stop an ingress component
 
-Complete the following procedure to stop an individual ingress component:
+Complete the following steps to stop an individual ingress component:
 
 1. Start any configuration tool capable of making HTTP requests.
 

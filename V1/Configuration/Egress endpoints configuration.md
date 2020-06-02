@@ -12,7 +12,7 @@ An egress endpoint represents a destination to which data is sent. You can speci
 
 **Note:** You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoint configurations, see [REST URLs](#rest-urls).
 
-Complete the following procedure to configure egress endpoints:
+Complete the following steps to configure egress endpoints:
 
 1. Using any text editor, create a file that contains one or more egress endpoints in the JSON format.
     - For content structure, see [Examples](#examples).

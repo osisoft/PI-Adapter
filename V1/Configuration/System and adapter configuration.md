@@ -10,7 +10,7 @@ You can configure the system and adapter components together using a single call
 
 Change the system and adapter configuration by importing the JSON file using a REST client:
 
-1. Using any text editor, create a file that contains the System and adapter configuration in JSON form.
+1. Using any text editor, create a file that contains the System and adapter configuration in the JSON format.
 
     - For content structure, see [Example](#example).
 

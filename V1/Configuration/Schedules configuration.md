@@ -10,9 +10,9 @@ You can configure OSIsoft adapters to run scans based on a schedule. If the adap
 
 ## Configure schedules
 
-Complete the following procedure to change the schedules configuration:
+Complete the following steps to change the schedules configuration:
 
-1. Using any text editor, create a file that contains the schedules configuration in JSON form.
+1. Using any text editor, create a file that contains the schedules configuration in the JSON format.
     - For content structure, see [Example](#example).
     - For all available parameters, see [Schedules parameters](#schedules-parameters).
 
