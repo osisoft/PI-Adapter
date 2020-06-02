@@ -26,13 +26,13 @@ Complete the following steps to delete an adapter component:
 
 All configuration and log files are renamed and moved. The files are renamed according to the timestamp of removal, for example `FileName.json_removed_yyyy-MM-dd--hh-mm-ss`.
 
-Configuration files will be moved to the following location:
+Configuration files are moved to the following location:
 
    **Windows:** `%programdata%\OSIsoft\Adapters\AdapterName\AdapterName\Configuration\Removed`
 
    **Linux:** `/usr/share/OSIsoft/Adapters/AdapterName/AdapterName/Configuration/Removed`
 
-Log files will be moved to the following location:
+Log files are moved to the following location:
 
    **Windows:** `%programdata%\OSIsoft\Adapters\AdapterName\AdapterName\Logs\Removed`
 
