@@ -34,6 +34,8 @@ Change the system and adapter configuration by importing the JSON file using a R
 
 ## Example
 
+**Note**: The following is an example configuration, it does not necessarily represent the configuration of the adapter that you are currently using. The data source and data selection configurations are different for every adapter.
+
 <details>
     <summary>Sample OPC UA adapter configuration</summary>
     <pre>
