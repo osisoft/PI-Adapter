@@ -6,12 +6,12 @@ uid: GeneralConfiguration
 
 You can configure OSIsoft adapters to produce and store diagnostics data at a designated health endpoint, and to send metadata for created streams.
 For more information about available diagnostics data, see [Adapter diagnostics](xref:AdapterDiagnostics) and [Egress diagnostics](xref:EgressDiagnostics).
-For more information about available metadata, see [Adapter Metadata](xref:AdapterMetadata).
+For more information about available metadata and what metadata is sent per metadata level, see [Adapter Metadata](xref:AdapterMetadata).
 
 ## Configure general
 
 1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
-2. Run a `PUT` command to the following endpoint, setting the `enableDiagnostics` and `enableMetadata` parameters to either **true** or **false**: `http://localhost:5590/api/v1/configuration/system/general`
+2. Run a `PUT` command to the following endpoint, setting the `enableDiagnostics` to either **true** or **false** and and `MetadataLevel` to None, Low, Medium, or High: `http://localhost:5590/api/v1/configuration/system/general`
 
    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
@@ -36,7 +36,7 @@ The following parameters are available for configuring general:
 | Parameter             | Required | Type    | Description |
 | ---------             | -------- | ------- | ----------- |
 | **EnableDiagnostics** | Optional | `boolean` | Determines if diagnostics are enabled |
-| **EnableMetadata** | Optional | `boolean` | Determines if metadata are sent |
+| **MetadataLevel** | Optional | `reference` | Defines amount of metadata sent to OMF endpoints. Options: None, Low, Medium, High. |
 
 ## Example
 
@@ -53,7 +53,7 @@ Sample output:
 ```code
 {
   "EnableDiagnostics": true,
-  "EnableMetadata": false
+  "MetadataLevel": "Medium"
 }
 ```
 
