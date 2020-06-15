@@ -4,7 +4,7 @@ uid: AdapterMetadata
 
 # Adapter metadata
 
-If the option to send metadata is set to `true` in the [General configuration](xref:GeneralConfiguration), adapter streams created by the ingress components include the following metadata:
+If the metadataLevel is set to `Low` or higher in the [General configuration](xref:GeneralConfiguration), adapter streams created by the ingress components include the following metadata:
 
 ```code
   Datasource: {ComponentId}
