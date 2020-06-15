@@ -6,6 +6,8 @@ uid: SchedulesConfiguration
 
 You can configure OSIsoft adapters to run scans based on a schedule. If the adapter supports schedules, each data item in the data selection configuration can be assigned a schedule. The adapter will then sample data for those data items at the scheduled time.
 
+**Note:** If the adapter supports scheduling and you start an ingress component without a schedules configuration, a default schedules configuration will be added to be used as an example.
+
 **Note:** When the adapter framework scheduler misses or skips a scan due to any reason, either one of the following messages is printed: `Scan skipped for schedule id <Id>` or `Scan missed for schedule <id>`.
 
 ## Configure schedules
