@@ -6,7 +6,7 @@ uid: GeneralConfiguration
 
 You can configure OSIsoft adapters to produce and store diagnostics data at a designated health endpoint, and to send metadata for created streams.
 For more information about available diagnostics data, see [Adapter diagnostics](xref:AdapterDiagnostics) and [Egress diagnostics](xref:EgressDiagnostics).
-For more information about available metadata and what metadata is sent per metadata level, see [Adapter Metadata](xref:AdapterMetadata).
+For more information about available metadata and what metadata are sent per metadata level, see [Adapter Metadata](xref:AdapterMetadata).
 
 ## Configure general
 
