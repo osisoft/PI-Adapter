@@ -21,7 +21,7 @@ Complete the procedure appropriate for your operating system to uninstall an OSI
 1. To delete OSIsoft adapter software from a Linux device, open a terminal window and run the following command:
 
     ```bash
-    sudo apt remove osisoft.adapters.<AdapterName>
+    sudo apt remove osisoft.adapter.<AdapterName>
     ```
 
 2. Optional: To delete data, configuration, and log files, delete the directory _/usr/share/OSIsoft/Adapters/AdapterName_.
