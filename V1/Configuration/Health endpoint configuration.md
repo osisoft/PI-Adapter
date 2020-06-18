@@ -4,7 +4,7 @@ uid: HealthEndpointConfiguration
 
 # Health endpoint configuration
 
-You can configure OSIsoft adapters to produce and store health data at a designated health endpoint.
+You can configure PI adapters to produce and store health data at a designated health endpoint.
 For more information about adapter health, see [Adapter health](xref:AdapterHealth).
 
 ## Configure health endpoint
@@ -57,8 +57,8 @@ The following parameters are available for configuring health endpoints:
 | **Endpoint**                    | Required                            | `string`    | The URL of the OMF endpoint to receive this health data |
 | **Username**                    | Required for PI Web API endpoints   | `string`    | The username used to authenticate with a PI Web API OMF endpoint |
 | **Password**                    | Required for PI Web API endpoints   | `string`    | The password used to authenticate with a PI Web API OMF endpoint |
-| **ClientId**                    | Required for OCS endpoints          | `string`    | The Client Id used for authentication with an OSIsoft Cloud Services OMF endpoint |
-| **ClientSecret**                | Required for OCS endpoints          | `string`    | The Client Secret used for authentication with an OSIsoft Cloud Services OMF endpoint |
+| **ClientId**                    | Required for OCS endpoints          | `string`    | The client ID used for authentication with an OSIsoft Cloud Services OMF endpoint |
+| **ClientSecret**                | Required for OCS endpoints          | `string`    | The client secret used for authentication with an OSIsoft Cloud Services OMF endpoint |
 | **TokenEndpoint** | Optional for OCS endpoints | `string` | Retrieves an OCS token from an alternative endpoint |
 | **ValidateEndpointCertificate** | Optional                            | `boolean`      | Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends keeping this set to the default, true, in production environments.|
 

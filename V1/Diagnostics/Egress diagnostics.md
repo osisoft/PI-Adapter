@@ -4,7 +4,7 @@ uid: EgressDiagnostics
 
 # Egress diagnostics
 
-The Egress component of the adapter produces the following diagnostics streams:
+The Egress component of the adapter produces the following diagnostics stream:
 
 ## IO rate
 
@@ -13,4 +13,4 @@ The `Diagnostics.Egress.IORate` dynamic type includes the following values, whic
 | Property  | Type   | Description                                            |
 | --------- | ------ | -------------------------------------------------------|
 |**timestamp** | `string` | Timestamp of event                                   |
-| **IORate**  | `double` | 1-minute rolling average of data rate (streams/second)|
+| **IORate**  | `double` | One-minute rolling average of data rate (streams/second)|

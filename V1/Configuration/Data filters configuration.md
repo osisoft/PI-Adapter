@@ -4,7 +4,7 @@ uid: DataFiltersConfiguration
 
 # Data filters configuration
 
-OSIsoft adapters can be configured to perform data filtering to save network bandwidth. Every data item in the data selection configuration can be assigned the id of a data filter. The adapter will then filter data for those data items based on the data filter configuration.
+PI adapters can be configured to perform data filtering to save network bandwidth. Every data item in the data selection configuration can be assigned the id of a data filter. The adapter will then filter data for those data items based on the data filter configuration.
 
 ## Configure data filters
 
@@ -14,11 +14,11 @@ Complete the following steps to change the data filters configuration:
     - For content structure, see [Data filters example](#data-filters-example).
     - For all available parameters, see [Data filters parameters](#data-filters-parameters).
 
-2. Save the file, for example as *Component_DataFilters.json*.
+2. Save the file, for example, as *Component_DataFilters.json*.
 
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataFilters`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataFilters`.
 
-    **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter, for example _Modbus1_.
+    **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter, for example, _Modbus1_.
 
     `5590` is the default port number. If you selected a different port number, replace it with that value.
 
@@ -30,7 +30,7 @@ Complete the following steps to change the data filters configuration:
 
     **Note:** Run this command from the same directory where the file is located.
 
-On successful execution, the data filters change takes effect immediately during runtime.
+On successful execution, the change that you have made to data filters takes effect immediately during runtime.
 
 ## Data filters schema
 
@@ -47,8 +47,8 @@ The following parameters are available for configuring data filters:
 | Parameter                | Required | Type      | Description |
 | ------------------------ | -------- | --------- | ----------- |
 |**Id**              | Required | `String` | Unique identifier for the data filter. |
-|**AbsoluteDeadband** | Optional | `Double` | Specifies the absolute change in data value that should cause the current value to pass the filter test. <br> **Note:** You must specify at least either `AbsoluteDeadband` or `PercentChange`. |
-|**PercentChange**     | Optional | `Double` | Specifies the percent change from previous value that should cause the current value to pass the filter test. <br> **Note:** You must specify at least either `AbsoluteDeadband` or `PercentChange`. |
+|**AbsoluteDeadband** | Optional | `Double` | Specifies the absolute change in data value that should cause the current value to pass the filter test. <br> **Note:** You must specify at least `AbsoluteDeadband` or `PercentChange`. |
+|**PercentChange**     | Optional | `Double` | Specifies the percent change from previous value that should cause the current value to pass the filter test. <br> **Note:** You must specify at least `AbsoluteDeadband` or `PercentChange`. |
 |**ExpirationPeriod**     | Optional | `TimeSpan` | The length in time that can elapse after an event before automatically storing the next event. The expected format is HH:MM:SS.###. |
 
 ## Data filters example
@@ -77,4 +77,4 @@ The following parameters are available for configuring data filters:
 | api/v1/configuration/_ComponentId_/DataFilters/*id*| DELETE     | Deletes configured data filter by *id*. |
 | api/v1/configuration/_ComponentId_/DataFilters/*id* | PUT       | Replaces data filter by *id*. Fails if data filter does not exist. |
 
-**Note:** Replace *ComponentId* with the Id of your adapter component, for example Modbus1.
+**Note:** Replace *ComponentId* with the Id of your adapter component, for example, Modbus1.

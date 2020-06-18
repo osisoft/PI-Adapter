@@ -8,7 +8,7 @@ You can install adapters on either a Windows or Linux operating system. Before i
 
 ## Windows
 
-Complete the following steps to install an OSIsoft adapter on a Windows computer:
+Complete the following steps to install a PI adapter on a Windows computer:
 
 1. Download the Windows .msi file from the [OSIsoft Customer portal (https://customers.osisoft.com/s/products)](https://customers.osisoft.com/s/products).
 
@@ -29,7 +29,7 @@ Complete the following steps to install an OSIsoft adapter on a Windows computer
 
 ## Linux
 
-Complete the following steps to install an OSIsoft adapter on a Linux computer:
+Complete the following steps to install a PI adapter on a Linux computer:
 
 1. Download the appropriate Linux distribution file from the [OSIsoft Customer portal (https://customers.osisoft.com/s/products)](https://customers.osisoft.com/s/products).
 

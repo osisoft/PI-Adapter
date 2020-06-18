@@ -4,7 +4,7 @@ uid: SystemComponentsConfiguration
 
 # System components configuration
 
-OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the EdgeCmd utility for any changes you make to the files.
+PI adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the EdgeCmd utility for any changes you make to the files.
 
 As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form where cryptographic key material is stored separately in a secure location. If you edit the files directly, the adapter may not work as expected.
 
@@ -65,7 +65,7 @@ Complete the following steps to add a new component to the system:
 
 ### Update system components
 
-Complete the following steps to update the system components. For example, by adding or deleting components.
+Complete the following steps to update the system components, for example, by adding or deleting components.
 
 1. Using any text editor, create a file that contains the current system components configuration. For information on how to retrieve the system components configuration, see [REST URLs](#rest-urls).
 
@@ -75,7 +75,7 @@ Complete the following steps to update the system components. For example, by ad
 
 3. Save the file. For example,  *UpdateComponents.json*
 
-4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `PUT` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components`
+4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `PUT` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components`
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
@@ -122,8 +122,8 @@ The following parameters are available for configuring system components:
 
 | Parameters     | Required | Type    | Description |
 | -------------- | -------- | --------| -------------|
-| **ComponentId**    | Required |`string` | The ID of the component. It can be any alphanumeric string, for example OmfEgress. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> `>` `<` `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `*` `\` `"` `(` `)` `\\` `+` `,` `;` `=` `` \| `` `` ` `` `{` `}` |
-| **ComponentType**  | Required |`string` | The type of the component, for example OmfEgress. There are two types of components: OmfEgress and the adapter. |
+| **ComponentId**    | Required |`string` | The ID of the component. It can be any alphanumeric string, for example, OmfEgress. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> `>` `<` `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `*` `\` `"` `(` `)` `\\` `+` `,` `;` `=` `` \| `` `` ` `` `{` `}` |
+| **ComponentType**  | Required |`string` | The type of the component, for example, OmfEgress. There are two types of components: OmfEgress and the adapter. |
 
 ## Examples
 

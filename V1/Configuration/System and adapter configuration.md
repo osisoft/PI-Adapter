@@ -16,7 +16,7 @@ Change the system and adapter configuration by importing the JSON file using a R
 
 2. Save the file. For example,  *SystemAdapter.config.json*.
 
-3. Use any of the [Configuration Tools](xref:ConfigurationTools) capable of making HTTP requests and run a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration`
+3. Use any of the [Configuration Tools](xref:ConfigurationTools) capable of making HTTP requests and run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration`
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
@@ -34,7 +34,7 @@ Change the system and adapter configuration by importing the JSON file using a R
 
 ## Example
 
-**Note**: The following is an example configuration, it does not necessarily represent the configuration of the adapter that you are currently using. The data source and data selection configurations are different for every adapter.
+**Note**: The following is an example configuration; it does not necessarily represent the configuration of the adapter that you are currently using. The data source and data selection configurations are different for every adapter.
 
 <details>
     <summary>Sample OPC UA adapter configuration</summary>

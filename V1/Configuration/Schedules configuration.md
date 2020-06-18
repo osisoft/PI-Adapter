@@ -4,7 +4,7 @@ uid: SchedulesConfiguration
 
 # Schedules configuration
 
-You can configure OSIsoft adapters to run scans based on a schedule. If the adapter supports schedules, each data item in the data selection configuration can be assigned a schedule. The adapter will then sample data for those data items at the scheduled time.
+You can configure PI adapters to run scans based on a schedule. If the adapter supports schedules, each data item in the data selection configuration can be assigned a schedule. The adapter will then sample data for those data items at the scheduled time.
 
 **Note:** If the adapter supports scheduling and you start an ingress component without a schedules configuration, a default schedules configuration will be added to be used as an example.
 
@@ -20,7 +20,7 @@ Complete the following steps to change the schedules configuration:
 
 2. Save the file. For example, Component_Schedules.json*.
 
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules`.
 
     **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter. For example, _Modbus1_.
 

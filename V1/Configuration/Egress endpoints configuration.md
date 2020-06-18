@@ -20,7 +20,7 @@ Complete the following steps to configure egress endpoints:
 
 2. Save the file. For example, _OmfEgress_DataEndpoints.json_.
 
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and run the appropriate command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/`
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and run the appropriate command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/`
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
@@ -121,6 +121,6 @@ The following examples are valid egress configurations:
 
 ## Egress execution details
 
-- After configure an egress endpoint, egress is immediately run for that endpoint. Egress is handled individually per configured endpoint. On first execution, types and containers are egressed. After that only new or changed types or containers are egressed. Type creation must be successful in order to create containers. Container creation must be successful in order to egress data.
+- After configuring an egress endpoint, egress is immediately run for that endpoint. Egress is handled individually per configured endpoint. On first execution, types and containers are egressed. After that only new or changed types or containers are egressed. Type creation must be successful in order to create containers. Container creation must be successful in order to egress data.
 - If you delete an egress endpoint, data flow immediately stops for that endpoint. Buffered data in a deleted endpoint is permanently lost.
-- Type, container, and data items are batched into one or more OMF messages when egressing. As per the requirements defined in OMF, a single message payload will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item results in the message failing. Types, containers, and data are egressed as long as the destination continues to respond to HTTP requests.
+- Type, container, and data items are batched into one or more OMF messages when egressing. As per the requirements defined in OMF, a single message payload will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the egress destination, failure to add a single item results in the message failing. Types, containers, and data are egressed as long as the destination continues to respond to HTTP requests.

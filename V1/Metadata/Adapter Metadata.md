@@ -28,4 +28,4 @@ The adapter may also send its own stream metadata not including health and diagn
 
 |![Metadata in OCS](../images/Metadata.png)|
 |:--:|
-|_Metadata in OCS_|
+|_Adapter stream with metadata in OCS_|

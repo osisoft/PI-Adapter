@@ -4,11 +4,11 @@ uid: UninstallTheAdapter
 
 # Uninstall the adapter
 
-Complete the procedure appropriate for your operating system to uninstall an OSIsoft adapter:
+Complete the procedure appropriate for your operating system to uninstall a PI adapter:
 
 ## Windows
 
-1. To delete the OSIsoft adapter program files from a Windows device, use the Windows Control Panel uninstall application process.
+1. To delete the PI adapter program files from a Windows device, use the Windows Control Panel uninstall application process.
 
     **Note:** The configuration, data, and log files are not deleted by the uninstall process.
 
@@ -18,7 +18,7 @@ Complete the procedure appropriate for your operating system to uninstall an OSI
 
 ## Linux
 
-1. To delete OSIsoft adapter software from a Linux device, open a terminal window and run the following command:
+1. To delete PI Adapter software from a Linux device, open a terminal window and run the following command:
 
     ```bash
     sudo apt remove osisoft.adapter.<AdapterName>

@@ -24,7 +24,7 @@ Complete the following steps to delete an adapter component:
 
 ## File relocation
 
-All configuration and log files are renamed and moved. The files are renamed according to the timestamp of removal, for example `FileName.json_removed_yyyy-MM-dd--hh-mm-ss`.
+All configuration and log files are renamed and moved. The files are renamed according to the timestamp of removal, for example, `FileName.json_removed_yyyy-MM-dd--hh-mm-ss`.
 
 Configuration files are moved to the following location:
 

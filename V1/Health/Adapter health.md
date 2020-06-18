@@ -4,13 +4,13 @@ uid: AdapterHealth
 
 # Adapter health
 
-OSIsoft adapters produce different kinds of health data that can be egressed to different health endpoints. 
+PI Adapters produce different kinds of health data that can be egressed to different health endpoints. 
 
 ## Available health data
 
 Dynamic data is sent every minute to configured health endpoints.
 
-The following health data are available:
+The following health data is available:
 
 - [Device status](xref:DeviceStatus)
 - [Next Health Message Expected](xref:NextHealthMessageExpected)
@@ -24,7 +24,7 @@ Two OMF endpoints are currently supported for adapter health data:
 
 There are a few differences in how these two systems treat the associated health data.
 
-- PI Web API parses the information and sends it to configured PI servers for the OMF endpoint. The static data is used to create a hierarchy on a PI AF server similar to the following:
+- PI Web API parses the information and sends it to configured PI servers for the OMF endpoint. The static data is used to create a hierarchy on a PI AF server similar to the following example:
 
   ![AdapterHealthAFHierarchy](../images/AdapterHealthAFHierarchy.PNG)
 
