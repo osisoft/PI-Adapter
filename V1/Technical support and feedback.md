@@ -22,15 +22,15 @@ When you contact OSIsoft Technical Support, be prepared to provide this informat
 - Details of any environment changes prior to the start of the issue
 - Summary of the issue, including any relevant log files during the time the issue occurred 
 
-<!--To view a brief primer on PI Adapters, see the [PI Adapters playbook](https://customers.osisoft.com/s/knowledgearticle?knowledgeArticleUrl=Playbook-OSIsoft-adapters) in the OSIsoft Customer Portal.-->
+<!--To view a brief primer on PI Adapters, see the [PI Adapters playbook](https://customers.osisoft.com/s/knowledgearticle?knowledgeArticleUrl=Playbook-PI-adapters) in the OSIsoft Customer Portal.-->
 
 <!--## Product feedback-->
 
-<!--To submit product feedback for PI Adapters, visit the [PI Adapters feedback page](https://feedback.osisoft.com/forums/123456-osisoft-adapters). The product team at OSIsoft regularly monitors the page.-->
+<!--To submit product feedback for PI Adapters, visit the [PI Adapters feedback page](https://feedback.osisoft.com/forums/123456-PI-adapters). The product team at OSIsoft regularly monitors the page.-->
 
 ## Documentation feedback
 
-To submit documentation feedback for PI Adapters, send an email to [documentation@osisoft.com](mailto:documentation@osisoft.com?subject=OSIsoft%20adapter%20documentation&body=Product%20name%20and%20version%20-%20Documentation%20topic%20URL%20-%20Details%20of%20the%20suggestion%20or%20error). Be sure to include the following information with your feedback:
+To submit documentation feedback for PI Adapters, send an email to [documentation@osisoft.com](mailto:documentation@osisoft.com?subject=PI%20adapter%20documentation&body=Product%20name%20and%20version%20-%20Documentation%20topic%20URL%20-%20Details%20of%20the%20suggestion%20or%20error). Be sure to include the following information with your feedback:
 
 - Product name and version
 - Documentation topic URL
