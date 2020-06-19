@@ -25,7 +25,3 @@ The adapter may also send its own stream metadata not including health and diagn
 
 - Metadata is only sent for streams created by the ingress components.
 - Currently, the only endpoint that persists sent metadata is OCS (OSIsoft Cloud Services).
-
-|![Metadata in OCS](../images/Metadata.png)|
-|:--:|
-|_Adapter stream with metadata in OCS_|
