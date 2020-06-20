@@ -46,10 +46,12 @@ The following parameters are available for configuring data filters:
 
 | Parameter                | Required | Type      | Description |
 | ------------------------ | -------- | --------- | ----------- |
-|**Id**              | Required | `String` | Unique identifier for the data filter. |
-|**AbsoluteDeadband** | Optional | `Double` | Specifies the absolute change in data value that should cause the current value to pass the filter test. <br> **Note:** You must specify at least `AbsoluteDeadband` or `PercentChange`. |
-|**PercentChange**     | Optional | `Double` | Specifies the percent change from previous value that should cause the current value to pass the filter test. <br> **Note:** You must specify at least `AbsoluteDeadband` or `PercentChange`. |
-|**ExpirationPeriod**     | Optional | `TimeSpan` | The length in time that can elapse after an event before automatically storing the next event. The expected format is HH:MM:SS.###. |
+|**Id**              | Required | `string` | Unique identifier for the data filter. |
+|**AbsoluteDeadband** | Optional | `double` | Specifies the absolute change in data value that should cause the current value to pass the filter test. <br> **Note:** You must specify at least `AbsoluteDeadband` or `PercentChange`. |
+|**PercentChange**     | Optional | `double` | Specifies the percent change from previous value that should cause the current value to pass the filter test. <br> **Note:** You must specify at least `AbsoluteDeadband` or `PercentChange`. |
+|**ExpirationPeriod**     | Optional | `timespan` | The length in time that can elapse after an event before automatically storing the next event. The expected format is HH:MM:SS.###. **\*** |
+
+**\* Note:** You can also specify timespans as numbers in seconds. For example, `"ExpirationPeriod": 25` specifies 25 seconds, or `"ExpirationPeriod": 125` specifies 2 minutes and 5 seconds.
 
 ## Data filters example
 

@@ -51,8 +51,10 @@ The following parameters are available for configuring schedules:
 | Parameter                | Required | Type      | Description |
 | ------------------------ | -------- | --------- | ----------- |
 |**Id**              | Required | `string` | Unique identifier for the schedule |
-|**Period** | Required | `string` | The data sampling rate of the schedule. The expected format is HH:MM:SS.###. |
-|**Offset**     | Optional | `string` | The offset from the midnight when the schedule starts. The expected format is HH:MM:SS.### |
+|**Period** | Required | `string` | The data sampling rate of the schedule. The expected format is HH:MM:SS.###. **\***|
+|**Offset**     | Optional | `string` | The offset from the midnight when the schedule starts. The expected format is HH:MM:SS.### **\***|
+
+**\* Note:** You can also specify timespans as numbers in seconds. For example, `"Period": 25` specifies 25 seconds, or `"Period": 125` specifies 2 minutes and 5 seconds.
 
 ## Example
 
