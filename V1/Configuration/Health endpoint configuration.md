@@ -41,11 +41,11 @@ A health endpoint designates an OMF endpoint where adapter health information is
 
 ## Health endpoints schema
 
-The full schema definition for the health endpoint configuration is in the *System_HealthEndpoints_schema.json* file located in one of the folders listed below:
+The full schema definition for the health endpoint configuration is in the `System_HealthEndpoints_schema.json` file located in one of the following folders:
 
-Windows: *%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas*
+Windows: `*%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
 
-Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
+Linux: `/opt/OSIsoft/Adapters/AdapterName/Schemas`
 
 ## Health endpoint parameters
 
@@ -53,14 +53,14 @@ The following parameters are available for configuring health endpoints:
 
 | Parameter                       | Required                            | Type      | Description                                        |
 |---------------------------------|-------------------------------------|-----------|----------------------------------------------------|
-| **Id**                          | Optional                            | `string`    | Uniquely identifies the endpoint. This can be any alphanumeric string. If left blank, a unique value is generated automatically. |
-| **Endpoint**                    | Required                            | `string`    | The URL of the OMF endpoint to receive this health data |
-| **Username**                    | Required for PI Web API endpoints   | `string`    | The username used to authenticate with a PI Web API OMF endpoint |
-| **Password**                    | Required for PI Web API endpoints   | `string`    | The password used to authenticate with a PI Web API OMF endpoint |
-| **ClientId**                    | Required for OCS endpoints          | `string`    | The client ID used for authentication with an OSIsoft Cloud Services OMF endpoint |
-| **ClientSecret**                | Required for OCS endpoints          | `string`    | The client secret used for authentication with an OSIsoft Cloud Services OMF endpoint |
-| **TokenEndpoint** | Optional for OCS endpoints | `string` | Retrieves an OCS token from an alternative endpoint |
-| **ValidateEndpointCertificate** | Optional                            | `boolean`      | Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends keeping this set to the default, true, in production environments.|
+| **Id**                          | Optional                            | `string`    | Uniquely identifies the endpoint. This can be any alphanumeric string. If left blank, a unique value is generated automatically. <br><br>Allowed value: any string identifier<br>Default value: new GUID|
+| **Endpoint**                    | Required                            | `string`    | The URL of the OMF endpoint to receive this health data <br><br>Allowed value: well-formed http or https endpoint string<br>Default: `null`|
+| **Username**                    | Required for PI Web API endpoints   | `string`    | The username used to authenticate with a PI Web API OMF endpoint <br><br>Allowed value: any string<br>Default: `null`|
+| **Password**                    | Required for PI Web API endpoints   | `string`    | The password used to authenticate with a PI Web API OMF endpoint <br><br>Allowed value: any string<br>Default: `null` |
+| **ClientId**                    | Required for OCS endpoints          | `string`    | The client ID used for authentication with an OSIsoft Cloud Services OMF endpoint <br><br>Allowed value: any string<br>Default: `null` |
+| **ClientSecret**                | Required for OCS endpoints          | `string`    | The client secret used for authentication with an OSIsoft Cloud Services OMF endpoint <br><br>Allowed value: any string<br>Default: `null`|
+| **TokenEndpoint** | Optional for OCS endpoints | `string` | Retrieves an OCS token from an alternative endpoint <br><br>Allowed value: well-formed http or https endpoint string <br>Default value: `null` |
+| **ValidateEndpointCertificate** | Optional                            | `boolean`      | Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends keeping this set to the default, true, in production environments. <br><br>Allowed value: `true` or `false`<br>Default value: `true`|
 
 ## Examples
 

@@ -58,11 +58,11 @@ Complete the following steps to configure egress endpoints:
 
 ## Egress endpoint configuration schema
 
-The full schema definition for the egress endpoint configuration is in the *OmfEgress_DataEndpoints_schema.json*  file located in one of the folders listed below:
+The full schema definition for the egress endpoint configuration is in the `OmfEgress_DataEndpoints_schema.json`  file located in one of the following folders:
 
-Windows: *%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas*
+Windows: `%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
 
-Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
+Linux: `/opt/OSIsoft/Adapters/AdapterName/Schemas`
 
 ## Egress endpoint parameters
 
@@ -70,14 +70,14 @@ The following parameters are available for configuring egress endpoints:
 
 | Parameter                       | Required                  | Type      | Description                                        |
 |---------------------------------|---------------------------|-----------|-------------|
-| **Id**                          | Optional                  | `string`    | Unique identifier |
-| **Endpoint**                    | Required                  | `string`    | Destination that accepts OMF v1.1 messages. Supported destinations include OCS and PI Server. |
-| **Username**                    | Required for PI endpoint  | `string`    | Basic authentication to the PI Web API OMF endpoint |
-| **Password**                    | Required for PI endpoint  | `string`    | Basic authentication to the PI Web API OMF endpoint |
-| **ClientId**                    | Required for OCS endpoint | `string`    | Authentication with the OCS OMF endpoint |
-| **ClientSecret**                | Required for OCS endpoint | `string`    | Authentication with the OCS OMF endpoint |
-| **TokenEndpoint**               | Optional for OCS endpoint | `string`    | Retrieves an OCS token from an alternative endpoint |
-| **ValidateEndpointCertificate** | Optional                  | `boolean`   | Disables verification of destination certificate. **Note:** Only use for testing with self-signed certificates. Defaults to true |
+| **Id**                          | Optional                  | `string`    | Unique identifier<br><br>Allowed value: any string identifier<br>Default value: new GUID |
+| **Endpoint**                    | Required                  | `string`    | Destination that accepts OMF v1.1 messages. Supported destinations include OCS and PI Server.<br><br>Allowed value: well-formed http or https endpoint string<br>Default: `null` |
+| **Username**                    | Required for PI endpoint  | `string`    | Basic authentication to the PI Web API OMF endpoint <br><br>Allowed value: any string<br>Default: `null` |
+| **Password**                    | Required for PI endpoint  | `string`    | Basic authentication to the PI Web API OMF endpoint <br><br>Allowed value: any string<br>Default: `null` |
+| **ClientId**                    | Required for OCS endpoint | `string`    | Authentication with the OCS OMF endpoint <br><br>Allowed value: any string<br>Default: `null`|
+| **ClientSecret**                | Required for OCS endpoint | `string`    | Authentication with the OCS OMF endpoint <br><br>Allowed value: any string<br>Default: `null`|
+| **TokenEndpoint**               | Optional for OCS endpoint | `string`    | Retrieves an OCS token from an alternative endpoint <br><br>Allowed value: well-formed http or https endpoint string <br>Default value: `null` |
+| **ValidateEndpointCertificate** | Optional                  | `boolean`   | Disables verification of destination certificate. **Note:** Only use for testing with self-signed certificates. <br><br>Allowed value: `true` or `false`<br>Default value: `true` |
 
 ## Examples
 

@@ -34,11 +34,11 @@ On successful execution, the change that you have made to data filters takes eff
 
 ## Data filters schema
 
-The full schema definition for the data filters configuration is in the  _AdapterName_DataFilters_schema.json_ here:
+The full schema definition for the data filters configuration is in the  `AdapterName_DataFilters_schema.json` file located in one of the following folders:
 
-Windows: *%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas*
+Windows: `%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
 
-Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
+Linux: `/opt/OSIsoft/Adapters/AdapterName/Schemas`
 
 ## Data filters parameters
 
@@ -46,10 +46,12 @@ The following parameters are available for configuring data filters:
 
 | Parameter                | Required | Type      | Description |
 | ------------------------ | -------- | --------- | ----------- |
-|**Id**              | Required | `String` | Unique identifier for the data filter. |
-|**AbsoluteDeadband** | Optional | `Double` | Specifies the absolute change in data value that should cause the current value to pass the filter test. <br> **Note:** You must specify at least `AbsoluteDeadband` or `PercentChange`. |
-|**PercentChange**     | Optional | `Double` | Specifies the percent change from previous value that should cause the current value to pass the filter test. <br> **Note:** You must specify at least `AbsoluteDeadband` or `PercentChange`. |
-|**ExpirationPeriod**     | Optional | `TimeSpan` | The length in time that can elapse after an event before automatically storing the next event. The expected format is HH:MM:SS.###. |
+|**Id**              | Required | `string` | Unique identifier for the data filter. <br><br>Allowed value: any string identifier<br> |
+|**AbsoluteDeadband** | Optional | `double` | Specifies the absolute change in data value that should cause the current value to pass the filter test. <br> **Note:** You must specify `AbsoluteDeadband` or `PercentChange`.<br><br>Allowed value: double value representing absolute deadband number<br>Default value: `null` |
+|**PercentChange**     | Optional | `double` | Specifies the percent change from previous value that should cause the current value to pass the filter test. <br> **Note:** You must specify `AbsoluteDeadband` or `PercentChange`.<br><br>Allowed value: double value representing percent change<br>Default value: `null` |
+|**ExpirationPeriod**     | Optional | `timespan` | The length in time that can elapse after an event before automatically storing the next event. The expected format is HH:MM:SS.###. **\*** <br><br>Allowed value: any timespan <br>Default value: `null`|
+
+**\* Note:** You can also specify timespans as numbers in seconds. For example, `"ExpirationPeriod": 25` specifies 25 seconds, or `"ExpirationPeriod": 125` specifies 2 minutes and 5 seconds.
 
 ## Data filters example
 

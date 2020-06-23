@@ -42,11 +42,11 @@ On successful execution, the log-level change takes effect immediately during ru
 
 ## Logging schema
 
-The full schema definition for the logging configuration is in the component specific logging file: _AdapterName_Logging_schema.json_, _OmfEgress_Logging_schema.json_, or _System_Logging_schema.json_ located in one of the folders listed below:
+The full schema definition for the logging configuration is in the component specific logging file: `AdapterName_Logging_schema.json`, `OmfEgress_Logging_schema.json`, or `System_Logging_schema.json` file located in one of the following folders:
 
-Windows: *%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas*
+Windows: `%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
 
-Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
+Linux: `/opt/OSIsoft/Adapters/AdapterName/Schemas`
 
 ## Logging parameters
 
@@ -54,9 +54,9 @@ The following parameters are available for configuring logging:
 
 | Parameter                 | Required | Type      | Description                                                  |
 | ------------------------- | -------- | --------- | ------------------------------------------------------------ |
-| **logLevel**              | Optional | reference | The logLevel sets the minimum severity for messages to be included in the logs. <br>Messages with a severity below the level set are not included. <br>The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical, None. <br>For detailed information about the logLevels, see [LogLevel](#loglevel). |
-| **logFileSizeLimitBytes** | Optional | `integer` | The maximum size (in bytes) of log files that the service will create for the component. The value must be a positive integer. |
-| **logFileCountLimit**     | Optional | `integer` | The maximum number of log files that the service will create for the component. The value must be a positive integer. |
+| **LogLevel**              | Optional | reference | The logLevel sets the minimum severity for messages to be included in the logs. <br>Messages with a severity below the level set are not included. <br><br>The log levels in their increasing order of severity are as follows: `Trace`, `Debug`, `Information`, `Warning`, `Error`, `Critical`, and `None`. <br>Default log level: `Information`<br><br>For detailed information about the log levels, see [LogLevel](#loglevel). |
+| **LogFileSizeLimitBytes** | Optional | `integer` | The maximum size (in bytes) of log files that the service will create for the component. The value must be a positive integer.<br><br>Minimum value: `1000`<br>Maximum value: `9223372036854775807`<br>Default value: `34636833` |
+| **LogFileCountLimit**     | Optional | `integer` | The maximum number of log files that the service will create for the component. The value must be a positive integer.<br><br>Minimum value: `1`<br>Maximum value: `2147483647`<br> Default value: `31` |
 
 ### LogLevel
 
