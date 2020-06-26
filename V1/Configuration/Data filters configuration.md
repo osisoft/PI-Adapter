@@ -49,7 +49,7 @@ The following parameters are available for configuring data filters:
 |**Id**              | Required | `string` | Unique identifier for the data filter. <br><br>Allowed value: any string identifier<br> |
 |**AbsoluteDeadband** | Optional | `double` | Specifies the absolute change in data value that should cause the current value to pass the filter test. <br> **Note:** You must specify `AbsoluteDeadband` or `PercentChange`.<br><br>Allowed value: double value representing absolute deadband number<br>Default value: `null` |
 |**PercentChange**     | Optional | `double` | Specifies the percent change from previous value that should cause the current value to pass the filter test. <br> **Note:** You must specify `AbsoluteDeadband` or `PercentChange`.<br><br>Allowed value: double value representing percent change<br>Default value: `null` |
-|**ExpirationPeriod**     | Optional | `timespan` | The length in time that can elapse after an event before automatically storing the next event. The expected format is HH:MM:SS.###. **\*** <br><br>Allowed value: any timespan <br>Default value: `null`|
+|**ExpirationPeriod**     | Optional | `timespan` | The length in time that can elapse after an event before automatically storing the next event. The expected format is HH:MM:SS.###. * <br><br>Allowed value: any timespan <br>Default value: `null`|
 
 **\* Note:** You can also specify timespans as numbers in seconds. For example, `"ExpirationPeriod": 25` specifies 25 seconds, or `"ExpirationPeriod": 125` specifies 2 minutes and 5 seconds.
 
