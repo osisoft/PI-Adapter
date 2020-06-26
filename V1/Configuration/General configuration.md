@@ -23,7 +23,7 @@ For more information about available metadata and what metadata are sent per met
 
 ## General schema
 
-The full schema definition for the general configuration is in the `System_General_schema.json` here:
+The full schema definition for the general configuration is in the `System_General_schema.json` file located in one of the following folders:
 
 Windows: `%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
 
@@ -35,8 +35,8 @@ The following parameters are available for configuring general:
 
 | Parameter             | Required | Type    | Description |
 | ---------             | -------- | ------- | ----------- |
-| **EnableDiagnostics** | Optional | `boolean` | Determines if diagnostics are enabled |
-| **MetadataLevel** | Optional | `reference` | Defines amount of metadata sent to OMF endpoints. Options: None, Low, Medium, High. |
+| **EnableDiagnostics** | Optional | `boolean` | Determines if diagnostics are enabled<br><br>Allowed value: `true` or `false`<br>Default value: `true`<br>|
+| **MetadataLevel** | Optional | `reference` | Defines amount of metadata sent to OMF endpoints.<br><br> Allowed value: `None`, `Low`, `Medium`, and `High`<br> Default value: `Medium` |
 
 ## Example
 

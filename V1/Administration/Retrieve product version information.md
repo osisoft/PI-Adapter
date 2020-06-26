@@ -18,15 +18,15 @@ Complete the following steps to retrieve the product version information of a PI
    **Get product information for adapter hosted on port 5590**
 
    ```bash
-   curl -d "" -X GET "http://localhost:5590/api/v1/Diagnostics/ProductInformation
+   curl "http://localhost:5590/api/v1/Diagnostics/ProductInformation
    ```
 
    Example result:
 
     ```code
     {
-        "Application Version": "1.1.0.30",
-        ".Net Core Version": ".NET Core 3.1.1",
-        "Operating System": "Microsoft Windows 10.0.17134"
+    "Application Version":"1.2.0.37",
+    ".Net Core Version":".NET Core 3.1.5",
+    "Operating System":"Linux 4.15.0-106-generic #107-Ubuntu SMP Thu Jun 4 11:27:52 UTC 2020"
     }
     ```

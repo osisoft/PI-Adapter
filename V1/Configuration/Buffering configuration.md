@@ -28,11 +28,11 @@ You can configure PI adapters to buffer data egressed from the adapter to endpoi
 
 ## Buffering schema
 
-The full schema definition for the system buffering is in the *System_Buffering_schema.json* here:
+The full schema definition for the system buffering is in the `System_Buffering_schema.json` file located in one of the following folders:
 
-Windows: *%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas*
+Windows: `%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
 
-Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
+Linux: `/opt/OSIsoft/Adapters/AdapterName/Schemas`
 
 ## Buffering parameters
 
@@ -40,9 +40,9 @@ The following parameters are available for configuring buffering:
 
 | Parameter | Required | Type | Description |
 | ----------| -------- | ---- | ----------- |
-| **EnablePersistentBuffering**  | Optional |  `boolean` | Enables or disables on-disk buffering <br><br> Default: True <br><br> **Note:** If you disable persistent buffering, in-memory buffering is used. In-memory buffering is limited by value in the MaxBufferSizeMB property. |
-| **MaxBufferSizeMB**  | Optional     |`integer` | Defines the maximum size of the buffer files that are persisted on disk or used in memory when EnablePersistentBuffering is set to false per configured endpoint. The unit is specified in MB (1 Megabyte = 1048576 bytes). Consider the capacity and the type of storage medium to determine a suitable value for this parameter. <br><br> Allowed values: [1, 2147483647] <br><br> Default: 1024 |
-| **BufferLocation**   | Required  | `string` | Defines the location of the buffer files. Absolute paths are required. Consider the access-control list (ACL) when you set this parameter. <br><br> Allowed value: Valid path to a folder location in the file system <br><br> Default: <br> **Windows:** _%ProgramData%\OSIsoft\Adapters\\{AdapterInstance}\Buffers_ <br> **Linux:** _/usr/share/OSIsoft/Adapters/{AdapterInstance}/Buffers_ |
+| **EnablePersistentBuffering**  | Optional |  `boolean` | Enables or disables on-disk buffering <br><br> Allowed value: `true` or `false`<br>Default value: `true` <br><br> **Note:** If you disable persistent buffering, in-memory buffering is used. In-memory buffering is limited by value in the MaxBufferSizeMB property. |
+| **MaxBufferSizeMB**  | Optional     |`integer` | Defines the maximum size of the buffer files that are persisted on disk or used in memory when EnablePersistentBuffering is set to false per configured endpoint. The unit is specified in MB (1 Megabyte = 1048576 bytes). Consider the capacity and the type of storage medium to determine a suitable value for this parameter. <br><br>Minimum value: `1`<br>Maximum value:  `2147483647`<br> Default value: `1024` |
+| **BufferLocation**   | Required  | `string` | Defines the location of the buffer files. Absolute paths are required. Consider the access-control list (ACL) when you set this parameter. <br><br> Allowed value: Valid path to a folder location in the file system <br> Default value: <br> **Windows:** _%ProgramData%\OSIsoft\Adapters\\{AdapterInstance}\Buffers_ <br> **Linux:** _/usr/share/OSIsoft/Adapters/{AdapterInstance}/Buffers_ |
 
 ## Examples
 

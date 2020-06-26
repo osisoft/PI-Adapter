@@ -38,11 +38,11 @@ On successful execution, the schedules change takes effect immediately during ru
 
 ## Schedules schema
 
-The full schema definition for the schedules configuration is in the  _AdapterName_Schedules_schema.json_ file located in one of the folders listed below:
+The full schema definition for the schedules configuration is in the  `AdapterName_Schedules_schema.json` file located in one of the following folders:
 
-Windows: *%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas*
+Windows: `%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
 
-Linux: */opt/OSIsoft/Adapters/AdapterName/Schemas*
+Linux: `/opt/OSIsoft/Adapters/AdapterName/Schemas`
 
 ## Schedules parameters
 
@@ -50,9 +50,9 @@ The following parameters are available for configuring schedules:
 
 | Parameter                | Required | Type      | Description |
 | ------------------------ | -------- | --------- | ----------- |
-|**Id**              | Required | `string` | Unique identifier for the schedule |
-|**Period** | Required | `string` | The data sampling rate of the schedule. The expected format is HH:MM:SS.###. **\***|
-|**Offset**     | Optional | `string` | The offset from the midnight when the schedule starts. The expected format is HH:MM:SS.### **\***|
+|**Id**              | Required | `string` | Unique identifier for the schedule<br><br>Allowed value: any string identifier |
+|**Period** | Required | `string` | The data sampling rate of the schedule. The expected format is HH:MM:SS.###. * <br><br>Invalid input: `null`, negative timespan, zero <br> Default value: `null` (must be specified)|
+|**Offset**     | Optional | `string` | The offset from the midnight when the schedule starts. The expected format is HH:MM:SS.### * <br><br>Invalid input: negative timespan<br>Default value: `null`|
 
 **\* Note:** You can also specify timespans as numbers in seconds. For example, `"Period": 25` specifies 25 seconds, or `"Period": 125` specifies 2 minutes and 5 seconds.
 

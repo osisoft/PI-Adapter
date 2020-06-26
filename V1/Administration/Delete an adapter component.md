@@ -28,15 +28,15 @@ All configuration and log files are renamed and moved. The files are renamed acc
 
 Configuration files are moved to the following location:
 
-   **Windows:** `%programdata%\OSIsoft\Adapters\AdapterName\AdapterName\Configuration\Removed`
+   **Windows:** `%programdata%\OSIsoft\Adapters\AdapterName\Configuration\Removed`
 
-   **Linux:** `/usr/share/OSIsoft/Adapters/AdapterName/AdapterName/Configuration/Removed`
+   **Linux:** `/usr/share/OSIsoft/Adapters/AdapterName/Configuration/Removed`
 
 Log files are moved to the following location:
 
-   **Windows:** `%programdata%\OSIsoft\Adapters\AdapterName\AdapterName\Logs\Removed`
+   **Windows:** `%programdata%\OSIsoft\Adapters\AdapterName\Logs\Removed`
 
-   **Linux:** `/usr/share/OSIsoft/Adapters/AdapterName/AdapterName/Logs/Removed`
+   **Linux:** `/usr/share/OSIsoft/Adapters/AdapterName/Logs/Removed`
 
 In the following example, one Modbus adapter service is installed on a particular Windows node with the name `ModbusService1`. A Modbus component with the name `ModbusDeviceX` was added and configured to this Modbus adapter and later removed. Linux follows a similar behavior. This is the resulting relocation and renaming scheme after deletion:
 
