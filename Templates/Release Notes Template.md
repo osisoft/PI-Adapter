@@ -128,7 +128,7 @@ High | 7.0-8.9 | *{ quantity }*
 Medium | 4.0-6.9 | *{ quantity }*
 Low | 0-3.9 | *{ quantity }*
 
-Security Vulnerabilities fixed in the *{ OSIsoft/3rd Party sub-component name}*
+Security Vulnerabilities fixed in the *{OSIsoft/3rd Party}* sub-component {*name*}
 Severity Category| CVSS Base Score Range  | Number of Fixed Vulnerabilities
 ---- | ------ | -----------
 Critical | 9.0-10 | *{ quantity }*
