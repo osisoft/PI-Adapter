@@ -4,7 +4,7 @@ uid: releaseNotes
 
 # Release Notes
 
-*Product Version x.x*<br>
+*{ Product Version x.x }*<br>
 © 2020 OSIsoft, LLC. All rights reserved. <!--*This section may be removed if this note is part of a broader manual.*-->
 
 ## Overview
@@ -35,7 +35,7 @@ This section lists features that were added in release *{ x.x.x.xxxx }* - *{ mm/
 *Using  table style:*-->
 Item | Description
 ---- | -----------
-*{Work item #}* | *{ feature description }*
+*{work item #}* | *{ feature description }*
 
 ## Known Issues
 
@@ -51,7 +51,7 @@ Item | Description
 
 ### Operating Systems
 
-<!--*Insert text here.*-->  For example: This release supports Windows Server 2019, Windows Server 2016, and Windows 10 (32 and 64 bit).
+<!--*Insert text here.  For example:*--> This release supports Windows Server 2019, Windows Server 2016, and Windows 10 (32 and 64 bit).
 
 ### Server Platforms
 
@@ -144,9 +144,9 @@ In addition to finding and fixing security bugs within the *{ product name }* , 
 
 ## Documentation Overview
 
-<!--*This section may be removed if the information is  captured within a separate topic in the same manual.*-->
+<!--*This section may be removed if the information is  captured within a separate topic in the same manual.
 
-Example:
+Example:*-->
 
 **PI Notifications User Guide:** An introduction to PI Notifications for the end user. This user guide provides a product overview, installation procedures, a tutorial to acquaint you with the user interface for PI Notifications, and other topics to allow you to work with and troubleshoot PI Notifications.
 
