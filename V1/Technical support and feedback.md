@@ -24,9 +24,9 @@ When you contact OSIsoft Technical Support, be prepared to provide this informat
 
 <!--To view a brief primer on PI Adapters, see the [PI Adapters playbook](https://customers.osisoft.com/s/knowledgearticle?knowledgeArticleUrl=Playbook-PI-adapters) in the OSIsoft Customer Portal.-->
 
-<!--## Product feedback-->
+## Product feedback
 
-<!--To submit product feedback for PI Adapters, visit the [PI Adapters feedback page](https://feedback.osisoft.com/forums/123456-PI-adapters). The product team at OSIsoft regularly monitors the page.-->
+To submit product feedback for PI Adapters, visit the [PI Adapters feedback page](https://feedback.osisoft.com/forums/930280-pi-adapters). The product team at OSIsoft regularly monitors the page.
 
 ## Documentation feedback
 
