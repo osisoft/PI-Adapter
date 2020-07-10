@@ -4,7 +4,7 @@ uid: UninstallTheAdapter
 
 # Uninstall the adapter
 
-Complete the procedure appropriate for your operating system to uninstall a PI adapter:
+Complete the procedure corresponding to your specific operating system to uninstall the adapter:
 
 ## Windows
 

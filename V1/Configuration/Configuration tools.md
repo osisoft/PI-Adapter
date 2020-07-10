@@ -4,7 +4,7 @@ uid: ConfigurationTools
 
 # Configuration tools
 
-You can configure PI adapters with the EdgeCmd utility, OSIsoft's proprietary tool for configuring adapters, or a commonly used REST tool.
+You can configure PI adapters with the EdgeCmd utility, OSIsoft's proprietary tool for configuring adapters, or a commonly-used REST tool.
 
 ## EdgeCmd utility
 

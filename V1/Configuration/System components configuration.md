@@ -65,7 +65,7 @@ Complete the following steps to add a new component to the system:
 
 ### Update system components
 
-Complete the following steps to update the system components, for example, by adding or deleting components.
+Complete the following steps to update the components of the system, for example, by adding or deleting one or more adapter components.
 
 1. Using any text editor, create a file that contains the current system components configuration. For information on how to retrieve the system components configuration, see [REST URLs](#rest-urls).
 
@@ -89,7 +89,7 @@ Complete the following steps to update the system components, for example, by ad
 
 ### Delete a system component
 
-Complete the following steps to delete an existing component:
+Complete the following steps to delete a specific existing component:
 
 1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 
@@ -118,7 +118,7 @@ Linux: `/opt/OSIsoft/Adapters/AdapterName/Schemas`
 
 ## System components parameters
 
-The following parameters are available for configuring system components:
+You can configure the following parameters for system components:
 
 | Parameters     | Required | Type    | Description |
 | -------------- | -------- | --------| -------------|

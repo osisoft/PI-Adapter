@@ -4,7 +4,7 @@ uid: SystemAndAdapterConfiguration
 
 # System and adapter configuration
 
-You can configure the system and adapter components together using a single call for replacing the existing configuration.
+You can configure the system component and adapter component together using a single file.
 
 ## Change system and adapter configuration
 
