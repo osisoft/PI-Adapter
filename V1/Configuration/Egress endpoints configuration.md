@@ -4,7 +4,7 @@ uid: EgressEndpointsConfiguration
 
 # Egress endpoints configuration
 
-Adapters can egress dynamic data to destinations that you supply through OMF. OSIsoft Cloud Services (OCS) and PI servers through PI Web API are supported destinations.
+Adapters can egress dynamic data to destinations that you supply through OMF. OSIsoft Cloud Services (OCS), PI servers through PI Web API, and Edge Data Store (EDS) are supported destinations.
 
 An egress endpoint represents a destination to which data is sent. You can specify multiple endpoints. Every egress endpoint is run independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under [Egress endpoint parameters](#egress-endpoint-parameters).
 
@@ -71,9 +71,9 @@ The following parameters are available for configuring egress endpoints:
 | Parameter                       | Required                  | Type      | Description                                        |
 |---------------------------------|---------------------------|-----------|-------------|
 | **Id**                          | Optional                  | `string`    | Unique identifier<br><br>Allowed value: any string identifier<br>Default value: new GUID |
-| **Endpoint**                    | Required                  | `string`    | Destination that accepts OMF v1.1 messages. Supported destinations include OCS and PI Server.<br><br>Allowed value: well-formed http or https endpoint string<br>Default: `null` |
-| **Username**                    | Required for PI endpoint  | `string`    | Basic authentication to the PI Web API OMF endpoint <br><br>Allowed value: any string<br>Default: `null` |
-| **Password**                    | Required for PI endpoint  | `string`    | Basic authentication to the PI Web API OMF endpoint <br><br>Allowed value: any string<br>Default: `null` |
+| **Endpoint**                    | Required                  | `string`    | Destination that accepts OMF v1.1 messages. Supported destinations include OCS, PI Server, and EDS.<br><br>Allowed value: well-formed http or https endpoint string<br>Default: `null` |
+| **Username**                    | Required for PI server and EDS endpoint  | `string`    | Basic authentication to the PI Web API OMF or EDS endpoint <br><br>_PI server:_<br>Allowed value: any string<br>Default: `null`<br><br>_EDS:_<br>Allowed value: any string, but cannot be `null` |
+| **Password**                    | Required for PI server and EDS endpoint  | `string`    | Basic authentication to the PI Web API OMF or EDS endpoint <br><br>_PI server:_<br>Allowed value: any string<br>Default: `null`<br><br>_EDS:_<br>Allowed value: any string, but cannot be `null`  |
 | **ClientId**                    | Required for OCS endpoint | `string`    | Authentication with the OCS OMF endpoint <br><br>Allowed value: any string<br>Default: `null`|
 | **ClientSecret**                | Required for OCS endpoint | `string`    | Authentication with the OCS OMF endpoint <br><br>Allowed value: any string<br>Default: `null`|
 | **TokenEndpoint**               | Optional for OCS endpoint | `string`    | Retrieves an OCS token from an alternative endpoint <br><br>Allowed value: well-formed http or https endpoint string <br>Default value: `null` |
@@ -104,6 +104,18 @@ The following examples are valid egress configurations:
      "Password": "<password>"
 }]
 ```
+
+### Egress data to EDS
+
+```json
+[{
+     "Id": "EDS",
+     "Endpoint": "http://localhost:<port_number>/api/v1/tenants/default/namespaces/default/omf",
+     "UserName": "eds",
+     "Password": "eds"
+}]
+```
+
 
 ## REST URLs
 
