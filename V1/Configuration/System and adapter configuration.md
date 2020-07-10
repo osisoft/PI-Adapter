@@ -110,6 +110,12 @@ Change the system and adapter configuration by importing the JSON file using a R
                 "endpoint": "https://OCSEndpoint/omf",
                 "clientId": "CLIENTID",
                 "clientSecret": "CLIENTSECRET"
+            },
+            {
+                "Id": "EDS",
+                "Endpoint": "http://localhost:<port_number>/api/v1/tenants/default/namespaces/default/omf"
+                "UserName": "eds",
+                "Password": "eds"
             }
         ]
     }
