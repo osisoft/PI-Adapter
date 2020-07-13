@@ -4,7 +4,7 @@ uid: InstallTheAdapter
 
 # Install the adapter
 
-You can install adapters on either a Windows or Linux operating system. Before installing the adapter, see [Installation prerequisites](xref:Installation#installation-prerequisites) to ensure your machine is properly configured to provide optimum adapter operation.
+You can install adapters on either a Windows or Linux operating system. Before installing the adapter, see [System requirements](xref:SystemRequirements) to ensure your machine is properly configured to provide optimum adapter operation.
 
 ## Windows
 
