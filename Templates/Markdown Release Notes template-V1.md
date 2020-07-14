@@ -146,7 +146,7 @@ Example:*-->
 
 **PI System Explorer User Guide:** Provides an overview and explains the functions of the PI System Explorer interface.
 
-## Technical Support and Resources
+## Technical support and resources
 
 <!--*Provide a cross-reference to the Technical Support and feedback section. For example,*-->
 
