@@ -40,6 +40,8 @@ Log files are moved to the following location:
 
 In the following example, one Modbus adapter service is installed on a particular Windows node with the name `ModbusService1`. A Modbus component with the name `ModbusDeviceX` was added and configured to this Modbus adapter and later removed. Linux follows a similar behavior. This is the resulting relocation and renaming scheme after deletion:
 
+**Note:** This is an example; it does not necessarily represent the adapter that you are currently using.
+
 ![ConfigurationFolder](../images/ConfigurationFolder.png)
 
 ![RemovedConfigurations](../images/RemovedConfigurations.png)
@@ -47,6 +49,7 @@ In the following example, one Modbus adapter service is installed on a particula
 ![LogsFolder](../images/LogsFolder.png)
 
 ![RemovedLogs](../images/RemovedLogs.png)
+ 
 
 ## REST URLs
 
