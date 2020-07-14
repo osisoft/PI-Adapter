@@ -18,6 +18,8 @@ The configuration of system components includes adding, updating, and deleting c
 
 Complete the following steps to add a new component to the system:
 
+**Note:** The examples in this procedure do not necessarily represent the adapter that your are currently using.
+
 1. Using any text editor, create a file that contains the component to be added to the system in the JSON format.
 
     - For content structure, see [Examples](#examples).
@@ -141,6 +143,8 @@ The default _System_Components.json_ file for the System component contains the 
 ```
 
 ### System components configuration with two adapter instances
+
+**Note:** This is an example configuration; it does not necessarily include the adapter that you are currently using.
 
 ```json
 [
