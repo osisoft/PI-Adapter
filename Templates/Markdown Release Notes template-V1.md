@@ -2,7 +2,7 @@
 uid: releaseNotes
 ---
 
-# Release Notes
+# Release notes
 
 *{ Product version x.x }*<br>
 
@@ -47,19 +47,19 @@ Item | Description
 ---- | -----------
 *{ item # }* | *{ problem/enhancement description }*
 
-### System requirements
+## System requirements
 
 <!--*Provide a cross-reference to the system requirements section. For example,*-->
 
 Refer to [System requirements](xref:SystemRequirements).
 
-### Installation and upgrade
+## Installation and upgrade
 
 <!--*Provide a cross-reference to the installation procedure. For example,*-->
 
 Refer to [Install the adapter](xref:InstallTheAdapter).
 
-### Uninstallation
+## Uninstallation
 
 <!--*Provide a cross-reference to the uninstallation procedure. For example,*-->
 
