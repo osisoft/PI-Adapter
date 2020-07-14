@@ -24,7 +24,7 @@ Complete the procedure appropriate for your operating system to start or stop an
 
     Example:
 
-    **Start** PI Adapter for OPC UA
+    _Start_ PI Adapter for OPC UA
 
     ```cmdline
     systemctl start PI Adapter for OPC UA
@@ -32,10 +32,12 @@ Complete the procedure appropriate for your operating system to start or stop an
 
     Example:
 
-    **Stop** PI Adapter for Modbus TCP
+    _Stop_ PI Adapter for Modbus TCP
   
       ```cmdline
       systemctl stop PI Adapter for Modbus
       ```
+      
+      **Note:** These commands are examples; they do not necessarily represent the adapter that you are currently using. 
   
 3. Press Enter.
