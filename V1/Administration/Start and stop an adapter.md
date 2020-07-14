@@ -12,6 +12,8 @@ Complete the procedure appropriate for your operating system to start or stop an
 
 2. Select **PI Adapter for _AdapterName_**, for example, PI Adapter for Modbus.
 
+    **Note:** This is an example; it does not necessarily represent the adapter that you are currently using. 
+
 3. Depending on whether your adapter is running or not, click either **Start** or **Stop**.
 
 ## Linux
