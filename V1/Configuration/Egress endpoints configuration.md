@@ -30,6 +30,8 @@ Complete the following steps to configure egress endpoints:
 
     - _Add endpoints_
 
+        **Note:** Run either the `POST` or the `PUT` command. For more information, see [REST URLs](#rest-urls). 
+            
         ```bash
         curl -d "@OmfEgress_DataEndpoints.json" -H "Content-Type: application/json" -X POST    "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
         ```
