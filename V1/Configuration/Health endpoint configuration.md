@@ -81,7 +81,7 @@ The following parameters are available for configuring health endpoints:
 ```code
 {
     "Id": "PI Web API",
-    "Endpoint": "https://<pi web api server>/piwebapi/omf/",
+    "Endpoint": "https://<pi web api server>:<port>/piwebapi/omf/",
     "UserName": "<username>",
     "Password": "<password>"
 }
@@ -92,7 +92,7 @@ The following parameters are available for configuring health endpoints:
 ```code
 [{
      "Id": "EDS",
-     "Endpoint": "http://localhost:<port_number>/api/v1/tenants/default/namespaces/default/omf",
+     "Endpoint": "http://localhost:<port>/api/v1/tenants/default/namespaces/default/omf",
      "UserName": "eds",
      "Password": "eds"
 }]
