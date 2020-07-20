@@ -14,7 +14,7 @@ Complete the procedure corresponding to your specific operating system to uninst
 
 2. Optional: To delete data, configuration, and log files, delete the directory _%ProgramData%\OSIsoft\Adapters\AdapterName_.
 
-    This will delete all data processed by the adapter in addition to the configuration and log files.
+    This deletes all data processed by the adapter, in addition to the configuration and log files.
 
 ## Linux
 
@@ -24,12 +24,10 @@ Complete the procedure corresponding to your specific operating system to uninst
     sudo apt remove pi.adapter.<AdapterName>
     ```
 
-2. Optional: To delete data, configuration, and log files, delete the directory _/usr/share/OSIsoft/Adapters/AdapterName_.
-
-    This deletes all data processed  by the adapter and configuration and log files.
-
-    Alternatively, run the following command:
+2. Optional: To delete data, configuration, and log files, run the following command:
 
     ```bash
     sudo rm -r /usr/share/OSIsoft/Adapters/<AdapterName>
     ```
+    
+    This deletes all data processed by the adapter, in addition to the configuration and log files.
