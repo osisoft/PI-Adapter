@@ -12,7 +12,7 @@ For more information about adapter health, see [Adapter health](xref:AdapterHeal
 
 A health endpoint designates an OMF endpoint where adapter health information is sent. You can configure multiple health endpoints.
 
-1. Using any text editor, create a file that contains one or more health endpoints in the JSON format.
+1. Use any text editor to create a file that contains one or more health endpoints in the JSON format.
     - For content structure, see [Examples](#examples).
     - For a table of all available health endpoint parameters, see [Health endpoint parameters](#health-endpoint-parameters).
 2. Save the file. For example, *HealthEndpoints.json*.
@@ -57,7 +57,7 @@ The following parameters are available for configuring health endpoints:
 | **Id**                          | Optional                            | `string`    | Uniquely identifies the endpoint. This can be any alphanumeric string. If left blank, a unique value is generated automatically. <br><br>Allowed value: any string identifier<br>Default value: new GUID|
 | **Endpoint**                    | Required                            | `string`    | The URL of the OMF endpoint to receive this health data <br><br>Allowed value: well-formed http or https endpoint string<br>Default: `null`|
 | **Username**                    | Required for PI Web API and EDS endpoints   | `string`    | The username used to authenticate with a PI Web API OMF or EDS endpoint <br><br>_PI server:_<br>Allowed value: any string<br>Default: `null`<br><br>_EDS:_<br>Allowed value: any string, but cannot be `null`|
-| **Password**                    | Required for PI Web API endpoints   | `string`    | The password used to authenticate with a PI Web API OMF or EDS endpoint <br><br>PI server:_<br>Allowed value: any string<br>Default: `null`<br><br>_EDS:_<br>Allowed value: any string, but cannot be `null` |
+| **Password**                    | Required for PI Web API endpoints   | `string`    | The password used to authenticate with a PI Web API OMF or EDS endpoint <br><br>_PI server:_<br>Allowed value: any string<br>Default: `null`<br><br>_EDS:_<br>Allowed value: any string, but cannot be `null` |
 | **ClientId**                    | Required for OCS endpoints          | `string`    | The client ID used for authentication with an OSIsoft Cloud Services OMF endpoint <br><br>Allowed value: any string<br>Default: `null` |
 | **ClientSecret**                | Required for OCS endpoints          | `string`    | The client secret used for authentication with an OSIsoft Cloud Services OMF endpoint <br><br>Allowed value: any string<br>Default: `null`|
 | **TokenEndpoint** | Optional for OCS endpoints | `string` | Retrieves an OCS token from an alternative endpoint <br><br>Allowed value: well-formed http or https endpoint string <br>Default value: `null` |
@@ -85,6 +85,17 @@ The following parameters are available for configuring health endpoints:
     "UserName": "<username>",
     "Password": "<password>"
 }
+```
+
+### EDS endpoint
+
+```code
+[{
+     "Id": "EDS",
+     "Endpoint": "http://localhost:<port_number>/api/v1/tenants/default/namespaces/default/omf",
+     "UserName": "eds",
+     "Password": "eds"
+}]
 ```
 
 ## REST URLs
