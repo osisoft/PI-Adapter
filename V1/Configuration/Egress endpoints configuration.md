@@ -14,6 +14,8 @@ For long term storage and analysis, you can configure any adapter to send time s
 
 Data egress to a PI server creates a PI point in the PI adapter configuration. Data egress to OCS or EDS creates a stream in the PI adapter configuration.
 
+**Note:** Egress to EDS requires the adapter to be on the same server as EDS.
+
 The name of the PI point or OCS or EDS stream is a combination of the StreamIdPrefix specified in the adapter data source configuration and the StreamId specified in the adapter data selection configuration.
 
 ## Configure egress endpoints
