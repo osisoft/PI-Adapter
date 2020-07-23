@@ -4,9 +4,19 @@ uid: EgressEndpointsConfiguration
 
 # Egress endpoints configuration
 
-Adapters can egress dynamic data to destinations that you supply through OMF. OSIsoft Cloud Services (OCS), PI servers through PI Web API, and Edge Data Store (EDS) are supported destinations.
+PI adapters collect time series data, which  they can send to a permanent data store (endpoint). This operation is called data egress. The following endpoints are available for data egress:
 
-An egress endpoint represents a destination to which data is sent. You can specify multiple endpoints. Every egress endpoint is run independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under [Egress endpoint parameters](#egress-endpoint-parameters).
+- OSIsoft Cloud Services (OCS)
+- PI servers through PI Web API
+- Edge Data Store (EDS)
+
+For long term storage and analysis, you can configure any adapter to send time series data to one or several of these endpoints in any combination. An egress endpoint is comprised of the properties specified under [Egress endpoint parameters](#egress-endpoint-parameters).
+
+Data egress to a PI server creates a PI point in the PI adapter configuration. Data egress to OCS or EDS creates a stream in the PI adapter configuration.
+
+**Note:** Egress to EDS requires the adapter to be on the same server as EDS.
+
+The name of the PI point or OCS or EDS stream is a combination of the StreamIdPrefix specified in the adapter data source configuration and the StreamId specified in the adapter data selection configuration.
 
 ## Configure egress endpoints
 
