@@ -28,7 +28,7 @@ Complete the following steps to configure egress endpoints:
     - For content structure, see [Examples](#examples).
     - For a table of all available parameters, see [Egress endpoint parameters](#egress-endpoint-parameters).
 
-2. Save the file. For example, _ConfigureEgressEndpoints.json_.
+2. Save the file. For example, `ConfigureEgressEndpoints.json`.
 
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and run the appropriate command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/`
 

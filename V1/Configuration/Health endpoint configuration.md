@@ -15,7 +15,7 @@ A health endpoint designates an OMF endpoint where adapter health information is
 1. Use any text editor to create a file that contains one or more health endpoints in the JSON format.
     - For content structure, see [Examples](#examples).
     - For a table of all available health endpoint parameters, see [Health endpoint parameters](#health-endpoint-parameters).
-2. Save the file. For example, *ConfigureHealthEndpoints.json*.
+2. Save the file. For example, `ConfigureHealthEndpoints.json`.
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run either a `POST` or `PUT` command to their appropriate endpoint.
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
