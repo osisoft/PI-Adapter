@@ -28,7 +28,7 @@ Complete the following steps to configure egress endpoints:
     - For content structure, see [Examples](#examples).
     - For a table of all available parameters, see [Egress endpoint parameters](#egress-endpoint-parameters).
 
-2. Save the file. For example, _OmfEgress_DataEndpoints.json_.
+2. Save the file. For example, _ConfigureEgressEndpoints.json_.
 
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and run the appropriate command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/`
 
@@ -40,14 +40,14 @@ Complete the following steps to configure egress endpoints:
 
     - _Add endpoints_
 
-        **Note:** Run either the `POST` or the `PUT` command. For more information, see [REST URLs](#rest-urls). 
+        **Note:** Run either the `POST` or the `PUT` command. For more information, see [REST URLs](#rest-urls).
             
         ```bash
-        curl -d "@OmfEgress_DataEndpoints.json" -H "Content-Type: application/json" -X POST    "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
+        curl -d "@ConfigureEgressEndpoints.json" -H "Content-Type: application/json" -X POST    "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
         ```
 
         ```bash
-        curl -d "@OmfEgress_DataEndpoints.json" -H "Content-Type: application/json" -X PUT   "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}"
+        curl -d "@ConfigureEgressEndpoints.json" -H "Content-Type: application/json" -X PUT   "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}"
         ```
 
     - _Delete an endpoint_
@@ -59,7 +59,7 @@ Complete the following steps to configure egress endpoints:
     - _Update an endpoint_
 
         ```bash
-        curl -d "@OmfEgress_DataEndpoints.json" -H "Content-Type: application/json" -X UPDATE     "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}"
+        curl -d "@ConfigureEgressEndpoints.json" -H "Content-Type: application/json" -X UPDATE     "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}"
         ```
 
     - _View endpoints_

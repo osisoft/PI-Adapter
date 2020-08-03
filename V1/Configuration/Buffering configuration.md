@@ -13,7 +13,7 @@ You can configure PI adapters to buffer data egressed from the adapter to endpoi
 1. Using any text editor, create a file that contains the buffering configuration in the JSON format.
    - For content structure, see the sample output in [Examples - Retrieve the buffering configuration](#examples).
    - For a table of all available parameters, see [Buffering parameters](#buffering-parameters).
-2. Save the file. For example, *Buffering.json*.
+2. Save the file. For example, *ConfigureBuffering.json*.
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and run a `PUT` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/buffering`
 
      **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
@@ -21,7 +21,7 @@ You can configure PI adapters to buffer data egressed from the adapter to endpoi
      Example using `curl`:
 
      ```bash
-      curl -d "@Buffering.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/buffering"
+      curl -d "@ConfigureBuffering.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/buffering"
      ```
 
     **Note:** Run this command from the same directory where the file is located.

@@ -14,7 +14,7 @@ Change the system and adapter configuration by importing the JSON file using a R
 
     - For content structure, see [Example](#example).
 
-2. Save the file. For example,  *SystemAdapter.config.json*.
+2. Save the file. For example,  *ConfigureSystemAndAdapter.json*.
 
 3. Use any of the [Configuration Tools](xref:ConfigurationTools) capable of making HTTP requests and run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration`
 
@@ -25,7 +25,7 @@ Change the system and adapter configuration by importing the JSON file using a R
     **Note:** Run this command from the same directory where the file is located.
 
     ```bash
-    curl -d "@SystemAdapter.config.json" -H "Content-Type: application/json" -X  PUT "http://localhost:5590/api/v1/configuration"
+    curl -d "@ConfigureSystemAndAdapter.json" -H "Content-Type: application/json" -X  PUT "http://localhost:5590/api/v1/configuration"
     ```
 
     **Note:** In order for some of the adapter specific configurations to take effect, you have to restart the adapter.

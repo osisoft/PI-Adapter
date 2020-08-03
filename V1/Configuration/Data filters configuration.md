@@ -14,7 +14,7 @@ Complete the following steps to change the data filters configuration:
     - For content structure, see [Data filters example](#data-filters-example).
     - For all available parameters, see [Data filters parameters](#data-filters-parameters).
 
-2. Save the file, for example, as *Component_DataFilters.json*.
+2. Save the file, for example, as *ConfigureDataFilters.json*.
 
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataFilters`.
 
@@ -25,7 +25,7 @@ Complete the following steps to change the data filters configuration:
     Example using `curl`:
 
     ```bash
-    curl -d "@ComponentId_DataFilters.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/<ComponentId>/DataFilters"
+    curl -d "@ConfigureDataFilters.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/<ComponentId>/DataFilters"
     ```
 
     **Note:** Run this command from the same directory where the file is located.
