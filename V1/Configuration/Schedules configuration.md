@@ -18,7 +18,7 @@ Complete the following steps to change the schedules configuration:
     - For content structure, see [Example](#example).
     - For all available parameters, see [Schedules parameters](#schedules-parameters).
 
-2. Save the file. For example, *ConfigureSchedules.json*.
+2. Save the file. For example, `ConfigureSchedules.json`.
 
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules`.
 
