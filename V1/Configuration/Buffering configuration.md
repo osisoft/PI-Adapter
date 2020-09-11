@@ -57,7 +57,7 @@ The following parameters are available for configuring buffering:
 
 <sup>2</sup> **Buffering only to memory**:<br>
         - The MaxBufferSizeMB of health endpoints is limited to 20MB of memory.<br>
-        - When MaxBufferSizeMB is reached, memory buffer for that endpoint is deleted and new events are buffered.<br>
+        - When MaxBufferSizeMB is reached, only the oldest message in the memory buffer is removed. Depending on the size of a new message, several old messages are removed.<br>
 
 ## Examples
 
