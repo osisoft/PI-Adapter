@@ -1,0 +1,8 @@
+- name: Adapter health
+  href: Health/toc.yml
+  topicHref: Adapter-health-1-3.md
+- name: Adapter diagnostics
+  href: ../Diagnostics/toc.yml
+  topicHref: ../Diagnostics/Adapter-diagnostics-1-3.md
+- name: Egress diagnostics
+  href: ../Diagnostics/Egress-diagnostics-1-3.md
