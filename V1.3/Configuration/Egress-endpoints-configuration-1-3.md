@@ -84,14 +84,14 @@ The following parameters are available for configuring egress endpoints:
 |---------------------------------|---------------------------|-----------|-------------|
 | **Id**                          | Optional                  | `string`    | Unique identifier<br><br>Allowed value: any string identifier<br>Default value: new GUID |
 | **Endpoint**                    | Required                  | `string`    | Destination that accepts OMF v1.1 messages. Supported destinations include OCS, PI Server, and EDS.<br><br>Allowed value: well-formed http or https endpoint string<br>Default: `null` |
-| **Username**                    | Required for PI server and EDS endpoint  | `string`    | Basic authentication to the PI Web API OMF or EDS endpoint <br><br>_PI server:_<br>Allowed value: any string<br>Default: `null`<br><br>_EDS:_<br>Allowed value: any string, can be null if endpoint url schema is `HTTP` |
-| **Password**                    | Required for PI server and EDS endpoint  | `string`    | Basic authentication to the PI Web API OMF or EDS endpoint <br><br>_PI server:_<br>Allowed value: any string<br>Default: `null`<br><br>_EDS:_<br>Allowed value: any string, can be null if endpoint url schema is `HTTP`  |
-| **ClientId**                    | Required for OCS endpoint | `string`    | Authentication with the OCS OMF endpoint <br><br>Allowed value: any string, can be null if endpoint url schema is `HTTP`<br>Default: `null`|
-| **ClientSecret**                | Required for OCS endpoint | `string`    | Authentication with the OCS OMF endpoint <br><br>Allowed value: any string, can be null if endpoint url schema is `HTTP`<br>Default: `null`|
+| **Username**                    | Required for PI server and EDS endpoint  | `string`    | Basic authentication to the PI Web API OMF or EDS endpoint <br><br>_PI server:_<br>Allowed value: any string<br>Default: `null`<br><br>_EDS:_<br>Allowed value: any string, can be null if the endpoint URL schema is `HTTP` |
+| **Password**                    | Required for PI server and EDS endpoint  | `string`    | Basic authentication to the PI Web API OMF or EDS endpoint <br><br>_PI server:_<br>Allowed value: any string<br>Default: `null`<br><br>_EDS:_<br>Allowed value: any string, can be null if the endpoint URL schema is `HTTP`  |
+| **ClientId**                    | Required for OCS endpoint | `string`    | Authentication with the OCS OMF endpoint <br><br>Allowed value: any string, can be null if the endpoint URL schema is `HTTP`<br>Default: `null`|
+| **ClientSecret**                | Required for OCS endpoint | `string`    | Authentication with the OCS OMF endpoint <br><br>Allowed value: any string, can be null if the endpoint URL schema is `HTTP`<br>Default: `null`|
 | **TokenEndpoint**               | Optional for OCS endpoint | `string`    | Retrieves an OCS token from an alternative endpoint <br><br>Allowed value: well-formed http or https endpoint string <br>Default value: `null` |
 | **ValidateEndpointCertificate** | Optional                  | `boolean`   | Disables verification of destination certificate. **Note:** Only use for testing with self-signed certificates. <br><br>Allowed value: `true` or `false`<br>Default value: `true` |
 
-If the Url schema for the Egress endpoint is HTTP, typically in the case of EDS, then specifying credentials is not required. 
+If the URL schema for the egress endpoint is HTTP, which is typical for EDS, then you do not need to specify credentials. 
 
 ## Examples
 
