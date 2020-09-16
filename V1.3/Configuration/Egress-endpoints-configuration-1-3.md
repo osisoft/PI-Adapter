@@ -91,7 +91,7 @@ The following parameters are available for configuring egress endpoints:
 | **TokenEndpoint**               | Optional for OCS endpoint | `string`    | Retrieves an OCS token from an alternative endpoint <br><br>Allowed value: well-formed http or https endpoint string <br>Default value: `null` |
 | **ValidateEndpointCertificate** | Optional                  | `boolean`   | Disables verification of destination certificate. **Note:** Only use for testing with self-signed certificates. <br><br>Allowed value: `true` or `false`<br>Default value: `true` |
 
-If the URL schema for the egress endpoint is HTTP, which is typical for EDS, then you do not need to specify credentials. 
+**Note:** If the URL schema for the egress endpoint is HTTP, which is typical for EDS, then you do not need to specify credentials. 
 
 ## Examples
 
