@@ -23,7 +23,7 @@ The following diagnostics data are available:
 
 After running diagnostics with a health endpoint configured to a PI server, you can use PI System Explorer to view the diagnostics for a given adapter. The element hierarchy is shown in the following image.
 
-![Diagnostics](../images/Diagnostics.PNG)
+![Diagnostics](../images/Diagnostics-1-3.PNG)
 
 - The **Elements** root contains a link to an **Adapters** node. This is the root node for all adapter instances.
 - Below **Adapters**, you will find one or more adapter nodes. Each node's title is defined by the node's corresponding computer name and service name in this format: `{ComputerName}.{ServiceName}`. For example, in the following image, **MachineName** is the computer name and **OpcUa** is the service name.
