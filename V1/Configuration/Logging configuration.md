@@ -6,7 +6,7 @@ uid: LoggingConfiguration
 
 PI adapters write daily log messages for the adapter, the system, and OMF egress to flat text files in the following locations:
 
-• Windows: *%ProgramData%\OSIsoft\Adapters\{AdapterInstance}\Logs*
+• Windows: *%ProgramData%\OSIsoft\Adapters\\{AdapterInstance}\Logs*
 
 • Linux: */usr/share/OSIsoft/Adapters/{AdapterInstance}/Logs*
 
