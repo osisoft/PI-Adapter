@@ -16,7 +16,7 @@ Complete the following steps to change the data filters configuration:
 
 2. Save the file, for example, as `ConfigureDataFilters.json`.
 
-3. Use any of the [Configuration tools](xref:ConfigurationTool1-3) capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataFilters`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataFilters`.
 
     **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter, for example, _Modbus1_.
 
