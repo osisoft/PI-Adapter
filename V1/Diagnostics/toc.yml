@@ -1,8 +1,8 @@
 - name: System
-  href: System.md
+  href: system.md
 - name: Stream count
-  href: Stream count.md
+  href: stream-count.md
 - name: IO rate
-  href: IO rate.md
+  href: io-rate.md
 - name: Error rate
-  href: Error rate.md
+  href: error-rate.md
