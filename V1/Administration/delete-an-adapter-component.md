@@ -42,13 +42,13 @@ In the following example, one Modbus adapter service is installed on a particula
 
 **Note:** This is an example; it does not necessarily represent the adapter that you are currently using.
 
-![ConfigurationFolder](../images/ConfigurationFolder.png)
+![ConfigurationFolder](../images/configuration-folder.png)
 
-![RemovedConfigurations](../images/RemovedConfigurations.png)
+![RemovedConfigurations](../images/removed-configurations.png)
 
-![LogsFolder](../images/LogsFolder.png)
+![LogsFolder](../images/logs-folder.png)
 
-![RemovedLogs](../images/RemovedLogs.png)
+![RemovedLogs](../images/removed-logs.png)
  
 
 ## REST URLs
