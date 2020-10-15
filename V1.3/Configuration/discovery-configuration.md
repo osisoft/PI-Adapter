@@ -4,7 +4,7 @@ uid: DiscoveryConfiguration1-3
 
 # Discovery configuration
 
-If you did not configure data selection for your adapter, you can perform a data discovery for existing streams on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery Id, which you can either specify or let the adapter generate it.
+You can perform a data discovery for existing streams on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery Id, which you can either specify or let the adapter generate it.
 
  Data discovery includes different routes. For example, you can choose to do the following:
 
@@ -12,20 +12,23 @@ If you did not configure data selection for your adapter, you can perform a data
 - Query the discovery status
 - Cancel or delete discoveries
 - Merge discovery results with the data selection item
-- Retrieve results from a current discovery and compare it with results from a previous discovery
+- Retrieve results from a current discovery and compare it with results from a previous or discovery 
+- Retrieve results from a current discovery and compare it with results from a current data selection configuration
 
 ## Configure discovery
 
 1. Start any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests.
 2. Run a `POST` command with the `Id` of the discovery and `autoSelect` set to either `true` or `false` to the following endpoint `http://localhost:5590/api/v1/configuration/<ComponentId>/Discoveries`<br>**Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.<br> Example using `curl`:<br>`curl -d "{ \"Id\":\"TestDiscovery\", \"autoSelect\":true }" -X POST "http://localhost:5590/api/v1/configuration/<ComponentId>/Discoveries"`
 
+<!---
 ## Discovery schema
 
 The full schema definition for the general configuration is in the `<AdapterName>_Discovery_schema.json` file located in one of the following folders:
 
-Windows: `%ProgramFiles%\OSIsoft\Adapters\<AdapterName\Schemas`
+Windows: `%ProgramFiles%\OSIsoft\Adapters\<AdapterName>\Schemas`
 
 Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
+--->
 
 ## Discovery parameters
 
@@ -46,7 +49,8 @@ Parameter | Type| Description
 
 ## Discoveries status example
 
-The following example shows the status of all discoveries. The discovery id in this example was auto-generated.
+The following example shows the status of all discoveries. The discovery id in this example was auto-generated.<br>
+**Note:** This is an example. It does not necessarily reflect the adapter you are currently using.
 
 ```json
 [
@@ -59,7 +63,7 @@ The following example shows the status of all discoveries. The discovery id in t
         "streamsFound": 4,
         "newStreams": 0,
         "newAssets": 0,
-        "resultUri": "http://localhost:8ff855f1-a636-490a-bb31-207410a6e607/result",
+        "resultUri": "http://127.0.0.1:5590/api/v1/Configuration/OpcUa1/Discoveries/8ff855f1-a636-490a-bb31-207410a6e607/result",
         "autoSelect": false,
         "status": "Complete",
         "errors": null
@@ -78,8 +82,10 @@ The following example shows the status of all discoveries. The discovery id in t
 | api/v1/configuration/_componentId_/discoveries/_discoveryId_                          | DELETE    | Cancels and deletes discovery and result                                                                                                |
 | api/v1/configuration/_componentId_/discoveries/_discoveryId_/result                   | GET       | Returns the result of a discovery                                                                                                       |
 | api/v1/configuration/_componentId_/discoveries/_discoveryId_/result?diff=_previousId_ | GET       | Returns the difference between the result and the previous result                                                                       |
-| api/v1/configuration/_componentId_/discoveries/_discoveryId_/result                   | DELETE    | Cancels and deletes discovery and result.<br>**Note:** The discovery Id is still valid, but a query will contain a status of `canceled` |
+| api/v1/configuration/_componentId_/dataselection?diff=_discoveryId_                   | GET       | Returns the difference between the data selection configuration and the discovery results
+| api/v1/configuration/_componentId_/discoveries/_discoveryId_/result                   | DELETE    | Cancels and deletes discovery result.<br><br>**Note:** The discovery Id is still valid, but a query will contain a status of `canceled`<br>Only the **Status** property will contain a `canceled` status, but not the query |
 | api/v1/configuration/_componentId_/dataselection/select?discoveryid=_discoveryId_     | POST      | Adds the discovered items to data selection with selected set to `true`                                                                   |
-| api/v1/configuration/_componentId_/dataselection/unselect?discoveryid=_discoveryId_   | POST      | Adds the discovered items to data selection with selected set to `false`                                                                 |
+| api/v1/configuration/_componentId_/dataselection/unselect?discoveryid=_discoveryId_   | POST      | Adds the discovered items to data selection with selected set to `false` 
+
 
 **Note:** Replace _componentId_ with the Id of your adapter component, for example OpcUa1.<br>Replace _discoveryId_ with the Id of the discovery for which you want to perform the action.
