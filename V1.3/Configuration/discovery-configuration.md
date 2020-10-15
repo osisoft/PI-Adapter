@@ -18,7 +18,15 @@ You can perform a data discovery for existing streams on demand. Data discovery 
 ## Configure discovery
 
 1. Start any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests.
-2. Run a `POST` command with the `Id` of the discovery and `autoSelect` set to either `true` or `false` to the following endpoint `http://localhost:5590/api/v1/configuration/<ComponentId>/Discoveries`<br>**Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.<br> Example using `curl`:<br>`curl -d "{ \"Id\":\"TestDiscovery\", \"autoSelect\":true }" -X POST "http://localhost:5590/api/v1/configuration/<ComponentId>/Discoveries"`
+2. Run a `POST` command with the `Id` of the discovery and `autoSelect` set to either `true` or `false` to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Discoveries`.
+
+   `5590` is the default port number. If you selected a different port number, replace it with that value.
+ 
+    Example using `curl`:
+    
+    ```bash
+    curl -d "{ \"Id\":\"TestDiscovery\", \"autoSelect\":true }" -X POST "http://localhost:5590/api/v1/configuration/<ComponentId>/Discoveries"
+    ```
 
 <!---
 ## Discovery schema
