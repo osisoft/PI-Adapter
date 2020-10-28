@@ -69,7 +69,7 @@ Sample output:
 ### Update MaxBufferSizeMb parameter
 
 ```cmd
-curl -d "{ "MaxBufferSizeMB": 100 }" -H "Content-Type: application/json" -X PATCH "http://localhost:5590/api/v1/configuration/system/buffering"
+curl -d "{ \"MaxBufferSizeMB\": 100 }" -H "Content-Type: application/json" -X PATCH "http://localhost:5590/api/v1/configuration/system/buffering"
 ```
 
 `204 No Content` response indicates success.
