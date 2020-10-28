@@ -124,7 +124,7 @@ You can configure the following parameters for system components:
 
 | Parameters     | Required | Type    | Description |
 | -------------- | -------- | --------| -------------|
-| **ComponentId**    | Required |`string` | The ID of the component. It can be any alphanumeric string, for example, OmfEgress. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> `>` `<` `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `*` `\` `"` `(` `)` `\\` `+` `,` `;` `=` `` \| `` `` ` `` `{` `}` |
+| **ComponentId**    | Required |`string` | The ID of the component. It can be any alphanumeric string, for example, OmfEgress. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> `>` `<` `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `*` `\` `"` `(` `)` `\\` `+` `,` `;` `=` `` \| `` `` ` `` `{` `}`<br><br>**Note:** The **ComponentId** is added to each container message that an adapter component sends to an OMF endpoint. It is displayed as the data source information (point source) in PI Web API. |
 | **ComponentType**  | Required |`string` | The type of the component, for example, OmfEgress. There are two types of components: OmfEgress and the adapter. |
 
 ## Examples
