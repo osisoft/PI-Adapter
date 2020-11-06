@@ -30,9 +30,9 @@ You can configure PI adapters to buffer data egressed from the adapter to endpoi
 
 The full schema definition for the system buffering is in the `System_Buffering_schema.json` file located in one of the following folders:
 
-Windows: `%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
+Windows: `%ProgramFiles%\OSIsoft\Adapters\<AdapterName>\Schemas`
 
-Linux: `/opt/OSIsoft/Adapters/AdapterName/Schemas`
+Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
 
 ## Buffering parameters
 

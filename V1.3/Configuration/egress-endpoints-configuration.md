@@ -72,9 +72,9 @@ Complete the following steps to configure egress endpoints:
 
 The full schema definition for the egress endpoint configuration is in the `OmfEgress_DataEndpoints_schema.json`  file located in one of the following folders:
 
-Windows: `%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
+Windows: `%ProgramFiles%\OSIsoft\Adapters\<AdapterName>\Schemas`
 
-Linux: `/opt/OSIsoft/Adapters/AdapterName/Schemas`
+Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
 
 ## Egress endpoint parameters
 
@@ -84,7 +84,7 @@ The following parameters are available for configuring egress endpoints:
 |---------------------------------|---------------------------|-----------|-------------|
 | **Id**                          | Optional                  | `string`    | Unique identifier<br><br>Allowed value: any string identifier<br>Default value: new GUID |
 | **Endpoint**                    | Required                  | `string`    | Destination that accepts OMF v1.2 messages. Supported destinations include OCS, PI Server, and EDS.<br><br>Allowed value: well-formed http or https endpoint string<br>Default: `null` |
-| **Username**                    | Required for PI server and EDS endpoint  | `string`    | Basic authentication to the PI Web API OMF or EDS endpoint <br><br>_PI server:_<br>Allowed value: any string<br>Default: `null`<br><br>_EDS:_<br>Allowed value: any string, can be null if the endpoint URL schema is `HTTP` |
+| **Username**                    | Required for PI server and EDS endpoint  | `string`    | Basic authentication to the PI Web API OMF or EDS endpoint <br><br>_PI server:_<br>Allowed value: any string<br>Default: `null`<br>**Note:** If your username contains a backslash, you must add an escape character, for example, type `OilCompany\TestUser` as `OilCompany\\TestUser`.<br><br>_EDS:_<br>Allowed value: any string, can be null if the endpoint URL schema is `HTTP` |
 | **Password**                    | Required for PI server and EDS endpoint  | `string`    | Basic authentication to the PI Web API OMF or EDS endpoint <br><br>_PI server:_<br>Allowed value: any string<br>Default: `null`<br><br>_EDS:_<br>Allowed value: any string, can be null if the endpoint URL schema is `HTTP`  |
 | **ClientId**                    | Required for OCS endpoint | `string`    | Authentication with the OCS OMF endpoint <br><br>Allowed value: any string, can be null if the endpoint URL schema is `HTTP`<br>Default: `null`|
 | **ClientSecret**                | Required for OCS endpoint | `string`    | Authentication with the OCS OMF endpoint <br><br>Allowed value: any string, can be null if the endpoint URL schema is `HTTP`<br>Default: `null`|

@@ -44,9 +44,9 @@ On successful execution, the log-level change takes effect immediately during ru
 
 The full schema definition for the logging configuration is in the component specific logging file: `AdapterName_Logging_schema.json`, `OmfEgress_Logging_schema.json`, or `System_Logging_schema.json` file located in one of the following folders:
 
-Windows: `%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
+Windows: `%ProgramFiles%\OSIsoft\Adapters\<AdapterName>\Schemas`
 
-Linux: `/opt/OSIsoft/Adapters/AdapterName/Schemas`
+Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
 
 ## Logging parameters
 

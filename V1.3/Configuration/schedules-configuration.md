@@ -40,9 +40,9 @@ On successful execution, the schedules change takes effect immediately during ru
 
 The full schema definition for the schedules configuration is in the  `AdapterName_Schedules_schema.json` file located in one of the following folders:
 
-Windows: `%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
+Windows: `%ProgramFiles%\OSIsoft\Adapters\<AdapterName>\Schemas`
 
-Linux: `/opt/OSIsoft/Adapters/AdapterName/Schemas`
+Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
 
 ## Schedules parameters
 

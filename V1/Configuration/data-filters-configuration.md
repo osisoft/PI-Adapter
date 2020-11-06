@@ -36,9 +36,9 @@ On successful execution, the change that you have made to data filters takes eff
 
 The full schema definition for the data filters configuration is in the  `AdapterName_DataFilters_schema.json` file located in one of the following folders:
 
-Windows: `%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
+Windows: `%ProgramFiles%\OSIsoft\Adapters\<AdapterName>\Schemas`
 
-Linux: `/opt/OSIsoft/Adapters/AdapterName/Schemas`
+Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
 
 ## Data filters parameters
 
