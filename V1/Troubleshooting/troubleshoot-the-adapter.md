@@ -4,13 +4,13 @@ uid: TroubleshootTheAdapter
 
 # Troubleshoot the adapter
 
-To troubleshoot issues with the PI adapter, you can check the adapter's logs, read the related PI Web API and OCS documentation, and use Wireshark, as detailed in t he following sections. If you are unable to resolve issues with the adapter or need additional guidance, contact OSIsoft Technical Support.
+To troubleshoot issues with the PI adapter, you can check the adapter's logs, read the related PI Web API and OCS documentation, and use Wireshark, as detailed in the following sections. If you are unable to resolve issues with the adapter or need additional guidance, contact OSIsoft Technical Support.
 
 **Note:** Make sure to check the troubleshooting information specific to your adapter.
 
 ## Check logs
 
-1. Check both the System and the OmfEgress logs. By default, they are located here:
+1. Check both the System and the OmfEgress logs. By default, they are located here:<br>
     Windows: `%ProgramData%\OSIsoft\Adapters\<AdapterName>\Logs`<br>
     Linux: `/usr/share/OSIsoft/Adapters/<AdapterName>/Logs`.
 2. Optional: Change the log level of the adapter to receive more information and context. For more information, see [Logging configuration](xref:LoggingConfiguration).
