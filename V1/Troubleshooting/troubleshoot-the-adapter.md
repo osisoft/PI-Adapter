@@ -17,7 +17,7 @@ To troubleshoot issues with the PI adapter, you can check the adapter's logs, re
 
 ### ASP .NET Core platform
 
-This log provides information from the Kestrel web server that hosts the application. The log might be present in case EDS encounters heartbeat failures or if the adapter has high throughput.
+This log provides information from the Kestrel web server that hosts the application. The log might be present in case EDS encounters heartbeat failures or if the adapter throughput is too high. When this happens, decrease the scan frequency or lower the amount of data selection items to spread the load among multiple adapters.
 
 ## PI Web API and OCS
 
@@ -25,7 +25,7 @@ Refer to the PI Web API and OCS documentation and their related troubleshooting 
 
 ## Wireshark
 
-Wireshark is a protocol-specific troubleshooting tool that supports all current adapter protocols. <br>Use [Wireshark](https://www.wireshark.org/download.html) to capture traffic from the adapter to the OMF destination and identify issues.
+Wireshark is a protocol-specific troubleshooting tool that supports all current adapter protocols. <br>Depending on the nature of the issue, use [Wireshark](https://www.wireshark.org/download.html) to capture traffic from the data source to the adapter or from the adapter to the OMF destination.
 
 ## Health and diagnostics egress to PI Web API
 
