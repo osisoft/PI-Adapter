@@ -114,9 +114,9 @@ Complete the following steps to delete a specific existing component:
 
 The full schema definition for the system components configuration is in the `System_Components_schema.json` file located in one of the following folders:
 
-Windows: `%ProgramFiles%\OSIsoft\Adapters\<AdapterName>\Schemas`
+Windows: `%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas`
 
-Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
+Linux: `/opt/OSIsoft/Adapters/AdapterName/Schemas`
 
 ## System components parameters
 
@@ -124,8 +124,10 @@ You can configure the following parameters for system components:
 
 | Parameters     | Required | Type    | Description |
 | -------------- | -------- | --------| -------------|
-| **ComponentId**    | Required |`string` | The ID of the component. It can be any alphanumeric string, for example, OmfEgress. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> `>` `<` `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `*` `\` `"` `(` `)` `\\` `+` `,` `;` `=` `` \| `` `` ` `` `{` `}` <br><br>**Note:** The **ComponentId** is added to each container message that an adapter component sends to an OMF endpoint. It is stored as the point source property of the PI tag when PI Web API destination is used. |
-| **ComponentType**  | Required |`string` | The type of the component, for example, OmfEgress. There are two types of components: OmfEgress and the adapter. |
+| **ComponentId**    | Required |`string` | The ID of the component. It can be any alphanumeric string, for example, Modbus1. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> `>` `<` `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `*` `\` `"` `(` `)` `\\` `+` `,` `;` `=` `` \| `` `` ` `` `{` `}`<br><br>**Note:** The **ComponentId** is added to each container message that an adapter component sends to an OMF endpoint. It is displayed as the data source information (point source) in PI Web API.<sup>1</sup>  |
+| **ComponentType**  | Required |`string` | The type of the component, for example, Modbus. There are two types of components: OmfEgress and the adapter.<sup>1</sup> |
+    
+<sup>1</sup>**Note:** The OmfEgress component is required to run the adapter. Both its **ComponentId** and **ComponentType** are reserved and should not be modified.
 
 ## Examples
 
@@ -149,12 +151,12 @@ The default _System_Components.json_ file for the System component contains the 
 ```json
 [
   {
-                "componentId": "Modbus1",
-                "componentType": "Modbus"
+                "ComponentId": "Modbus1",
+                "ComponentType": "Modbus"
             },
             {
-                "componentId": "Modbus2",
-                "componentType": "Modbus"
+                "ComponentId": "Modbus2",
+                "ComponentType": "Modbus"
             },
             {
                 "ComponentId": "OmfEgress",
