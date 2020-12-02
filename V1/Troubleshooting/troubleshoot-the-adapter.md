@@ -17,7 +17,7 @@ Perform the following steps to view the System and OmfEgress logs:
 1. Navigate to the logs directory:<br>
     Windows: `%ProgramData%\OSIsoft\Adapters\<AdapterName>\Logs`<br>
     Linux: `/usr/share/OSIsoft/Adapters/<AdapterName>/Logs`.<br><br>
-    **Example:** A successful connection to a PI Web API egress endpoint displays the following message in the OmfEgress log:
+    **Example:**<br> A successful connection to a PI Web API egress endpoint displays the following message in the OmfEgress log:
 
     ```json
     2020-11-02 11:08:51.870 -06:00 [Information] Data will be sent to the following OMF endpoint: 
@@ -66,6 +66,8 @@ Certain egress health information in both PI Web API and OCS show if an adapter 
 
 ### PI Web API connection
 
+Perform the following steps to determine if a connection to the PI Web API endpoint exists:
+
 1. Open PI Web API.
 2. Select the OmfEgress component of your adapter, for example *GVAdapterUbuntu.OpcUa.OmfEgress*.
 3. Make sure that the following PI points have been created for your egress endpoint:
@@ -74,6 +76,8 @@ Certain egress health information in both PI Web API and OCS show if an adapter 
     - **IORate**
 
 ### OCS connection
+
+Perform the following steps to determine if a connection to the OCS endpoint exists:
 
 1. Open OCS.
 2. Click **Sequential Data Store** > **Streams**.
