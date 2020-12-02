@@ -4,7 +4,7 @@ uid: DiscoveryConfiguration1-3
 
 # Discovery configuration
 
-You can perform a data discovery for existing streams on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery Id, which you can either specify or let the adapter generate it.
+You can perform a data discovery for existing data pieces on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery Id, which you can either specify or let the adapter generate it.
 
  Data discovery includes different routes. For example, you can choose to do the following:
 
@@ -12,7 +12,7 @@ You can perform a data discovery for existing streams on demand. Data discovery 
 - Query the discovery status
 - Cancel or delete discoveries
 - Merge discovery results with the data selection item
-- Retrieve results from a current discovery and compare it with results from a previous or discovery 
+- Retrieve results from a current discovery and compare it with results from a previous or discovery
 - Retrieve results from a current discovery and compare it with results from a current data selection configuration
 
 ## Configure discovery
@@ -21,9 +21,9 @@ You can perform a data discovery for existing streams on demand. Data discovery 
 2. Run a `POST` command with the `Id` of the discovery and `autoSelect` set to either `true` or `false` to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Discoveries`.
 
    `5590` is the default port number. If you selected a different port number, replace it with that value.
- 
+
     Example using `curl`:
-    
+
     ```bash
     curl -d "{ \"Id\":\"TestDiscovery\", \"autoSelect\":true }" -X POST "http://localhost:5590/api/v1/configuration/<ComponentId>/Discoveries"
     ```
@@ -47,8 +47,8 @@ Parameter | Type| Description
  **startTime** | `datetime` | Time when the discovery started.
  **endTime** | `datetime`| Time when the discovery ended.
  **progress** | `double` | Progress of the discovery. 
- **streamsFound** | `integer` | Number of streams that the discovery found.
- **newStreams** | `integer` | Number of new streams that the discovery found in comparison to the previous discovery.
+ **itemsFound** | `integer` | Number of data pieces that the discovery found on the data source.
+ **newItems** | `integer` | Number of new data pieces that the discovery found in comparison to the previous discovery.
  **newAssets** | `integer` | Number of new assets that the discovery found in comparison to the previous discovery.
  **resultUri** | `integer` | URL at which you can access the results of the discovery.
  **autoSelect** | `boolean` | When set to `true`, the result of the discovery gets pushed to the data selection.
@@ -68,8 +68,8 @@ The following example shows the status of all discoveries. The discovery id in t
         "startTime": "2020-09-30T19:34:01.8180401+02:00",
         "endTime": "2020-09-30T19:34:01.8368776+02:00",
         "progress": 30,
-        "streamsFound": 4,
-        "newStreams": 0,
+        "itemsFound": 4,
+        "newItems": 0,
         "newAssets": 0,
         "resultUri": "http://127.0.0.1:5590/api/v1/Configuration/OpcUa1/Discoveries/8ff855f1-a636-490a-bb31-207410a6e607/result",
         "autoSelect": false,
@@ -93,7 +93,6 @@ The following example shows the status of all discoveries. The discovery id in t
 | api/v1/configuration/_componentId_/dataselection?diff=_discoveryId_                   | GET       | Returns the difference between the data selection configuration and the discovery results
 | api/v1/configuration/_componentId_/discoveries/_discoveryId_/result                   | DELETE    | Cancels and deletes discovery result.<br><br>**Note:** The discovery Id is still valid, but a query will contain a status of `canceled`<br>Only the **Status** property will contain a `canceled` status, but not the query |
 | api/v1/configuration/_componentId_/dataselection/select?discoveryid=_discoveryId_     | POST      | Adds the discovered items to data selection with selected set to `true`                                                                   |
-| api/v1/configuration/_componentId_/dataselection/unselect?discoveryid=_discoveryId_   | POST      | Adds the discovered items to data selection with selected set to `false` 
-
+| api/v1/configuration/_componentId_/dataselection/unselect?discoveryid=_discoveryId_   | POST      | Adds the discovered items to data selection with selected set to `false`
 
 **Note:** Replace _componentId_ with the Id of your adapter component, for example OpcUa1.<br>Replace _discoveryId_ with the Id of the discovery for which you want to perform the action.
