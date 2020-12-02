@@ -8,13 +8,24 @@ PI adapters provide features for troubleshooting issues related to connectivity,
 
 **Note:** Make sure to also check the troubleshooting information specific to your adapter in this user guide.
 
-## Check logs
+## Logs
+
+Messages from the System and OmfEgress logs provide information on the status of the adapter. For example, they show if a connection from the adapter to an egress endpoint exists.
 
 Perform the following steps to view the System and OmfEgress logs:
 
 1. Navigate to the logs directory:<br>
     Windows: `%ProgramData%\OSIsoft\Adapters\<AdapterName>\Logs`<br>
-    Linux: `/usr/share/OSIsoft/Adapters/<AdapterName>/Logs`.
+    Linux: `/usr/share/OSIsoft/Adapters/<AdapterName>/Logs`.<br><br>
+    **Example:** A successful connection to a PI Web API egress endpoint displays the following message in the OmfEgress log:
+
+    ```json
+    2020-11-02 11:08:51.870 -06:00 [Information] Data will be sent to the following OMF endpoint: 
+    Id: <omfegress id>
+    Endpoint: <pi web api URL>   (note: the pi web api default port is 443)
+    ValidateEndpointCertificate: <true or false>
+    ```
+
 2. Optional: Change the log level of the adapter to receive more information and context. For more information, see [Logging configuration](xref:LoggingConfiguration).
 
 ### ASP .NET Core platform
@@ -48,3 +59,33 @@ To resolve the conflict, perform the following steps:
 5. Delete the associated health and diagnostics PI points on any or all PI Data Archives created by PI Web API.
 6. Start PI Web API.
 7. Start the adapter.
+
+## Adapter connection to egress endpoint
+
+Certain egress health information in both PI Web API and OCS show if an adapter connection to an egress endpoint exists. To verify an active connection, perform one of the following procedures:
+
+### PI Web API connection
+
+1. Open PI Web API.
+2. Select the OmfEgress component of your adapter, for example *GVAdapterUbuntu.OpcUa.OmfEgress*.
+3. Make sure that the following PI points have been created for your egress endpoint:
+    - **DeviceStatus**
+    - **NextHealthMessageExpected**
+    - **IORate**
+
+### OCS connection
+
+1. Open OCS.
+2. Click **Sequential Data Store** > **Streams**.
+3. Makes sure that  the following streams have been created for your egress endpoint:
+    - **DeviceStatus**
+    - **NextHealthMessageExpected**
+    - **IORate**
+
+### TCP connection
+
+Perform the following steps to see all established TCP sessions in Linux:
+
+1. Open a terminal.
+2. Type the following command: `ss  -o state established -t -p`
+3. Press Enter.
