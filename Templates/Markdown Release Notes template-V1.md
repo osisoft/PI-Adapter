@@ -101,7 +101,7 @@ Based on the CVSS scoring system this issue has been categorized as a High (7.0�
 
 **Sample A with OSIsoft sub-component** - Based on the CVSS scoring system this issue has been categorized as a High (7.0 – 8.9). This high-level security issue has been resolved in *{ OSIsoft’s PI SDK version 1.1 sub-component }* which has been packaged in this *{ PI ProcessBook 1998 release }*. To reduce exposure to this security issue upgrade to the latest release.
 
-**Sample A with 3rd Party sub-component** - Based on the CVSS scoring system this issue has been categorized as a High (7.0 – 8.9). This high-level security issue has been resolved in the 3rd Party *{ OpenSSL sub-component }* which has been packaged in this *{ PI Adapter for OPC UA 1.2 }* release . To reduce exposure to this security issue upgrade to the latest release.
+**Sample A with 3rd Party sub-component** - Based on the CVSS scoring system this issue has been categorized as a High (7.0 – 8.9). This high-level security issue has been resolved in the 3rd Party *{ OpenSSL sub-component }* which has been packaged in this *{ PI Adapter for \<AdapterName\> 1.2 }* release . To reduce exposure to this security issue upgrade to the latest release.
 
 **Sample B** - For this release of the *{ product name }*, *{x number}* of security vulnerability has been identified and fixed. The table below provides an overview of the types and severity of the security fixes.
 

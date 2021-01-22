@@ -69,7 +69,7 @@ Certain egress health information in both PI Web API and OCS show if an adapter 
 Perform the following steps to determine if a connection to the PI Web API endpoint exists:
 
 1. Open PI Web API.
-2. Select the OmfEgress component of your adapter, for example *GVAdapterUbuntu.OpcUa.OmfEgress*.
+2. Select the OmfEgress component of your adapter, for example *GVAdapterUbuntu.\<AdapterName\>.OmfEgress*.
 3. Make sure that the following PI points have been created for your egress endpoint:
     - **DeviceStatus**
     - **NextHealthMessageExpected**

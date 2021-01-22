@@ -18,7 +18,7 @@ Complete the following steps to change the data filters configuration:
 
 3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataFilters`.
 
-    **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter, for example, _Modbus1_.
+    **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter.
 
     `5590` is the default port number. If you selected a different port number, replace it with that value.
 
@@ -79,4 +79,4 @@ The following parameters are available for configuring data filters:
 | api/v1/configuration/_ComponentId_/DataFilters/*id*| DELETE     | Deletes configured data filter by *id*. |
 | api/v1/configuration/_ComponentId_/DataFilters/*id* | PUT       | Replaces data filter by *id*. Fails if data filter does not exist. |
 
-**Note:** Replace *ComponentId* with the Id of your adapter component, for example, Modbus1.
+**Note:** Replace *ComponentId* with the Id of your adapter component.

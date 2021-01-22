@@ -22,7 +22,7 @@ Complete the following steps to change the schedules configuration:
 
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules`.
 
-    **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter. For example, _Modbus1_.
+    **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter.
 
     `5590` is the default port number. If you selected a different port number, replace it with that value.
 
@@ -81,4 +81,4 @@ The following parameters are available for configuring schedules:
 | api/v1/configuration/_ComponentId_/Schedules/*id* | PUT       | Replaces schedule by *id*. Fails if schedule does not exist |
 | api/v1/configuration/_ComponentId_/Schedules/*id* | PATCH     | Allows partial updating of configured schedule by *id* |
 
-**Note:** Replace *ComponentId* with the Id of your adapter component. For example, Modbus1.
+**Note:** Replace *ComponentId* with the Id of your adapter component.

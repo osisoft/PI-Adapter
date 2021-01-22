@@ -18,8 +18,6 @@ The configuration of system components includes adding, updating, and deleting c
 
 Complete the following steps to add a new component to the system:
 
-**Note:** The examples in this procedure do not necessarily represent the adapter that your are currently using.
-
 1. Using any text editor, create a file that contains the component to be added to the system in the JSON format.
 
     - For content structure, see [Examples](#examples).
@@ -27,16 +25,16 @@ Complete the following steps to add a new component to the system:
 
     **Note:** The OmfEgress component is required for this initial release for adapters to run. You can add additional components, but only a single OmfEgress component is supported.
 
-    The following example adds a Modbus TCP adapter:
+    The following example adds an adapter:
 
       ```json
         {
-          "ComponentId": "Modbus1",
-          "ComponentType": "Modbus"
+          "ComponentId": "<AdapterName>1",
+          "ComponentType": "<AdapterName>"
         }
       ```
 
-    **Note:** A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter to be added.
+    **Note:** A unique ComponentId is necessary for each component in the system.
 
 2. Save the file. For example, *AddComponent.json*.
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run either a `POST` or `PUT` command to their appropriate endpoint.
@@ -60,7 +58,7 @@ Complete the following steps to add a new component to the system:
         **Note:** Run this command from the same directory where the file is located.
 
         ```bash
-        curl -d "@AddComponent.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components/Modbus1"
+        curl -d "@AddComponent.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components/<componentId>"
         ```
 
     After the curl command completes successfully, you can configure or use the new component.
@@ -102,10 +100,10 @@ Complete the following steps to delete a specific existing component:
     Example using `curl`:
 
     **Note:** Run this command from the same directory where the file is located. <br>
-    *Delete OpcUa1 component*
+    *Delete adapter component*
   
     ```bash
-    curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/OpcUa1/"
+    curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/<componentId>/"
     ```
 
     All the logs and configurations files for the deleted components are moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
@@ -124,8 +122,8 @@ You can configure the following parameters for system components:
 
 | Parameters     | Required | Type    | Description |
 | -------------- | -------- | --------| -------------|
-| **ComponentId**    | Required |`string` | The ID of the component<sup>1</sup>. It can be any alphanumeric string, for example, Modbus1. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> `>` `<` `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `*` `\` `"` `(` `)` `\\` `+` `,` `;` `=` `` \| `` `` ` `` `{` `}`  |
-| **ComponentType**  | Required |`string` | The type of the component, for example, Modbus. There are two types of components: OmfEgress and the adapter.<sup>1</sup> |
+| **ComponentId**    | Required |`string` | The ID of the component<sup>1</sup>. It can be any alphanumeric string. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> `>` `<` `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `*` `\` `"` `(` `)` `\\` `+` `,` `;` `=` `` \| `` `` ` `` `{` `}`  |
+| **ComponentType**  | Required |`string` | The type of the component. There are two types of components: OmfEgress and the adapter.<sup>1</sup> |
     
 <sup>1</sup>**Note:** The OmfEgress component is required to run the adapter. Both its **ComponentId** and **ComponentType** are reserved and should not be modified.
 
@@ -146,17 +144,15 @@ The default _System_Components.json_ file for the System component contains the 
 
 ### System components configuration with two adapter instances
 
-**Note:** This is an example configuration; it does not necessarily include the adapter that you are currently using.
-
 ```json
 [
   {
-                "ComponentId": "Modbus1",
-                "ComponentType": "Modbus"
+                "ComponentId": "<AdapterName>1",
+                "ComponentType": "<AdapterName>"
             },
             {
-                "ComponentId": "Modbus2",
-                "ComponentType": "Modbus"
+                "ComponentId": "<AdapterName>2",
+                "ComponentType": "<AdapterName>"
             },
             {
                 "ComponentId": "OmfEgress",

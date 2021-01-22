@@ -16,10 +16,10 @@ Complete the following steps to delete an adapter component:
 
       Example using `curl` :
 
-    **Delete OpcUa1 adapter component**
+    **Delete an adapter component**
 
       ```bash
-      curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/OpcUa1"
+      curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/<componentId>"
       ```
 
 ## File relocation
