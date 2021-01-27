@@ -147,12 +147,12 @@ The default _System_Components.json_ file for the System component contains the 
 ```json
 [
   {
-     "ComponentId": "Modbus1",
-     "ComponentType": "Modbus"
+     "ComponentId": "<AdapterName>1",
+     "ComponentType": "<AdapterName>"
   },
   {
-     "ComponentId": "Modbus2",
-     "ComponentType": "Modbus"
+     "ComponentId": "<AdapterName>2",
+     "ComponentType": "<AdapterName>"
   },
   {
      "ComponentId": "OmfEgress",
