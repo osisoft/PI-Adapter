@@ -60,4 +60,4 @@ For the adapter to use a reverse proxy while egressing, you must configure the r
 
 Example of an architecture with a reverse proxy:
 
-![Forward proxy](../images/reverse-proxy.png)
+![Reverse proxy](../images/reverse-proxy.png)
