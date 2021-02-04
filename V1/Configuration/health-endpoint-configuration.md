@@ -37,7 +37,7 @@ A health endpoint designates an OMF endpoint where adapter health information is
         **Note:** Run this command from the same directory where the file is located.
 
         ```bash
-        curl -d "@ConfigureHealthEndpoints.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/healthendpoints/OCS"
+        curl -d "@ConfigureHealthEndpoints.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/healthendpoints/OCS"
         ```
 
 ## Health endpoints schema
