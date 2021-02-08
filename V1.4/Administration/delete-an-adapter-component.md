@@ -19,7 +19,7 @@ Complete the following steps to delete an adapter component:
     **Delete an adapter component**
 
       ```bash
-      curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/<componentId>"
+      curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/<ComponentId>"
       ```
 
 ## File relocation
@@ -38,9 +38,7 @@ Log files are moved to the following location:
 
    **Linux:** `/usr/share/OSIsoft/Adapters/AdapterName/Logs/Removed`
 
-In the following example, one Modbus adapter service is installed on a particular Windows node with the name `ModbusService1`. A Modbus component with the name `ModbusDeviceX` was added and configured to this Modbus adapter and later removed. Linux follows a similar behavior. This is the resulting relocation and renaming scheme after deletion:
-
-**Note:** This is an example; it does not necessarily represent the adapter that you are currently using.
+In the following example, one adapter service is installed on a particular Windows node with the name `<Adapter>Service1`. An adapter component with the name `<Adapter>DeviceX` was added and configured to this adapter and later removed. Linux follows a similar behavior. This is the resulting relocation and renaming scheme after deletion:
 
 ![ConfigurationFolder](../images/configuration-folder.png)
 
@@ -50,7 +48,6 @@ In the following example, one Modbus adapter service is installed on a particula
 
 ![RemovedLogs](../images/removed-logs.png)
  
-
 ## REST URLs
 
 | Relative URL                                              | HTTP verb | Action               |

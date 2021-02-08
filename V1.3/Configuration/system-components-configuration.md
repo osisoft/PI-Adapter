@@ -51,14 +51,14 @@ Complete the following steps to add a new component to the system:
         curl -d "@AddComponent.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/components"
         ```
 
-    - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/system/components/<componentId>`
+    - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId>`
 
         Example using `curl`:
 
         **Note:** Run this command from the same directory where the file is located.
 
         ```bash
-        curl -d "@AddComponent.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components/<componentId>"
+        curl -d "@AddComponent.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components/<ComponentId>"
         ```
 
     After the curl command completes successfully, you can configure or use the new component.
@@ -103,7 +103,7 @@ Complete the following steps to delete a specific existing component:
     *Delete adapter component*
   
     ```bash
-    curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/<componentId>/"
+    curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/<ComponentId>/"
     ```
 
     All the logs and configurations files for the deleted components are moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
@@ -168,5 +168,5 @@ The default _System_Components.json_ file for the System component contains the 
 | api/v1/configuration/system/components | GET | Retrieves  the system components configuration |
 | api/v1/configuration/system/components | POST | Adds a new component to the system configuration |
 | api/v1/configuration/system/components | PUT | Updates the system components configuration |
-| api/v1/configuration/system/components/_componentId_ | DELETE | Deletes a specific component from the system components configuration |
-| api/v1/configuration/system/components/_componentId_ | PUT | Creates a new component with the specified *componentId* in the system configuration
+| api/v1/configuration/system/components/_ComponentId_ | DELETE | Deletes a specific component from the system components configuration |
+| api/v1/configuration/system/components/_ComponentId_ | PUT | Creates a new component with the specified *ComponentId* in the system configuration

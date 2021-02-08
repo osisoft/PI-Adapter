@@ -70,7 +70,7 @@ The following example shows the status of all discoveries. The discovery id in t
         "itemsFound": 4,
         "newItems": 0,
         "newAssets": 0,
-        "resultUri": "http://127.0.0.1:5590/api/v1/Configuration/<componentId>/Discoveries/8ff855f1-a636-490a-bb31-207410a6e607/result",
+        "resultUri": "http://127.0.0.1:5590/api/v1/Configuration/<ComponentId>/Discoveries/8ff855f1-a636-490a-bb31-207410a6e607/result",
         "autoSelect": false,
         "status": "Complete",
         "errors": null
@@ -94,4 +94,4 @@ The following example shows the status of all discoveries. The discovery id in t
 | api/v1/configuration/_componentId_/dataselection/select?discoveryid=_discoveryId_     | POST      | Adds the discovered items to data selection with selected set to `true`                                                                   |
 | api/v1/configuration/_componentId_/dataselection/unselect?discoveryid=_discoveryId_   | POST      | Adds the discovered items to data selection with selected set to `false`
 
-**Note:** Replace _componentId_ with the Id of your adapter component.<br>Replace _discoveryId_ with the Id of the discovery for which you want to perform the action.
+**Note:** Replace _ComponentId_ with the Id of your adapter component.<br>Replace _DiscoveryId_ with the Id of the discovery for which you want to perform the action.
