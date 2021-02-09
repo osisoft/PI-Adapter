@@ -4,7 +4,7 @@ uid: DiscoveryConfiguration1-3
 
 # Discovery configuration
 
-You can perform a data discovery for existing data pieces on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery Id, which you can either specify or let the adapter generate.
+You can perform a data discovery for existing data pieces on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery Id, which you can either specify or let the adapter generate. <!-- ID? I'm not going to mark this further, but I think it's worth standardiing >
 
  Data discovery includes different routes. For example, you can choose to do the following:
 
@@ -12,7 +12,7 @@ You can perform a data discovery for existing data pieces on demand. Data discov
 - Query the discovery status
 - Cancel or delete discoveries
 - Merge discovery results with the data selection item
-- Retrieve results from a current discovery and compare it with results from a previous or discovery
+- Retrieve results from a current discovery and compare it with results from a previous or discovery <!-- do you mean "previous discovery"? >
 - Retrieve results from a current discovery and compare it with results from a current data selection configuration
 
 ## Configure discovery
@@ -52,7 +52,7 @@ Progress = also indicated the number of topics found through the discovery
 Parameter | Type| Description
 ---------|----------|---------
  **id** | `string` | The Id of the discovery. <br><br> **Note:** You cannot run multiple discoveries with the same Id.
- **query** | `string` | A filter that is specific to the data source. The query filter can limit the scope of the discovery.<br><br>For more information, see the Data source configuration topic.
+ **query** | `string` | A filter that is specific to the data source. The query filter can limit the scope of the discovery.<br><br>For more information, see the Data source configuration topic. <!-- is this reference intentionally vague? It doesn't mean much to me. >
  **startTime** | `datetime` | Time when the discovery started.
  **endTime** | `datetime`| Time when the discovery ended.
  **progress** | `double` | Progress of the discovery. 
@@ -100,7 +100,7 @@ The following example shows the status of all discoveries. The discovery id in t
 | api/v1/configuration/_componentId_/discoveries/_discoveryId_/result                   | GET       | Returns the result of a discovery                                                                                                       |
 | api/v1/configuration/_componentId_/discoveries/_discoveryId_/result?diff=_previousId_ | GET       | Returns the difference between the result and the previous result                                                                       |
 | api/v1/configuration/_componentId_/dataselection?diff=_discoveryId_                   | GET       | Returns the difference between the data selection configuration and the discovery results
-| api/v1/configuration/_componentId_/discoveries/_discoveryId_/result                   | DELETE    | Cancels and deletes discovery result.<br><br>**Note:** The discovery Id is still valid, but a query will contain a status of `canceled`<br>Only the **Status** property will contain a `canceled` status, but not the query |
+| api/v1/configuration/_componentId_/discoveries/_discoveryId_/result                   | DELETE    | Cancels and deletes discovery result.<br><br>**Note:** The discovery Id is still valid, but a query will contain a status of `canceled`<br>Only the **Status** property will contain a `canceled` status, but not the query <!--This note needs some rewriting. I don't understand what it's saying. > |
 | api/v1/configuration/_componentId_/dataselection/select?discoveryid=_discoveryId_     | POST      | Adds the discovered items to data selection with selected set to `true`                                                                   |
 | api/v1/configuration/_componentId_/dataselection/unselect?discoveryid=_discoveryId_   | POST      | Adds the discovered items to data selection with selected set to `false`
 
