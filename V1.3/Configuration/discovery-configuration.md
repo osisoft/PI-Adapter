@@ -4,15 +4,15 @@ uid: DiscoveryConfiguration1-3
 
 # Discovery configuration
 
-You can perform a data discovery for existing data pieces on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery Id, which you can either specify or let the adapter generate.
+You can perform a data discovery for existing data pieces on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery ID, which you can either specify or let the adapter generate.
 
- Data discovery includes different routes. For example, you can choose to do the following:
+Data discovery includes different routes. For example, you can choose to do the following:
 
 - Retrieve the discovery results
 - Query the discovery status
 - Cancel or delete discoveries
 - Merge discovery results with the data selection item
-- Retrieve results from a current discovery and compare it with results from a previous or discovery
+- Retrieve results from a current discovery and compare it with results from a previous discovery
 - Retrieve results from a current discovery and compare it with results from a current data selection configuration
 
 ## Configure discovery
@@ -28,34 +28,19 @@ You can perform a data discovery for existing data pieces on demand. Data discov
     curl -d "{ \"Id\":\"TestDiscovery\", \"autoSelect\":true }" -X POST "http://localhost:5590/api/v1/configuration/<ComponentId>/Discoveries"
     ```
 
-<!---
-## Discovery schema
-
-The full schema definition for the general configuration is in the `<AdapterName>_Discovery_schema.json` file located in one of the following folders:
-
-Windows: `%ProgramFiles%\OSIsoft\Adapters\<AdapterName>\Schemas`
-
-Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
---->
-
 <!--
 Only Id, Query and AutoSelect will have effect when initiating the discovery query. The other parameters for the 'discovery state' are redundant and will be overridden even if specified in the configuration. To avoid any confusion we could mention only the 3 relevant ones to the customer for configuring discovery. The table below is the State of the discovrery is mainly for intepreting discovery result.
 -->
 
-<!--
-Thyag:
-Specific to MQTT Sparkplug B, the descriptions
-Progress = also indicated the number of topics found through the discovery 
--->
 ## Discovery parameters
 
 Parameter | Type| Description
 ---------|----------|---------
- **id** | `string` | The Id of the discovery. <br><br> **Note:** You cannot run multiple discoveries with the same Id.
- **query** | `string` | A filter that is specific to the data source. The query filter can limit the scope of the discovery.<br><br>For more information, see the Data source configuration topic.
+ **id** | `string` | The ID of the discovery. <br><br> **Note:** You cannot run multiple discoveries with the same ID.
+ **query** | `string` | A filter that is specific to the data source. The query filter can limit the scope of the discovery.<br><br>For more information, see the Data source configuration topic of your specific adapter.
  **startTime** | `datetime` | Time when the discovery started.
  **endTime** | `datetime`| Time when the discovery ended.
- **progress** | `double` | Progress of the discovery. 
+ **progress** | `double` | Progress of the discovery (number of topics found through the discovery) 
  **itemsFound** | `integer` | Number of data pieces that the discovery found on the data source.
  **newItems** | `integer` | Number of new data pieces that the discovery found in comparison to the previous discovery.
  **newAssets** | `integer` | Number of new assets that the discovery found in comparison to the previous discovery.
@@ -95,13 +80,13 @@ The following example shows the status of all discoveries. The discovery id in t
 | api/v1/configuration/_componentId_/discoveries                                        | GET       | Returns status of all discoveries                                                                                                       |
 | api/v1/configuration/_componentId_/discoveries                                        | POST      | Initiates a new discovery and returns its Id                                                                                            |
 | api/v1/configuration/_componentId_/discoveries                                        | DELETE    | Cancels and deletes all saved discoveries                                                                                               |
-| api/v1/configuration/_componentId_/discoveries/_discoveryId_                          | GET       | Gets the status of an individual discovery<br><br>**Note:** If a discovery with the specified Id does not exist, you will get an error message                                                                                           |
+| api/v1/configuration/_componentId_/discoveries/_discoveryId_                          | GET       | Gets the status of an individual discovery<br><br>**Note:** If a discovery with the specified ID does not exist, you will get an error message                                                                                           |
 | api/v1/configuration/_componentId_/discoveries/_discoveryId_                          | DELETE    | Cancels and deletes discovery and result                                                                                                |
 | api/v1/configuration/_componentId_/discoveries/_discoveryId_/result                   | GET       | Returns the result of a discovery                                                                                                       |
 | api/v1/configuration/_componentId_/discoveries/_discoveryId_/result?diff=_previousId_ | GET       | Returns the difference between the result and the previous result                                                                       |
 | api/v1/configuration/_componentId_/dataselection?diff=_discoveryId_                   | GET       | Returns the difference between the data selection configuration and the discovery results
-| api/v1/configuration/_componentId_/discoveries/_discoveryId_/result                   | DELETE    | Cancels and deletes discovery result.<br><br>**Note:** The discovery Id is still valid, but a query will contain a status of `canceled`<br>Only the **Status** property will contain a `canceled` status, but not the query |
+| api/v1/configuration/_componentId_/discoveries/_discoveryId_/result                   | DELETE    | Cancels and deletes discovery result.<br><br>**Note:** The discovery ID is still valid, but the **Status** property of a discovery query will contain a status of `canceled` |
 | api/v1/configuration/_componentId_/dataselection/select?discoveryid=_discoveryId_     | POST      | Adds the discovered items to data selection with selected set to `true`                                                                   |
 | api/v1/configuration/_componentId_/dataselection/unselect?discoveryid=_discoveryId_   | POST      | Adds the discovered items to data selection with selected set to `false`
 
-**Note:** Replace _componentId_ with the Id of your adapter component, for example OpcUa1.<br>Replace _discoveryId_ with the Id of the discovery for which you want to perform the action.
+**Note:** Replace _componentId_ with the ID of your adapter component, for example OpcUa1.<br>Replace _discoveryId_ with the Id of the discovery for which you want to perform the action.
