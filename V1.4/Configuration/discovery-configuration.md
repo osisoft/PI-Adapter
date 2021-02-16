@@ -6,7 +6,7 @@ uid: DiscoveryConfiguration1-4
 
 You can perform a data discovery for existing data pieces on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery Id, which you can either specify or let the adapter generate it.
 
- Data discovery includes different routes. For example, you can choose to do the following:
+Data discovery includes different routes. For example, you can choose to do the following:
 
 - Retrieve the discovery results
 - Query the discovery status
@@ -42,22 +42,22 @@ Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
 
 Parameter | Type| Description
 ---------|----------|---------
- **id** | `string` | The Id of the discovery. <br><br> **Note:** You cannot run multiple discoveries with the same Id.
+ **id** | `string` | The Id of the discovery <br><br> **Note:** You cannot run multiple discoveries with the same Id.
  **query** | `string` | A filter that is specific to the data source. The query filter can limit the scope of the discovery.<br><br>For more information, see the Data source configuration topic.
- **startTime** | `datetime` | Time when the discovery started.
- **endTime** | `datetime`| Time when the discovery ended.
- **progress** | `double` | Progress of the discovery.
- **itemsFound** | `integer` | Number of data pieces that the discovery found on the data source.
- **newItems** | `integer` | Number of new data pieces that the discovery found in comparison to the previous discovery.
- **newAssets** | `integer` | Number of new assets that the discovery found in comparison to the previous discovery.
- **resultUri** | `integer` | URL at which you can access the results of the discovery.
+ **startTime** | `datetime` | Time when the discovery started
+ **endTime** | `datetime`| Time when the discovery ended
+ **progress** | `double` | Progress of the discovery
+ **itemsFound** | `integer` | Number of data pieces that the discovery found on the data source
+ **newItems** | `integer` | Number of new data pieces that the discovery found in comparison to the previous discovery
+ **newAssets** | `integer` | Number of new assets that the discovery found in comparison to the previous discovery
+ **resultUri** | `integer` | URL at which you can access the results of the discovery
  **autoSelect** | `boolean` | When set to `true`, the result of the discovery gets pushed to the data selection.
- **status** | `reference` | Status of the discovery, for example `Active` or `Complete`.
- **errors** | `string`| Errors encountered during the discovery.
+ **status** | `reference` | Status of the discovery, for example `Active` or `Complete`
+ **errors** | `string`| Errors encountered during the discovery
 
 ## Discoveries status example
 
-The following example shows the status of all discoveries. The discovery id in this example was auto-generated.<br>
+The following example shows the status of all discoveries. The discovery Id in this example was auto-generated.<br>
 **Note:** This is an example. It does not necessarily reflect the adapter you are currently using.
 
 ```json
@@ -86,7 +86,7 @@ The following example shows the status of all discoveries. The discovery id in t
 | api/v1/configuration/_componentId_/discoveries                                        | GET       | Returns status of all discoveries                                                                                                       |
 | api/v1/configuration/_componentId_/discoveries                                        | POST      | Initiates a new discovery and returns its Id                                                                                            |
 | api/v1/configuration/_componentId_/discoveries                                        | DELETE    | Cancels and deletes all saved discoveries                                                                                               |
-| api/v1/configuration/_componentId_/discoveries/_discoveryId_                          | GET       | Gets the status of an individual discovery<br><br>**Note:** If a discovery with the specified Id does not exist, you will get an error message                                                                                           |
+| api/v1/configuration/_componentId_/discoveries/_discoveryId_                          | GET       | Gets the status of an individual discovery<br><br>**Note:** If a discovery with the specified Id does not exist, you will get an error message.                                                                                          |
 | api/v1/configuration/_componentId_/discoveries/_discoveryId_                          | DELETE    | Cancels and deletes discovery and result                                                                                                |
 | api/v1/configuration/_componentId_/discoveries/_discoveryId_/result                   | GET       | Returns the result of a discovery                                                                                                       |
 | api/v1/configuration/_componentId_/discoveries/_discoveryId_/result?diff=_previousId_ | GET       | Returns the difference between the result and the previous result                                                                       |
