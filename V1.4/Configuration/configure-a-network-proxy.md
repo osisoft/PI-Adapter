@@ -8,13 +8,13 @@ Some network architectures may need a network proxy between the PI adapter and t
 
 ## HTTPS forward proxy
 
-For the adapter to use an HTTPS forward proxy while egressing, configure the `https_proxy` environment variable. The value of this environment variable must contain the URL of the proxy server, beginning with `http`. The format of the string is `[user[:password]@]http://hostname[:port]`.
+For the adapter to use an HTTPS forward proxy while egressing, configure the `https_proxy` environment variable. The value of this environment variable must contain the URL of the proxy server beginning with `http`. The format of the string is `[user[:password]@]http://hostname[:port]`.
 
 ### HTTPS proxy environment variable
 
 Parameter| Required | Description
 ---------|----------|---------
- `user` | Optional| The user name for the HTTPS forward proxy.
+ `user` | Optional| The user name for the HTTPS forward proxy
  `password` | Optional | The password for the HTTPS forward proxy specified user name. If you specify `user`, `password` remains optional.
  `port` | Optional | If you do not specify `port`, the default `80` is used.
 
