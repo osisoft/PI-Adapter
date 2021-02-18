@@ -4,7 +4,10 @@ uid: PIAdapterUsers
 
 # PI Adapter users
 
-Who uses PI Adapters and what do they use it for? With the PI Adapters' comprehensive amount of functions, they are applicable to a variety of users' work. Starting from the installation and configuration up to administration and troubleshooting.
+PI Adapters are typically used by users who:
+
+- Operate in an edge environment 
+- Operate on-premises but are interested in interpreting data from an edge environment
 
 The following are frequent PI Adapter users.
 

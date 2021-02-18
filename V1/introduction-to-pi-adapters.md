@@ -4,14 +4,18 @@ uid: IntroductionToPIAdapters
 
 # Introduction to PI Adapters
 
-PI Adapters is an edge data collection technology that provides access to time-series data previously isolated on remote assets or in secondary networks. Available for Windows and Linux devices, PI Adapters pull real-time data from IIoT gateways and sensor-enabled equipment and securely route the data to EDS for additional edge applications, to on-premises PI Server, or to OSIsoft's cloud-hosted data management service OCS.
+PI Adapters is an edge data collection technology that provides access to time-series data previously isolated on remote assets or in secondary networks. Available for Windows and Linux devices, PI Adapters pull real-time data from IIoT gateways and sensor-enabled equipment and securely route the data to:
+
+- Edge Data Store (EDS) for additional edge applications 
+- PI Server for on-premises storage 
+- OSIsoft Cloud Services (OCS) for cloud-hosted data management service
 
 PI Adapters offer the following generic capabilities:
 
-- Connection to inbound data sources from common industrial protocols
-- Real-time data transfer to PI Server, OCS, and EDS with optional data filtering to manipulate data on the outbound side
-- Buffering to overcome network and system disruptions
-- Administration functions for simplified management and scalable installation and configuration
+- Connection to [inbound data](#inbound-data) sources from common industrial protocols
+- Real-time [data transfer](#data-transfer) to PI Server, OCS, and EDS with optional data filtering to manipulate data on the outbound side
+- [Buffering](#buffering) to overcome network and system disruptions
+- [Administration](#administration) functions for simplified management, scalable installation, and configuration
 
 ## Capabilities in detail
 
@@ -19,7 +23,7 @@ The following capabilities are available for every PI Adapter. A specific PI Ada
 
 ### Inbound data
 
-PI Adapters provide connections to a variety of inbound data sources from common industrial protocols. Currently available protocols include OPC UA, Modbus TCP, DNP3, and BACnet. Protocols in progress include MQTT, Azure Event Hubs, RDBMS, and Structured Data Files.
+PI Adapters provide connections to a variety of inbound data sources from common industrial protocols. 
 
 The optional stream metadata capability provides the option to set the amount of metadata to provide meaningful metadata that differs for every adapter type.
 
@@ -27,7 +31,7 @@ For more information, see [Data source configuration](xref:DataSourceConfigurati
 
 ### Data transfer
 
-PI Adapters allow you to transfer real-time data to PI Server, OSIsoft Cloud Services (OCS), and Edge Data Store (EDS). The data filtering capability improves the configuration flexibility by manipulating data on the outbound side and minimizes network bandwidth consumption through exception reporting capabilities.
+PI Adapters allow you to transfer real-time data to one or more egress endpoint: PI Server, OSIsoft Cloud Services (OCS), or Edge Data Store (EDS). The data filtering capability improves the configuration flexibility by manipulating data on the outbound side and minimizes network bandwidth consumption through exception reporting capabilities.
 
 For more information, see [Egress configuration](xref:EgressConfiguration).
 
