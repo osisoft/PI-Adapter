@@ -6,6 +6,8 @@ uid: AdapterHealth1-4
 
 PI Adapters produce different kinds of health data that can be egressed to different health endpoints.
 
+To egress health related data, you have to configure an adapter health endpoint first. See [Health endpoint configuration](xref:HealthEndpointConfiguration1-4).
+
 ## Available health data
 
 Dynamic data is sent every minute to configured health endpoints.

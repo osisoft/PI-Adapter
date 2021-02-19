@@ -1,2 +1,4 @@
 - name: Prepare egress destinations
   href: prepare-egress-destinations.md
+- name: Configure a network proxy
+  href: configure-a-network-proxy.md
