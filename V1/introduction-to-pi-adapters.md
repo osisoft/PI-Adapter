@@ -37,7 +37,7 @@ For more information, see [Egress configuration](xref:EgressConfiguration).
 
 ### Buffering
 
-PI Adapters incorporate robust data collection through buffering for data egressed from the adapter to egress endpoints or health endpoints. Buffering helps to overcome network and system disruptions that often result in data loss.
+The PI Adapters' buffering capability creates a robust data collection for data egressed from the adapter to egress endpoints or health endpoints. Buffering helps to overcome network and system disruptions that often result in data loss.
 
 For more information, see [Buffering configuration](xref:BufferingConfiguration).
 
