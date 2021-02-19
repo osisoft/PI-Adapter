@@ -25,7 +25,7 @@ The following capabilities are available for every PI Adapter. A specific PI Ada
 
 PI Adapters provide connections to a variety of inbound data sources from common industrial protocols. 
 
-The optional stream metadata capability provides the option to set the amount of metadata to provide meaningful metadata that differs for every adapter type.
+The optional stream metadata capability allows to set the amount of metadata sent with each stream. Metadata are different for every adapter type.
 
 For more information, see [Data source configuration](xref:DataSourceConfiguration) and [Data selection configuration](xref: DataSelectionConfiguration).
 
