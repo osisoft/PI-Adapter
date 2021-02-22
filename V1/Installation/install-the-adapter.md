@@ -36,7 +36,7 @@ Complete the following steps to install a PI adapter on a Linux computer:
     **Note:** Customer login credentials are required to access the portal.
 
 2. Open a terminal.
-3. Run the `sudo` app install command.
+3. Run the `sudo apt install` app install command.
 
     **Examples**: <br> To install the Linux ARM Debian package, run the command <br>`sudo apt install ./OpcUa_linux-arm.deb` <br> To install the Linux x64 package, run the command <br> `sudo apt install ./Modbus_linux-x64.deb`
 
