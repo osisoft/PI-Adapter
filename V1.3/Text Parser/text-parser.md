@@ -110,6 +110,75 @@ The following syntaxes are used to extract values from documents.
 ]
 ```
 
+### JSON - Complex JSONPath example
+
+```json
+{
+  "StreamData": {
+    "TPPrototype.uflsample.value_time": [
+      {
+        "StreamId": "TPPrototype.uflsample.value_time",
+        "DataType": "Double",
+        "Timestamp": "2013-12-01T06:00:00Z",
+        "Value": 339.0
+      },
+      {
+        "StreamId": "TPPrototype.uflsample.value_time",
+        "DataType": "Double",
+        "Timestamp": "2013-12-01T07:00:00Z",
+        "Value": 344.0
+      },
+      {
+        "StreamId": "TPPrototype.uflsample.value_time",
+        "DataType": "Double",
+        "Timestamp": "2013-12-01T17:00:00Z",
+        "Value": 341.0
+      }
+    ],
+    "TPPrototype.uflsample.value_timeString": [
+      {
+        "StreamId": "TPPrototype.uflsample.value_timeString",
+        "DataType": "String",
+        "Timestamp": "2013-12-01T06:00:00Z",
+        "Value": "339.0"
+      },
+      {
+        "StreamId": "TPPrototype.uflsample.value_timeString",
+        "DataType": "String",
+        "Timestamp": "2013-12-01T07:00:00Z",
+        "Value": "344.0"
+      },
+      {
+        "StreamId": "TPPrototype.uflsample.value_timeString",
+        "DataType": "String",
+        "Timestamp": "2013-12-01T17:00:00Z",
+        "Value": "341.0"
+      }
+    ],
+    "TPPrototype.uflsample.pressure_time": [
+      {
+        "StreamId": "TPPrototype.uflsample.pressure_time",
+        "DataType": "Double",
+        "Timestamp": "2013-12-01T06:00:00Z",
+        "Value": 339.0
+      },
+      {
+        "StreamId": "TPPrototype.uflsample.pressure_time",
+        "DataType": "Double",
+        "Timestamp": "2013-12-01T07:00:00Z",
+        "Value": 344.0
+      },
+      {
+        "StreamId": "TPPrototype.uflsample.pressure_time",
+        "DataType": "Double",
+        "Timestamp": "2013-12-01T17:00:00Z",
+        "Value": 341.0
+      }
+    ]
+  }
+}
+```
+
 ### CSV - Simple CSV column index example
 
 ```csv
