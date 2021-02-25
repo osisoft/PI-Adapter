@@ -207,3 +207,11 @@ Date,Value
 ```
 
 ## Error handling
+
+If you encounter Text Parser related errors that is errors for the **ValueField** or **TimeField**, check the StreamId associated with the error message.
+
+Possible errors include the following:
+
+- The JSONPath expression of **ValueField** or **TimeField** is pointing to a non-existing value
+- The JSONPath expression of **ValueField** or **TimeField** is missing a value altogether
+- **DataType** does not match the value
