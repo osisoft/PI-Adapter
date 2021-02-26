@@ -20,7 +20,7 @@ Some numeric values and datetimes support cultures when they are being parsed. T
 
 A time zone or offset specified by a time is always used to convert to UTC time. Time zones are only used if there is no offset or time zone specifier in a text date and time string.
 
-If a time zone supports time changes between daylight and standard times, the text file source might contain invalid or ambiguous datetimes. These are usually only possible for a two hour period each year because they occur during time changes. Ambiguous times are reported as standard times.
+If a time zone supports time changes between daylight and standard times, the text file source might contain invalid or ambiguous datetimes. These invalid datetimes are usually only possible for a two-hour period each year because they occur during time changes. Ambiguous times are reported as standard times.
 
 ## Syntaxes for value retrieval
 
