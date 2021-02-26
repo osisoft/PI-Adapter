@@ -4,7 +4,7 @@ uid: TextParser
 
 # Text Parser
 
-The adapter you are using includes the Text Parser component which ensures consistent parsing of text from XML, JSON, and CSV files. Designed to be a document parser, the Text Parser parses a semantically complete document in its entirety.
+The adapter you are using includes the Text Parser component, which ensures consistent parsing of text from XML, JSON, and CSV files. The Text Parser parses a semantically complete document in its entirety.
 
 The Text Parser produces OMF compatible output, which in turn is compatible with the OCS backing SDS (Sequential Data Store) that stores data in streams consisting of multiple values and indexes.
 
