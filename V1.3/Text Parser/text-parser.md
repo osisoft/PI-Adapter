@@ -11,6 +11,8 @@ The Text Parser produces OMF compatible output, which in turn is compatible with
 
 ## Data types supported by the Text Parser
 
+The following data types are supported by the Text Parser: 
+
 * DateTime
 * DateTimeOffset
 * TimeSpan
