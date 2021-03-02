@@ -66,8 +66,6 @@ The following XPath configuration reads a series of values:
 }
 ```
 
-
-
 ### CSV - Simple CSV column index example
 
 ```csv
