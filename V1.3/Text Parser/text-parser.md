@@ -2,16 +2,16 @@
 uid: TextParser
 ---
 
-# Text Parser
+# Text parser
 
-The adapter you are using includes the Text Parser component which ensures consistent parsing of text from different files. For more information on which file types are supported for your adapter, see the topics in this chapter.
+The adapter you are using includes the text parser component which ensures consistent parsing of text from different files. For more information on which file types are supported for your adapter, see the topics in this chapter.
 
-Designed to be a document parser, the Text Parser parses a semantically complete document in its entirety.
-The Text Parser produces OMF compatible output, which in turn is compatible with the OCS backing SDS (Sequential Data Store) that stores data in streams consisting of multiple values and indexes.
+Designed to be a document parser, the text parser parses a semantically complete document in its entirety.
+The text parser produces OMF compatible output, which in turn is compatible with the OCS backing SDS (Sequential Data Store) that stores data in streams consisting of multiple values and indexes.
 
-## Data types supported by the Text Parser
+## Data types supported by the text parser
 
-The following data types are supported by the Text Parser: 
+The following data types are supported by the text parser: 
 
 * DateTime
 * DateTimeOffset
@@ -31,7 +31,7 @@ The following data types are supported by the Text Parser:
 * char
 * string
 
-**Note:** Not all data types supported by the Text Parser are also supported by OMF.
+**Note:** Not all data types supported by the text parser are also supported by OMF.
 
 ## Culture support
 

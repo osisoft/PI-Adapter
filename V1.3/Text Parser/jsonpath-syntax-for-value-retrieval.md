@@ -481,7 +481,7 @@ The following JSONPath configuration reads Sunday Average Indoor Temperature. Th
 
 ## Error handling
 
-If you encounter Text Parser related errors that is errors for the **ValueField** or **TimeField**, check the StreamId associated with the error message.
+If you encounter text parser related errors that is errors for the **ValueField** or **TimeField**, check the StreamId associated with the error message.
 
 Possible errors include the following:
 
