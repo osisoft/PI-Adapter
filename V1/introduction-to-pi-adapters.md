@@ -27,13 +27,13 @@ PI Adapters provide connections to a variety of inbound data sources from common
 
 The optional stream metadata capability allows you to set the amount of metadata sent with each stream. Metadata are different for every adapter type.
 
-For more information, see [Data source configuration](xref:DataSourceConfiguration) and [Data selection configuration](xref: DataSelectionConfiguration).
+For more information, see the Data source configuration and Data selection configuration topics.
 
 ### Data transfer
 
 PI Adapters allow you to transfer real-time data to one or more egress endpoint: PI Server, OSIsoft Cloud Services (OCS), or Edge Data Store (EDS). The data filtering capability improves the configuration flexibility by manipulating data on the outbound side and minimizes network bandwidth consumption through exception reporting capabilities.
 
-For more information, see [Egress configuration](xref:EgressConfiguration).
+For more information, see [Egress endpoints configuration](xref:EgressEndpointsConfiguration).
 
 ### Buffering
 
