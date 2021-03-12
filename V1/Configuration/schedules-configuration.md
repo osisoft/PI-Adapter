@@ -12,27 +12,34 @@ You can configure PI adapters to run scans based on a schedule. If the adapter s
 
 ## Configure schedules
 
-Complete the following steps to change the schedules configuration:
+Complete the following steps to configure schedules. Use the `PUT` method in conjunction with the `http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules` REST endpoint to initialize the configuration.
 
-1. Using any text editor, create a file that contains the schedules configuration in the JSON format.
-    - For content structure, see [Example](#example).
-    - For all available parameters, see [Schedules parameters](#schedules-parameters).
+1. Using a text editor, create an empty text file.
 
-2. Save the file. For example, `ConfigureSchedules.json`.
+2. Copy and paste an example configuration for schedules into the file.
 
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules`.
+    For sample JSON, see [Example](#example).
 
-    **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter.
+3. Update the example JSON parameters for your environment.
 
-    `5590` is the default port number. If you selected a different port number, replace it with that value.
+    For a table of all available parameters, see [Schedules parameters](#schedules-parameters).
 
-    Example using `curl`:
+4. Save the file. For example, as `ConfigureSchedules.json`.
 
-    **Note:** Run this command from the same directory where the file is located.
+5. Open a command line session. Change directory to the location of `ConfigureSchedules.json`.
+
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the schedules configuration.
 
     ```bash
     curl -d "@ConfigureSchedules.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules"
     ```
+
+    **Notes:**
+  
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
+    * For a list of other REST operations you can perform, like updating or replacing a schedules configuration, see [REST URLs](#rest-urls).
+    <br/>
+    <br/>
 
 On successful execution, the schedules change takes effect immediately during runtime.
 
