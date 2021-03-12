@@ -40,7 +40,7 @@ Complete the following steps to configure logging. Use the `PUT` method in conju
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
     * For a list of other REST operations you can perform, like updating or retrieving a logging configuration, see [REST URLs](#rest-urls).
-    * Any parameter not specified in the updated configuration file reverts to the default schema value
+    * Any parameter not specified in the updated configuration file reverts to the default schema value.
     <br/>
     <br/>
 
