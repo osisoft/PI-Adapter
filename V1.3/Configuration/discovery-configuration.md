@@ -28,10 +28,6 @@ Data discovery includes different routes. For example, you can choose to do the 
     curl -d "{ \"Id\":\"TestDiscovery\", \"autoSelect\":true }" -X POST "http://localhost:5590/api/v1/configuration/<ComponentId>/Discoveries"
     ```
 
-<!--
-Only Id, Query and AutoSelect will have effect when initiating the discovery query. The other parameters for the 'discovery state' are redundant and will be overridden even if specified in the configuration. To avoid any confusion we could mention only the 3 relevant ones to the customer for configuring discovery. The table below is the State of the discovrery is mainly for intepreting discovery result.
--->
-
 ## Discovery parameters
 
 Parameter | Type| Description

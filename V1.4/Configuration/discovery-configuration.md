@@ -28,16 +28,6 @@ Data discovery includes different routes. For example, you can choose to do the 
     curl -d "{ \"Id\":\"TestDiscovery\", \"autoSelect\":true }" -X POST "http://localhost:5590/api/v1/configuration/<ComponentId>/Discoveries"
     ```
 
-<!---
-## Discovery schema
-
-The full schema definition for the general configuration is in the `<AdapterName>_Discovery_schema.json` file located in one of the following folders:
-
-Windows: `%ProgramFiles%\OSIsoft\Adapters\<AdapterName>\Schemas`
-
-Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
---->
-
 ## Discovery parameters
 
 Parameter | Type| Description
