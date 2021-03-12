@@ -10,16 +10,34 @@ For more information about available metadata and what metadata are sent per met
 
 ## Configure general
 
-1. Start any of the [Configuration tools](xref:ConfigurationTools1-4) capable of making HTTP requests.
-2. Run a `PUT` command to the following endpoint, setting `enableDiagnostics` to either `true` or `false` and `MetadataLevel` to `None`, `Low`, `Medium`, or `High`: `http://localhost:5590/api/v1/configuration/system/general`
+Complete the following steps to configure diagnostics and metadata levels. Use the `PUT` method in conjunction with the `http://localhost:5590/api/v1/configuration/system/general` REST endpoint to initialize the configuration.
 
-   **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
+1. Using a text editor, create an empty text file.
 
-   Example using `curl`:
+2. Copy and paste an example configuration for diagnostics and metadata levels into the file.
 
-   ```bash
-   curl -d "{ \"enableDiagnostics\":true, \"enableMetadata\":false }" -X PUT "http://localhost:5590/api/v1/configuration/system/general"
-   ```
+    For sample JSON, see [Example](#example).
+
+3. Update the example JSON parameters for your environment.
+
+    For a table of all available parameters, see [General parameters](#general-parameters).
+
+4. Save the file. For example, as `ConfigureGeneral.json`.
+
+5. Open a command line session. Change directory to the location of `ConfigureGeneral.json`.
+
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the general configuration.
+
+    ```bash
+    curl -d "@ConfigureGeneral.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/general"
+    ```
+
+    **Notes:**
+  
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
+    * For a list of other REST operations you can perform, like updating or replacing a general configuration, see [REST URLs](#rest-urls).
+    <br/>
+    <br/>
 
 ## General schema
 

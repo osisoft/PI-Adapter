@@ -14,31 +14,37 @@ Each message in the log displays the message severity level, timestamp, and the 
 
 ## Configure logging
 
-Complete the following steps to change the logging configuration:
+Complete the following steps to configure logging. Use the `PUT` method in conjunction with the `http://localhost:5590/api/v1/configuration/<ComponentId>/Logging` REST endpoint to initialize the configuration.
 
-1. Using any text editor, create a file that contains the logging configuration in the JSON format.
-    - For content structure, see [Example](#example).
-    - For all available parameters, see [Logging parameters](#logging-parameters).
+1. Using a text editor, create an empty text file.
 
-2. Save the file. For example, `ConfigureLogging.json`.
+2. Copy and paste an example configuration for logging into the file.
 
-3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run a `PUT` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Logging`.
+    For sample JSON, see [Example](#example).
 
-    **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter.
+3. Update the example JSON parameters for your environment.
 
-    `5590` is the default port number. If you selected a different port number, replace it with that value.
+    For a table of all available parameters, see [Logging parameters](#logging-parameters).
 
-    Example using `curl`:
+4. Save the file. For example, as `ConfigureLogging.json`.
 
-    **Note:** Run this command from the same directory where the file is located.
+5. Open a command line session. Change directory to the location of `ConfigureLogging.json`.
+
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the logging configuration.
 
     ```bash
     curl -d "@ConfigureLogging.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/<ComponentId>/Logging"
     ```
 
-On successful execution, the log-level change takes effect immediately during runtime. The other configurations (log file size and file count) are updated after the adapter is restarted.
+    **Notes:**
+  
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
+    * For a list of other REST operations you can perform, like updating or retrieving a logging configuration, see [REST URLs](#rest-urls).
+    * Any parameter not specified in the updated configuration file reverts to the default schema value
+    <br/>
+    <br/>
 
-**Note:**  Any parameter not specified in the updated configuration file reverts to the default schema value.
+On successful execution, the log-level change takes effect immediately during runtime. The other configurations (log file size and file count) are updated after the adapter is restarted.
 
 ## Logging schema
 
