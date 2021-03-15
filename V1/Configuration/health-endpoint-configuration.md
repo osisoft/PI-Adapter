@@ -10,34 +10,34 @@ For more information about adapter health, see [Adapter health](xref:AdapterHeal
 
 ## Configure health endpoint
 
-A health endpoint designates an OMF endpoint where adapter health information is sent. You can configure multiple health endpoints.
+Complete the following steps to configure health endpoints. Use the `PUT` method in conjunction with the `http://localhost:5590/api/v1/configuration/system/healthendpoints` REST endpoint to initialize the configuration.
 
-1. Use any text editor to create a file that contains one or more health endpoints in the JSON format.
-    - For content structure, see [Examples](#examples).
-    - For a table of all available health endpoint parameters, see [Health endpoint parameters](#health-endpoint-parameters).
-2. Save the file. For example, `ConfigureHealthEndpoints.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run either a `POST` or `PUT` command to their appropriate endpoint.
+1. Using a text editor, create an empty text file.
 
-    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
+2. Copy and paste an example configuration for health endpoints into the file.
 
-    - **POST** endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints`
+    For sample JSON, see [Examples](#examples).
 
-        Example using `curl`:
+3. Update the example JSON parameters for your environment.
 
-        **Note:** Run this command from the same directory where the file is located.
+    For a table of all available parameters, see [Health endpoint parameters](#health-endpoint-parameters).
 
-        ```bash
-        curl -d "@ConfigureHealthEndpoints.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/healthendpoints"
-        ```
+4. Save the file. For example, as `ConfigureHealthEndpoints.json`.
 
-    - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/system/healthendpoints/{Id}`
+5. Open a command line session. Change directory to the location of `ConfigureHealthEndpoints.json`.
+
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the health endpoint configuration.
+
+    ```bash
+    curl -d "@ConfigureHealthEndpoints.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/healthendpoints"
+    ```
+
+    **Notes:**
   
-        Example using `curl`:
-
-        **Note:** Run this command from the same directory where the file is located.
-
-        ```bash
-        curl -d "@ConfigureHealthEndpoints.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/healthendpoints/OCS"
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
+    * For a list of other REST operations you can perform, like updating or replacing a health endpoints configuration, see [REST URLs](#rest-urls).
+    <br/>
+    <br/>
         ```
 
 ## Health endpoints schema

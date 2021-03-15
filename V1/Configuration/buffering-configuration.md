@@ -10,21 +10,34 @@ You can configure PI adapters to buffer data egressed from the adapter to egress
 
 ## Configure buffering
 
-1. Using any text editor, create a file that contains the buffering configuration in the JSON format.
-   - For content structure, see the sample output in [Examples - Retrieve the buffering configuration](#examples).
-   - For a table of all available parameters, see [Buffering parameters](#buffering-parameters).
-2. Save the file. For example, `ConfigureBuffering.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests and run a `PUT` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/buffering`
+Complete the following steps to configure buffering. Use the `PUT` method in conjunction with the `http://localhost:5590/api/v1/configuration/system/buffering` REST endpoint to initialize the configuration.
 
-     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
+1. Using a text editor, create an empty text file.
 
-     Example using `curl`:
+2. Copy and paste an example configuration for buffering into the file.
 
-     ```bash
-      curl -d "@ConfigureBuffering.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/buffering"
-     ```
+    For sample JSON, see [Examples - Retrieve the buffering configuration](#examples).
 
-    **Note:** Run this command from the same directory where the file is located.
+3. Update the example JSON parameters for your environment.
+
+    For a table of all available parameters, see [Buffering parameters](#buffering-parameters).
+
+4. Save the file. For example, as `ConfigureBuffering.json`.
+
+5. Open a command line session. Change directory to the location of `ConfigureBuffering.json`.
+
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the buffering configuration.
+
+    ```bash
+    curl -d "@ConfigureBuffering.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/buffering"
+    ```
+
+    **Notes:**
+  
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
+    * For a list of other REST operations you can perform, like updating or replacing a buffering configuration, see [REST URLs](#rest-urls).
+    <br/>
+    <br/>
 
 ## Buffering schema
 

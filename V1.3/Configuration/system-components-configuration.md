@@ -12,101 +12,34 @@ As part of making adapters as secure as possible, any passwords or secrets that 
 
 ## Configure system components
 
-The configuration of system components includes adding, updating, and deleting components.
+Complete the following steps to configure system components. Use the `PUT` method in conjunction with the `http://localhost:5590/api/v1/configuration/system/components/<componentId>` REST endpoint to initialize the configuration.
 
-### Add a system component
+1. Using a text editor, create an empty text file.
 
-Complete the following steps to add a new component to the system:
+2. Copy and paste an example configuration for system components into the file.
 
-1. Using any text editor, create a file that contains the component to be added to the system in the JSON format.
+    For sample JSON, see [Examples](#examples).
 
-    - For content structure, see [Examples](#examples).
-    - For a table of all available parameters, see [System components parameters](#system-components-parameters).
+3. Update the example JSON parameters for your environment.
 
-    **Note:** The OmfEgress component is required for this initial release for adapters to run. You can add additional components, but only a single OmfEgress component is supported.
+    For a table of all available parameters, see [System component parameters](#system-component-parameters).
 
-    The following example adds an adapter:
+4. Save the file. For example, as `ConfigureComponents.json`.
 
-      ```json
-        {
-          "ComponentId": "<AdapterName>1",
-          "ComponentType": "<AdapterName>"
-        }
-      ```
+5. Open a command line session. Change directory to the location of `ConfigureComponents.json`.
 
-    **Note:** A unique ComponentId is necessary for each component in the system.
-
-2. Save the file. For example, *AddComponent.json*.
-3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run either a `POST` or `PUT` command to their appropriate endpoint.
-
-    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
-
-    - **POST** endpoint: `http://localhost:5590/api/v1/configuration/system/components`
-
-        Example using `curl`:
-
-        **Note:** Run this command from the same directory where the file is located.
-
-        ```bash
-        curl -d "@AddComponent.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/system/components"
-        ```
-
-    - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId>`
-
-        Example using `curl`:
-
-        **Note:** Run this command from the same directory where the file is located.
-
-        ```bash
-        curl -d "@AddComponent.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components/<ComponentId>"
-        ```
-
-    After the curl command completes successfully, you can configure or use the new component.
-
-### Update system components
-
-Complete the following steps to update the components of the system, for example, by adding or deleting one or more adapter components.
-
-1. Using any text editor, create a file that contains the current system components configuration. For information on how to retrieve the system components configuration, see [REST URLs](#rest-urls).
-
-2. Delete or add components as you need.
-
-    **Note:** You cannot delete the OmfEgress component.
-
-3. Save the file. For example,  *UpdateComponents.json*
-
-4. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run a `PUT` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components`
-
-    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
-
-    Example using `curl`:
-
-    **Note:** Run this command from the same directory where the file is located.
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the system components configuration.
 
     ```bash
-    curl -d "@UpdateComponents.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components"
+    curl -d "@ConfigureComponents.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components/<componentId>"
     ```
 
-### Delete a system component
-
-Complete the following steps to delete a specific existing component:
-
-1. Start any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests.
-
-2. Run a `DELETE` command to the following endpoint, replacing `<ComponentId>` with the ID of the component that you want to delete: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId>/`
-
-    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
-
-    Example using `curl`:
-
-    **Note:** Run this command from the same directory where the file is located. <br>
-    *Delete adapter component*
+    **Notes:**
   
-    ```bash
-    curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/<ComponentId>/"
-    ```
-
-    All the logs and configurations files for the deleted components are moved to the corresponding _logs/Removed_ or _Configuration/Removed_ folder.
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
+    * For a list of other REST operations you can perform, like updating or deleting a system components configuration, see [REST URLs](#rest-urls).
+    <br/>
+    <br/>
 
 ## System components schema
 
