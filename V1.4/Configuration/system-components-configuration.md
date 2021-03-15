@@ -22,7 +22,7 @@ Complete the following steps to configure system components. Use the `PUT` metho
 
 3. Update the example JSON parameters for your environment.
 
-    For a table of all available parameters, see [System component parameters](#system-component-parameters).
+    For a table of all available parameters, see [System components parameters](#system-components-parameters).
 
 4. Save the file. For example, as `ConfigureComponents.json`.
 
@@ -38,8 +38,8 @@ Complete the following steps to configure system components. Use the `PUT` metho
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
     * For a list of other REST operations you can perform, like updating or deleting a system components configuration, see [REST URLs](#rest-urls).
-    <br/>
-    <br/>
+    <br>
+    <br>
 
 ## System components schema
 

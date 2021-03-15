@@ -38,6 +38,7 @@ Complete the following steps to configure buffering. Use the `PUT` method in con
     * For a list of other REST operations you can perform, like updating or replacing a buffering configuration, see [REST URLs](#rest-urls).
     <br/>
     <br/>
+
 ## Buffering schema
 
 The full schema definition for the system buffering is in the `System_Buffering_schema.json` file located in one of the following folders:

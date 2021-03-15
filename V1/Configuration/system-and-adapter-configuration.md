@@ -14,7 +14,7 @@ Complete the following steps to configure system and adapter. Use the `PUT` meth
 
 2. Copy and paste an example configuration for system and adapter into the file.
 
-    For sample JSON, see the configuration examples topic.
+    For sample JSON, see the corresponding adapter configuration examples topic.
 
 4. Save the file. For example, as `ConfigureSystemAndAdapter.json`.
 
@@ -30,14 +30,8 @@ Complete the following steps to configure system and adapter. Use the `PUT` meth
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
     * In order for some of the adapter specific configurations to take effect, you have to restart the adapter.
-    <br/>
-    <br/>
 
-    If the operation fails due to errors in the configuration, the count of the error and suitable error messages are returned in the result.
-
-## Example
-
-For an example system and adapter configuration, see the Configuration examples topic.
+If the operation fails due to errors in the configuration, the count of the error and suitable error messages are returned in the result.
 
 ## REST URLs
 
