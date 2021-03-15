@@ -4,35 +4,34 @@ uid: SchedulesConfiguration1-3
 
 # Schedules configuration
 
-You can configure PI adapters to run scans based on a schedule. If the adapter supports schedules, each data item in the data selection configuration can be assigned a schedule. The adapter will then sample data for those data items at the scheduled time.
+Complete the following steps to configure schedules. Use the `PUT` method in conjunction with the `http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules` REST endpoint to initialize the configuration.
 
-**Note:** If the adapter supports scheduling and you start an ingress component without a schedules configuration, a default schedules configuration will be added to be used as an example.
+1. Using a text editor, create an empty text file.
 
-**Note:** When the adapter framework scheduler misses or skips a scan due to any reason, either one of the following messages is printed: `Scan skipped for schedule id <Id>` or `Scan missed for schedule <id>`.
+2. Copy and paste an example configuration for schedules into the file.
 
-## Configure schedules
+    For sample JSON, see [Example](#example).
 
-Complete the following steps to change the schedules configuration:
+3. Update the example JSON parameters for your environment.
 
-1. Using any text editor, create a file that contains the schedules configuration in the JSON format.
-    - For content structure, see [Example](#example).
-    - For all available parameters, see [Schedules parameters](#schedules-parameters).
+    For a table of all available parameters, see [Schedules parameters](#schedules-parameters).
 
-2. Save the file. For example, `ConfigureSchedules.json`.
+4. Save the file. For example, as `ConfigureSchedules.json`.
 
-3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules`.
+5. Open a command line session. Change directory to the location of `ConfigureSchedules.json`.
 
-    **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter. For example, _Modbus1_.
-
-    `5590` is the default port number. If you selected a different port number, replace it with that value.
-
-    Example using `curl`:
-
-    **Note:** Run this command from the same directory where the file is located.
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the schedules configuration.
 
     ```bash
     curl -d "@ConfigureSchedules.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules"
     ```
+
+    **Notes:**
+  
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
+    * For a list of other REST operations you can perform, like updating or replacing a schedules configuration, see [REST URLs](#rest-urls).
+    <br/>
+    <br/>
 
 On successful execution, the schedules change takes effect immediately during runtime.
 
@@ -81,4 +80,4 @@ The following parameters are available for configuring schedules:
 | api/v1/configuration/_ComponentId_/Schedules/*id* | PUT       | Replaces schedule by *id*. Fails if schedule does not exist |
 | api/v1/configuration/_ComponentId_/Schedules/*id* | PATCH     | Allows partial updating of configured schedule by *id* |
 
-**Note:** Replace *ComponentId* with the Id of your adapter component. For example, Modbus1.
+**Note:** Replace *ComponentId* with the Id of your adapter component.

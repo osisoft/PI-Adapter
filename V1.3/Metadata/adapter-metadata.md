@@ -11,7 +11,7 @@ If the metadataLevel is set to `Low` or higher in the [General configuration](xr
   AdapterType: {ComponentType}
 ```
 
-`ComponentId` corresponds to the adapter components' data source configured in the [Components configuration](xref:SystemComponentsConfiguration1-3). `ComponentType` corresponds to the adapter type. For example, Modbus or OpcUa.
+`ComponentId` corresponds to the adapter components' data source configured in the [Components configuration](xref:SystemComponentsConfiguration1-3). `ComponentType` corresponds to the adapter type.
 
 ## Metadata for health and diagnostics streams
 

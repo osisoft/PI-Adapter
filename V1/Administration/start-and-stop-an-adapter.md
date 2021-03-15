@@ -10,9 +10,7 @@ Complete the procedure appropriate for your operating system to start or stop an
 
 1. Open Windows services.
 
-2. Select **PI Adapter for _AdapterName_**, for example, PI Adapter for Modbus.
-
-    **Note:** This is an example; it does not necessarily represent the adapter that you are currently using.
+2. Select **PI Adapter for \<AdapterName\>**.
 
 3. Depending on whether your adapter is running or not, click either **Start** or **Stop**.
 
@@ -24,20 +22,18 @@ Complete the procedure appropriate for your operating system to start or stop an
 
     Example:
 
-    _Start_ PI Adapter for OPC UA
+    _Start_ PI Adapter for \<AdapterName\>
 
     ```cmdline
-    sudo systemctl start pi.adapter.opcua
+    sudo systemctl start pi.adapter.<adapterName>
     ```
 
     Example:
 
-    _Stop_ PI Adapter for Modbus TCP
+    _Stop_ PI Adapter for \<AdapterName\>
   
       ```cmdline
-      sudo systemctl stop pi.adapter.modbus
+      sudo systemctl stop pi.adapter.<adapterName>
       ```
-
-      **Note:** These commands are examples; they do not necessarily represent the adapter that you are currently using.
   
 3. Press Enter.

@@ -20,53 +20,34 @@ The name of the PI point or OCS or EDS stream is a combination of the StreamIdPr
 
 ## Configure egress endpoints
 
-**Note:** You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoint configurations, see [REST URLs](#rest-urls).
+Complete the following steps to configure egress endpoints. Use the `PUT` method in conjunction with the `http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints` REST endpoint to initialize the configuration.
 
-Complete the following steps to configure egress endpoints:
+1. Using a text editor, create an empty text file.
 
-1. Using any text editor, create a file that contains one or more egress endpoints in the JSON format.
-    - For content structure, see [Examples](#examples).
-    - For a table of all available parameters, see [Egress endpoint parameters](#egress-endpoint-parameters).
+2. Copy and paste an example configuration for egress endpoints into the file.
 
-2. Save the file. For example, `ConfigureEgressEndpoints.json`.
+    For sample JSON, see [Examples](#examples).
 
-3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests and run the appropriate command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/`
+3. Update the example JSON parameters for your environment.
 
-    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
+    For a table of all available parameters, see [Egress endpoint parameters](#egress-endpoint-parameters).
 
-    Examples using `curl`:
+4. Save the file. For example, as `ConfigureEgressEndpoints.json`.
 
-    **Note:** Run the commands from the same directory where the file is located.
+5. Open a command line session. Change directory to the location of `ConfigureEgressEndpoints.json`.
 
-    - _Add endpoints_
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the egress endpoints configuration.
 
-        **Note:** Run either the `POST` or the `PUT` command. For more information, see [REST URLs](#rest-urls).
-            
-        ```bash
-        curl -d "@ConfigureEgressEndpoints.json" -H "Content-Type: application/json" -X POST    "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
-        ```
+    ```bash
+    curl -d "@ConfigureEgressEndpoints.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
+    ```
 
-        ```bash
-        curl -d "@ConfigureEgressEndpoints.json" -H "Content-Type: application/json" -X PUT   "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}"
-        ```
-
-    - _Delete an endpoint_
-
-        ```bash
-        curl -X DELETE "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}"
-        ```
-
-    - _Update an endpoint_
-
-        ```bash
-        curl -d "@ConfigureEgressEndpoints.json" -H "Content-Type: application/json" -X UPDATE     "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}"
-        ```
-
-    - _View endpoints_
-
-        ```bash
-        curl -X GET "http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints"
-        ```
+    **Notes:**
+  
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
+    * For a list of other REST operations you can perform, like updating or replacing an egress endpoints configuration, see [REST URLs](#rest-urls).
+    <br/>
+    <br/>
 
 ## Egress endpoint configuration schema
 
