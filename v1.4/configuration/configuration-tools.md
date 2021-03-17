@@ -1,5 +1,5 @@
 ---
-uid: ConfigurationTools1-3
+uid: ConfigurationTools1-4
 ---
 
 # Configuration tools
@@ -8,7 +8,7 @@ You can configure PI adapters with the EdgeCmd utility, OSIsoft's proprietary to
 
 ## EdgeCmd utility
 
-The EdgeCmd utility enables adapter configuration on both Linux and Windows operating systems. For more information on using the EdgeCmd utility, see the [EdgeCmd utility documentation](https://osisoft.github.io/Edgecmd-Docs/V1.2/edgecmd-utility.html).
+The EdgeCmd utility enables adapter configuration on both Linux and Windows operating systems. For more information on using the EdgeCmd utility, see the [EdgeCmd utility documentation (https://osisoft.github.io/Edgecmd-Docs/v1.1/edgecmd-utility.html)](https://osisoft.github.io/Edgecmd-Docs/v1.1/edgecmd-utility.html).
 
 ## REST tools
 

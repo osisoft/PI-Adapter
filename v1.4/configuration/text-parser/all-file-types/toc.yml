@@ -1,0 +1,4 @@
+- name: JSONPath syntax for value retrieval
+  href: ../jsonpath-syntax-for-value-retrieval.md
+- name: XPath and CSV syntax for value retrieval
+  href: ../xpath-and-csv-syntax-for-value-retrieval.md
