@@ -1,5 +1,5 @@
 ---
-uid: ErrorRate1-4
+uid: ErrorRate
 ---
 
 # Error rate

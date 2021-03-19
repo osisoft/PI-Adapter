@@ -1,5 +1,5 @@
 ---
-uid: UninstallTheAdapter1-4
+uid: UninstallTheAdapter
 ---
 
 # Uninstall the adapter

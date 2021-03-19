@@ -1,12 +1,12 @@
 ---
-uid: AdapterDiagnostics1-4
+uid: AdapterDiagnostics
 ---
 
 # Adapter diagnostics
 
 The adapter and its components produce different kinds of diagnostics data that is sent to all health endpoints. The `System_Diagnostics.json` file contains a flag that determines whether diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default.
 
-To egress diagnostics related data, you have to configure an adapter health endpoint first. See [Health endpoint configuration](xref:HealthEndpointConfiguration1-4).
+To egress diagnostics related data, you have to configure an adapter health endpoint first. See [Health endpoint configuration](xref:HealthEndpointConfiguration).
 
 ## Available diagnostics data
 
@@ -14,10 +14,10 @@ Every minute, dynamic data is sent to configured health endpoints.
 
 The following diagnostics data are available:
 
-- [System](xref:System1-4)
-- [Stream count](xref:StreamCount1-4)
-- [IO rate](xref:IORate1-4)
-- [Error rate](xref:ErrorRate1-4)
+- [System](xref:System)
+- [Stream count](xref:StreamCount)
+- [IO rate](xref:IORate)
+- [Error rate](xref:ErrorRate)
 
 ## AF structure
 

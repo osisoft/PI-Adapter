@@ -1,5 +1,5 @@
 ---
-uid: BufferingConfiguration1-4
+uid: BufferingConfiguration
 ---
 
 # Buffering configuration

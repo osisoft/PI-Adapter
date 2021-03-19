@@ -1,5 +1,5 @@
 ---
-uid: DeleteAnAdapterComponent1-4
+uid: DeleteAnAdapterComponent
 ---
 
 # Delete an adapter component
@@ -8,7 +8,7 @@ When you remove an adapter component, the configuration and log files are saved 
 
 Complete the following steps to delete an adapter component:
 
-1. Start any of the [Configuration tools](xref:ConfigurationTools1-4) capable of making HTTP requests.
+1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 
 2. Run a `DELETE` command to the following endpoint: `http://localhost:5590/api/v1/configuration/system/components/<ComponentId>`
 

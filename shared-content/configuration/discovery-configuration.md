@@ -1,5 +1,5 @@
 ---
-uid: DiscoveryConfiguration1-4
+uid: DiscoveryConfiguration
 ---
 
 # Discovery configuration
@@ -17,7 +17,7 @@ Data discovery includes different routes. For example, you can choose to do the 
 
 ## Configure discovery
 
-1. Start any of the [Configuration tools](xref:ConfigurationTools1-4) capable of making HTTP requests.
+1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 2. Run a `POST` command with the `Id` of the discovery and `autoSelect` set to either `true` or `false` to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Discoveries`.
 
    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.

@@ -1,5 +1,5 @@
 ---
-uid: TroubleshootTheAdapter1-4
+uid: TroubleshootTheAdapter
 ---
 
 # Troubleshoot the adapter

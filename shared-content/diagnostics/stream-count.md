@@ -1,5 +1,5 @@
 ---
-uid: StreamCount1-4
+uid: StreamCount
 ---
 
 # Stream count

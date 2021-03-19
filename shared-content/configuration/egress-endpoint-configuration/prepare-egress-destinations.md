@@ -1,5 +1,5 @@
 ---
-uid: PrepareEgressDestinations1-4
+uid: PrepareEgressDestinations
 ---
 
 # Prepare egress destinations

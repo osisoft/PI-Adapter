@@ -1,5 +1,5 @@
 ---
-uid: InstallTheAdapter1-4
+uid: InstallTheAdapter
 ---
 
 # Install the adapter
