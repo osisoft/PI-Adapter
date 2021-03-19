@@ -1,5 +1,5 @@
 ---
-uid: StartAndStopAnAdapter1-3
+uid: StartAndStopAnAdapter
 ---
 
 # Start and stop an adapter

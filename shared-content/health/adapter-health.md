@@ -1,12 +1,12 @@
 ---
-uid: AdapterHealth1-3
+uid: AdapterHealth
 ---
 
 # Adapter health
 
 PI Adapters produce different kinds of health data that can be egressed to different health endpoints.
 
-To egress health related data, you have to configure an adapter health endpoint first. See [Health endpoint configuration](xref:HealthEndpointConfiguration1-3).
+To egress health related data, you have to configure an adapter health endpoint first. See [Health endpoint configuration](xref:HealthEndpointConfiguration).
 
 ## Available health data
 
@@ -14,8 +14,8 @@ Dynamic data is sent every minute to configured health endpoints.
 
 The following health data is available:
 
-- [Device status](xref:DeviceStatus1-3)
-- [Next Health Message Expected](xref:NextHealthMessageExpected1-3)
+- [Device status](xref:DeviceStatus)
+- [Next Health Message Expected](xref:NextHealthMessageExpected)
 
 ## AF structure
 

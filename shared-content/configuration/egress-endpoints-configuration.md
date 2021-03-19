@@ -1,5 +1,5 @@
 ---
-uid: EgressEndpointsConfiguration1-3
+uid: EgressEndpointsConfiguration
 ---
 
 # Egress endpoints configuration

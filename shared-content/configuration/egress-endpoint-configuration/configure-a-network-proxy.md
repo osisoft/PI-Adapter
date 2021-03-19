@@ -1,5 +1,5 @@
 ---
-uid: ConfigureANetworkProxy1-3
+uid: ConfigureANetworkProxy
 ---
 
 # Configure a network proxy
@@ -50,7 +50,7 @@ Example of an architecture with an https forward proxy:
 
 ## Reverse proxy
 
-For the adapter to use a reverse proxy while egressing, you must configure the reverse proxy as an egress endpoint. For information on how to configure an egress endpoint, see [Egress endpoints configuration](xref:EgressEndpointsConfiguration1-3).
+For the adapter to use a reverse proxy while egressing, you must configure the reverse proxy as an egress endpoint. For information on how to configure an egress endpoint, see [Egress endpoints configuration](xref:EgressEndpointsConfiguration).
 
 **Example:**
 

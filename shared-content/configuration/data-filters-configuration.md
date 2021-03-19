@@ -1,5 +1,5 @@
 ---
-uid: DataFiltersConfiguration1-3
+uid: DataFiltersConfiguration
 ---
 
 # Data filters configuration

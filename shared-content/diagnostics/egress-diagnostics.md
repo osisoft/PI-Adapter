@@ -1,5 +1,5 @@
 ---
-uid: EgressDiagnostics1-3
+uid: EgressDiagnostics
 ---
 
 # Egress diagnostics

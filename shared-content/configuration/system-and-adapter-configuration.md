@@ -1,5 +1,5 @@
 ---
-uid: SystemAndAdapterConfiguration1-3
+uid: SystemAndAdapterConfiguration
 ---
 
 # System and adapter configuration

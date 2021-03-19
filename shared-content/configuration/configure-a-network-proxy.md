@@ -1,5 +1,5 @@
 ---
-uid: ConfigureANetworkProxy1-3
+uid: ConfigureANetworkProxy
 ---
 
 # Configure a network proxy

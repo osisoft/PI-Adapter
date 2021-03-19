@@ -1,5 +1,5 @@
 ---
-uid: TechnicalSupportAndFeedback1-3
+uid: TechnicalSupportAndFeedback
 ---
 
 # Technical support and feedback

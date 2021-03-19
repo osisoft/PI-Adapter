@@ -1,5 +1,5 @@
 ---
-uid: RetrieveProductVersionInformation1-3
+uid: RetrieveProductVersionInformation
 ---
 
 # Retrieve product version information
@@ -8,7 +8,7 @@ The product version information includes the application version, the version of
 
 Complete the following steps to retrieve the product version information of a PI adapter:
 
-1. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests.
+1. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 2. Run a `GET` command to the following endpoint: `http://localhost:5590/api/v1/Diagnostics/ProductInformation`
 
    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.

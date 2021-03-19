@@ -1,16 +1,16 @@
 ---
-uid: GeneralConfiguration1-3
+uid: GeneralConfiguration
 ---
 
 # General configuration
 
 You can configure PI adapters to produce and store diagnostics data at a designated health endpoint, and to send metadata for created streams.
-For more information about available diagnostics data, see [Adapter diagnostics](xref:AdapterDiagnostics) and [Egress diagnostics](xref:EgressDiagnostics1-3).
-For more information about available metadata and what metadata are sent per metadata level, see [Adapter Metadata](xref:AdapterMetadata1-3).
+For more information about available diagnostics data, see [Adapter diagnostics](xref:AdapterDiagnostics) and [Egress diagnostics](xref:EgressDiagnostics).
+For more information about available metadata and what metadata are sent per metadata level, see [Adapter Metadata](xref:AdapterMetadata).
 
 ## Configure general
 
-1. Start any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests.
+1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 2. Run a `PUT` command to the following endpoint, setting `enableDiagnostics` to either `true` or `false` and `MetadataLevel` to `None`, `Low`, `Medium`, or `High`: `http://localhost:5590/api/v1/configuration/system/general`
 
    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.

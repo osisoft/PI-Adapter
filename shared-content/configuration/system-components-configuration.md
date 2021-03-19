@@ -1,5 +1,5 @@
 ---
-uid: SystemComponentsConfiguration1-3
+uid: SystemComponentsConfiguration
 ---
 
 # System components configuration

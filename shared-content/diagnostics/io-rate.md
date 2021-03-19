@@ -1,5 +1,5 @@
 ---
-uid: IORate1-3
+uid: IORate
 ---
 
 # IO rate

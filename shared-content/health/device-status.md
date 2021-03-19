@@ -1,5 +1,5 @@
 ---
-uid: DeviceStatus1-3
+uid: DeviceStatus
 ---
 
 # Device status
