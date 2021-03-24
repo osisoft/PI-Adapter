@@ -10,7 +10,7 @@ For more information about available metadata and what metadata are sent per met
 
 ## Configure general
 
-1. Start any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests.
+1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 2. Run a `PUT` command to the following endpoint, setting `enableDiagnostics` to either `true` or `false` and `MetadataLevel` to `None`, `Low`, `Medium`, or `High`: `http://localhost:5590/api/v1/configuration/system/general`
 
    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
