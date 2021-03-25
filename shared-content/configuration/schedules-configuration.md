@@ -20,7 +20,7 @@ Complete the following steps to change the schedules configuration:
 
 2. Save the file. For example, `ConfigureSchedules.json`.
 
-3. Use any of the [Configuration tools](xref:ConfigurationTools1-3) capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules`.
 
     **Note:**  Replace _&lt;ComponentId&gt;_ with the ComponentId of the adapter.
 
