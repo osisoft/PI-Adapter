@@ -4,7 +4,7 @@ uid: RetrieveProductVersionInformation
 
 # Retrieve product version information
 
-The product version information includes the application version, the version of the underlying .NET Core framework, and the operating system that the adapter is running on.
+The product version information includes the adapter framework version, application version, the version of the underlying .NET Core framework, and the operating system that the adapter is running on.
 
 Complete the following steps to retrieve the product version information of a PI adapter:
 
@@ -25,6 +25,8 @@ Complete the following steps to retrieve the product version information of a PI
 
     ```code
     {
+    "Application Name": "PI Adapter for <AdapterName>",
+    "Adapter Framework Version": "1.3.0.351",
     "Application Version":"1.2.0.37",
     ".Net Core Version":".NET Core 3.1.5",
     "Operating System":"Linux 4.15.0-106-generic #107-Ubuntu SMP Thu Jun 4 11:27:52 UTC 2020"
