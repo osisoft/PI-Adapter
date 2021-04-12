@@ -463,7 +463,7 @@ The following example reads specific value from complex nested JSON:
 }
 ```
 
-The following JSONPath configuration reads Sunday Average Indoor Temperature. The timestamp comes from Adapter local time.
+The following JSONPath configuration reads Sunday Average Indoor Temperature. The timestamp comes from the Adapter local time.
 
 ```json
 {
@@ -481,7 +481,7 @@ The following JSONPath configuration reads Sunday Average Indoor Temperature. Th
 
 ## Error handling
 
-If you encounter text parser related errors that is errors for the **ValueField** or **TimeField**, check the StreamId associated with the error message.
+If you encounter text parser related errors for the **ValueField** or **TimeField**, check the StreamId associated with the error message.
 
 Possible errors include the following:
 
