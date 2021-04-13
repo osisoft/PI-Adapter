@@ -1,8 +1,8 @@
 ---
-uid: OnDemandHistoryRecovery
+uid: OnDemandHistoryRecoveryConfiguration
 ---
 
-# On-demand history recovery
+# On-demand history recovery configuration
 
 The PI adapter supports performing history recovery on-demand by specifying start and end time.
 

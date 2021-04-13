@@ -1,8 +1,8 @@
 ---
-uid: HistoryRecoveryConfiguration
+uid: HistoryRecovery
 ---
 
-# History recovery configuration
+# History recovery
 
 History recovery for PI adapters supports the following two scenarios:
 
