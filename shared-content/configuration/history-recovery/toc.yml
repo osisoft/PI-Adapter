@@ -1,0 +1,4 @@
+- name: On-demand history recovery configuration
+  href: on-demand-history-recovery-configuration.md
+- name: Automatic history recovery
+  href: automatic-history-recovery.md
