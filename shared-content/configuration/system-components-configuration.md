@@ -31,7 +31,7 @@ Complete the following steps to configure system components. Use the `PUT` metho
 6. Enter the following cURL command (which uses the `PUT` method) to initialize the system components configuration.
 
     ```bash
-    curl -d "@ConfigureComponents.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components/<componentId>"
+    curl -d "@ConfigureComponents.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components"
     ```
 
     **Notes:**
