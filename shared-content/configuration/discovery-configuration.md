@@ -45,6 +45,8 @@ Parameter | Type| Description
  **status** | `reference` | Status of the discovery, for example `Active` or `Complete`
  **errors** | `string`| Errors encountered during the discovery
 
+**Note:** If, during data source discovery, the PI adapter encounters characters that are used in the stream Id but that are not allowed in PI tag names, the adapter replaces the characters with a unicode escape sequence in the auto-generated `<componentId>_DataSelection.json` file.
+
 ## Discoveries status example
 
 The following example shows the status of all discoveries. The discovery id in this example was auto-generated.<br>
