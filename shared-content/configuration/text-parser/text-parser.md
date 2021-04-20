@@ -49,9 +49,11 @@ For time zones that support time changes between daylight and standard times, a 
 
 The text parser can use time zones, cultures, and custom formats to read dates and times from ingress data.
 
-You can specify custom dates and times when you configure data selection. Set the custom date and time using the `TimeFormat` property. If you are using a culture other than default `en-US`, use the name of day or month specific to the culture. For example, use "Juni" instead of "June" for the `de-DE` culture.
+You can specify date and time formats when you configure data selection. Set the date and time using the `TimeFormat` property. If you leave the `TimeFormat` property unset, the data selection configuration defaults to the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date format.
 
-The following custom date and time syntaxes are supported.
+If you are using a culture other than default `en-US`, use the name of day or month specific to the culture. For example, use "Juni" instead of "June" for the `de-DE` culture.
+
+The following date and time syntaxes have been tested and are supported.
 
 ```text
 "MM/dd/yyyy H:mm:ss zzz"         "06/15/2018 15:15:30 -05:00"
@@ -71,3 +73,8 @@ The following custom date and time syntaxes are supported.
 "dddd dd MMM yyyy h:mm tt zzz"   "Sunday 15 Jun 2008 8:30 AM -06:00"
 "dddd dd MMMM yyyy h:mm tt zzz"  "Sunday 15 June 2008 8:30 AM -06:00" 
 ```
+
+Adapter date and time processing uses [Microsoft datetime parsing](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.parseexact?view=net-5.0).  
+
+* For more documentation on standard datetime formats, which fit most use cases, see [Standard date and time format strings](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings).
+* For documentation on custom datetime formation, see [Custom date and time format strings](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings).
