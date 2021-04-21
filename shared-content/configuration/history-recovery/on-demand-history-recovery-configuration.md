@@ -59,12 +59,12 @@ Parameter | Type| Description
 
 | Relative URL                                   | HTTP verb | Action |
 |------------------------------------------------|-----------|--------|
-| api/v1/configuration/_<componentId>_/historyRecoveries | GET       | Returns all history recoveries statuses
-| api/v1/configuration/_<componentId>_/historyRecoveries | POST       | Initiates a new history recovery, returns the id of the operation
-| api/v1/configuration/_<componentId>_/historyRecoveries | DELETE      | Cancels all active history recovery operations and removes states
-| api/v1/configuration/_<componentId>_/historyRecoveries/_<operationId>_ |  GET    | Gets the status of an individual history recovery
-| api/v1/configuration/_<componentId>_/historyRecoveries/_<operationId>_ | DELETE       | Cancels history recovery and remove the state |
-| api/v1/configuration/_<componentId>_/historyRecoveries/_<operationId>_/cancel | POST | Cancels history recovery|
-| api/v1/configuration/_<componentId>_/historyRecoveries/_<operationId>_/resume | POST | Resumes canceled or failed history recovery operation from the checkpoint |
+| api/v1/configuration/_\<componentId>_/historyRecoveries | GET       | Returns all history recoveries statuses
+| api/v1/configuration/_\<componentId>_/historyRecoveries | POST       | Initiates a new history recovery, returns the id of the operation
+| api/v1/configuration/_\<componentId>_/historyRecoveries | DELETE      | Cancels all active history recovery operations and removes states
+| api/v1/configuration/_\<componentId>_/historyRecoveries/_\<operationId>_ |  GET    | Gets the status of an individual history recovery
+| api/v1/configuration/_\<componentId>_/historyRecoveries/_\<operationId>_ | DELETE       | Cancels history recovery and removes the state |
+| api/v1/configuration/_\<componentId>_/historyRecoveries/_\<operationId>_/cancel | POST | Cancels history recovery|
+| api/v1/configuration/_\<componentId>_/historyRecoveries/_\<operationId>_/resume | POST | Resumes canceled or failed history recovery operation (`202`) from the checkpoint<br><br>**Note:** If the `<operationId>` is not found, a 404 HTTP error message will be returned  | 
 
-**Note:** Replace _<componentId>_ with the Id of your adapter component. Replace _<operationId>_ with the Id of the history recovery operation for which you want to perform the action.
+**Note:** Replace _\<componentId>_ with the Id of your adapter component. Replace _\<operationId>_ with the Id of the history recovery operation for which you want to perform the action.
