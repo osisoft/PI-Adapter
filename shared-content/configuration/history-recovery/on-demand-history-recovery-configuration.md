@@ -29,8 +29,8 @@ Parameter | Type| Description
  **id** | `string` | The Id of the history recovery<br><br> **Note:** You cannot run multiple discoveries with the same Id.
  **startTime** | `datetime` | Time when the the first data items are collected.
  **endTime** | `datetime`| Time when the last data items are collected.
-| **checkpoint** | `double` | <!--Add description here -->
-| **items** | `double` | <!--Add description here -->
+| **checkpoint** | `double` | The latest timestamp that the history recovery has completed with the range being between **startTime** and **endTime**.
+| **items** | `double` | The amount of data selection items in the history recovery operation.
 | **recoveredEvents** | `double` | Number of events that the history recovery found on the data source.
 | **progress** | `double` | Progress of the history recovery (number of data items found through the history recovery).
 | **errors** | `string` | Errors encountered during the history recovery.
