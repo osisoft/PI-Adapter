@@ -4,7 +4,7 @@ uid: IntroductionToPIAdapters
 
 # Introduction to PI Adapters
 
-PI Adapters is an edge data collection technology that provides access to time-series data previously isolated on remote assets or in secondary networks. Available for Windows and Linux devices, PI Adapters pull real-time data from IIoT gateways and sensor-enabled equipment and securely route the data to:
+PI Adapters are data collection components that provide access to time-series data previously isolated on remote assets or in secondary networks. Available for Windows and Linux devices, PI Adapters pull real-time data from IIoT gateways and sensor-enabled equipment and securely route the data to:
 
 - Edge Data Store (EDS) for additional edge applications 
 - PI Server for on-premises storage 
@@ -19,13 +19,13 @@ PI Adapters offer the following generic capabilities:
 
 ## Capabilities in detail
 
-The following capabilities are available for every PI Adapter. A specific PI Adapter might or might not include additional capabilities such as network proxy support or data source auto discovery.
+The following capabilities are available for every PI Adapter. A specific PI Adapter may or may not include additional capabilities, such as network proxy support or data source auto discovery.
 
 ### Inbound data
 
-PI Adapters provide connections to a variety of inbound data sources from common industrial protocols. 
+PI Adapters provide connections to a variety of inbound data sources from common industrial protocols.
 
-The optional stream metadata capability allows you to set the amount of metadata sent with each stream. Metadata are different for every adapter type.
+The optional stream metadata capability allows you to set the amount of metadata sent with each stream. Metadata are different for every adapter type and you can configure the number of metadata to be displayed.
 
 For more information, see the Data source configuration and Data selection configuration topics.
 
