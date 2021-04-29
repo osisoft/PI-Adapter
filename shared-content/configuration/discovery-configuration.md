@@ -35,7 +35,7 @@ Data discovery includes different routes. For example, you can choose to do the 
 
 Parameter | Type| Description
 ---------|----------|---------
- **id** | `string` | The Id of the discovery <br><br> **Note:** You cannot run multiple discoveries with the same Id.
+ **id** | `string` | The Id of the discovery <br><br> **Notes:**<br>&bull; You cannot run multiple discoveries with the same Id.<br>&bull; Including an `id` is optional. If you do not include one, the adapter automatically generates one.
  **query** | `string` | A filter that is specific to the data source. The query filter can limit the scope of the discovery.<br><br>For more information, see the Data source configuration topic.
  **startTime** | `datetime` | Time when the discovery started
  **endTime** | `datetime`| Time when the discovery ended
