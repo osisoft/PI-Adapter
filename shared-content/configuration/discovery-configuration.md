@@ -20,7 +20,10 @@ Data discovery includes different routes. For example, you can choose to do the 
 1. Start any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests.
 2. Run a `POST` command with the `Id` of the discovery and `autoSelect` set to either `true` or `false` to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/Discoveries`.
 
-   **Note:**`5590` is the default port number. If you selected a different port number, replace it with that value.
+   **Notes:**
+
+    * Including an `Id` is optional. If you do not include one, the adapter automatically generates one.
+    * `5590` is the default port number. If you selected a different port number, replace it with that value.
 
     Example using `curl`:
 
@@ -32,18 +35,18 @@ Data discovery includes different routes. For example, you can choose to do the 
 
 Parameter | Type| Description
 ---------|----------|---------
- **id** | `string` | The ID of the discovery. <br><br> **Note:** You cannot run multiple discoveries with the same ID.
- **query** | `string` | A filter that is specific to the data source. The query filter can limit the scope of the discovery.<br><br>For more information, see the Data source configuration topic of your specific adapter.
- **startTime** | `datetime` | Time when the discovery started.
- **endTime** | `datetime`| Time when the discovery ended.
- **progress** | `double` | Progress of the discovery (number of topics found through the discovery) 
- **itemsFound** | `integer` | Number of data pieces that the discovery found on the data source.
- **newItems** | `integer` | Number of new data pieces that the discovery found in comparison to the previous discovery.
- **newAssets** | `integer` | Number of new assets that the discovery found in comparison to the previous discovery.
- **resultUri** | `integer` | URL at which you can access the results of the discovery.
- **autoSelect** | `boolean` | When set to `true`, the result of the discovery gets pushed to the data selection.
- **status** | `reference` | Status of the discovery, for example `Active` or `Complete`.
- **errors** | `string`| Errors encountered during the discovery.
+**id** | `string` | The Id of the discovery <br><br> **Notes:**<br>&bull; You cannot run multiple discoveries with the same Id.<br>&bull; Including an `id` is optional. If you do not include one, the adapter automatically generates one.
+**query** | `string` | A filter that is specific to the data source. The query filter can limit the scope of the discovery.<br><br>For more information, see the Data source configuration topic of your specific adapter.
+**startTime** | `datetime` | Time when the discovery started.
+**endTime** | `datetime`| Time when the discovery ended.
+**progress** | `double` | Progress of the discovery (number of topics found through the discovery) 
+**itemsFound** | `integer` | Number of data pieces that the discovery found on the data source.
+**newItems** | `integer` | Number of new data pieces that the discovery found in comparison to the previous discovery.
+**newAssets** | `integer` | Number of new assets that the discovery found in comparison to the previous discovery.
+**resultUri** | `integer` | URL at which you can access the results of the discovery.
+**autoSelect** | `boolean` | When set to `true`, the result of the discovery gets pushed to the data selection.
+**status** | `reference` | Status of the discovery, for example `Active` or `Complete`.
+**errors** | `string`| Errors encountered during the discovery.
 
 **Note:** If, during data source discovery, the PI adapter encounters characters that are used in the stream Id but that are not allowed in PI tag names, the adapter replaces the characters with a unicode escape sequence in the auto-generated `<componentId>_DataSelection.json` file.
 
