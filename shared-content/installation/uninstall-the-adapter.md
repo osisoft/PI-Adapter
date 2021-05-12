@@ -2,7 +2,7 @@
 uid: UninstallTheAdapter
 ---
 
-# Uninstallation
+# Uninstall the adapter
 
 Complete the procedure corresponding to your specific operating system to uninstall the adapter:
 
