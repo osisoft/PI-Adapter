@@ -33,6 +33,7 @@ Parameter | Type| Description
 | **items** | `double` | The amount of data selection items in the history recovery operation.
 | **recoveredEvents** | `double` | Number of events that the history recovery found on the data source.
 | **progress** | `double` | Progress of the history recovery (number of data items found through the history recovery).
+| **status** | `enum` | Status of the history recovery.<br><br>The following statuses are available:<br> - *Active* - The operation is currently in progress<br>- *Complete* - The operation has been completed<br>- *Canceled* - The operation has been canceled<br>- *Failed* - The operation failed
 | **errors** | `string` | Errors encountered during the history recovery.
 
 ## History recovery status example
