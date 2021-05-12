@@ -2,7 +2,7 @@
 uid: SchedulesConfiguration
 ---
 
-# Schedules configuration
+# Schedules
 
 You can configure PI adapters to run scans based on a schedule. If the adapter supports schedules, each data item in the data selection configuration can be assigned a schedule. The adapter will then sample data for those data items at the scheduled time.
 

@@ -2,7 +2,7 @@
 uid: SystemAndAdapterConfiguration
 ---
 
-# System and adapter configuration
+# System and adapter
 
 You can configure the system component and adapter component together using a single file.
 
