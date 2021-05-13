@@ -2,7 +2,7 @@
 uid: EgressDiagnostics
 ---
 
-# Egress diagnostics
+# Egress
 
 The Egress component of the adapter produces the following diagnostics stream:
 

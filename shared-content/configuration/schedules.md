@@ -2,7 +2,7 @@
 uid: SchedulesConfiguration
 ---
 
-# Schedules configuration
+# Schedules
 
 Complete the following steps to configure schedules. Use the `PUT` method in conjunction with the `http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules` REST endpoint to initialize the configuration.
 

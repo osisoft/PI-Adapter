@@ -2,7 +2,7 @@
 uid: EgressEndpointsConfiguration
 ---
 
-# Egress endpoints configuration
+# Egress endpoints
 
 PI adapters collect time series data, which  they can send to a permanent data store (endpoint). This operation is called data egress. The following endpoints are available for data egress:
 
