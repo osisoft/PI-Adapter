@@ -2,7 +2,7 @@
 uid: TroubleshootTheAdapter
 ---
 
-# Troubleshoot the adapter
+# Troubleshooting
 
 PI adapters provide features for troubleshooting issues related to connectivity, data flow, and configuration. Resources include adapter logs and the Wireshark troubleshooting tool . If you are still unable to resolve issues or need additional guidance, contact OSIsoft Technical Support through the [OSIsoft Customer Portal](https://my.osisoft.com/).
 
