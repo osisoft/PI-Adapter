@@ -1,5 +1,5 @@
 ---
-uid: Troubleshooting
+uid: TroubleshootTheAdapter
 ---
 
 # Troubleshooting

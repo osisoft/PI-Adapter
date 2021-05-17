@@ -2,7 +2,7 @@
 uid: LoggingConfiguration
 ---
 
-# Logging configuration
+# Logging
 
 PI adapters write daily log messages for the adapter, the system, and OMF egress to flat text files in the following locations:
 

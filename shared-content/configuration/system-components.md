@@ -2,7 +2,7 @@
 uid: SystemComponentsConfiguration
 ---
 
-# System components configuration
+# System components
 
 PI adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the EdgeCmd utility for any changes you make to the files.
 
