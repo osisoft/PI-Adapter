@@ -2,7 +2,7 @@
 uid: AdapterDiagnostics
 ---
 
-# Adapter diagnostics
+# Diagnostics
 
 The adapter and its components produce different kinds of diagnostics data that is sent to all health endpoints. The `System_Diagnostics.json` file contains a flag that determines whether diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default.
 

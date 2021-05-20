@@ -2,7 +2,7 @@
 uid: BufferingConfiguration
 ---
 
-# Buffering configuration
+# Buffering
 
 You can configure PI adapters to buffer data egressed from the adapter to endpoints. Buffering is configured through the buffering configuration parameters in the system configuration.
 
