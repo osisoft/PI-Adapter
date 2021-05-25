@@ -6,6 +6,8 @@ uid: DataFiltersConfiguration
 
 PI adapters can be configured to perform data filtering to save network bandwidth. Every data item in the data selection configuration can be assigned the Id of a data filter. The adapter will then filter data for those data items based on the data filter configuration.
 
+**Note:** If data filters are enabled and data quality changes, both the old and current data quality values are passed on. Quality values are `Good`, `Bad`, and `Questionable`.
+
 ## Configure data filters
 
 Complete the following steps to configure data filters. Use the `PUT` method in conjunction with the `http://localhost:5590/api/v1/configuration/<ComponentId>/DataFilters` REST endpoint to initialize the configuration.
@@ -38,6 +40,7 @@ Complete the following steps to configure data filters. Use the `PUT` method in 
     <br/>
 
 On successful execution, the change that you have made to data filters takes effect immediately during runtime.
+
 ## Data filters schema
 
 The full schema definition for the data filters configuration is in the  `AdapterName_DataFilters_schema.json` file located in one of the following folders:
