@@ -10,7 +10,7 @@ When a new version of the adapter is released, you can upgrade it by running the
 
 Complete the following steps to upgrade a PI adapter on a Windows computer:
 
-1. Download the latest Windows .msi file from the [OSIsoft Customer portal (https://customers.osisoft.com/s/products)](https://customers.osisoft.com/s/products).
+1. Download the latest Windows .msi file from the [OSIsoft Customer Portal](https://customers.osisoft.com/s/products).
 
     **Note:** Customer login credentials are required to access the portal.
 
@@ -22,7 +22,7 @@ Complete the following steps to upgrade a PI adapter on a Windows computer:
 
 4. Optional: To verify the upgrade, run the following `curl` command with the port number that you specified when completing the wizard:
 
-   ```cmd
+   ```powershell
    curl -X GET "http://localhost:5590/api/v1/Diagnostics/ProductInformation"
    ```
 
@@ -42,7 +42,7 @@ Complete the following steps to upgrade a PI adapter on a Windows computer:
 
 Complete the following steps to upgrade a PI adapter on a Linux computer:
 
-1. Download the appropriate Linux distribution file from the [OSIsoft Customer portal (https://customers.osisoft.com/s/products)](https://customers.osisoft.com/s/products).
+1. Download the appropriate Linux distribution file from the [OSIsoft Customer Portal](https://customers.osisoft.com/s/products).
 
     **Note:** Customer login credentials are required to access the portal.
 
@@ -51,7 +51,7 @@ Complete the following steps to upgrade a PI adapter on a Linux computer:
 3. Change directory to the original install location and run the `sudo apt install` command.
 
     * **Linux ARM Debian:** `sudo apt install ./{AdapterName}_linux-arm.deb`
-    * **Linux x64:** `sudo apt install ./{AdapterName}_linux-x64.deb`
+    * **Linux x64:** `sudo apt install ./{AdapterName}_linux-x64.deb`<br><br>
 
 4. Optional: To verify the upgrade, run the following `curl` command with the port number that you specified:
 
