@@ -15,6 +15,7 @@ Complete the following steps to install a PI adapter on a Windows computer:
     **Note:** Customer login credentials are required to access the portal.
 
 2. Run the .msi file.
+
 3. Follow the setup wizard.
 
     You can change the installation folder or port number during setup. The default port number is `5590`.
@@ -36,6 +37,7 @@ Complete the following steps to install a PI adapter on a Linux computer:
     **Note:** Customer login credentials are required to access the portal.
 
 2. Open a terminal.
+
 3. Run the `sudo apt install` app install command.
 
     **Examples**: <br> To install the Linux ARM Debian package, run the command <br>`sudo apt install ./{AdapterName}_linux-arm.deb` <br> To install the Linux x64 package, run the command <br> `sudo apt install ./{AdapterName}_linux-x64.deb`
