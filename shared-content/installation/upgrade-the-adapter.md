@@ -16,9 +16,7 @@ Complete the following steps to upgrade a PI adapter on a Windows computer:
 
 2. Run the .msi file.
 
-3. Follow the setup wizard.
-
-    You can change the installation folder or port number during upgrade. The default port number is `5590`.
+3. Complete the setup wizard.
 
 4. Optional: To verify the upgrade, run the following `curl` command with the port number that you specified when completing the wizard:
 
