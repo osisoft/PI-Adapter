@@ -62,7 +62,6 @@ The following parameters are available for configuring buffering:
         - An adapter creates 20 MB buffer files that are stored in **BufferLocation**.<br>
         - When **MaxBufferSizeMB** is reached, the oldest buffer file is deleted and a new buffer file is created.<br>
         - The health endpoint is fixed at 20 MB. When the health endpoint buffer file becomes full, a new buffer file is created and the previous buffer file is deleted.
-        - When the buffer file of a **MaxBufferSizeMB** of 20 MB fills, a new buffer file is created and the previous buffer file deleted.
 
 **Note:** The following rules apply in case of an error when creating a new buffer file:
 
